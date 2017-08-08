@@ -1,0 +1,17 @@
+
+.webcam-upload-container {
+
+}
+
+.image-container {
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    width: 30%;
+}
+
+.image-container .title {
+    text-align: center;
+    color:red;
+}

@@ -1,0 +1,256 @@
+<?php
+
+require_once DPPWU_MODELS_PATH.'DPPWUDummyModel.php';
+
+abstract class DPPWUModel
+{
+    public $many_to_many = [];
+
+    /**
+     * @var wpdb instance
+     */
+    protected $db;
+
+    /**
+     * Table name
+     * @var string
+     */
+    protected $table;
+    
+    /**
+     * Table fields array
+     * @var array
+     */
+    protected $fields;
+    
+    /**
+     * Wordpress table prefix
+     * @var string
+     */
+    protected $prefix;
+
+    /**
+     * Constructor
+     * @global type $wpdb
+     */
+
+    public function __construct()
+    {
+        global $wpdb;
+        $this->db = $wpdb;
+        $this->prefix = $this->db->prefix;
+        $this->table = $this->tableName();
+    }
+
+    /**
+     * Table name
+     */
+    abstract function tableName();
+    
+    /**
+     * Table primary key
+     */
+    abstract function primaryKey();
+
+    /**
+     * Creates table
+     */
+    abstract function createTable();
+    
+    /**
+     * This method will perform 'select * (all)' query for requested table.
+     * @return mixed 
+     */
+    public function findAll($where = null)
+    {
+        $sql = self::selectAll() . $this->tableName();
+        if (null !== $where) {
+            $sql .= ' '.$where; 
+        }
+        return $this->db->get_results($sql);
+    }
+    
+    /**
+     * This method will select data from the table based on 'id' key 
+     * @param integer $id
+     * @return mixed result on success and false on failure
+     */
+    public function findOne($id)
+    {
+        if(is_array($id) && $id['id']) {
+            $id = (int) $id['id'];
+        }
+        $sql = sprintf(self::selectAll() . $this->tableName().' WHERE '.$this->primaryKey().'=%d', (int)$id);
+        $results = $this->get_results($sql);
+        if (isset($results[0]) && $results[0]) {
+            return $results[0];
+        }
+        return false;
+    }
+    
+    /**
+     * This method is a simple wrapper for wordpress $wpdb->get_results() method. 
+     * It will execute sql query, and respond with execution results. 
+     * 
+     * @param string $sql
+     * @return mixed
+     */
+    public function get_results($sql)
+    {
+        return $this->db->get_results($sql);
+    }
+
+    /**
+     * This method execute query using prepared statements. It can accept query params
+     * as well as only sql query string.
+     * 
+     * @param string $sql
+     * @param null | array $params
+     * @return mixed
+     */
+    public function query($sql, $params = null)
+    {
+        if ($params) {
+            return $this->db->query($this->db->prepare($sql, $params));
+        }
+        return $this->db->query($sql);
+    }
+
+    public function get($params)
+    {
+        $sql = 'SELECT ' . implode(', ', $this->fields) . ' '
+                . 'FROM ' . $this->tableName() . ' '
+                . 'WHERE id=%d';
+
+        return $this->db->get_row($this->db->prepare($sql, $params), ARRAY_A);
+    }
+
+    /**
+     * Delete record by id
+     * @param integer $id
+     * @return boolean true on success, false on failure
+     */
+    public function deleteById($id)
+    {
+        $sql = 'DELETE FROM ' . $this->tableName() . ' WHERE id=%d';
+        if (is_array($id)) {
+            if (isset($id['id'])) {
+                return $this->query($sql, array('id' => (int) $id['id']));
+            }
+        } else {
+            return $this->query($sql, array('id' => (int) $id));
+        }
+    }
+
+    /**
+     * Drop table
+     */
+    public function dropTable()
+    {
+        $sql = 'DROP TABLE ' . $this->tableName();
+        $this->query($sql);
+    }
+
+    public function isExists($id)
+    {
+        if ($this->findOne($id)) {
+            return true;
+        }
+        return false;
+    }
+    
+    public function update($data) 
+    {
+        $id = $data[$this->primaryKey()];
+        unset($data['id']);
+        $set = '';
+        $last = count($data);
+        $count = 1;
+        foreach ($data as $key => $item) {
+            if ($last == $count) {
+                $set .= "`$key`='{$item}'";
+            } else {
+                $set .= "`$key`='{$item}', ";
+            }
+            $count++;
+        }
+        $sql = "UPDATE `{$this->tableName()}` SET {$set} WHERE ".$this->primaryKey()."={$id};";
+        return $this->query($sql);
+    }
+    
+    public function insert($data) 
+    {
+        $values = $columns = '';
+        $last = count($data);
+        $count = 1;
+        foreach ($data as $key => $item) {
+            if ($last == $count) {
+                $columns .= "`$key`";
+                $values .= "'{$item}'";
+            } else {
+                $columns .= "`$key`".', ';
+                $values .= "'{$item}', ";
+            }
+            $count++;
+        }
+        $sql = "INSERT INTO `{$this->tableName()}` ({$columns}) VALUES ({$values});";
+        $this->query($sql);
+        return $this->last_insert_id();
+    }
+    
+    public function save($data) 
+    {
+        $data = $this->saveRelated($data);
+        
+        if (isset($data[$this->primaryKey()]) && $this->isExists($data[$this->primaryKey()])) {
+            return $this->update($data);
+        } else if (is_array($data)) {
+            return $this->insert($data);
+        } else {
+            return false;
+        }
+    }
+    
+    protected function saveRelated($data)
+    {
+        if (isset($data['related']) && isset($this->many_to_many['table'])) {
+            $related = $data['related']; 
+            unset($data['related']);
+            $table = $this->prefix.$this->many_to_many['table'];
+            $sql = "DELETE FROM {$table} WHERE {$this->many_to_many['id']}={$data['id']}";
+            $this->query($sql);
+            foreach ($related as $item) {
+                $columns = $this->many_to_many['id'].', '.$this->many_to_many['related'];
+                $values = (int) $data[$this->primaryKey()].', '.(int) $item;
+                $sql = "INSERT INTO {$table} ({$columns}) VALUES ({$values})";
+                $this->query($sql);
+            }
+        }
+        return $data;
+    }
+
+
+    protected function last_insert_id()
+    {
+        return $this->db->insert_id;
+    }
+    
+    protected static function selectAll()
+    {
+        return 'SELECT * FROM ';
+    }
+    
+    protected static function sanitizeArray(array $data = [])
+    {
+        $result = array();
+        foreach ($data as $name => $item) {
+            //Check if data is json, esc_attr - corrupts json
+            if (is_string($item) && (is_object(json_decode($item)) || is_array(json_decode($item)))) {
+                $result[$name] = html_entity_decode($item);
+            } else {
+                $result[$name] = esc_attr($item); 
+            }
+        }
+        return $result;
+    }
+}

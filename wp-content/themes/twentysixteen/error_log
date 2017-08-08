@@ -1,0 +1,1 @@
+[09-Jul-2017 22:13:39 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/kanawaic/public_html/wp-content/themes/twentysixteen/404.php on line 10

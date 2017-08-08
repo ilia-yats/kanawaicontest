@@ -1,0 +1,49 @@
+{"event":"details","time":1500296648,"u":"20","run":"15.18","mem":"28.68","data":"----- Initiating master send function for BackupBuddy v8.0.1.0 for basename file: `newwp_revslider_layer_animations.sql`. Post-send deletion: 1"}
+{"event":"details","time":1500296648,"u":"20","run":"15.18","mem":"28.68","data":"Created fileoptions lock file `send-live_ad0851a04f756e94255817ab9a3fc4a2-vgeahv.txt.lock` with ID: 596c99a8330475.99953258."}
+{"event":"details","time":1500296648,"u":"20","run":"15.18","mem":"28.68","data":"Fileoptions load using 0 MB of memory."}
+{"event":"details","time":1500296648,"u":"20","run":"15.18","mem":"28.69","data":"Fileoptions `send-live_ad0851a04f756e94255817ab9a3fc4a2-vgeahv.txt` saved. 3224 bytes written."}
+{"event":"details","time":1500296648,"u":"20","run":"15.18","mem":"28.68","data":"Initializing destination."}
+{"event":"details","time":1500296648,"u":"21","run":"15.18","mem":"28.68","data":"Loading destination init file `\/home\/kanawaic\/public_html\/wp-content\/plugins\/backupbuddy\/destinations\/live\/init.php`."}
+{"event":"details","time":1500296648,"u":"21","run":"15.18","mem":"28.68","data":"Destination init loaded."}
+{"event":"details","time":1500296648,"u":"21","run":"15.18","mem":"28.68","data":"Initialized `live` destination."}
+{"event":"details","time":1500296648,"u":"21","run":"15.18","mem":"28.68","data":"Applying destination-specific defaults."}
+{"event":"details","time":1500296648,"u":"21","run":"15.18","mem":"28.69","data":"Applying global destination defaults."}
+{"event":"details","time":1500296648,"u":"21","run":"15.18","mem":"28.68","data":"Calling destination-specific send method."}
+{"event":"details","time":1500296648,"u":"21","run":"15.18","mem":"28.69","data":"Starting S32 send()."}
+{"event":"details","time":1500296648,"u":"21","run":"15.18","mem":"28.71","data":"Using bundled cacert.pem file based on destination settings."}
+{"event":"details","time":1500296648,"u":"21","run":"15.18","mem":"29.46","data":"Guzzle client cainfo: `\/home\/kanawaic\/public_html\/wp-content\/plugins\/backupbuddy\/destinations\/_s3lib2\/Guzzle\/Http\/Resources\/cacert.pem`. capath: `n\/a`."}
+{"event":"details","time":1500296648,"u":"21","run":"15.18","mem":"29.48","data":"File size of `466 Bytes`."}
+{"event":"details","time":1500296648,"u":"21","run":"15.18","mem":"29.48","data":"Initiating multipart transfer."}
+{"event":"details","time":1500296648,"u":"61","run":"15.58","mem":"29.49","data":"Initiated multipart upload with ID `EFP8_xjVzZixGf388A9ctyvObsLadv60aWSVHYDMM85g6UEGvGUCP6nBc1Tave1uEE4ZElzx4Nvie_4oLhRIe9_FW4GLP16t41qdaqF4aIgeHXceC.p2NhHNrXQGnM8y7VtN9VDzluAixcCS0_wRVQ--`."}
+{"event":"details","time":1500296648,"u":"61","run":"15.58","mem":"29.50","data":"Multipart initiated; passing over to send first chunk this run. Burst size: `10 MB`."}
+{"event":"details","time":1500296648,"u":"61","run":"15.58","mem":"29.49","data":"Max time not set in settings so detecting server max PHP runtime."}
+{"event":"details","time":1500296648,"u":"61","run":"15.58","mem":"29.49","data":"Using max runtime: `30`."}
+{"event":"details","time":1500296648,"u":"61","run":"15.58","mem":"29.49","data":"About to read in part contents of part `1` of `1` parts of file `\/home\/kanawaic\/public_html\/wp-content\/uploads\/backupbuddy_temp\/k164a4th1ifaxkq\/live_db_snapshot\/newwp_revslider_layer_animations.sql` to remote location `d2thf6LEFQXeXiC1\/6516f0546a0bc07a1d25a033f85b14d00ba595e2\/wp-content\/uploads\/backupbuddy_temp\/SERIAL\/newwp_revslider_layer_animations.sql` with multipart ID `EFP8_xjVzZixGf388A9ctyvObsLadv60aWSVHYDMM85g6UEGvGUCP6nBc1Tave1uEE4ZElzx4Nvie_4oLhRIe9_FW4GLP16t41qdaqF4aIgeHXceC.p2NhHNrXQGnM8y7VtN9VDzluAixcCS0_wRVQ--`."}
+{"event":"details","time":1500296648,"u":"61","run":"15.58","mem":"29.50","data":"Beginning upload."}
+{"event":"details","time":1500296648,"u":"72","run":"15.70","mem":"29.50","data":"Success sending chunk. Enable full logging for upload result details."}
+{"event":"details","time":1500296648,"u":"72","run":"15.70","mem":"29.50","data":"Uploaded size this burst: `466 Bytes`, Start time: `1500289448.62`. Finish time: `1500289448.73`. Elapsed: `0.114109992981`. Speed: `4 KB`\/sec."}
+{"event":"details","time":1500296648,"u":"72","run":"15.70","mem":"29.50","data":"About to load fileoptions data."}
+{"event":"details","time":1500296648,"u":"73","run":"15.70","mem":"29.50","data":"Fileoptions instance #10."}
+{"event":"details","time":1500296648,"u":"73","run":"15.70","mem":"29.50","data":"Created fileoptions lock file `send-live_ad0851a04f756e94255817ab9a3fc4a2-vgeahv.txt.lock` with ID: 596c99a8b242f6.63485176."}
+{"event":"details","time":1500296648,"u":"73","run":"15.70","mem":"29.52","data":"Fileoptions load using 0.01 MB of memory."}
+{"event":"details","time":1500296648,"u":"73","run":"15.70","mem":"29.52","data":"Fileoptions data loaded."}
+{"event":"details","time":1500296648,"u":"73","run":"15.70","mem":"29.52","data":"Getting etags and notifying of multipart upload completion."}
+{"event":"details","time":1500296648,"u":"96","run":"15.93","mem":"29.52","data":"Server notified of multipart completion."}
+{"event":"details","time":1500296648,"u":"96","run":"15.93","mem":"29.52","data":"No more parts left for this multipart upload. Clearing multipart instance variables."}
+{"event":"details","time":1500296648,"u":"96","run":"15.93","mem":"29.52","data":"Upload speed average of all chunks: `4 KB`."}
+{"event":"details","time":1500296648,"u":"96","run":"15.93","mem":"29.53","data":"Fileoptions `send-live_ad0851a04f756e94255817ab9a3fc4a2-vgeahv.txt` saved. 3400 bytes written."}
+{"event":"details","time":1500296648,"u":"96","run":"15.93","mem":"29.48","data":"Saving catalog that file `\/home\/kanawaic\/public_html\/wp-content\/uploads\/backupbuddy_temp\/k164a4th1ifaxkq\/live_db_snapshot\/newwp_revslider_layer_animations.sql` has been backed up."}
+{"event":"details","time":1500296648,"u":"96","run":"15.93","mem":"29.48","data":"Fileoptions `tables-k164a4th1ifaxkq.txt` saved (Live mode). 1989 bytes written."}
+{"event":"details","time":1500296648,"u":"96","run":"15.93","mem":"29.49","data":"Fileoptions `state-k164a4th1ifaxkq.txt` saved. 4300 bytes written."}
+{"event":"details","time":1500296648,"u":"96","run":"15.94","mem":"29.47","data":"Completed send function. Success."}
+{"event":"details","time":1500296648,"u":"96","run":"15.94","mem":"29.47","data":"About to load fileoptions data."}
+{"event":"details","time":1500296648,"u":"96","run":"15.94","mem":"29.47","data":"Fileoptions instance #16."}
+{"event":"details","time":1500296648,"u":"96","run":"15.94","mem":"29.48","data":"Created fileoptions lock file `send-live_ad0851a04f756e94255817ab9a3fc4a2-vgeahv.txt.lock` with ID: 596c99a8ec5074.74369906."}
+{"event":"details","time":1500296648,"u":"96","run":"15.94","mem":"29.49","data":"Fileoptions load using 0.01 MB of memory."}
+{"event":"details","time":1500296648,"u":"96","run":"15.94","mem":"29.49","data":"Fileoptions data loaded."}
+{"event":"details","time":1500296648,"u":"96","run":"15.94","mem":"29.49","data":"L\u00f6schen nach Versand aktiviert."}
+{"event":"details","time":1500296648,"u":"96","run":"15.94","mem":"29.49","data":"Performing post-send deletion since transfer succeeded."}
+{"event":"details","time":1500296648,"u":"96","run":"15.94","mem":"29.49","data":"Deleting local file `\/home\/kanawaic\/public_html\/wp-content\/uploads\/backupbuddy_temp\/k164a4th1ifaxkq\/live_db_snapshot\/newwp_revslider_layer_animations.sql`."}
+{"event":"details","time":1500296648,"u":"96","run":"15.94","mem":"29.49","data":"Deleted local file after successful remote destination send based on settings."}
+{"event":"archiveDeleted","time":1500296648,"u":"96","run":"15.94","mem":"29.49","data":""}
+{"event":"details","time":1500296648,"u":"96","run":"15.94","mem":"29.49","data":"Ending send() function pass."}

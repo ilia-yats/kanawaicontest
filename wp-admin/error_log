@@ -1,0 +1,2040 @@
+[19-Nov-2016 08:43:00 UTC] PHP Warning:  array_merge(): Argument #1 is not an array in /home/wp/public_html/wp-content/plugins/revslider/includes/framework/base-admin.class.php on line 430
+[21-Dec-2016 07:15:58 UTC] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[21-Dec-2016 18:11:07 UTC] WordPress database error Table 'wp_gml_locations' already exists for query CREATE TABLE wp_gml_locations (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+		category_id INT(11) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+		address_one VARCHAR(255) NOT NULL,
+		address_two VARCHAR(255) NOT NULL,
+		postcode VARCHAR(255) NOT NULL,
+		phone VARCHAR(255) NULL,
+		email VARCHAR(255) NULL,
+		latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,
+		location_image VARCHAR(130) NULL,
+		location_view_url VARCHAR(130) NULL,	 	 
+        description text,		
+		created_date datetime NOT NULL,
+		modified_date datetime NOT NULL,
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[21-Dec-2016 18:11:07 UTC] WordPress database error Table 'wp_gml_settings' already exists for query CREATE TABLE wp_gml_settings (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,		 
+        map_height VARCHAR(20) NULL,
+		map_width VARCHAR(20) NULL,
+		show_phone TINYINT(2) NOT NULL,
+		show_email TINYINT(2) NOT NULL,
+		show_image TINYINT(2) NOT NULL,
+		show_vd_link TINYINT(2) NOT NULL,
+		created_date datetime NOT NULL,	
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[22-Dec-2016 06:32:14 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/wp/public_html/wp-content/plugins/google-map-locations/includes/gml_functions.php on line 282
+[23-Dec-2016 04:56:51 UTC] WordPress database error Column 'address_two' cannot be null for query INSERT INTO `wp_gml_locations` (`category_id`, `name`, `address_one`, `address_two`, `postcode`, `phone`, `email`, `latitude`, `longitude`, `description`, `created_date`, `modified_date`, `status`) VALUES (1, 'test-satish', 'sfgsr', NULL, '', '', '', '5356', '34564', NULL, '2016-12-23 04:56:51', '2016-12-23 04:56:51', 1) made by do_action('google-map-locations_page_add-location'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_add_location, gml_add_new_location
+[23-Dec-2016 05:06:14 UTC] WordPress database error Column 'address_two' cannot be null for query INSERT INTO `wp_gml_locations` (`category_id`, `name`, `address_one`, `address_two`, `postcode`, `phone`, `email`, `latitude`, `longitude`, `description`, `created_date`, `modified_date`, `status`) VALUES (1, 'test', 'rgerdf', NULL, 'dfg', '', '', '4364', '45646', NULL, '2016-12-23 05:06:14', '2016-12-23 05:06:14', 1) made by do_action('google-map-locations_page_add-location'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_add_location, gml_add_new_location
+[23-Dec-2016 05:43:49 UTC] WordPress database error Column 'address_two' cannot be null for query INSERT INTO `wp_gml_locations` (`category_id`, `name`, `address_one`, `address_two`, `postcode`, `phone`, `email`, `latitude`, `longitude`, `description`, `created_date`, `modified_date`, `status`) VALUES (1, 'fdfdfdf', 'http://wordpress-spezialist.ch/?post_type=us_portfolio&p=5868', NULL, 'fdfdf', 'dffdf', 'dfdf', 'dffdf', 'dffdf', NULL, '2016-12-23 05:43:49', '2016-12-23 05:43:49', 1) made by do_action('google-map-locations_page_add-location'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_add_location, gml_add_new_location
+[23-Dec-2016 06:59:15 UTC] WordPress database error Column 'address_two' cannot be null for query INSERT INTO `wp_gml_locations` (`category_id`, `name`, `address_one`, `address_two`, `postcode`, `phone`, `email`, `latitude`, `longitude`, `description`, `created_date`, `modified_date`, `status`) VALUES (1, 'tyu', 'http://wordpress-spezialist.ch/?post_type=us_portfolio&p=5872', NULL, 'tyu', 'tuy', 'ftyu', '6788', '67899', NULL, '2016-12-23 06:59:15', '2016-12-23 06:59:15', 1) made by do_action('google-map-locations_page_add-location'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_add_location, gml_add_new_location
+[23-Dec-2016 07:10:16 UTC] WordPress database error Column 'category_id' cannot be null for query INSERT INTO `wp_gml_locations` (`category_id`, `name`, `address_one`, `address_two`, `postcode`, `phone`, `email`, `latitude`, `longitude`, `description`, `created_date`, `modified_date`, `status`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2016-12-23 07:10:16', '2016-12-23 07:10:16', 1) made by do_action('google-map-locations_page_add-location'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_add_location, gml_add_new_location
+[23-Dec-2016 07:10:38 UTC] WordPress database error Column 'address_two' cannot be null for query INSERT INTO `wp_gml_locations` (`category_id`, `name`, `address_one`, `address_two`, `postcode`, `phone`, `email`, `latitude`, `longitude`, `description`, `created_date`, `modified_date`, `status`) VALUES (1, 'dsfds', 'http://wordpress-spezialist.ch/?post_type=us_portfolio&p=5868', NULL, 'ret', 'strge', 'tsrg', '47.373878', '6.633597', NULL, '2016-12-23 07:10:38', '2016-12-23 07:10:38', 1) made by do_action('google-map-locations_page_add-location'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_add_location, gml_add_new_location
+[23-Dec-2016 07:17:24 UTC] WordPress database error Column 'address_two' cannot be null for query INSERT INTO `wp_gml_locations` (`category_id`, `name`, `address_one`, `address_two`, `postcode`, `phone`, `email`, `latitude`, `longitude`, `description`, `created_date`, `modified_date`, `status`) VALUES (1, '11', 'http://zephyr.us-themes.com/portfolio/project-slider/', NULL, '', '', '', '47.373878', '8.04312', NULL, '2016-12-23 07:17:24', '2016-12-23 07:17:24', 1) made by do_action('google-map-locations_page_add-location'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_add_location, gml_add_new_location
+[23-Dec-2016 07:38:12 UTC] WordPress database error Column 'address_two' cannot be null for query INSERT INTO `wp_gml_locations` (`category_id`, `name`, `address_one`, `address_two`, `postcode`, `phone`, `email`, `latitude`, `longitude`, `description`, `created_date`, `modified_date`, `status`) VALUES (1, 'fgh', 'http://wordpress-spezialist.ch/?post_type=us_portfolio&p=5872', NULL, 'fgh', '', '', '46.519962', '8.306372', NULL, '2016-12-23 07:38:12', '2016-12-23 07:38:12', 1) made by do_action('google-map-locations_page_add-location'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_add_location, gml_add_new_location
+[23-Dec-2016 07:55:50 UTC] WordPress database error Column 'address_two' cannot be null for query INSERT INTO `wp_gml_locations` (`category_id`, `name`, `address_one`, `address_two`, `postcode`, `phone`, `email`, `latitude`, `longitude`, `description`, `created_date`, `modified_date`, `status`) VALUES (1, 'dfs', 'http://zephyr.us-themes.com/portfolio/project-slider/', NULL, 'dsg', 'dfg', 'dfg', '47.373878', '7686', NULL, '2016-12-23 07:55:50', '2016-12-23 07:55:50', 1) made by do_action('google-map-locations_page_add-location'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_add_location, gml_add_new_location
+[23-Dec-2016 07:55:54 UTC] WordPress database error Column 'address_two' cannot be null for query INSERT INTO `wp_gml_locations` (`category_id`, `name`, `address_one`, `address_two`, `postcode`, `phone`, `email`, `latitude`, `longitude`, `description`, `created_date`, `modified_date`, `status`) VALUES (1, 'dfs', 'http://zephyr.us-themes.com/portfolio/project-slider/', NULL, 'dsg', 'dfg', 'dfg', '47.373878', '7686', NULL, '2016-12-23 07:55:54', '2016-12-23 07:55:54', 1) made by do_action('google-map-locations_page_add-location'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_add_location, gml_add_new_location
+[23-Dec-2016 07:55:56 UTC] WordPress database error Column 'address_two' cannot be null for query INSERT INTO `wp_gml_locations` (`category_id`, `name`, `address_one`, `address_two`, `postcode`, `phone`, `email`, `latitude`, `longitude`, `description`, `created_date`, `modified_date`, `status`) VALUES (1, 'dfs', 'http://zephyr.us-themes.com/portfolio/project-slider/', NULL, 'dsg', 'dfg', 'dfg', '47.373878', '7686', NULL, '2016-12-23 07:55:56', '2016-12-23 07:55:56', 1) made by do_action('google-map-locations_page_add-location'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_add_location, gml_add_new_location
+[23-Dec-2016 08:01:55 UTC] WordPress database error Column 'address_two' cannot be null for query INSERT INTO `wp_gml_locations` (`category_id`, `name`, `address_one`, `address_two`, `postcode`, `phone`, `email`, `latitude`, `longitude`, `description`, `created_date`, `modified_date`, `status`) VALUES (1, 'hg', 'http://wordpress-spezialist.ch/?post_type=us_portfolio&p=5868', NULL, 'yj', 'jfgh', '', '46.519962', 'yjfgtj', NULL, '2016-12-23 08:01:55', '2016-12-23 08:01:55', 1) made by do_action('google-map-locations_page_add-location'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_add_location, gml_add_new_location
+[23-Dec-2016 08:05:33 UTC] PHP Fatal error:  Function name must be a string in /home/wp/public_html/wp-content/plugins/google-map-locations/includes/gml_functions.php on line 31
+[23-Dec-2016 08:12:14 UTC] WordPress database error Column 'address_two' cannot be null for query INSERT INTO `wp_gml_locations` (`category_id`, `name`, `address_one`, `address_two`, `postcode`, `phone`, `email`, `latitude`, `longitude`, `description`, `created_date`, `modified_date`, `status`) VALUES (1, 'dsfg', 'http://zephyr.us-themes.com/portfolio/creative-project-slider/', NULL, 'sdefg', '', '', '456', '547', NULL, '2016-12-23 08:12:14', '2016-12-23 08:12:14', 1) made by do_action('google-map-locations_page_add-location'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_add_location, gml_add_new_location
+[23-Dec-2016 08:14:30 UTC] WordPress database error Column 'address_two' cannot be null for query INSERT INTO `wp_gml_locations` (`category_id`, `name`, `address_one`, `address_two`, `postcode`, `phone`, `email`, `latitude`, `longitude`, `description`, `created_date`, `modified_date`, `status`) VALUES (1, 'yyy', 'http://zephyr.us-themes.com/portfolio/project-slider/', NULL, 'jkjkl', '', '', '88', '90', NULL, '2016-12-23 08:14:30', '2016-12-23 08:14:30', 1) made by do_action('google-map-locations_page_add-location'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_add_location, gml_add_new_location
+[23-Dec-2016 08:19:43 UTC] WordPress database error Column 'address_two' cannot be null for query INSERT INTO `wp_gml_locations` (`category_id`, `name`, `address_one`, `address_two`, `postcode`, `phone`, `email`, `latitude`, `longitude`, `description`, `created_date`, `modified_date`, `status`) VALUES (1, 'yht', 'http://wordpress-spezialist.ch/?post_type=us_portfolio&p=5868', NULL, '', '', '', '56', '678', NULL, '2016-12-23 08:19:43', '2016-12-23 08:19:43', 1) made by do_action('google-map-locations_page_add-location'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_add_location, gml_add_new_location
+[23-Dec-2016 08:23:22 UTC] WordPress database error Column 'category_id' cannot be null for query INSERT INTO `wp_gml_locations` (`category_id`, `name`, `address_one`, `address_two`, `postcode`, `phone`, `email`, `latitude`, `longitude`, `description`, `created_date`, `modified_date`, `status`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2016-12-23 08:23:22', '2016-12-23 08:23:22', 1) made by do_action('google-map-locations_page_add-location'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_add_location, gml_add_new_location
+[23-Dec-2016 09:42:07 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/wp/public_html/wp-content/plugins/google-map-locations/admin_views/gml_edit_location.php on line 78
+[23-Dec-2016 10:04:01 UTC] WordPress database error Column 'address_two' cannot be null for query INSERT INTO `wp_gml_locations` (`category_id`, `name`, `address_one`, `address_two`, `postcode`, `phone`, `email`, `latitude`, `longitude`, `description`, `created_date`, `modified_date`, `status`) VALUES (1, 'hjghhgh', 'http://wordpress-spezialist.ch/?post_type=us_portfolio&p=5872', NULL, 'hghgh', 'ghgh', 'ghgh', '46.519962', '8.306372', NULL, '2016-12-23 10:04:01', '2016-12-23 10:04:01', 1) made by do_action('google-map-locations_page_add-location'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_add_location, gml_add_new_location
+[23-Dec-2016 11:56:43 UTC] PHP Warning:  move_uploaded_file(uploads/1.png): failed to open stream: No such file or directory in /home/wp/public_html/wp-content/plugins/google-map-locations/includes/gml_functions.php on line 29
+[23-Dec-2016 11:56:43 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpuGNZJv' to 'uploads/1.png' in /home/wp/public_html/wp-content/plugins/google-map-locations/includes/gml_functions.php on line 29
+[23-Dec-2016 12:04:47 UTC] PHP Warning:  Illegal string offset 'size' in /home/wp/public_html/wp-admin/includes/file.php on line 323
+[23-Dec-2016 12:12:29 UTC] PHP Warning:  move_uploaded_file(): http:// wrapper is disabled in the server configuration by allow_url_fopen=0 in /home/wp/public_html/wp-content/plugins/google-map-locations/includes/gml_functions.php on line 29
+[23-Dec-2016 12:12:29 UTC] PHP Warning:  move_uploaded_file(http://wordpress-spezialist.ch/wp-content/plugins/google-map-locations/admin_views/uploads1 (2).png): failed to open stream: no suitable wrapper could be found in /home/wp/public_html/wp-content/plugins/google-map-locations/includes/gml_functions.php on line 29
+[23-Dec-2016 12:12:29 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpRTRWwF' to 'http://wordpress-spezialist.ch/wp-content/plugins/google-map-locations/admin_views/uploads1 (2).png' in /home/wp/public_html/wp-content/plugins/google-map-locations/includes/gml_functions.php on line 29
+[23-Dec-2016 12:14:22 UTC] PHP Warning:  move_uploaded_file(): http:// wrapper is disabled in the server configuration by allow_url_fopen=0 in /home/wp/public_html/wp-content/plugins/google-map-locations/includes/gml_functions.php on line 29
+[23-Dec-2016 12:14:22 UTC] PHP Warning:  move_uploaded_file(http://wordpress-spezialist.ch/wp-content/uploads1.jpg): failed to open stream: no suitable wrapper could be found in /home/wp/public_html/wp-content/plugins/google-map-locations/includes/gml_functions.php on line 29
+[23-Dec-2016 12:14:22 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phprcotP2' to 'http://wordpress-spezialist.ch/wp-content/uploads1.jpg' in /home/wp/public_html/wp-content/plugins/google-map-locations/includes/gml_functions.php on line 29
+[23-Dec-2016 12:22:39 UTC] WordPress database error Column 'category_id' cannot be null for query INSERT INTO `wp_gml_locations` (`category_id`, `name`, `address_one`, `address_two`, `postcode`, `phone`, `email`, `latitude`, `longitude`, `description`, `created_date`, `modified_date`, `status`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2016-12-23 12:22:39', '2016-12-23 12:22:39', 1) made by do_action('google-map-locations_page_add-location'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_add_location, gml_add_new_location
+[23-Dec-2016 12:23:17 UTC] PHP Warning:  move_uploaded_file(public_html/wp-content/plugins/google-map-locations/admin_views/uploads14 (1).png): failed to open stream: No such file or directory in /home/wp/public_html/wp-content/plugins/google-map-locations/includes/gml_functions.php on line 30
+[23-Dec-2016 12:23:17 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpP4shxU' to 'public_html/wp-content/plugins/google-map-locations/admin_views/uploads14 (1).png' in /home/wp/public_html/wp-content/plugins/google-map-locations/includes/gml_functions.php on line 30
+[23-Dec-2016 12:25:35 UTC] PHP Warning:  move_uploaded_file(public_html/wp-content/plugins/google-map-locations/admin_views/uploads/14 (1).png): failed to open stream: No such file or directory in /home/wp/public_html/wp-content/plugins/google-map-locations/includes/gml_functions.php on line 30
+[23-Dec-2016 12:25:35 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpKigvX2' to 'public_html/wp-content/plugins/google-map-locations/admin_views/uploads/14 (1).png' in /home/wp/public_html/wp-content/plugins/google-map-locations/includes/gml_functions.php on line 30
+[23-Dec-2016 12:26:59 UTC] PHP Warning:  move_uploaded_file(uploads/14 (1).png): failed to open stream: No such file or directory in /home/wp/public_html/wp-content/plugins/google-map-locations/includes/gml_functions.php on line 30
+[23-Dec-2016 12:26:59 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phplj4Klr' to 'uploads/14 (1).png' in /home/wp/public_html/wp-content/plugins/google-map-locations/includes/gml_functions.php on line 30
+[23-Dec-2016 12:27:40 UTC] PHP Warning:  move_uploaded_file(/wp-content/plugins/google-map-locations/admin_views/uploads/14 (1).png): failed to open stream: No such file or directory in /home/wp/public_html/wp-content/plugins/google-map-locations/includes/gml_functions.php on line 30
+[23-Dec-2016 12:27:40 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpilJGql' to '/wp-content/plugins/google-map-locations/admin_views/uploads/14 (1).png' in /home/wp/public_html/wp-content/plugins/google-map-locations/includes/gml_functions.php on line 30
+[23-Dec-2016 12:49:09 UTC] PHP Warning:  move_uploaded_file(/home/wp/public_html/wp-content/uploads/training/1482497349_14 (1).png): failed to open stream: No such file or directory in /home/wp/public_html/wp-content/plugins/google-map-locations/includes/gml_functions.php on line 33
+[23-Dec-2016 12:49:09 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpQkyURq' to '/home/wp/public_html/wp-content/uploads/training/1482497349_14 (1).png' in /home/wp/public_html/wp-content/plugins/google-map-locations/includes/gml_functions.php on line 33
+[23-Dec-2016 12:50:54 UTC] PHP Warning:  move_uploaded_file(): The second argument to copy() function cannot be a directory in /home/wp/public_html/wp-content/plugins/google-map-locations/includes/gml_functions.php on line 33
+[23-Dec-2016 12:50:54 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpEgzxPi' to '/home/wp/public_html/wp-content/uploads' in /home/wp/public_html/wp-content/plugins/google-map-locations/includes/gml_functions.php on line 33
+[23-Dec-2016 12:57:10 UTC] PHP Warning:  move_uploaded_file(/home/wp/public_html/wp-content/uploads/location_img/1 (4).png): failed to open stream: No such file or directory in /home/wp/public_html/wp-content/plugins/google-map-locations/includes/gml_functions.php on line 33
+[23-Dec-2016 12:57:10 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpuDzjyn' to '/home/wp/public_html/wp-content/uploads/location_img/1 (4).png' in /home/wp/public_html/wp-content/plugins/google-map-locations/includes/gml_functions.php on line 33
+[24-Dec-2016 08:52:57 UTC] PHP Parse error:  syntax error, unexpected '$name' (T_VARIABLE) in /home/wp/public_html/wp-content/plugins/google-map-locations/includes/gml_functions.php on line 138
+[24-Dec-2016 08:52:57 UTC] PHP Parse error:  syntax error, unexpected '$name' (T_VARIABLE) in /home/wp/public_html/wp-content/plugins/google-map-locations/includes/gml_functions.php on line 138
+[24-Dec-2016 08:52:59 UTC] PHP Parse error:  syntax error, unexpected '$name' (T_VARIABLE) in /home/wp/public_html/wp-content/plugins/google-map-locations/includes/gml_functions.php on line 138
+[24-Dec-2016 08:53:03 UTC] PHP Parse error:  syntax error, unexpected '$name' (T_VARIABLE) in /home/wp/public_html/wp-content/plugins/google-map-locations/includes/gml_functions.php on line 138
+[26-Dec-2016 08:26:46 UTC] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/wp/public_html/wp-content/plugins/google-map-locations/admin_views/gml_add_location.php on line 17
+[27-Dec-2016 09:05:22 UTC] WordPress database error Column 'address_two' cannot be null for query INSERT INTO `wp_gml_locations` (`category_id`, `name`, `address_one`, `address_two`, `postcode`, `phone`, `email`, `latitude`, `longitude`, `description`, `created_date`, `modified_date`, `status`) VALUES (1, 'ankitchoudharywww', 'http://wordpress-spezialist.ch/?post_type=us_portfolio&p=5982', NULL, 'gfgfgfg', 'fgfgfg', 'fgfg', '434', '434', NULL, '2016-12-27 09:05:22', '2016-12-27 09:05:22', 1) made by do_action('google-map-locations_page_add-location'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_add_location, gml_add_new_location
+[27-Dec-2016 09:32:48 UTC] WordPress database error Column 'address_one' cannot be null for query INSERT INTO `wp_gml_locations` (`category_id`, `name`, `address_one`, `address_two`, `postcode`, `phone`, `email`, `latitude`, `longitude`, `description`, `created_date`, `modified_date`, `status`) VALUES (1, 'ankit', NULL, NULL, 'fdfdf', 'fdfdf', 'dffdf', '434', '434', NULL, '2016-12-27 09:32:48', '2016-12-27 09:32:48', 1) made by do_action('google-map-locations_page_add-location'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_add_location, gml_add_new_location
+[27-Dec-2016 09:32:56 UTC] WordPress database error Column 'category_id' cannot be null for query INSERT INTO `wp_gml_locations` (`category_id`, `name`, `address_one`, `address_two`, `postcode`, `phone`, `email`, `latitude`, `longitude`, `description`, `created_date`, `modified_date`, `status`) VALUES (NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2016-12-27 09:32:56', '2016-12-27 09:32:56', 1) made by do_action('google-map-locations_page_add-location'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_add_location, gml_add_new_location
+[27-Dec-2016 09:33:37 UTC] WordPress database error Column 'address_one' cannot be null for query INSERT INTO `wp_gml_locations` (`category_id`, `name`, `address_one`, `address_two`, `postcode`, `phone`, `email`, `latitude`, `longitude`, `description`, `created_date`, `modified_date`, `status`) VALUES (1, 'ankitchoudhary', NULL, NULL, 'bvbvb', 'vbvbv', 'bvbvb', '434', '434', NULL, '2016-12-27 09:33:37', '2016-12-27 09:33:37', 1) made by do_action('google-map-locations_page_add-location'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_add_location, gml_add_new_location
+[29-Dec-2016 06:35:02 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/wp/public_html/wp-content/plugins/google-map-locations/includes/gml_functions.php on line 38
+[29-Dec-2016 08:50:26 UTC] WordPress database error Column 'address_two' cannot be null for query INSERT INTO `wp_gml_locations` (`category_id`, `name`, `address_one`, `address_two`, `postcode`, `phone`, `email`, `latitude`, `longitude`, `description`, `created_date`, `modified_date`, `status`) VALUES (1, 'satish-test', 'http://wordpress-spezialist.ch/?post_type=us_portfolio&p=6227', NULL, 'hi check shortfact1 data  please only test  not correct data', 'safsdzg  dsgfs  dfg', 'fghf  dgfg', '47.3934', '77.39102649999995', NULL, '2016-12-29 08:50:26', '2016-12-29 08:50:26', 1) made by do_action('google-map-locations_page_add-location'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_add_location, gml_add_new_location
+[29-Dec-2016 08:51:19 UTC] WordPress database error Column 'address_two' cannot be null for query INSERT INTO `wp_gml_locations` (`category_id`, `name`, `address_one`, `address_two`, `postcode`, `phone`, `email`, `latitude`, `longitude`, `description`, `created_date`, `modified_date`, `status`) VALUES (1, 'test-satish3', 'http://wordpress-spezialist.ch/?post_type=us_portfolio&p=6231', NULL, 'dfsfg  xZDC', 'zdsf  dsxzvg', 'dsfzf  dfsxg', '47.3934', '77.39102649999995', NULL, '2016-12-29 08:51:19', '2016-12-29 08:51:19', 1) made by do_action('google-map-locations_page_add-location'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_add_location, gml_add_new_location
+[29-Dec-2016 08:53:57 UTC] WordPress database error Column 'address_two' cannot be null for query INSERT INTO `wp_gml_locations` (`category_id`, `name`, `address_one`, `address_two`, `postcode`, `phone`, `email`, `latitude`, `longitude`, `description`, `created_date`, `modified_date`, `status`) VALUES (1, 'satish-test', 'http://wordpress-spezialist.ch/?post_type=us_portfolio&p=6229', NULL, 'dfgxhgdsgdf fgh h  satish', 'fgdf ', 'gyrdftyh', '47.3934', '8.04312', NULL, '2016-12-29 08:53:57', '2016-12-29 08:53:57', 1) made by do_action('google-map-locations_page_add-location'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_add_location, gml_add_new_location
+[29-Dec-2016 08:56:42 UTC] WordPress database error Column 'address_two' cannot be null for query INSERT INTO `wp_gml_locations` (`category_id`, `name`, `address_one`, `address_two`, `postcode`, `phone`, `email`, `latitude`, `longitude`, `description`, `created_date`, `modified_date`, `status`) VALUES (1, 'test-satish', 'http://wordpress-spezialist.ch/?post_type=us_portfolio&p=6231', NULL, 'aswdfsa  dzsfvd', 'dfh', 'dfhg', '47.3934', '77.39102649999995', NULL, '2016-12-29 08:56:42', '2016-12-29 08:56:42', 1) made by do_action('google-map-locations_page_add-location'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_add_location, gml_add_new_location
+[29-Dec-2016 08:58:10 UTC] WordPress database error Column 'address_two' cannot be null for query INSERT INTO `wp_gml_locations` (`category_id`, `name`, `address_one`, `address_two`, `postcode`, `phone`, `email`, `latitude`, `longitude`, `description`, `created_date`, `modified_date`, `status`) VALUES (1, 'test-satish', 'http://wordpress-spezialist.ch/?post_type=us_portfolio&p=6227', NULL, 'fbgdxgh dfgh  gdfg', 'fgh', 'dfh', '47.3934', '77.39102649999995', NULL, '2016-12-29 08:58:10', '2016-12-29 08:58:10', 1) made by do_action('google-map-locations_page_add-location'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_add_location, gml_add_new_location
+[29-Dec-2016 08:59:10 UTC] WordPress database error Column 'address_two' cannot be null for query INSERT INTO `wp_gml_locations` (`category_id`, `name`, `address_one`, `address_two`, `postcode`, `phone`, `email`, `latitude`, `longitude`, `description`, `created_date`, `modified_date`, `status`) VALUES (1, 'test-satish', 'http://wordpress-spezialist.ch/?post_type=us_portfolio&p=6231', NULL, 'daSf  safs', 'sdf', 'sdfgg', '47.3934', '77.39102649999995', NULL, '2016-12-29 08:59:10', '2016-12-29 08:59:10', 1) made by do_action('google-map-locations_page_add-location'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_add_location, gml_add_new_location
+[29-Dec-2016 09:00:22 UTC] WordPress database error Column 'address_two' cannot be null for query INSERT INTO `wp_gml_locations` (`category_id`, `name`, `address_one`, `address_two`, `postcode`, `phone`, `email`, `latitude`, `longitude`, `description`, `created_date`, `modified_date`, `status`) VALUES (1, 'test-satish', 'http://wordpress-spezialist.ch/?post_type=us_portfolio&p=6231', NULL, 'fdsg  dszgx satis kumar singh', 'dszfs', 'dfvg', '47.3934', '77.39102649999995', NULL, '2016-12-29 09:00:22', '2016-12-29 09:00:22', 1) made by do_action('google-map-locations_page_add-location'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_add_location, gml_add_new_location
+[29-Dec-2016 09:02:49 UTC] WordPress database error Column 'address_two' cannot be null for query INSERT INTO `wp_gml_locations` (`category_id`, `name`, `address_one`, `address_two`, `postcode`, `phone`, `email`, `latitude`, `longitude`, `description`, `created_date`, `modified_date`, `status`) VALUES (1, 'test-satish', 'http://wordpress-spezialist.ch/?post_type=us_portfolio&p=6231', NULL, 'dfcszg  SFAd', 'dfgh', 'dfh', '47.3934', '77.39102649999995', NULL, '2016-12-29 09:02:49', '2016-12-29 09:02:49', 1) made by do_action('google-map-locations_page_add-location'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_add_location, gml_add_new_location
+[29-Dec-2016 09:04:27 UTC] WordPress database error Column 'category_id' cannot be null for query INSERT INTO `wp_gml_locations` (`category_id`, `name`, `address_one`, `address_two`, `postcode`, `phone`, `email`, `latitude`, `longitude`, `description`, `created_date`, `modified_date`, `status`) VALUES (NULL, NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, '2016-12-29 09:04:27', '2016-12-29 09:04:27', 1) made by do_action('google-map-locations_page_add-location'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_add_location, gml_add_new_location
+[29-Dec-2016 09:04:54 UTC] WordPress database error Column 'address_two' cannot be null for query INSERT INTO `wp_gml_locations` (`category_id`, `name`, `address_one`, `address_two`, `postcode`, `phone`, `email`, `latitude`, `longitude`, `description`, `created_date`, `modified_date`, `status`) VALUES (1, 'test-satish', 'http://wordpress-spezialist.ch/?post_type=us_portfolio&p=6229', NULL, 'xvgdfbfcdszg', 'dfgdx', 'dfh', '47.3934', '77.39102649999995', NULL, '2016-12-29 09:04:54', '2016-12-29 09:04:54', 1) made by do_action('google-map-locations_page_add-location'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_add_location, gml_add_new_location
+[29-Dec-2016 09:06:45 UTC] WordPress database error Column 'address_two' cannot be null for query INSERT INTO `wp_gml_locations` (`category_id`, `name`, `address_one`, `address_two`, `postcode`, `phone`, `email`, `latitude`, `longitude`, `description`, `created_date`, `modified_date`, `status`) VALUES (1, 'test-satish', 'http://wordpress-spezialist.ch/?post_type=us_portfolio&p=6231', NULL, 'dfxgh  fvdsxg', 'fgjc', 'fgjc', '47.3934', '77.39102649999995', NULL, '2016-12-29 09:06:45', '2016-12-29 09:06:45', 1) made by do_action('google-map-locations_page_add-location'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_add_location, gml_add_new_location
+[29-Dec-2016 09:07:44 UTC] WordPress database error Column 'address_two' cannot be null for query INSERT INTO `wp_gml_locations` (`category_id`, `name`, `address_one`, `address_two`, `postcode`, `phone`, `email`, `latitude`, `longitude`, `description`, `created_date`, `modified_date`, `status`) VALUES (1, 'test-satish', 'http://wordpress-spezialist.ch/?post_type=us_portfolio&p=6229', NULL, 'vcxdfc asdfsaf asf asf asfg asf sadfds sdfgg sdfgdsg sdg   sdgdsf', 'sdgfdf', 'dfsgdfg', '47.3934', '77.39102649999995', NULL, '2016-12-29 09:07:44', '2016-12-29 09:07:44', 1) made by do_action('google-map-locations_page_add-location'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_add_location, gml_add_new_location
+[29-Dec-2016 09:08:07 UTC] WordPress database error Column 'address_two' cannot be null for query INSERT INTO `wp_gml_locations` (`category_id`, `name`, `address_one`, `address_two`, `postcode`, `phone`, `email`, `latitude`, `longitude`, `description`, `created_date`, `modified_date`, `status`) VALUES (1, 'test-satish', 'http://wordpress-spezialist.ch/?post_type=us_portfolio&p=6231', NULL, 'sdg', 'dsfgh', 'dfsghb', '47.3934', '77.39102649999995', NULL, '2016-12-29 09:08:07', '2016-12-29 09:08:07', 1) made by do_action('google-map-locations_page_add-location'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_add_location, gml_add_new_location
+[29-Dec-2016 09:08:55 UTC] WordPress database error Column 'address_two' cannot be null for query INSERT INTO `wp_gml_locations` (`category_id`, `name`, `address_one`, `address_two`, `postcode`, `phone`, `email`, `latitude`, `longitude`, `description`, `created_date`, `modified_date`, `status`) VALUES (1, 'test-satish3', 'http://wordpress-spezialist.ch/?post_type=us_portfolio&p=6231', NULL, 'asfgd drgdft dfgdfh', 'fdgh ', 'dfgyh', '47.3934', '77.39102649999995', NULL, '2016-12-29 09:08:55', '2016-12-29 09:08:55', 1) made by do_action('google-map-locations_page_add-location'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_add_location, gml_add_new_location
+[29-Dec-2016 09:09:44 UTC] WordPress database error Column 'address_two' cannot be null for query INSERT INTO `wp_gml_locations` (`category_id`, `name`, `address_one`, `address_two`, `postcode`, `phone`, `email`, `latitude`, `longitude`, `description`, `created_date`, `modified_date`, `status`) VALUES (1, 'test-satish', 'http://wordpress-spezialist.ch/?post_type=us_portfolio&p=6231', NULL, 'fxgfd', 'dfhg', 'fghj', '47.3934', '77.39102649999995', NULL, '2016-12-29 09:09:44', '2016-12-29 09:09:44', 1) made by do_action('google-map-locations_page_add-location'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_add_location, gml_add_new_location
+[29-Dec-2016 09:11:35 UTC] WordPress database error Column 'address_two' cannot be null for query INSERT INTO `wp_gml_locations` (`category_id`, `name`, `address_one`, `address_two`, `postcode`, `phone`, `email`, `latitude`, `longitude`, `description`, `created_date`, `modified_date`, `status`) VALUES (1, 'test-satish', 'http://wordpress-spezialist.ch/?post_type=us_portfolio&p=6229', NULL, 'fcdxjg\r\nfcxh', 'dfhfg\r\ngdfxgh', 'dfhj', '47.3934', '77.39102649999995', NULL, '2016-12-29 09:11:35', '2016-12-29 09:11:35', 1) made by do_action('google-map-locations_page_add-location'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_add_location, gml_add_new_location
+[29-Dec-2016 09:13:26 UTC] WordPress database error Column 'address_two' cannot be null for query INSERT INTO `wp_gml_locations` (`category_id`, `name`, `address_one`, `address_two`, `postcode`, `phone`, `email`, `latitude`, `longitude`, `description`, `created_date`, `modified_date`, `status`) VALUES (1, 'test-satish', 'http://wordpress-spezialist.ch/?post_type=us_portfolio&p=6229', NULL, 'sfdg dfr gdfh', 'dfghfg', 'dfghfg', '47.3934', '77.39102649999995', NULL, '2016-12-29 09:13:26', '2016-12-29 09:13:26', 1) made by do_action('google-map-locations_page_add-location'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_add_location, gml_add_new_location
+[29-Dec-2016 09:17:39 UTC] WordPress database error Column 'address_two' cannot be null for query INSERT INTO `wp_gml_locations` (`category_id`, `name`, `address_one`, `address_two`, `postcode`, `phone`, `email`, `latitude`, `longitude`, `description`, `created_date`, `modified_date`, `status`) VALUES (1, 'test-satish', 'http://wordpress-spezialist.ch/?post_type=us_portfolio&p=6231', NULL, 'aefreaw dsefr e', 'deswr ', 'ew r', '47.3934', '77.39102649999995', NULL, '2016-12-29 09:17:39', '2016-12-29 09:17:39', 1) made by do_action('google-map-locations_page_add-location'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_add_location, gml_add_new_location
+[29-Dec-2016 09:32:03 UTC] WordPress database error Column 'address_two' cannot be null for query INSERT INTO `wp_gml_locations` (`category_id`, `name`, `address_one`, `address_two`, `postcode`, `phone`, `email`, `latitude`, `longitude`, `description`, `created_date`, `modified_date`, `status`) VALUES (1, 'test-satish', 'http://wordpress-spezialist.ch/?post_type=us_portfolio&p=6229', NULL, 'sdszg', 'dgdf', 'xdfgdf', '47.3934', '77.39102649999995', NULL, '2016-12-29 09:32:03', '2016-12-29 09:32:03', 1) made by do_action('google-map-locations_page_add-location'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_add_location, gml_add_new_location
+[29-Dec-2016 09:33:27 UTC] PHP Fatal error:  Cannot redeclare getExtension() (previously declared in /home/wp/public_html/wp-content/plugins/google-map-locations/includes/gml_functions.php:10) in /home/wp/public_html/wp-content/plugins/google-map-locations/admin_views/gml_add_location.php on line 18
+[29-Dec-2016 09:33:34 UTC] PHP Fatal error:  Cannot redeclare getExtension() (previously declared in /home/wp/public_html/wp-content/plugins/google-map-locations/includes/gml_functions.php:10) in /home/wp/public_html/wp-content/plugins/google-map-locations/admin_views/gml_add_location.php on line 18
+[29-Dec-2016 09:33:47 UTC] PHP Fatal error:  Cannot redeclare getExtension() (previously declared in /home/wp/public_html/wp-content/plugins/google-map-locations/includes/gml_functions.php:10) in /home/wp/public_html/wp-content/plugins/google-map-locations/admin_views/gml_add_location.php on line 18
+[03-Jan-2017 09:48:41 UTC] WordPress database error Table 'wp_gml_locations' already exists for query CREATE TABLE wp_gml_locations (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+		category_id INT(11) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+		address_one VARCHAR(255) NOT NULL,
+		address_two VARCHAR(255) NOT NULL,
+		postcode VARCHAR(255) NOT NULL,
+		phone VARCHAR(255) NULL,
+		email VARCHAR(255) NULL,
+		latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,
+		location_image VARCHAR(130) NULL,
+		location_view_url VARCHAR(130) NULL,	 	 
+        description text,		
+		created_date datetime NOT NULL,
+		modified_date datetime NOT NULL,
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 09:48:41 UTC] WordPress database error Table 'wp_gml_settings' already exists for query CREATE TABLE wp_gml_settings (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,		 
+        map_height VARCHAR(20) NULL,
+		map_width VARCHAR(20) NULL,
+		show_phone TINYINT(2) NOT NULL,
+		show_email TINYINT(2) NOT NULL,
+		show_image TINYINT(2) NOT NULL,
+		show_vd_link TINYINT(2) NOT NULL,
+		created_date datetime NOT NULL,	
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 11:27:23 UTC] WordPress database error Table 'newwp_gml_locations' already exists for query CREATE TABLE newwp_gml_locations (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+		category_id INT(11) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+		address_one VARCHAR(255) NOT NULL,
+		address_two VARCHAR(255) NOT NULL,
+		postcode VARCHAR(255) NOT NULL,
+		phone VARCHAR(255) NULL,
+		email VARCHAR(255) NULL,
+		latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,
+		location_image VARCHAR(130) NULL,
+		location_view_url VARCHAR(130) NULL,	 	 
+        description text,		
+		created_date datetime NOT NULL,
+		modified_date datetime NOT NULL,
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 11:27:23 UTC] WordPress database error Table 'newwp_gml_settings' already exists for query CREATE TABLE newwp_gml_settings (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,		 
+        map_height VARCHAR(20) NULL,
+		map_width VARCHAR(20) NULL,
+		show_phone TINYINT(2) NOT NULL,
+		show_email TINYINT(2) NOT NULL,
+		show_image TINYINT(2) NOT NULL,
+		show_vd_link TINYINT(2) NOT NULL,
+		created_date datetime NOT NULL,	
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 11:29:32 UTC] WordPress database error Table 'newwp_gml_locations' already exists for query CREATE TABLE newwp_gml_locations (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+		category_id INT(11) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+		address_one VARCHAR(255) NOT NULL,
+		address_two VARCHAR(255) NOT NULL,
+		postcode VARCHAR(255) NOT NULL,
+		phone VARCHAR(255) NULL,
+		email VARCHAR(255) NULL,
+		latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,
+		location_image VARCHAR(130) NULL,
+		location_view_url VARCHAR(130) NULL,	 	 
+        description text,		
+		created_date datetime NOT NULL,
+		modified_date datetime NOT NULL,
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 11:29:32 UTC] WordPress database error Table 'newwp_gml_settings' already exists for query CREATE TABLE newwp_gml_settings (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,		 
+        map_height VARCHAR(20) NULL,
+		map_width VARCHAR(20) NULL,
+		show_phone TINYINT(2) NOT NULL,
+		show_email TINYINT(2) NOT NULL,
+		show_image TINYINT(2) NOT NULL,
+		show_vd_link TINYINT(2) NOT NULL,
+		created_date datetime NOT NULL,	
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 11:35:46 UTC] WordPress database error Table 'newwp_gml_locations' already exists for query CREATE TABLE newwp_gml_locations (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+		category_id INT(11) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+		address_one VARCHAR(255) NOT NULL,
+		address_two VARCHAR(255) NOT NULL,
+		postcode VARCHAR(255) NOT NULL,
+		phone VARCHAR(255) NULL,
+		email VARCHAR(255) NULL,
+		latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,
+		location_image VARCHAR(130) NULL,
+		location_view_url VARCHAR(130) NULL,	 	 
+        description text,		
+		created_date datetime NOT NULL,
+		modified_date datetime NOT NULL,
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 11:35:46 UTC] WordPress database error Table 'newwp_gml_settings' already exists for query CREATE TABLE newwp_gml_settings (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,		 
+        map_height VARCHAR(20) NULL,
+		map_width VARCHAR(20) NULL,
+		show_phone TINYINT(2) NOT NULL,
+		show_email TINYINT(2) NOT NULL,
+		show_image TINYINT(2) NOT NULL,
+		show_vd_link TINYINT(2) NOT NULL,
+		created_date datetime NOT NULL,	
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 11:38:27 UTC] WordPress database error Table 'newwp_gml_locations' already exists for query CREATE TABLE newwp_gml_locations (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+		category_id INT(11) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+		address_one VARCHAR(255) NOT NULL,
+		address_two VARCHAR(255) NOT NULL,
+		postcode VARCHAR(255) NOT NULL,
+		phone VARCHAR(255) NULL,
+		email VARCHAR(255) NULL,
+		latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,
+		location_image VARCHAR(130) NULL,
+		location_view_url VARCHAR(130) NULL,	 	 
+        description text,		
+		created_date datetime NOT NULL,
+		modified_date datetime NOT NULL,
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 11:38:27 UTC] WordPress database error Table 'newwp_gml_settings' already exists for query CREATE TABLE newwp_gml_settings (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,		 
+        map_height VARCHAR(20) NULL,
+		map_width VARCHAR(20) NULL,
+		show_phone TINYINT(2) NOT NULL,
+		show_email TINYINT(2) NOT NULL,
+		show_image TINYINT(2) NOT NULL,
+		show_vd_link TINYINT(2) NOT NULL,
+		created_date datetime NOT NULL,	
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 11:39:45 UTC] WordPress database error Table 'newwp_gml_locations' already exists for query CREATE TABLE newwp_gml_locations (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+		category_id INT(11) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+		address_one VARCHAR(255) NOT NULL,
+		address_two VARCHAR(255) NOT NULL,
+		postcode VARCHAR(255) NOT NULL,
+		phone VARCHAR(255) NULL,
+		email VARCHAR(255) NULL,
+		latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,
+		location_image VARCHAR(130) NULL,
+		location_view_url VARCHAR(130) NULL,	 	 
+        description text,		
+		created_date datetime NOT NULL,
+		modified_date datetime NOT NULL,
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 11:39:45 UTC] WordPress database error Table 'newwp_gml_settings' already exists for query CREATE TABLE newwp_gml_settings (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,		 
+        map_height VARCHAR(20) NULL,
+		map_width VARCHAR(20) NULL,
+		show_phone TINYINT(2) NOT NULL,
+		show_email TINYINT(2) NOT NULL,
+		show_image TINYINT(2) NOT NULL,
+		show_vd_link TINYINT(2) NOT NULL,
+		created_date datetime NOT NULL,	
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 11:43:34 UTC] WordPress database error Table 'newwp_gml_locations' already exists for query CREATE TABLE newwp_gml_locations (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+		category_id INT(11) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+		address_one VARCHAR(255) NOT NULL,
+		address_two VARCHAR(255) NOT NULL,
+		postcode VARCHAR(255) NOT NULL,
+		phone VARCHAR(255) NULL,
+		email VARCHAR(255) NULL,
+		latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,
+		location_image VARCHAR(130) NULL,
+		location_view_url VARCHAR(130) NULL,	 	 
+        description text,		
+		created_date datetime NOT NULL,
+		modified_date datetime NOT NULL,
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 11:43:34 UTC] WordPress database error Table 'newwp_gml_settings' already exists for query CREATE TABLE newwp_gml_settings (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,		 
+        map_height VARCHAR(20) NULL,
+		map_width VARCHAR(20) NULL,
+		show_phone TINYINT(2) NOT NULL,
+		show_email TINYINT(2) NOT NULL,
+		show_image TINYINT(2) NOT NULL,
+		show_vd_link TINYINT(2) NOT NULL,
+		created_date datetime NOT NULL,	
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 11:44:53 UTC] WordPress database error Table 'newwp_gml_locations' already exists for query CREATE TABLE newwp_gml_locations (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+		category_id INT(11) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+		address_one VARCHAR(255) NOT NULL,
+		address_two VARCHAR(255) NOT NULL,
+		postcode VARCHAR(255) NOT NULL,
+		phone VARCHAR(255) NULL,
+		email VARCHAR(255) NULL,
+		latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,
+		location_image VARCHAR(130) NULL,
+		location_view_url VARCHAR(130) NULL,	 	 
+        description text,		
+		created_date datetime NOT NULL,
+		modified_date datetime NOT NULL,
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 11:44:53 UTC] WordPress database error Table 'newwp_gml_settings' already exists for query CREATE TABLE newwp_gml_settings (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,		 
+        map_height VARCHAR(20) NULL,
+		map_width VARCHAR(20) NULL,
+		show_phone TINYINT(2) NOT NULL,
+		show_email TINYINT(2) NOT NULL,
+		show_image TINYINT(2) NOT NULL,
+		show_vd_link TINYINT(2) NOT NULL,
+		created_date datetime NOT NULL,	
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 11:55:52 UTC] WordPress database error Table 'newwp_gml_locations' already exists for query CREATE TABLE newwp_gml_locations (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+		category_id INT(11) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+		address_one VARCHAR(255) NOT NULL,
+		address_two VARCHAR(255) NOT NULL,
+		postcode VARCHAR(255) NOT NULL,
+		phone VARCHAR(255) NULL,
+		email VARCHAR(255) NULL,
+		latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,
+		location_image VARCHAR(130) NULL,
+		location_view_url VARCHAR(130) NULL,	 	 
+        description text,		
+		created_date datetime NOT NULL,
+		modified_date datetime NOT NULL,
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 11:55:52 UTC] WordPress database error Table 'newwp_gml_settings' already exists for query CREATE TABLE newwp_gml_settings (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,		 
+        map_height VARCHAR(20) NULL,
+		map_width VARCHAR(20) NULL,
+		show_phone TINYINT(2) NOT NULL,
+		show_email TINYINT(2) NOT NULL,
+		show_image TINYINT(2) NOT NULL,
+		show_vd_link TINYINT(2) NOT NULL,
+		created_date datetime NOT NULL,	
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 11:59:24 UTC] WordPress database error Table 'newwp_gml_locations' already exists for query CREATE TABLE newwp_gml_locations (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+		category_id INT(11) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+		address_one VARCHAR(255) NOT NULL,
+		address_two VARCHAR(255) NOT NULL,
+		postcode VARCHAR(255) NOT NULL,
+		phone VARCHAR(255) NULL,
+		email VARCHAR(255) NULL,
+		latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,
+		location_image VARCHAR(130) NULL,
+		location_view_url VARCHAR(130) NULL,	 	 
+        description text,		
+		created_date datetime NOT NULL,
+		modified_date datetime NOT NULL,
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 11:59:24 UTC] WordPress database error Table 'newwp_gml_settings' already exists for query CREATE TABLE newwp_gml_settings (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,		 
+        map_height VARCHAR(20) NULL,
+		map_width VARCHAR(20) NULL,
+		show_phone TINYINT(2) NOT NULL,
+		show_email TINYINT(2) NOT NULL,
+		show_image TINYINT(2) NOT NULL,
+		show_vd_link TINYINT(2) NOT NULL,
+		created_date datetime NOT NULL,	
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 12:13:05 UTC] WordPress database error Table 'newwp_gml_locations' already exists for query CREATE TABLE newwp_gml_locations (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+		category_id INT(11) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+		address_one VARCHAR(255) NOT NULL,
+		address_two VARCHAR(255) NOT NULL,
+		postcode VARCHAR(255) NOT NULL,
+		phone VARCHAR(255) NULL,
+		email VARCHAR(255) NULL,
+		latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,
+		location_image VARCHAR(130) NULL,
+		location_view_url VARCHAR(130) NULL,	 	 
+        description text,		
+		created_date datetime NOT NULL,
+		modified_date datetime NOT NULL,
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 12:13:05 UTC] WordPress database error Table 'newwp_gml_settings' already exists for query CREATE TABLE newwp_gml_settings (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,		 
+        map_height VARCHAR(20) NULL,
+		map_width VARCHAR(20) NULL,
+		show_phone TINYINT(2) NOT NULL,
+		show_email TINYINT(2) NOT NULL,
+		show_image TINYINT(2) NOT NULL,
+		show_vd_link TINYINT(2) NOT NULL,
+		created_date datetime NOT NULL,	
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 12:14:00 UTC] WordPress database error Table 'newwp_gml_locations' already exists for query CREATE TABLE newwp_gml_locations (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+		category_id INT(11) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+		address_one VARCHAR(255) NOT NULL,
+		address_two VARCHAR(255) NOT NULL,
+		postcode VARCHAR(255) NOT NULL,
+		phone VARCHAR(255) NULL,
+		email VARCHAR(255) NULL,
+		latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,
+		location_image VARCHAR(130) NULL,
+		location_view_url VARCHAR(130) NULL,	 	 
+        description text,		
+		created_date datetime NOT NULL,
+		modified_date datetime NOT NULL,
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 12:14:00 UTC] WordPress database error Table 'newwp_gml_settings' already exists for query CREATE TABLE newwp_gml_settings (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,		 
+        map_height VARCHAR(20) NULL,
+		map_width VARCHAR(20) NULL,
+		show_phone TINYINT(2) NOT NULL,
+		show_email TINYINT(2) NOT NULL,
+		show_image TINYINT(2) NOT NULL,
+		show_vd_link TINYINT(2) NOT NULL,
+		created_date datetime NOT NULL,	
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 12:16:18 UTC] WordPress database error Table 'newwp_gml_locations' already exists for query CREATE TABLE newwp_gml_locations (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+		category_id INT(11) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+		address_one VARCHAR(255) NOT NULL,
+		address_two VARCHAR(255) NOT NULL,
+		postcode VARCHAR(255) NOT NULL,
+		phone VARCHAR(255) NULL,
+		email VARCHAR(255) NULL,
+		latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,
+		location_image VARCHAR(130) NULL,
+		location_view_url VARCHAR(130) NULL,	 	 
+        description text,		
+		created_date datetime NOT NULL,
+		modified_date datetime NOT NULL,
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 12:16:18 UTC] WordPress database error Table 'newwp_gml_settings' already exists for query CREATE TABLE newwp_gml_settings (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,		 
+        map_height VARCHAR(20) NULL,
+		map_width VARCHAR(20) NULL,
+		show_phone TINYINT(2) NOT NULL,
+		show_email TINYINT(2) NOT NULL,
+		show_image TINYINT(2) NOT NULL,
+		show_vd_link TINYINT(2) NOT NULL,
+		created_date datetime NOT NULL,	
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 12:21:47 UTC] WordPress database error Table 'newwp_gml_locations' already exists for query CREATE TABLE newwp_gml_locations (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+		category_id INT(11) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+		address_one VARCHAR(255) NOT NULL,
+		address_two VARCHAR(255) NOT NULL,
+		postcode VARCHAR(255) NOT NULL,
+		phone VARCHAR(255) NULL,
+		email VARCHAR(255) NULL,
+		latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,
+		location_image VARCHAR(130) NULL,
+		location_view_url VARCHAR(130) NULL,	 	 
+        description text,		
+		created_date datetime NOT NULL,
+		modified_date datetime NOT NULL,
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 12:21:47 UTC] WordPress database error Table 'newwp_gml_settings' already exists for query CREATE TABLE newwp_gml_settings (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,		 
+        map_height VARCHAR(20) NULL,
+		map_width VARCHAR(20) NULL,
+		show_phone TINYINT(2) NOT NULL,
+		show_email TINYINT(2) NOT NULL,
+		show_image TINYINT(2) NOT NULL,
+		show_vd_link TINYINT(2) NOT NULL,
+		created_date datetime NOT NULL,	
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 12:23:02 UTC] WordPress database error Table 'newwp_gml_locations' already exists for query CREATE TABLE newwp_gml_locations (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+		category_id INT(11) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+		address_one VARCHAR(255) NOT NULL,
+		address_two VARCHAR(255) NOT NULL,
+		postcode VARCHAR(255) NOT NULL,
+		phone VARCHAR(255) NULL,
+		email VARCHAR(255) NULL,
+		latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,
+		location_image VARCHAR(130) NULL,
+		location_view_url VARCHAR(130) NULL,	 	 
+        description text,		
+		created_date datetime NOT NULL,
+		modified_date datetime NOT NULL,
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 12:23:02 UTC] WordPress database error Table 'newwp_gml_settings' already exists for query CREATE TABLE newwp_gml_settings (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,		 
+        map_height VARCHAR(20) NULL,
+		map_width VARCHAR(20) NULL,
+		show_phone TINYINT(2) NOT NULL,
+		show_email TINYINT(2) NOT NULL,
+		show_image TINYINT(2) NOT NULL,
+		show_vd_link TINYINT(2) NOT NULL,
+		created_date datetime NOT NULL,	
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 12:23:46 UTC] WordPress database error Table 'newwp_gml_locations' already exists for query CREATE TABLE newwp_gml_locations (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+		category_id INT(11) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+		address_one VARCHAR(255) NOT NULL,
+		address_two VARCHAR(255) NOT NULL,
+		postcode VARCHAR(255) NOT NULL,
+		phone VARCHAR(255) NULL,
+		email VARCHAR(255) NULL,
+		latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,
+		location_image VARCHAR(130) NULL,
+		location_view_url VARCHAR(130) NULL,	 	 
+        description text,		
+		created_date datetime NOT NULL,
+		modified_date datetime NOT NULL,
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 12:23:46 UTC] WordPress database error Table 'newwp_gml_settings' already exists for query CREATE TABLE newwp_gml_settings (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,		 
+        map_height VARCHAR(20) NULL,
+		map_width VARCHAR(20) NULL,
+		show_phone TINYINT(2) NOT NULL,
+		show_email TINYINT(2) NOT NULL,
+		show_image TINYINT(2) NOT NULL,
+		show_vd_link TINYINT(2) NOT NULL,
+		created_date datetime NOT NULL,	
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 12:25:08 UTC] WordPress database error Table 'newwp_gml_locations' already exists for query CREATE TABLE newwp_gml_locations (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+		category_id INT(11) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+		address_one VARCHAR(255) NOT NULL,
+		address_two VARCHAR(255) NOT NULL,
+		postcode VARCHAR(255) NOT NULL,
+		phone VARCHAR(255) NULL,
+		email VARCHAR(255) NULL,
+		latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,
+		location_image VARCHAR(130) NULL,
+		location_view_url VARCHAR(130) NULL,	 	 
+        description text,		
+		created_date datetime NOT NULL,
+		modified_date datetime NOT NULL,
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 12:25:08 UTC] WordPress database error Table 'newwp_gml_settings' already exists for query CREATE TABLE newwp_gml_settings (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,		 
+        map_height VARCHAR(20) NULL,
+		map_width VARCHAR(20) NULL,
+		show_phone TINYINT(2) NOT NULL,
+		show_email TINYINT(2) NOT NULL,
+		show_image TINYINT(2) NOT NULL,
+		show_vd_link TINYINT(2) NOT NULL,
+		created_date datetime NOT NULL,	
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 12:29:28 UTC] WordPress database error Table 'newwp_gml_locations' already exists for query CREATE TABLE newwp_gml_locations (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+		category_id INT(11) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+		address_one VARCHAR(255) NOT NULL,
+		address_two VARCHAR(255) NOT NULL,
+		postcode VARCHAR(255) NOT NULL,
+		phone VARCHAR(255) NULL,
+		email VARCHAR(255) NULL,
+		latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,
+		location_image VARCHAR(130) NULL,
+		location_view_url VARCHAR(130) NULL,	 	 
+        description text,		
+		created_date datetime NOT NULL,
+		modified_date datetime NOT NULL,
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 12:29:28 UTC] WordPress database error Table 'newwp_gml_settings' already exists for query CREATE TABLE newwp_gml_settings (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,		 
+        map_height VARCHAR(20) NULL,
+		map_width VARCHAR(20) NULL,
+		show_phone TINYINT(2) NOT NULL,
+		show_email TINYINT(2) NOT NULL,
+		show_image TINYINT(2) NOT NULL,
+		show_vd_link TINYINT(2) NOT NULL,
+		created_date datetime NOT NULL,	
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 12:38:23 UTC] WordPress database error Table 'newwp_gml_locations' already exists for query CREATE TABLE newwp_gml_locations (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+		category_id INT(11) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+		address_one VARCHAR(255) NOT NULL,
+		address_two VARCHAR(255) NOT NULL,
+		postcode VARCHAR(255) NOT NULL,
+		phone VARCHAR(255) NULL,
+		email VARCHAR(255) NULL,
+		latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,
+		location_image VARCHAR(130) NULL,
+		location_view_url VARCHAR(130) NULL,	 	 
+        description text,		
+		created_date datetime NOT NULL,
+		modified_date datetime NOT NULL,
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 12:38:23 UTC] WordPress database error Table 'newwp_gml_settings' already exists for query CREATE TABLE newwp_gml_settings (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,		 
+        map_height VARCHAR(20) NULL,
+		map_width VARCHAR(20) NULL,
+		show_phone TINYINT(2) NOT NULL,
+		show_email TINYINT(2) NOT NULL,
+		show_image TINYINT(2) NOT NULL,
+		show_vd_link TINYINT(2) NOT NULL,
+		created_date datetime NOT NULL,	
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 12:39:12 UTC] WordPress database error Table 'newwp_gml_locations' already exists for query CREATE TABLE newwp_gml_locations (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+		category_id INT(11) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+		address_one VARCHAR(255) NOT NULL,
+		address_two VARCHAR(255) NOT NULL,
+		postcode VARCHAR(255) NOT NULL,
+		phone VARCHAR(255) NULL,
+		email VARCHAR(255) NULL,
+		latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,
+		location_image VARCHAR(130) NULL,
+		location_view_url VARCHAR(130) NULL,	 	 
+        description text,		
+		created_date datetime NOT NULL,
+		modified_date datetime NOT NULL,
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 12:39:12 UTC] WordPress database error Table 'newwp_gml_settings' already exists for query CREATE TABLE newwp_gml_settings (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,		 
+        map_height VARCHAR(20) NULL,
+		map_width VARCHAR(20) NULL,
+		show_phone TINYINT(2) NOT NULL,
+		show_email TINYINT(2) NOT NULL,
+		show_image TINYINT(2) NOT NULL,
+		show_vd_link TINYINT(2) NOT NULL,
+		created_date datetime NOT NULL,	
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 12:41:10 UTC] WordPress database error Table 'newwp_gml_locations' already exists for query CREATE TABLE newwp_gml_locations (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+		category_id INT(11) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+		address_one VARCHAR(255) NOT NULL,
+		address_two VARCHAR(255) NOT NULL,
+		postcode VARCHAR(255) NOT NULL,
+		phone VARCHAR(255) NULL,
+		email VARCHAR(255) NULL,
+		latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,
+		location_image VARCHAR(130) NULL,
+		location_view_url VARCHAR(130) NULL,	 	 
+        description text,		
+		created_date datetime NOT NULL,
+		modified_date datetime NOT NULL,
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 12:41:10 UTC] WordPress database error Table 'newwp_gml_settings' already exists for query CREATE TABLE newwp_gml_settings (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,		 
+        map_height VARCHAR(20) NULL,
+		map_width VARCHAR(20) NULL,
+		show_phone TINYINT(2) NOT NULL,
+		show_email TINYINT(2) NOT NULL,
+		show_image TINYINT(2) NOT NULL,
+		show_vd_link TINYINT(2) NOT NULL,
+		created_date datetime NOT NULL,	
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 12:44:19 UTC] WordPress database error Table 'newwp_gml_locations' already exists for query CREATE TABLE newwp_gml_locations (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+		category_id INT(11) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+		address_one VARCHAR(255) NOT NULL,
+		address_two VARCHAR(255) NOT NULL,
+		postcode VARCHAR(255) NOT NULL,
+		phone VARCHAR(255) NULL,
+		email VARCHAR(255) NULL,
+		latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,
+		location_image VARCHAR(130) NULL,
+		location_view_url VARCHAR(130) NULL,	 	 
+        description text,		
+		created_date datetime NOT NULL,
+		modified_date datetime NOT NULL,
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 12:44:19 UTC] WordPress database error Table 'newwp_gml_settings' already exists for query CREATE TABLE newwp_gml_settings (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,		 
+        map_height VARCHAR(20) NULL,
+		map_width VARCHAR(20) NULL,
+		show_phone TINYINT(2) NOT NULL,
+		show_email TINYINT(2) NOT NULL,
+		show_image TINYINT(2) NOT NULL,
+		show_vd_link TINYINT(2) NOT NULL,
+		created_date datetime NOT NULL,	
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 12:45:11 UTC] WordPress database error Table 'newwp_gml_locations' already exists for query CREATE TABLE newwp_gml_locations (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+		category_id INT(11) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+		address_one VARCHAR(255) NOT NULL,
+		address_two VARCHAR(255) NOT NULL,
+		postcode VARCHAR(255) NOT NULL,
+		phone VARCHAR(255) NULL,
+		email VARCHAR(255) NULL,
+		latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,
+		location_image VARCHAR(130) NULL,
+		location_view_url VARCHAR(130) NULL,	 	 
+        description text,		
+		created_date datetime NOT NULL,
+		modified_date datetime NOT NULL,
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 12:45:11 UTC] WordPress database error Table 'newwp_gml_settings' already exists for query CREATE TABLE newwp_gml_settings (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,		 
+        map_height VARCHAR(20) NULL,
+		map_width VARCHAR(20) NULL,
+		show_phone TINYINT(2) NOT NULL,
+		show_email TINYINT(2) NOT NULL,
+		show_image TINYINT(2) NOT NULL,
+		show_vd_link TINYINT(2) NOT NULL,
+		created_date datetime NOT NULL,	
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 12:45:46 UTC] WordPress database error Table 'newwp_gml_locations' already exists for query CREATE TABLE newwp_gml_locations (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+		category_id INT(11) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+		address_one VARCHAR(255) NOT NULL,
+		address_two VARCHAR(255) NOT NULL,
+		postcode VARCHAR(255) NOT NULL,
+		phone VARCHAR(255) NULL,
+		email VARCHAR(255) NULL,
+		latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,
+		location_image VARCHAR(130) NULL,
+		location_view_url VARCHAR(130) NULL,	 	 
+        description text,		
+		created_date datetime NOT NULL,
+		modified_date datetime NOT NULL,
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 12:45:46 UTC] WordPress database error Table 'newwp_gml_settings' already exists for query CREATE TABLE newwp_gml_settings (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,		 
+        map_height VARCHAR(20) NULL,
+		map_width VARCHAR(20) NULL,
+		show_phone TINYINT(2) NOT NULL,
+		show_email TINYINT(2) NOT NULL,
+		show_image TINYINT(2) NOT NULL,
+		show_vd_link TINYINT(2) NOT NULL,
+		created_date datetime NOT NULL,	
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 12:49:55 UTC] WordPress database error Table 'newwp_gml_locations' already exists for query CREATE TABLE newwp_gml_locations (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+		category_id INT(11) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+		address_one VARCHAR(255) NOT NULL,
+		address_two VARCHAR(255) NOT NULL,
+		postcode VARCHAR(255) NOT NULL,
+		phone VARCHAR(255) NULL,
+		email VARCHAR(255) NULL,
+		latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,
+		location_image VARCHAR(130) NULL,
+		location_view_url VARCHAR(130) NULL,	 	 
+        description text,		
+		created_date datetime NOT NULL,
+		modified_date datetime NOT NULL,
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 12:49:55 UTC] WordPress database error Table 'newwp_gml_settings' already exists for query CREATE TABLE newwp_gml_settings (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,		 
+        map_height VARCHAR(20) NULL,
+		map_width VARCHAR(20) NULL,
+		show_phone TINYINT(2) NOT NULL,
+		show_email TINYINT(2) NOT NULL,
+		show_image TINYINT(2) NOT NULL,
+		show_vd_link TINYINT(2) NOT NULL,
+		created_date datetime NOT NULL,	
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 12:55:06 UTC] WordPress database error Table 'newwp_gml_locations' already exists for query CREATE TABLE newwp_gml_locations (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+		category_id INT(11) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+		address_one VARCHAR(255) NOT NULL,
+		address_two VARCHAR(255) NOT NULL,
+		postcode VARCHAR(255) NOT NULL,
+		phone VARCHAR(255) NULL,
+		email VARCHAR(255) NULL,
+		latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,
+		location_image VARCHAR(130) NULL,
+		location_view_url VARCHAR(130) NULL,	 	 
+        description text,		
+		created_date datetime NOT NULL,
+		modified_date datetime NOT NULL,
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 12:55:06 UTC] WordPress database error Table 'newwp_gml_settings' already exists for query CREATE TABLE newwp_gml_settings (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,		 
+        map_height VARCHAR(20) NULL,
+		map_width VARCHAR(20) NULL,
+		show_phone TINYINT(2) NOT NULL,
+		show_email TINYINT(2) NOT NULL,
+		show_image TINYINT(2) NOT NULL,
+		show_vd_link TINYINT(2) NOT NULL,
+		created_date datetime NOT NULL,	
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 12:59:49 UTC] WordPress database error Table 'newwp_gml_locations' already exists for query CREATE TABLE newwp_gml_locations (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+		category_id INT(11) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+		address_one VARCHAR(255) NOT NULL,
+		address_two VARCHAR(255) NOT NULL,
+		postcode VARCHAR(255) NOT NULL,
+		phone VARCHAR(255) NULL,
+		email VARCHAR(255) NULL,
+		latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,
+		location_image VARCHAR(130) NULL,
+		location_view_url VARCHAR(130) NULL,	 	 
+        description text,		
+		created_date datetime NOT NULL,
+		modified_date datetime NOT NULL,
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 12:59:49 UTC] WordPress database error Table 'newwp_gml_settings' already exists for query CREATE TABLE newwp_gml_settings (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,		 
+        map_height VARCHAR(20) NULL,
+		map_width VARCHAR(20) NULL,
+		show_phone TINYINT(2) NOT NULL,
+		show_email TINYINT(2) NOT NULL,
+		show_image TINYINT(2) NOT NULL,
+		show_vd_link TINYINT(2) NOT NULL,
+		created_date datetime NOT NULL,	
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 13:03:21 UTC] WordPress database error Table 'newwp_gml_locations' already exists for query CREATE TABLE newwp_gml_locations (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+		category_id INT(11) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+		address_one VARCHAR(255) NOT NULL,
+		address_two VARCHAR(255) NOT NULL,
+		postcode VARCHAR(255) NOT NULL,
+		phone VARCHAR(255) NULL,
+		email VARCHAR(255) NULL,
+		latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,
+		location_image VARCHAR(130) NULL,
+		location_view_url VARCHAR(130) NULL,	 	 
+        description text,		
+		created_date datetime NOT NULL,
+		modified_date datetime NOT NULL,
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 13:03:21 UTC] WordPress database error Table 'newwp_gml_settings' already exists for query CREATE TABLE newwp_gml_settings (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,		 
+        map_height VARCHAR(20) NULL,
+		map_width VARCHAR(20) NULL,
+		show_phone TINYINT(2) NOT NULL,
+		show_email TINYINT(2) NOT NULL,
+		show_image TINYINT(2) NOT NULL,
+		show_vd_link TINYINT(2) NOT NULL,
+		created_date datetime NOT NULL,	
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 13:12:53 UTC] WordPress database error Table 'newwp_gml_locations' already exists for query CREATE TABLE newwp_gml_locations (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+		category_id INT(11) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+		address_one VARCHAR(255) NOT NULL,
+		address_two VARCHAR(255) NOT NULL,
+		postcode VARCHAR(255) NOT NULL,
+		phone VARCHAR(255) NULL,
+		email VARCHAR(255) NULL,
+		latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,
+		location_image VARCHAR(130) NULL,
+		location_view_url VARCHAR(130) NULL,	 	 
+        description text,		
+		created_date datetime NOT NULL,
+		modified_date datetime NOT NULL,
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 13:12:53 UTC] WordPress database error Table 'newwp_gml_settings' already exists for query CREATE TABLE newwp_gml_settings (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,		 
+        map_height VARCHAR(20) NULL,
+		map_width VARCHAR(20) NULL,
+		show_phone TINYINT(2) NOT NULL,
+		show_email TINYINT(2) NOT NULL,
+		show_image TINYINT(2) NOT NULL,
+		show_vd_link TINYINT(2) NOT NULL,
+		created_date datetime NOT NULL,	
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 13:13:47 UTC] WordPress database error Table 'newwp_gml_locations' already exists for query CREATE TABLE newwp_gml_locations (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+		category_id INT(11) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+		address_one VARCHAR(255) NOT NULL,
+		address_two VARCHAR(255) NOT NULL,
+		postcode VARCHAR(255) NOT NULL,
+		phone VARCHAR(255) NULL,
+		email VARCHAR(255) NULL,
+		latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,
+		location_image VARCHAR(130) NULL,
+		location_view_url VARCHAR(130) NULL,	 	 
+        description text,		
+		created_date datetime NOT NULL,
+		modified_date datetime NOT NULL,
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 13:13:47 UTC] WordPress database error Table 'newwp_gml_settings' already exists for query CREATE TABLE newwp_gml_settings (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,		 
+        map_height VARCHAR(20) NULL,
+		map_width VARCHAR(20) NULL,
+		show_phone TINYINT(2) NOT NULL,
+		show_email TINYINT(2) NOT NULL,
+		show_image TINYINT(2) NOT NULL,
+		show_vd_link TINYINT(2) NOT NULL,
+		created_date datetime NOT NULL,	
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 13:14:59 UTC] WordPress database error Table 'newwp_gml_locations' already exists for query CREATE TABLE newwp_gml_locations (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+		category_id INT(11) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+		address_one VARCHAR(255) NOT NULL,
+		address_two VARCHAR(255) NOT NULL,
+		postcode VARCHAR(255) NOT NULL,
+		phone VARCHAR(255) NULL,
+		email VARCHAR(255) NULL,
+		latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,
+		location_image VARCHAR(130) NULL,
+		location_view_url VARCHAR(130) NULL,	 	 
+        description text,		
+		created_date datetime NOT NULL,
+		modified_date datetime NOT NULL,
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 13:14:59 UTC] WordPress database error Table 'newwp_gml_settings' already exists for query CREATE TABLE newwp_gml_settings (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,		 
+        map_height VARCHAR(20) NULL,
+		map_width VARCHAR(20) NULL,
+		show_phone TINYINT(2) NOT NULL,
+		show_email TINYINT(2) NOT NULL,
+		show_image TINYINT(2) NOT NULL,
+		show_vd_link TINYINT(2) NOT NULL,
+		created_date datetime NOT NULL,	
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 13:18:37 UTC] WordPress database error Table 'newwp_gml_locations' already exists for query CREATE TABLE newwp_gml_locations (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+		category_id INT(11) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+		address_one VARCHAR(255) NOT NULL,
+		address_two VARCHAR(255) NOT NULL,
+		postcode VARCHAR(255) NOT NULL,
+		phone VARCHAR(255) NULL,
+		email VARCHAR(255) NULL,
+		latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,
+		location_image VARCHAR(130) NULL,
+		location_view_url VARCHAR(130) NULL,	 	 
+        description text,		
+		created_date datetime NOT NULL,
+		modified_date datetime NOT NULL,
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 13:18:37 UTC] WordPress database error Table 'newwp_gml_settings' already exists for query CREATE TABLE newwp_gml_settings (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,		 
+        map_height VARCHAR(20) NULL,
+		map_width VARCHAR(20) NULL,
+		show_phone TINYINT(2) NOT NULL,
+		show_email TINYINT(2) NOT NULL,
+		show_image TINYINT(2) NOT NULL,
+		show_vd_link TINYINT(2) NOT NULL,
+		created_date datetime NOT NULL,	
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 13:29:58 UTC] WordPress database error Table 'newwp_gml_locations' already exists for query CREATE TABLE newwp_gml_locations (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+		category_id INT(11) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+		address_one VARCHAR(255) NOT NULL,
+		address_two VARCHAR(255) NOT NULL,
+		postcode VARCHAR(255) NOT NULL,
+		phone VARCHAR(255) NULL,
+		email VARCHAR(255) NULL,
+		latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,
+		location_image VARCHAR(130) NULL,
+		location_view_url VARCHAR(130) NULL,	 	 
+        description text,		
+		created_date datetime NOT NULL,
+		modified_date datetime NOT NULL,
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 13:29:58 UTC] WordPress database error Table 'newwp_gml_settings' already exists for query CREATE TABLE newwp_gml_settings (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,		 
+        map_height VARCHAR(20) NULL,
+		map_width VARCHAR(20) NULL,
+		show_phone TINYINT(2) NOT NULL,
+		show_email TINYINT(2) NOT NULL,
+		show_image TINYINT(2) NOT NULL,
+		show_vd_link TINYINT(2) NOT NULL,
+		created_date datetime NOT NULL,	
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 13:31:16 UTC] WordPress database error Table 'newwp_gml_locations' already exists for query CREATE TABLE newwp_gml_locations (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+		category_id INT(11) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+		address_one VARCHAR(255) NOT NULL,
+		address_two VARCHAR(255) NOT NULL,
+		postcode VARCHAR(255) NOT NULL,
+		phone VARCHAR(255) NULL,
+		email VARCHAR(255) NULL,
+		latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,
+		location_image VARCHAR(130) NULL,
+		location_view_url VARCHAR(130) NULL,	 	 
+        description text,		
+		created_date datetime NOT NULL,
+		modified_date datetime NOT NULL,
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 13:31:16 UTC] WordPress database error Table 'newwp_gml_settings' already exists for query CREATE TABLE newwp_gml_settings (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,		 
+        map_height VARCHAR(20) NULL,
+		map_width VARCHAR(20) NULL,
+		show_phone TINYINT(2) NOT NULL,
+		show_email TINYINT(2) NOT NULL,
+		show_image TINYINT(2) NOT NULL,
+		show_vd_link TINYINT(2) NOT NULL,
+		created_date datetime NOT NULL,	
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 13:32:29 UTC] WordPress database error Table 'newwp_gml_locations' already exists for query CREATE TABLE newwp_gml_locations (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+		category_id INT(11) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+		address_one VARCHAR(255) NOT NULL,
+		address_two VARCHAR(255) NOT NULL,
+		postcode VARCHAR(255) NOT NULL,
+		phone VARCHAR(255) NULL,
+		email VARCHAR(255) NULL,
+		latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,
+		location_image VARCHAR(130) NULL,
+		location_view_url VARCHAR(130) NULL,	 	 
+        description text,		
+		created_date datetime NOT NULL,
+		modified_date datetime NOT NULL,
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 13:32:29 UTC] WordPress database error Table 'newwp_gml_settings' already exists for query CREATE TABLE newwp_gml_settings (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,		 
+        map_height VARCHAR(20) NULL,
+		map_width VARCHAR(20) NULL,
+		show_phone TINYINT(2) NOT NULL,
+		show_email TINYINT(2) NOT NULL,
+		show_image TINYINT(2) NOT NULL,
+		show_vd_link TINYINT(2) NOT NULL,
+		created_date datetime NOT NULL,	
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 13:33:45 UTC] WordPress database error Table 'newwp_gml_locations' already exists for query CREATE TABLE newwp_gml_locations (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+		category_id INT(11) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+		address_one VARCHAR(255) NOT NULL,
+		address_two VARCHAR(255) NOT NULL,
+		postcode VARCHAR(255) NOT NULL,
+		phone VARCHAR(255) NULL,
+		email VARCHAR(255) NULL,
+		latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,
+		location_image VARCHAR(130) NULL,
+		location_view_url VARCHAR(130) NULL,	 	 
+        description text,		
+		created_date datetime NOT NULL,
+		modified_date datetime NOT NULL,
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 13:33:45 UTC] WordPress database error Table 'newwp_gml_settings' already exists for query CREATE TABLE newwp_gml_settings (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,		 
+        map_height VARCHAR(20) NULL,
+		map_width VARCHAR(20) NULL,
+		show_phone TINYINT(2) NOT NULL,
+		show_email TINYINT(2) NOT NULL,
+		show_image TINYINT(2) NOT NULL,
+		show_vd_link TINYINT(2) NOT NULL,
+		created_date datetime NOT NULL,	
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 13:53:32 UTC] WordPress database error Table 'newwp_gml_locations' already exists for query CREATE TABLE newwp_gml_locations (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+		category_id INT(11) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+		address_one VARCHAR(255) NOT NULL,
+		address_two VARCHAR(255) NOT NULL,
+		postcode VARCHAR(255) NOT NULL,
+		phone VARCHAR(255) NULL,
+		email VARCHAR(255) NULL,
+		latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,
+		location_image VARCHAR(130) NULL,
+		location_view_url VARCHAR(130) NULL,	 	 
+        description text,		
+		created_date datetime NOT NULL,
+		modified_date datetime NOT NULL,
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 13:53:32 UTC] WordPress database error Table 'newwp_gml_settings' already exists for query CREATE TABLE newwp_gml_settings (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,		 
+        map_height VARCHAR(20) NULL,
+		map_width VARCHAR(20) NULL,
+		show_phone TINYINT(2) NOT NULL,
+		show_email TINYINT(2) NOT NULL,
+		show_image TINYINT(2) NOT NULL,
+		show_vd_link TINYINT(2) NOT NULL,
+		created_date datetime NOT NULL,	
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 13:54:24 UTC] WordPress database error Table 'newwp_gml_locations' already exists for query CREATE TABLE newwp_gml_locations (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+		category_id INT(11) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+		address_one VARCHAR(255) NOT NULL,
+		address_two VARCHAR(255) NOT NULL,
+		postcode VARCHAR(255) NOT NULL,
+		phone VARCHAR(255) NULL,
+		email VARCHAR(255) NULL,
+		latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,
+		location_image VARCHAR(130) NULL,
+		location_view_url VARCHAR(130) NULL,	 	 
+        description text,		
+		created_date datetime NOT NULL,
+		modified_date datetime NOT NULL,
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 13:54:24 UTC] WordPress database error Table 'newwp_gml_settings' already exists for query CREATE TABLE newwp_gml_settings (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,		 
+        map_height VARCHAR(20) NULL,
+		map_width VARCHAR(20) NULL,
+		show_phone TINYINT(2) NOT NULL,
+		show_email TINYINT(2) NOT NULL,
+		show_image TINYINT(2) NOT NULL,
+		show_vd_link TINYINT(2) NOT NULL,
+		created_date datetime NOT NULL,	
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 13:55:27 UTC] WordPress database error Table 'newwp_gml_locations' already exists for query CREATE TABLE newwp_gml_locations (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+		category_id INT(11) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+		address_one VARCHAR(255) NOT NULL,
+		address_two VARCHAR(255) NOT NULL,
+		postcode VARCHAR(255) NOT NULL,
+		phone VARCHAR(255) NULL,
+		email VARCHAR(255) NULL,
+		latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,
+		location_image VARCHAR(130) NULL,
+		location_view_url VARCHAR(130) NULL,	 	 
+        description text,		
+		created_date datetime NOT NULL,
+		modified_date datetime NOT NULL,
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 13:55:27 UTC] WordPress database error Table 'newwp_gml_settings' already exists for query CREATE TABLE newwp_gml_settings (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,		 
+        map_height VARCHAR(20) NULL,
+		map_width VARCHAR(20) NULL,
+		show_phone TINYINT(2) NOT NULL,
+		show_email TINYINT(2) NOT NULL,
+		show_image TINYINT(2) NOT NULL,
+		show_vd_link TINYINT(2) NOT NULL,
+		created_date datetime NOT NULL,	
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 14:00:19 UTC] WordPress database error Table 'newwp_gml_locations' already exists for query CREATE TABLE newwp_gml_locations (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+		category_id INT(11) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+		address_one VARCHAR(255) NOT NULL,
+		address_two VARCHAR(255) NOT NULL,
+		postcode VARCHAR(255) NOT NULL,
+		phone VARCHAR(255) NULL,
+		email VARCHAR(255) NULL,
+		latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,
+		location_image VARCHAR(130) NULL,
+		location_view_url VARCHAR(130) NULL,	 	 
+        description text,		
+		created_date datetime NOT NULL,
+		modified_date datetime NOT NULL,
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 14:00:19 UTC] WordPress database error Table 'newwp_gml_settings' already exists for query CREATE TABLE newwp_gml_settings (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,		 
+        map_height VARCHAR(20) NULL,
+		map_width VARCHAR(20) NULL,
+		show_phone TINYINT(2) NOT NULL,
+		show_email TINYINT(2) NOT NULL,
+		show_image TINYINT(2) NOT NULL,
+		show_vd_link TINYINT(2) NOT NULL,
+		created_date datetime NOT NULL,	
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 14:01:07 UTC] WordPress database error Table 'newwp_gml_locations' already exists for query CREATE TABLE newwp_gml_locations (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+		category_id INT(11) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+		address_one VARCHAR(255) NOT NULL,
+		address_two VARCHAR(255) NOT NULL,
+		postcode VARCHAR(255) NOT NULL,
+		phone VARCHAR(255) NULL,
+		email VARCHAR(255) NULL,
+		latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,
+		location_image VARCHAR(130) NULL,
+		location_view_url VARCHAR(130) NULL,	 	 
+        description text,		
+		created_date datetime NOT NULL,
+		modified_date datetime NOT NULL,
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 14:01:07 UTC] WordPress database error Table 'newwp_gml_settings' already exists for query CREATE TABLE newwp_gml_settings (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,		 
+        map_height VARCHAR(20) NULL,
+		map_width VARCHAR(20) NULL,
+		show_phone TINYINT(2) NOT NULL,
+		show_email TINYINT(2) NOT NULL,
+		show_image TINYINT(2) NOT NULL,
+		show_vd_link TINYINT(2) NOT NULL,
+		created_date datetime NOT NULL,	
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 14:02:16 UTC] WordPress database error Table 'newwp_gml_locations' already exists for query CREATE TABLE newwp_gml_locations (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+		category_id INT(11) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+		address_one VARCHAR(255) NOT NULL,
+		address_two VARCHAR(255) NOT NULL,
+		postcode VARCHAR(255) NOT NULL,
+		phone VARCHAR(255) NULL,
+		email VARCHAR(255) NULL,
+		latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,
+		location_image VARCHAR(130) NULL,
+		location_view_url VARCHAR(130) NULL,	 	 
+        description text,		
+		created_date datetime NOT NULL,
+		modified_date datetime NOT NULL,
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 14:02:16 UTC] WordPress database error Table 'newwp_gml_settings' already exists for query CREATE TABLE newwp_gml_settings (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,		 
+        map_height VARCHAR(20) NULL,
+		map_width VARCHAR(20) NULL,
+		show_phone TINYINT(2) NOT NULL,
+		show_email TINYINT(2) NOT NULL,
+		show_image TINYINT(2) NOT NULL,
+		show_vd_link TINYINT(2) NOT NULL,
+		created_date datetime NOT NULL,	
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 14:02:44 UTC] WordPress database error Table 'newwp_gml_locations' already exists for query CREATE TABLE newwp_gml_locations (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+		category_id INT(11) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+		address_one VARCHAR(255) NOT NULL,
+		address_two VARCHAR(255) NOT NULL,
+		postcode VARCHAR(255) NOT NULL,
+		phone VARCHAR(255) NULL,
+		email VARCHAR(255) NULL,
+		latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,
+		location_image VARCHAR(130) NULL,
+		location_view_url VARCHAR(130) NULL,	 	 
+        description text,		
+		created_date datetime NOT NULL,
+		modified_date datetime NOT NULL,
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 14:02:44 UTC] WordPress database error Table 'newwp_gml_settings' already exists for query CREATE TABLE newwp_gml_settings (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,		 
+        map_height VARCHAR(20) NULL,
+		map_width VARCHAR(20) NULL,
+		show_phone TINYINT(2) NOT NULL,
+		show_email TINYINT(2) NOT NULL,
+		show_image TINYINT(2) NOT NULL,
+		show_vd_link TINYINT(2) NOT NULL,
+		created_date datetime NOT NULL,	
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 14:04:54 UTC] WordPress database error Table 'newwp_gml_locations' already exists for query CREATE TABLE newwp_gml_locations (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+		category_id INT(11) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+		address_one VARCHAR(255) NOT NULL,
+		address_two VARCHAR(255) NOT NULL,
+		postcode VARCHAR(255) NOT NULL,
+		phone VARCHAR(255) NULL,
+		email VARCHAR(255) NULL,
+		latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,
+		location_image VARCHAR(130) NULL,
+		location_view_url VARCHAR(130) NULL,	 	 
+        description text,		
+		created_date datetime NOT NULL,
+		modified_date datetime NOT NULL,
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 14:04:54 UTC] WordPress database error Table 'newwp_gml_settings' already exists for query CREATE TABLE newwp_gml_settings (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,		 
+        map_height VARCHAR(20) NULL,
+		map_width VARCHAR(20) NULL,
+		show_phone TINYINT(2) NOT NULL,
+		show_email TINYINT(2) NOT NULL,
+		show_image TINYINT(2) NOT NULL,
+		show_vd_link TINYINT(2) NOT NULL,
+		created_date datetime NOT NULL,	
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 14:05:44 UTC] WordPress database error Table 'newwp_gml_locations' already exists for query CREATE TABLE newwp_gml_locations (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+		category_id INT(11) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+		address_one VARCHAR(255) NOT NULL,
+		address_two VARCHAR(255) NOT NULL,
+		postcode VARCHAR(255) NOT NULL,
+		phone VARCHAR(255) NULL,
+		email VARCHAR(255) NULL,
+		latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,
+		location_image VARCHAR(130) NULL,
+		location_view_url VARCHAR(130) NULL,	 	 
+        description text,		
+		created_date datetime NOT NULL,
+		modified_date datetime NOT NULL,
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 14:05:44 UTC] WordPress database error Table 'newwp_gml_settings' already exists for query CREATE TABLE newwp_gml_settings (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,		 
+        map_height VARCHAR(20) NULL,
+		map_width VARCHAR(20) NULL,
+		show_phone TINYINT(2) NOT NULL,
+		show_email TINYINT(2) NOT NULL,
+		show_image TINYINT(2) NOT NULL,
+		show_vd_link TINYINT(2) NOT NULL,
+		created_date datetime NOT NULL,	
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 14:06:29 UTC] WordPress database error Table 'newwp_gml_locations' already exists for query CREATE TABLE newwp_gml_locations (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+		category_id INT(11) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+		address_one VARCHAR(255) NOT NULL,
+		address_two VARCHAR(255) NOT NULL,
+		postcode VARCHAR(255) NOT NULL,
+		phone VARCHAR(255) NULL,
+		email VARCHAR(255) NULL,
+		latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,
+		location_image VARCHAR(130) NULL,
+		location_view_url VARCHAR(130) NULL,	 	 
+        description text,		
+		created_date datetime NOT NULL,
+		modified_date datetime NOT NULL,
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 14:06:29 UTC] WordPress database error Table 'newwp_gml_settings' already exists for query CREATE TABLE newwp_gml_settings (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,		 
+        map_height VARCHAR(20) NULL,
+		map_width VARCHAR(20) NULL,
+		show_phone TINYINT(2) NOT NULL,
+		show_email TINYINT(2) NOT NULL,
+		show_image TINYINT(2) NOT NULL,
+		show_vd_link TINYINT(2) NOT NULL,
+		created_date datetime NOT NULL,	
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 14:07:40 UTC] WordPress database error Table 'newwp_gml_locations' already exists for query CREATE TABLE newwp_gml_locations (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+		category_id INT(11) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+		address_one VARCHAR(255) NOT NULL,
+		address_two VARCHAR(255) NOT NULL,
+		postcode VARCHAR(255) NOT NULL,
+		phone VARCHAR(255) NULL,
+		email VARCHAR(255) NULL,
+		latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,
+		location_image VARCHAR(130) NULL,
+		location_view_url VARCHAR(130) NULL,	 	 
+        description text,		
+		created_date datetime NOT NULL,
+		modified_date datetime NOT NULL,
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 14:07:40 UTC] WordPress database error Table 'newwp_gml_settings' already exists for query CREATE TABLE newwp_gml_settings (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,		 
+        map_height VARCHAR(20) NULL,
+		map_width VARCHAR(20) NULL,
+		show_phone TINYINT(2) NOT NULL,
+		show_email TINYINT(2) NOT NULL,
+		show_image TINYINT(2) NOT NULL,
+		show_vd_link TINYINT(2) NOT NULL,
+		created_date datetime NOT NULL,	
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 14:08:42 UTC] WordPress database error Table 'newwp_gml_locations' already exists for query CREATE TABLE newwp_gml_locations (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+		category_id INT(11) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+		address_one VARCHAR(255) NOT NULL,
+		address_two VARCHAR(255) NOT NULL,
+		postcode VARCHAR(255) NOT NULL,
+		phone VARCHAR(255) NULL,
+		email VARCHAR(255) NULL,
+		latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,
+		location_image VARCHAR(130) NULL,
+		location_view_url VARCHAR(130) NULL,	 	 
+        description text,		
+		created_date datetime NOT NULL,
+		modified_date datetime NOT NULL,
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 14:08:42 UTC] WordPress database error Table 'newwp_gml_settings' already exists for query CREATE TABLE newwp_gml_settings (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,		 
+        map_height VARCHAR(20) NULL,
+		map_width VARCHAR(20) NULL,
+		show_phone TINYINT(2) NOT NULL,
+		show_email TINYINT(2) NOT NULL,
+		show_image TINYINT(2) NOT NULL,
+		show_vd_link TINYINT(2) NOT NULL,
+		created_date datetime NOT NULL,	
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 14:09:46 UTC] WordPress database error Table 'newwp_gml_locations' already exists for query CREATE TABLE newwp_gml_locations (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+		category_id INT(11) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+		address_one VARCHAR(255) NOT NULL,
+		address_two VARCHAR(255) NOT NULL,
+		postcode VARCHAR(255) NOT NULL,
+		phone VARCHAR(255) NULL,
+		email VARCHAR(255) NULL,
+		latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,
+		location_image VARCHAR(130) NULL,
+		location_view_url VARCHAR(130) NULL,	 	 
+        description text,		
+		created_date datetime NOT NULL,
+		modified_date datetime NOT NULL,
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 14:09:46 UTC] WordPress database error Table 'newwp_gml_settings' already exists for query CREATE TABLE newwp_gml_settings (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,		 
+        map_height VARCHAR(20) NULL,
+		map_width VARCHAR(20) NULL,
+		show_phone TINYINT(2) NOT NULL,
+		show_email TINYINT(2) NOT NULL,
+		show_image TINYINT(2) NOT NULL,
+		show_vd_link TINYINT(2) NOT NULL,
+		created_date datetime NOT NULL,	
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 14:10:22 UTC] WordPress database error Table 'newwp_gml_locations' already exists for query CREATE TABLE newwp_gml_locations (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+		category_id INT(11) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+		address_one VARCHAR(255) NOT NULL,
+		address_two VARCHAR(255) NOT NULL,
+		postcode VARCHAR(255) NOT NULL,
+		phone VARCHAR(255) NULL,
+		email VARCHAR(255) NULL,
+		latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,
+		location_image VARCHAR(130) NULL,
+		location_view_url VARCHAR(130) NULL,	 	 
+        description text,		
+		created_date datetime NOT NULL,
+		modified_date datetime NOT NULL,
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 14:10:22 UTC] WordPress database error Table 'newwp_gml_settings' already exists for query CREATE TABLE newwp_gml_settings (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,		 
+        map_height VARCHAR(20) NULL,
+		map_width VARCHAR(20) NULL,
+		show_phone TINYINT(2) NOT NULL,
+		show_email TINYINT(2) NOT NULL,
+		show_image TINYINT(2) NOT NULL,
+		show_vd_link TINYINT(2) NOT NULL,
+		created_date datetime NOT NULL,	
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 14:11:20 UTC] WordPress database error Table 'newwp_gml_locations' already exists for query CREATE TABLE newwp_gml_locations (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+		category_id INT(11) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+		address_one VARCHAR(255) NOT NULL,
+		address_two VARCHAR(255) NOT NULL,
+		postcode VARCHAR(255) NOT NULL,
+		phone VARCHAR(255) NULL,
+		email VARCHAR(255) NULL,
+		latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,
+		location_image VARCHAR(130) NULL,
+		location_view_url VARCHAR(130) NULL,	 	 
+        description text,		
+		created_date datetime NOT NULL,
+		modified_date datetime NOT NULL,
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 14:11:20 UTC] WordPress database error Table 'newwp_gml_settings' already exists for query CREATE TABLE newwp_gml_settings (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,		 
+        map_height VARCHAR(20) NULL,
+		map_width VARCHAR(20) NULL,
+		show_phone TINYINT(2) NOT NULL,
+		show_email TINYINT(2) NOT NULL,
+		show_image TINYINT(2) NOT NULL,
+		show_vd_link TINYINT(2) NOT NULL,
+		created_date datetime NOT NULL,	
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 14:11:52 UTC] WordPress database error Table 'newwp_gml_locations' already exists for query CREATE TABLE newwp_gml_locations (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+		category_id INT(11) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+		address_one VARCHAR(255) NOT NULL,
+		address_two VARCHAR(255) NOT NULL,
+		postcode VARCHAR(255) NOT NULL,
+		phone VARCHAR(255) NULL,
+		email VARCHAR(255) NULL,
+		latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,
+		location_image VARCHAR(130) NULL,
+		location_view_url VARCHAR(130) NULL,	 	 
+        description text,		
+		created_date datetime NOT NULL,
+		modified_date datetime NOT NULL,
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 14:11:52 UTC] WordPress database error Table 'newwp_gml_settings' already exists for query CREATE TABLE newwp_gml_settings (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,		 
+        map_height VARCHAR(20) NULL,
+		map_width VARCHAR(20) NULL,
+		show_phone TINYINT(2) NOT NULL,
+		show_email TINYINT(2) NOT NULL,
+		show_image TINYINT(2) NOT NULL,
+		show_vd_link TINYINT(2) NOT NULL,
+		created_date datetime NOT NULL,	
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 14:12:28 UTC] WordPress database error Table 'newwp_gml_locations' already exists for query CREATE TABLE newwp_gml_locations (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+		category_id INT(11) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+		address_one VARCHAR(255) NOT NULL,
+		address_two VARCHAR(255) NOT NULL,
+		postcode VARCHAR(255) NOT NULL,
+		phone VARCHAR(255) NULL,
+		email VARCHAR(255) NULL,
+		latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,
+		location_image VARCHAR(130) NULL,
+		location_view_url VARCHAR(130) NULL,	 	 
+        description text,		
+		created_date datetime NOT NULL,
+		modified_date datetime NOT NULL,
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[03-Jan-2017 14:12:28 UTC] WordPress database error Table 'newwp_gml_settings' already exists for query CREATE TABLE newwp_gml_settings (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,		 
+        map_height VARCHAR(20) NULL,
+		map_width VARCHAR(20) NULL,
+		show_phone TINYINT(2) NOT NULL,
+		show_email TINYINT(2) NOT NULL,
+		show_image TINYINT(2) NOT NULL,
+		show_vd_link TINYINT(2) NOT NULL,
+		created_date datetime NOT NULL,	
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[04-Jan-2017 10:17:22 UTC] WordPress database error Table 'newwp_gml_locations' already exists for query CREATE TABLE newwp_gml_locations (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+		category_id INT(11) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+		address_one VARCHAR(255) NOT NULL,
+		address_two VARCHAR(255) NOT NULL,
+		postcode VARCHAR(255) NOT NULL,
+		phone VARCHAR(255) NULL,
+		email VARCHAR(255) NULL,
+		latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,
+		location_image VARCHAR(130) NULL,
+		location_view_url VARCHAR(130) NULL,	 	 
+        description text,		
+		created_date datetime NOT NULL,
+		modified_date datetime NOT NULL,
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[04-Jan-2017 10:17:22 UTC] WordPress database error Table 'newwp_gml_settings' already exists for query CREATE TABLE newwp_gml_settings (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,		 
+        map_height VARCHAR(20) NULL,
+		map_width VARCHAR(20) NULL,
+		show_phone TINYINT(2) NOT NULL,
+		show_email TINYINT(2) NOT NULL,
+		show_image TINYINT(2) NOT NULL,
+		show_vd_link TINYINT(2) NOT NULL,
+		created_date datetime NOT NULL,	
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[04-Jan-2017 10:19:51 UTC] WordPress database error Table 'newwp_gml_locations' already exists for query CREATE TABLE newwp_gml_locations (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+		category_id INT(11) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+		address_one VARCHAR(255) NOT NULL,
+		address_two VARCHAR(255) NOT NULL,
+		postcode VARCHAR(255) NOT NULL,
+		phone VARCHAR(255) NULL,
+		email VARCHAR(255) NULL,
+		latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,
+		location_image VARCHAR(130) NULL,
+		location_view_url VARCHAR(130) NULL,	 	 
+        description text,		
+		created_date datetime NOT NULL,
+		modified_date datetime NOT NULL,
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[04-Jan-2017 10:19:51 UTC] WordPress database error Table 'newwp_gml_settings' already exists for query CREATE TABLE newwp_gml_settings (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,		 
+        map_height VARCHAR(20) NULL,
+		map_width VARCHAR(20) NULL,
+		show_phone TINYINT(2) NOT NULL,
+		show_email TINYINT(2) NOT NULL,
+		show_image TINYINT(2) NOT NULL,
+		show_vd_link TINYINT(2) NOT NULL,
+		created_date datetime NOT NULL,	
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[04-Jan-2017 10:24:57 UTC] WordPress database error Table 'newwp_gml_locations' already exists for query CREATE TABLE newwp_gml_locations (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+		category_id INT(11) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+		address_one VARCHAR(255) NOT NULL,
+		address_two VARCHAR(255) NOT NULL,
+		postcode VARCHAR(255) NOT NULL,
+		phone VARCHAR(255) NULL,
+		email VARCHAR(255) NULL,
+		latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,
+		location_image VARCHAR(130) NULL,
+		location_view_url VARCHAR(130) NULL,	 	 
+        description text,		
+		created_date datetime NOT NULL,
+		modified_date datetime NOT NULL,
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[04-Jan-2017 10:24:57 UTC] WordPress database error Table 'newwp_gml_settings' already exists for query CREATE TABLE newwp_gml_settings (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,		 
+        map_height VARCHAR(20) NULL,
+		map_width VARCHAR(20) NULL,
+		show_phone TINYINT(2) NOT NULL,
+		show_email TINYINT(2) NOT NULL,
+		show_image TINYINT(2) NOT NULL,
+		show_vd_link TINYINT(2) NOT NULL,
+		created_date datetime NOT NULL,	
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[04-Jan-2017 10:27:22 UTC] WordPress database error Table 'newwp_gml_locations' already exists for query CREATE TABLE newwp_gml_locations (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+		category_id INT(11) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+		address_one VARCHAR(255) NOT NULL,
+		address_two VARCHAR(255) NOT NULL,
+		postcode VARCHAR(255) NOT NULL,
+		phone VARCHAR(255) NULL,
+		email VARCHAR(255) NULL,
+		latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,
+		location_image VARCHAR(130) NULL,
+		location_view_url VARCHAR(130) NULL,	 	 
+        description text,		
+		created_date datetime NOT NULL,
+		modified_date datetime NOT NULL,
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[04-Jan-2017 10:27:22 UTC] WordPress database error Table 'newwp_gml_settings' already exists for query CREATE TABLE newwp_gml_settings (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,		 
+        map_height VARCHAR(20) NULL,
+		map_width VARCHAR(20) NULL,
+		show_phone TINYINT(2) NOT NULL,
+		show_email TINYINT(2) NOT NULL,
+		show_image TINYINT(2) NOT NULL,
+		show_vd_link TINYINT(2) NOT NULL,
+		created_date datetime NOT NULL,	
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[04-Jan-2017 10:37:23 UTC] WordPress database error Table 'newwp_gml_locations' already exists for query CREATE TABLE newwp_gml_locations (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+		category_id INT(11) NOT NULL,
+        name VARCHAR(255) NOT NULL,
+		address_one VARCHAR(255) NOT NULL,
+		address_two VARCHAR(255) NOT NULL,
+		postcode VARCHAR(255) NOT NULL,
+		phone VARCHAR(255) NULL,
+		email VARCHAR(255) NULL,
+		latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,
+		location_image VARCHAR(130) NULL,
+		location_view_url VARCHAR(130) NULL,	 	 
+        description text,		
+		created_date datetime NOT NULL,
+		modified_date datetime NOT NULL,
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[04-Jan-2017 10:37:23 UTC] WordPress database error Table 'newwp_gml_settings' already exists for query CREATE TABLE newwp_gml_settings (
+        id INT(11) NOT NULL AUTO_INCREMENT,
+        latitude VARCHAR(130) NOT NULL,	
+        longitude VARCHAR(130) NOT NULL,		 
+        map_height VARCHAR(20) NULL,
+		map_width VARCHAR(20) NULL,
+		show_phone TINYINT(2) NOT NULL,
+		show_email TINYINT(2) NOT NULL,
+		show_image TINYINT(2) NOT NULL,
+		show_vd_link TINYINT(2) NOT NULL,
+		created_date datetime NOT NULL,	
+		status TINYINT(2) NOT NULL,
+	UNIQUE KEY id (id)
+    ); made by activate_plugin, do_action('activate_google-map-locations/google-map-locations.php'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_install
+[04-Jan-2017 11:07:26 UTC] WordPress database error Table 'kanawaic_kan-web1.wp_gml_settings' doesn't exist for query SHOW FULL COLUMNS FROM `wp_gml_settings` made by do_action('google-map-locations_page_gml-settings'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_settings, gml_edit_settings
+[09-Jan-2017 12:57:42 UTC] WordPress database error Table 'kanawaic_kan-web1.wp_gml_settings' doesn't exist for query SHOW FULL COLUMNS FROM `wp_gml_settings` made by do_action('google-map-locations_page_gml-settings'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_settings, gml_edit_settings
+[09-Jan-2017 12:59:44 UTC] WordPress database error Table 'kanawaic_kan-web1.wp_gml_settings' doesn't exist for query SHOW FULL COLUMNS FROM `wp_gml_settings` made by do_action('google-map-locations_page_gml-settings'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_settings, gml_edit_settings
+[09-Jan-2017 13:00:13 UTC] WordPress database error Table 'kanawaic_kan-web1.wp_gml_settings' doesn't exist for query SHOW FULL COLUMNS FROM `wp_gml_settings` made by do_action('google-map-locations_page_gml-settings'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_settings, gml_edit_settings
+[09-Jan-2017 13:00:20 UTC] WordPress database error Table 'kanawaic_kan-web1.wp_gml_settings' doesn't exist for query SHOW FULL COLUMNS FROM `wp_gml_settings` made by do_action('google-map-locations_page_gml-settings'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_settings, gml_edit_settings
+[09-Jan-2017 13:01:12 UTC] WordPress database error Table 'kanawaic_kan-web1.wp_gml_settings' doesn't exist for query SHOW FULL COLUMNS FROM `wp_gml_settings` made by do_action('google-map-locations_page_gml-settings'), WP_Hook->do_action, WP_Hook->apply_filters, call_user_func_array, gml_settings, gml_edit_settings
+[04-Jul-2017 18:43:45 UTC] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[04-Jul-2017 18:43:55 UTC] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[04-Jul-2017 18:44:02 UTC] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[04-Jul-2017 18:46:25 UTC] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[04-Jul-2017 18:46:32 UTC] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[09-Jul-2017 13:27:21 UTC] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[17-Jul-2017 15:01:23 UTC] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[17-Jul-2017 15:01:29 UTC] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[20-Jul-2017 09:08:07 UTC] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0

@@ -1,0 +1,7 @@
+table .create_trainer input{height:26px; width:300px;}
+.crInput{height:32px; width:290px;}
+.trainerInputError{border: solid #FF0000 2px !important; text-shadow:#FF0000;}
+.my_input{height:32px; width:300px;} 
+.gm-style-iw {width:300px !important;}
+.gm-style .gm-style-iw {width:300px !important;}
+.gmnoprint div {background-color:red !important; }

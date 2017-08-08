@@ -1,0 +1,15 @@
+.bm_legend_item {
+    margin-left: 50px;
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.yellow {
+    background-color: yellow;
+}
