@@ -1,0 +1,80 @@
+{"event":"details","time":1502268581,"u":"14","run":"1.13","mem":"60.74","data":"----- Initiating master send function for BackupBuddy v8.0.1.0 for basename file: `pack-5e8f47969d15533c6113bc1af11579b69a614f37.pack`. Post-send deletion: "}
+{"event":"details","time":1502268581,"u":"15","run":"1.13","mem":"60.74","data":"Created fileoptions lock file `send-live_0668a7b7d7b4a413cb58b54175db353d-nstfs4.txt.lock` with ID: 598ab0852473f8.10954035."}
+{"event":"details","time":1502268581,"u":"15","run":"1.13","mem":"60.74","data":"Fileoptions load using 0 MB of memory."}
+{"event":"details","time":1502268581,"u":"15","run":"1.13","mem":"60.75","data":"Fileoptions `send-live_0668a7b7d7b4a413cb58b54175db353d-nstfs4.txt` saved. 3232 bytes written."}
+{"event":"details","time":1502268581,"u":"15","run":"1.13","mem":"60.74","data":"Initializing destination."}
+{"event":"details","time":1502268581,"u":"15","run":"1.13","mem":"60.74","data":"Loading destination init file `\/Users\/ilia\/www\/kanawai\/wp-content\/plugins\/backupbuddy\/destinations\/live\/init.php`."}
+{"event":"details","time":1502268581,"u":"15","run":"1.13","mem":"60.74","data":"Destination init loaded."}
+{"event":"details","time":1502268581,"u":"15","run":"1.13","mem":"60.74","data":"Initialized `live` destination."}
+{"event":"details","time":1502268581,"u":"15","run":"1.13","mem":"60.74","data":"Applying destination-specific defaults."}
+{"event":"details","time":1502268581,"u":"15","run":"1.13","mem":"60.75","data":"Applying global destination defaults."}
+{"event":"details","time":1502268581,"u":"15","run":"1.13","mem":"60.74","data":"Calling destination-specific send method."}
+{"event":"details","time":1502268581,"u":"16","run":"1.14","mem":"60.89","data":"Starting S32 send()."}
+{"event":"details","time":1502268581,"u":"16","run":"1.15","mem":"61.28","data":"Using bundled cacert.pem file based on destination settings."}
+{"event":"details","time":1502268581,"u":"20","run":"1.18","mem":"62.67","data":"Guzzle client cainfo: `\/Users\/ilia\/www\/kanawai\/wp-content\/plugins\/backupbuddy\/destinations\/_s3lib2\/Guzzle\/Http\/Resources\/cacert.pem`. capath: `n\/a`."}
+{"event":"details","time":1502268581,"u":"21","run":"1.20","mem":"62.99","data":"File size of `348.62 MB`."}
+{"event":"details","time":1502268581,"u":"21","run":"1.20","mem":"62.99","data":"Initiating multipart transfer."}
+{"event":"details","time":1502268581,"u":"79","run":"1.77","mem":"64.05","data":"Initiated multipart upload with ID `iW2i3mnb1hizdU0zRxbaow86u7AJACwfmXnor4TM0YV1LX9wadWWcLy5L843994v.6Ekwkhx2g3le2KDGyOHxDfD3iAlNyK6WdXZvOCQ.Vyb3Im0OARDwWoLxyxecPeerbZWNNetkgL9IYHgXa2qDg--`."}
+{"event":"details","time":1502268581,"u":"79","run":"1.78","mem":"64.08","data":"Multipart initiated; passing over to send first chunk this run. Burst size: `10 MB`."}
+{"event":"details","time":1502268581,"u":"79","run":"1.78","mem":"64.07","data":"Max time not set in settings so detecting server max PHP runtime."}
+{"event":"details","time":1502268581,"u":"79","run":"1.78","mem":"64.07","data":"Using max runtime: `30`."}
+{"event":"details","time":1502268581,"u":"79","run":"1.78","mem":"64.07","data":"About to read in part contents of part `1` of `35` parts of file `\/Users\/ilia\/www\/kanawai\/.git\/objects\/pack\/pack-5e8f47969d15533c6113bc1af11579b69a614f37.pack` to remote location `d2thf6LEFQXeXiC1\/6516f0546a0bc07a1d25a033f85b14d00ba595e2\/.git\/objects\/pack\/pack-5e8f47969d15533c6113bc1af11579b69a614f37.pack` with multipart ID `iW2i3mnb1hizdU0zRxbaow86u7AJACwfmXnor4TM0YV1LX9wadWWcLy5L843994v.6Ekwkhx2g3le2KDGyOHxDfD3iAlNyK6WdXZvOCQ.Vyb3Im0OARDwWoLxyxecPeerbZWNNetkgL9IYHgXa2qDg--`."}
+{"event":"details","time":1502268581,"u":"82","run":"1.80","mem":"74.08","data":"Beginning upload."}
+{"event":"details","time":1502268592,"u":"99","run":"12.97","mem":"74.20","data":"Success sending chunk. Enable full logging for upload result details."}
+{"event":"details","time":1502268592,"u":"99","run":"12.98","mem":"74.20","data":"Uploaded size this burst: `10 MB`, Start time: `1502261381.8`. Finish time: `1502261393`. Elapsed: `11.1990010738`. Speed: `914 KB`\/sec."}
+{"event":"details","time":1502268592,"u":"99","run":"12.98","mem":"74.20","data":"About to load fileoptions data."}
+{"event":"details","time":1502268592,"u":"99","run":"12.98","mem":"74.20","data":"Fileoptions instance #10."}
+{"event":"details","time":1502268592,"u":"99","run":"12.98","mem":"74.20","data":"Created fileoptions lock file `send-live_0668a7b7d7b4a413cb58b54175db353d-nstfs4.txt.lock` with ID: 598ab090f3e3b9.60520972."}
+{"event":"details","time":1502268593,"u":"00","run":"12.98","mem":"74.21","data":"Fileoptions load using 0.01 MB of memory."}
+{"event":"details","time":1502268593,"u":"00","run":"12.98","mem":"74.21","data":"Fileoptions data loaded."}
+{"event":"details","time":1502268593,"u":"00","run":"12.98","mem":"74.21","data":"S3 multipart upload has more parts left."}
+{"event":"details","time":1502268593,"u":"00","run":"12.98","mem":"74.21","data":"Not approaching limits. Proceeding to next burst this run."}
+{"event":"details","time":1502268593,"u":"00","run":"12.98","mem":"74.22","data":"Fileoptions `send-live_0668a7b7d7b4a413cb58b54175db353d-nstfs4.txt` saved. 3460 bytes written."}
+{"event":"details","time":1502268593,"u":"00","run":"12.98","mem":"74.21","data":"About to read in part contents of part `2` of `35` parts of file `\/Users\/ilia\/www\/kanawai\/.git\/objects\/pack\/pack-5e8f47969d15533c6113bc1af11579b69a614f37.pack` to remote location `d2thf6LEFQXeXiC1\/6516f0546a0bc07a1d25a033f85b14d00ba595e2\/.git\/objects\/pack\/pack-5e8f47969d15533c6113bc1af11579b69a614f37.pack` with multipart ID `iW2i3mnb1hizdU0zRxbaow86u7AJACwfmXnor4TM0YV1LX9wadWWcLy5L843994v.6Ekwkhx2g3le2KDGyOHxDfD3iAlNyK6WdXZvOCQ.Vyb3Im0OARDwWoLxyxecPeerbZWNNetkgL9IYHgXa2qDg--`."}
+{"event":"details","time":1502268593,"u":"02","run":"13.00","mem":"74.21","data":"Beginning upload."}
+{"event":"details","time":1502268602,"u":"60","run":"22.58","mem":"74.21","data":"Success sending chunk. Enable full logging for upload result details."}
+{"event":"details","time":1502268602,"u":"60","run":"22.59","mem":"74.21","data":"Uploaded size this burst: `10 MB`, Start time: `1502261393`. Finish time: `1502261402.61`. Elapsed: `9.60376095772`. Speed: `1.04 MB`\/sec."}
+{"event":"details","time":1502268602,"u":"60","run":"22.59","mem":"74.21","data":"fileoptions already loaded from prior pass."}
+{"event":"details","time":1502268602,"u":"60","run":"22.59","mem":"74.21","data":"S3 multipart upload has more parts left."}
+{"event":"message","time":1502268602,"u":"60","run":"22.59","mem":"74.21","data":"Not enough time left (~`2.61164593697`) with max time of `30` sec to send another chunk at `2.08 MB` \/ sec. Ran for 21.388 sec. Proceeding to use chunking."}
+{"event":"details","time":1502268602,"u":"61","run":"22.59","mem":"74.23","data":"Next S3 chunk step cron event scheduled."}
+{"event":"details","time":1502268602,"u":"61","run":"22.59","mem":"64.15","data":"Multipart chunk mode completed a pass of the send function. Resuming will be needed. Result: `Array\n(\n    [0] => iW2i3mnb1hizdU0zRxbaow86u7AJACwfmXnor4TM0YV1LX9wadWWcLy5L843994v.6Ekwkhx2g3le2KDGyOHxDfD3iAlNyK6WdXZvOCQ.Vyb3Im0OARDwWoLxyxecPeerbZWNNetkgL9IYHgXa2qDg--\n    [1] => Sent part 2 of 35 parts.<br><div class=\"backupbuddy-progressbar\" data-percent=\"6\"><div class=\"backupbuddy-progressbar-label\"><\/div><\/div>\n)\n`."}
+{"event":"details","time":1502268602,"u":"61","run":"22.59","mem":"64.15","data":"Created fileoptions lock file `send-live_0668a7b7d7b4a413cb58b54175db353d-nstfs4.txt.lock` with ID: 598ab09a95a861.52695577."}
+{"event":"details","time":1502268602,"u":"61","run":"22.59","mem":"64.16","data":"Fileoptions load using 0.01 MB of memory."}
+{"event":"details","time":1502268602,"u":"61","run":"22.59","mem":"64.17","data":"Fileoptions `send-live_0668a7b7d7b4a413cb58b54175db353d-nstfs4.txt` saved. 3532 bytes written."}
+{"event":"details","time":1502268602,"u":"61","run":"22.59","mem":"64.16","data":"Next multipart chunk will be processed shortly. Now waiting on its cron..."}
+{"event":"details","time":1502268602,"u":"61","run":"22.59","mem":"64.16","data":"Ending send() function pass."}
+{"event":"details","time":1502268740,"u":"57","run":"0.57","mem":"40.91","data":"----- Initiating master send function for BackupBuddy v8.0.1.0 for basename file: `pack-5e8f47969d15533c6113bc1af11579b69a614f37.pack`. Post-send deletion: "}
+{"event":"details","time":1502268740,"u":"57","run":"0.58","mem":"40.98","data":"Created fileoptions lock file `send-live_0668a7b7d7b4a413cb58b54175db353d-nstfs4.txt.lock` with ID: 598ab1248d5078.74525646."}
+{"event":"details","time":1502268740,"u":"58","run":"0.58","mem":"40.99","data":"Fileoptions load using 0.01 MB of memory."}
+{"event":"details","time":1502268740,"u":"58","run":"0.58","mem":"41.00","data":"Fileoptions `send-live_0668a7b7d7b4a413cb58b54175db353d-nstfs4.txt` saved. 9056 bytes written."}
+{"event":"details","time":1502268740,"u":"58","run":"0.58","mem":"40.98","data":"Initializing destination."}
+{"event":"details","time":1502268740,"u":"58","run":"0.58","mem":"40.98","data":"Loading destination init file `\/Users\/ilia\/www\/kanawai\/wp-content\/plugins\/backupbuddy\/destinations\/live\/init.php`."}
+{"event":"details","time":1502268740,"u":"58","run":"0.58","mem":"41.02","data":"Destination init loaded."}
+{"event":"details","time":1502268740,"u":"58","run":"0.58","mem":"41.02","data":"Initialized `live` destination."}
+{"event":"details","time":1502268740,"u":"58","run":"0.58","mem":"41.02","data":"Applying destination-specific defaults."}
+{"event":"details","time":1502268740,"u":"58","run":"0.58","mem":"41.03","data":"Applying global destination defaults."}
+{"event":"details","time":1502268740,"u":"58","run":"0.58","mem":"41.03","data":"Calling destination-specific send method."}
+{"event":"details","time":1502268740,"u":"59","run":"0.59","mem":"41.25","data":"Starting S32 send()."}
+{"event":"details","time":1502268740,"u":"59","run":"0.59","mem":"41.64","data":"Using bundled cacert.pem file based on destination settings."}
+{"event":"details","time":1502268740,"u":"77","run":"0.77","mem":"43.03","data":"Guzzle client cainfo: `\/Users\/ilia\/www\/kanawai\/wp-content\/plugins\/backupbuddy\/destinations\/_s3lib2\/Guzzle\/Http\/Resources\/cacert.pem`. capath: `n\/a`."}
+{"event":"details","time":1502268740,"u":"80","run":"0.80","mem":"43.35","data":"Max time not set in settings so detecting server max PHP runtime."}
+{"event":"details","time":1502268740,"u":"80","run":"0.80","mem":"43.35","data":"Using max runtime: `30`."}
+{"event":"details","time":1502268740,"u":"80","run":"0.80","mem":"43.36","data":"About to read in part contents of part `3` of `35` parts of file `\/Users\/ilia\/www\/kanawai\/.git\/objects\/pack\/pack-5e8f47969d15533c6113bc1af11579b69a614f37.pack` to remote location `d2thf6LEFQXeXiC1\/6516f0546a0bc07a1d25a033f85b14d00ba595e2\/.git\/objects\/pack\/pack-5e8f47969d15533c6113bc1af11579b69a614f37.pack` with multipart ID `iW2i3mnb1hizdU0zRxbaow86u7AJACwfmXnor4TM0YV1LX9wadWWcLy5L843994v.6Ekwkhx2g3le2KDGyOHxDfD3iAlNyK6WdXZvOCQ.Vyb3Im0OARDwWoLxyxecPeerbZWNNetkgL9IYHgXa2qDg--`."}
+{"event":"details","time":1502268740,"u":"89","run":"0.89","mem":"53.37","data":"Beginning upload."}
+{"event":"details","time":1502268753,"u":"13","run":"13.13","mem":"54.53","data":"Success sending chunk. Enable full logging for upload result details."}
+{"event":"details","time":1502268753,"u":"13","run":"13.13","mem":"54.53","data":"Uploaded size this burst: `10 MB`, Start time: `1502261540.81`. Finish time: `1502261553.13`. Elapsed: `12.3277490139`. Speed: `831 KB`\/sec."}
+{"event":"details","time":1502268753,"u":"13","run":"13.13","mem":"54.53","data":"About to load fileoptions data."}
+{"event":"details","time":1502268753,"u":"13","run":"13.13","mem":"54.53","data":"Fileoptions instance #10."}
+{"event":"details","time":1502268753,"u":"13","run":"13.13","mem":"54.53","data":"Created fileoptions lock file `send-live_0668a7b7d7b4a413cb58b54175db353d-nstfs4.txt.lock` with ID: 598ab13120e928.75245543."}
+{"event":"details","time":1502268753,"u":"13","run":"13.14","mem":"54.57","data":"Fileoptions load using 0.04 MB of memory."}
+{"event":"details","time":1502268753,"u":"14","run":"13.14","mem":"54.57","data":"Fileoptions data loaded."}
+{"event":"details","time":1502268753,"u":"14","run":"13.14","mem":"54.57","data":"S3 multipart upload has more parts left."}
+{"event":"message","time":1502268753,"u":"14","run":"13.14","mem":"54.57","data":"Not enough time left (~`11.6635539532`) with max time of `30` sec to send another chunk at `830 KB` \/ sec. Ran for 12.336 sec. Proceeding to use chunking."}
+{"event":"details","time":1502268753,"u":"15","run":"13.15","mem":"54.58","data":"Next S3 chunk step cron event scheduled."}
+{"event":"details","time":1502268753,"u":"15","run":"13.15","mem":"44.49","data":"Multipart chunk mode completed a pass of the send function. Resuming will be needed. Result: `Array\n(\n    [0] => iW2i3mnb1hizdU0zRxbaow86u7AJACwfmXnor4TM0YV1LX9wadWWcLy5L843994v.6Ekwkhx2g3le2KDGyOHxDfD3iAlNyK6WdXZvOCQ.Vyb3Im0OARDwWoLxyxecPeerbZWNNetkgL9IYHgXa2qDg--\n    [1] => Sent part 3 of 35 parts.<br><div class=\"backupbuddy-progressbar\" data-percent=\"9\"><div class=\"backupbuddy-progressbar-label\"><\/div><\/div>\n)\n`."}
+{"event":"details","time":1502268753,"u":"15","run":"13.15","mem":"44.49","data":"Created fileoptions lock file `send-live_0668a7b7d7b4a413cb58b54175db353d-nstfs4.txt.lock` with ID: 598ab13125db38.14739015."}
+{"event":"details","time":1502268753,"u":"15","run":"13.15","mem":"44.52","data":"Fileoptions load using 0.04 MB of memory."}
+{"event":"details","time":1502268753,"u":"15","run":"13.15","mem":"44.54","data":"Fileoptions `send-live_0668a7b7d7b4a413cb58b54175db353d-nstfs4.txt` saved. 9056 bytes written."}
+{"event":"details","time":1502268753,"u":"15","run":"13.15","mem":"44.52","data":"Next multipart chunk will be processed shortly. Now waiting on its cron..."}
+{"event":"details","time":1502268753,"u":"15","run":"13.15","mem":"44.52","data":"Ending send() function pass."}

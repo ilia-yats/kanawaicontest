@@ -119,6 +119,12 @@ function pb_tag_manager2()
 }
 
 
+add_action('init', 'kanawaicontest_public_init');
+function kanawaicontest_public_init() {
+    // use correct path here
+    require_once ABSPATH . '/wp-content/plugins/kanawaicontest/public/Kanawaicontest.php';
+}
+
 add_action( 'wp_enqueue_scripts', 'kanawaicontest_assets', 12 );
 function kanawaicontest_assets() {
     $templateDir = get_stylesheet_directory_uri();
@@ -127,3 +133,5 @@ function kanawaicontest_assets() {
     wp_register_script( 'kc-main-script', $templateDir . '/js/index.js', ['jquery']);
     wp_enqueue_script( 'kc-main-script' );
 }
+
+

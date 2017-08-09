@@ -1,129 +1,154 @@
 function GalleryImages() {
-    jQuery.each(jQuery('.img'), function () {
-        var background = jQuery(this).data('background');
-        jQuery(this).css('background-image', 'url('+background+')')
+    $.each($('.img'), function () {
+        var background = $(this).data('background');
+        $(this).css('background-image', 'url('+background+')')
     })
 }
 var ImageZoom =  {
-    init: function(jQueryblock, isChosen, isArchive) {
-        var jQuerycnt = jQuery('#image-zoom');
-        var jQuerycntInner = jQuery('.image-zoom-inner', jQuerycnt);
-        var jQueryimg = jQuery('.main-img', jQuerycntInner);
-        var imgUrl = jQueryblock.data('background');
-        var jQuerystarButton = jQuery('.star-button', jQuerycntInner);
+    $cnt: null,
+    $block: null,
+    $img: null,
+    $starButton: null,
+    $cntInner: null,
+    imgUrl: null,
+    init: function() {
+        var self = this;
+        this.$cnt = $('#image-zoom');
+        this.$cntInner = $('.image-zoom-inner', this.$cnt);
+        this.$starButton = $('.star-button', this.$cntInner);
+        this.$img = $('.main-img', this.$cntInner);
 
-        function hideImageZoom() {
-            jQuerycnt.removeClass('visible');
-        }
-        if (isArchive) {
-            jQuerystarButton.hide();
-        }
-        isChosen
-            ? jQuerystarButton.addClass('chosen')
-            : jQuerystarButton.removeClass('chosen');
-
-        jQuerycnt.addClass('visible');
-        jQueryimg.attr('src', imgUrl);
-
-        jQuery('.close').on('click', function () {
-            hideImageZoom();
-        });
-
-        jQuery('.next-img').on('click', function () {
-            if (jQueryblock.parent().is(':last-child')) {
+        $('#next').click(function () {
+            if (self.$block.parent().is(':last-child')) {
                 return false;
             }
 
-            (jQueryblock.parent().next().children('svg').hasClass('chosen'))
-                ? jQuery('svg', jQuerycntInner).addClass('chosen')
-                : jQuery('svg', jQuerycntInner).removeClass('chosen');
-            jQueryblock = jQueryblock.parent().next().children('.img');
-            imgUrl = jQueryblock.data('background');
-            jQueryimg.attr('src', imgUrl);
+            self.nextImg();
         });
 
-        jQuery('.prev-img').on('click', function () {
-            if (jQueryblock.parent().is(':first-child')) {
+        $('#prev').click(function () {
+            if (self.$block.parent().is(':first-child')) {
                 return false;
             }
 
-            (jQueryblock.parent().prev().children('svg').hasClass('chosen'))
-                ? jQuery('svg', jQuerycntInner).addClass('chosen')
-                : jQuery('svg', jQuerycntInner).removeClass('chosen');
-            jQueryblock = jQueryblock.parent().prev().children('.img');
-            imgUrl = jQueryblock.data('background');
-            jQueryimg.attr('src', imgUrl);
+            self.prevImg();
         });
 
-        jQuery('.star-button', jQuerycntInner).on('click', function () {
-            var jQuerygalleryBlock = jQuery('#gallery-images');
 
-            if ((jQuery('.chosen', jQuerygalleryBlock).length < 3) || jQuery(this).hasClass('chosen')) {
-                jQuery(this).toggleClass('chosen');
-                jQueryblock.siblings().toggleClass('chosen');
+        $('#close').click(function () {
+            self.hide();
+        });
+
+        $('.star-button', self.$cntInner).click(function () {
+            var $galleryBlock = $('#gallery-images');
+
+            if (($('.chosen', $galleryBlock).length < 3) || $(this).hasClass('chosen')) {
+                $(this).toggleClass('chosen');
+                self.$block.siblings().toggleClass('chosen');
             }
 
-            if (jQuery('.chosen', jQuerygalleryBlock).length < 3) {
-                jQuery('#show-form').removeClass('active');
+            if ($('.chosen', $galleryBlock).length < 3) {
+                $('#show-form').removeClass('active');
             } else {
-                jQuery('#show-form').addClass('active');
+                $('#show-form').addClass('active');
             }
         });
+    },
+    show: function ($block, isChosen) {
+        var self = this;
+        self.$block = $block;
 
-        jQuery(document).mouseup(function (e) {
-            if (jQuerycnt.has(e.target).length === 0) {
-                hideImageZoom();
+        isChosen
+            ? this.$starButton.addClass('chosen')
+            : this.$starButton.removeClass('chosen');
+
+        this.imgUrl = self.$block.data('background');
+        this.$cnt.addClass('visible');
+        this.$img.attr('src', self.imgUrl);
+
+        $(document).mouseup(function (e) {
+            if (self.$cnt.has(e.target).length === 0) {
+                self.hide();
             }
         });
+    },
+    hide: function () {
+        this.$cnt.removeClass('visible');
+        this.$img.attr('src', '');
+        $(document).unbind('mouseup');
+    },
+    nextImg: function () {
+        var self = this;
+
+        (self.$block.parent().next().children('svg').hasClass('chosen'))
+            ? $('svg', self.$cntInner).addClass('chosen')
+            : $('svg', self.$cntInner).removeClass('chosen');
+        self.$block = self.$block.parent().next().children('.img');
+        self.imgUrl = self.$block.data('background');
+        self.$img.attr('src', self.imgUrl);
+    },
+    prevImg: function () {
+        var self = this;
+
+        (self.$block.parent().prev().children('svg').hasClass('chosen'))
+            ? $('svg', self.$cntInner).addClass('chosen')
+            : $('svg', self.$cntInner).removeClass('chosen');
+        self.$block = self.$block.parent().prev().children('.img');
+        self.imgUrl = self.$block.data('background');
+        self.$img.attr('src', self.imgUrl);
     }
 };
 
-jQuery(document).ready(function () {
+$(document).ready(function () {
     GalleryImages();
-    var jQuerygalleryBlock = jQuery('#gallery-images');
+    ImageZoom.init();
+    var $galleryBlock = $('#gallery-images');
 
 
-    jQuery('.img').on('click', function () {
+    $('.img').on('click', function () {
         var isChosen = false;
-        if (jQuery(this).siblings().hasClass('chosen')) {
+        if ($(this).siblings().hasClass('chosen')) {
             isChosen = true;
         }
-        if (jQuery(this).closest('#archive-gallery')) {
-            ImageZoom.init(jQuery(this), isChosen, true)
-        }
-        ImageZoom.init(jQuery(this), isChosen);
-    });
 
-    jQuery('.star-button', jQuerygalleryBlock).on('click', function () {
-        if ((jQuery('.chosen', jQuerygalleryBlock).length < 3) || jQuery(this).hasClass('chosen')) {
-            jQuery(this).toggleClass('chosen');
-        }
-
-        if (jQuery('.chosen', jQuerygalleryBlock).length < 3) {
-            jQuery('#show-form').removeClass('active');
+        if ($(this).siblings('.star-button').length == 0) {
+            $('#image-zoom .star-button').hide();
         } else {
-            jQuery('#show-form').addClass('active');
+            $('#image-zoom .star-button').show();
+        }
+        ImageZoom.show($(this), isChosen);
+    });
+
+    $('.star-button', $galleryBlock).on('click', function () {
+        if (($('.chosen', $galleryBlock).length < 3) || $(this).hasClass('chosen')) {
+            $(this).toggleClass('chosen');
+        }
+
+        if ($('.chosen', $galleryBlock).length < 3) {
+            $('#show-form').removeClass('active');
+        } else {
+            $('#show-form').addClass('active');
         }
     });
 
-    jQuery('#show-full-rules').on('click', function (e) {
+    $('#show-full-rules').on('click', function (e) {
         e.preventDefault();
 
-        jQuery(this).hide().parent().siblings('.hidden').slideDown();
+        $(this).hide().parent().siblings('.hidden').slideDown();
     });
 
-    jQuery('.show-form-button').on('click', function () {
-        if (!jQuery(this).hasClass('active')) {
+    $('.show-form-button').on('click', function () {
+        if (!$(this).hasClass('active')) {
             return false;
         }
-        jQuery(this).hide();
-        jQuery('#main-form').slideDown(300);
+        $(this).hide();
+        $('#main-form').slideDown(300);
     });
 
-    jQuery('#show-archiv').on('click', function (e) {
+    $('#show-archiv').on('click', function (e) {
         e.preventDefault();
 
-        jQuery('#archive-gallery').slideDown(200);
-        jQuery(this).hide();
+        $('#archive-gallery').slideDown(200);
+        $(this).hide();
     })
 });
