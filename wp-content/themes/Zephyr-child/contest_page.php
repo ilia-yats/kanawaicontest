@@ -4,6 +4,13 @@ Template Name: Contest Page
 */
 ?>
 
+<?php
+// Substitute outdated jquery with newer one only on this page
+wp_deregister_script( 'jquery' );
+wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js', false, '1.12.4' );
+wp_enqueue_script( 'jquery' );
+?>
+
 <?php get_header();?>
 <body>
 <script src='https://www.google.com/recaptcha/api.js'></script>
@@ -105,7 +112,7 @@ Template Name: Contest Page
             <span>Sie haben Ihre Stimme fuer das aktuelle Gewinnspiel bereits abgegeben.<br>Gerne können Sie nächsten Monat wieder mitmachen!</span>
         </div>
         <div class="form" id="main-form">
-            <form action="post">
+            <form method="post" action="">
                 <label for="name">Vorname:</label>
                 <input type="text" id="vorname">
                 <label for="name">Name:</label>

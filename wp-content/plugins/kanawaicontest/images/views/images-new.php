@@ -18,15 +18,15 @@
                            value="" required="required"/>
                 </td>
             </tr>
-            <tr class="row-name">
-                <th scope="row">
-                    <label for="description">Description</label>
-                </th>
-                <td>
-                    <input type="text" name="description" id="description" class="regular-text"
-                           value="" required="required"/>
-                </td>
-            </tr>
+<!--            <tr class="row-name">-->
+<!--                <th scope="row">-->
+<!--                    <label for="description">Description</label>-->
+<!--                </th>-->
+<!--                <td>-->
+<!--                    <input type="text" name="description" id="description" class="regular-text"-->
+<!--                           value="" required="required"/>-->
+<!--                </td>-->
+<!--            </tr>-->
             <tr class="row-name">
                 <th scope="row">
                     <label for="image_file">Image File</label>
@@ -41,6 +41,7 @@
         <?php wp_nonce_field('kanawaicontest_new_image'); ?>
         <?php submit_button('Save', 'primary', 'submit_image'); ?>
 
+        <input type='hidden' name='tour_id' id='tour_id' value='<?php echo absint($_REQUEST['tour_id']) ?>'>
         <input type='hidden' name='image_attachment_id' id='image_attachment_id' value=''>
     </form>
 </div>

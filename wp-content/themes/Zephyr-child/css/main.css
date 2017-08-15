@@ -491,7 +491,7 @@ body .inner {
     text-transform: uppercase;
     background-color: #ffa900; }
 .rules .inner .form {
-    display: none;
+    /*display: none;*/
     margin-bottom: 85px;
     text-align: left; }
 .rules .inner .form form label {
