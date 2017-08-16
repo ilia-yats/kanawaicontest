@@ -62,7 +62,7 @@ $templateDir = get_stylesheet_directory_uri();
         </div>
         <div class="gallery-images" id="gallery-images">
             <div class="img-container">
-                <div class="img" data-background="images/image_736х416/170217_cleandevil_final.jpg">
+                <div class="img" data-background="<?= $templateDir ?>/images/170217_cleandevil_final.jpg">
                     <div class="layer"></div>
                 </div>
                 <svg class="star-button" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70.0354767 67.0449219"  xml:space="preserve">
@@ -81,7 +81,7 @@ $templateDir = get_stylesheet_directory_uri();
             </svg>
             </div>
             <div class="img-container">
-                <div class="img" data-background="images/image_736х416/CGAG_VW%20-%2001.06.%20-%2031.12.2017.jpg">
+                <div class="img" data-background="<?= $templateDir ?>/images/CGAG_VW%20-%2001.06.%20-%2031.12.2017.jpg">
                     <div class="layer"></div>
                 </div>
                 <svg class="star-button" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70.0354767 67.0449219"  xml:space="preserve">
@@ -100,7 +100,7 @@ $templateDir = get_stylesheet_directory_uri();
             </svg>
             </div>
             <div class="img-container">
-                <div class="img" data-background="images/image_736х416/Edelweiss_pizza%20-%2014.08.%20-%2019.08.2017.jpg">
+                <div class="img" data-background="<?= $templateDir ?>/images/Edelweiss_pizza%20-%2014.08.%20-%2019.08.2017.jpg">
                     <div class="layer"></div>
                 </div>
                 <svg class="star-button" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70.0354767 67.0449219"  xml:space="preserve">
@@ -119,7 +119,7 @@ $templateDir = get_stylesheet_directory_uri();
             </svg>
             </div>
             <div class="img-container">
-                <div class="img" data-background="images/image_736х416/Hafners%20British%20Bikes%20-%20Letzte%2010%20Tage%20vom%20Monat.jpg">
+                <div class="img" data-background="<?= $templateDir ?>/images/Hafners%20British%20Bikes%20-%20Letzte%2010%20Tage%20vom%20Monat.jpg">
                     <div class="layer"></div>
                 </div>
                 <svg class="star-button" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70.0354767 67.0449219"  xml:space="preserve">
@@ -138,7 +138,7 @@ $templateDir = get_stylesheet_directory_uri();
             </svg>
             </div>
             <div class="img-container">
-                <div class="img" data-background="images/image_736х416/Jazz%20Club%20Lichtensteig%20-%2007.08.%20-%2010.08.2017.jpg">
+                <div class="img" data-background="<?= $templateDir ?>/images/Jazz%20Club%20Lichtensteig%20-%2007.08.%20-%2010.08.2017.jpg">
                     <div class="layer"></div>
                 </div>
                 <svg class="star-button" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70.0354767 67.0449219"  xml:space="preserve">
@@ -157,7 +157,7 @@ $templateDir = get_stylesheet_directory_uri();
             </svg>
             </div>
             <div class="img-container">
-                <div class="img" data-background="images/image_736х416/Möbel%20GAMMA%20-%2017.07.%20-%2021.07.2017_02.08.%20-%2004.08.2017_10.08.%20-%2011.08.2017.jpg">
+                <div class="img" data-background="<?= $templateDir ?>/images/Möbel%20GAMMA%20-%2017.07.%20-%2021.07.2017_02.08.%20-%2004.08.2017_10.08.%20-%2011.08.2017.jpg">
                     <div class="layer"></div>
                 </div>
                 <svg class="star-button" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70.0354767 67.0449219"  xml:space="preserve">
@@ -176,7 +176,7 @@ $templateDir = get_stylesheet_directory_uri();
             </svg>
             </div>
             <div class="img-container">
-                <div class="img" data-background="images/image_736х416/Möbel%20Schnetzer.jpg">
+                <div class="img" data-background="<?= $templateDir ?>/images/Möbel%20Schnetzer.jpg">
                     <div class="layer"></div>
                 </div>
                 <svg class="star-button" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70.0354767 67.0449219"  xml:space="preserve">
@@ -195,7 +195,7 @@ $templateDir = get_stylesheet_directory_uri();
             </svg>
             </div>
             <div class="img-container">
-                <div class="img" data-background="images/image_736х416/Neue%20Blumenau%20-%2010.08.%20-%2012.08.2017.jpg">
+                <div class="img" data-background="<?= $templateDir ?>/images/Neue%20Blumenau%20-%2010.08.%20-%2012.08.2017.jpg">
                     <div class="layer"></div>
                 </div>
                 <svg class="star-button" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70.0354767 67.0449219"  xml:space="preserve">
@@ -214,7 +214,7 @@ $templateDir = get_stylesheet_directory_uri();
             </svg>
             </div>
             <div class="img-container">
-                <div class="img" data-background="images/image_736х416/Royal%20King%20BWC%20-%2016zu9_6%20-%2028.08.%20-%2003.09.2017.jpg">
+                <div class="img" data-background="<?= $templateDir ?>/images/Royal%20King%20BWC%20-%2016zu9_6%20-%2028.08.%20-%2003.09.2017.jpg">
                     <div class="layer"></div>
                 </div>
                 <svg class="star-button" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70.0354767 67.0449219"  xml:space="preserve">
@@ -233,7 +233,7 @@ $templateDir = get_stylesheet_directory_uri();
             </svg>
             </div>
             <div class="img-container">
-                <div class="img" data-background="images/image_736х416/Verein%20Highlander_31.07.-06.08.2017.jpg">
+                <div class="img" data-background="<?= $templateDir ?>/images/Verein%20Highlander_31.07.-06.08.2017.jpg">
                     <div class="layer"></div>
                 </div>
                 <svg class="star-button" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70.0354767 67.0449219"  xml:space="preserve">
@@ -252,7 +252,7 @@ $templateDir = get_stylesheet_directory_uri();
             </svg>
             </div>
             <div class="img-container">
-                <div class="img" data-background="images/image_736х416/170217_cleandevil_final.jpg">
+                <div class="img" data-background="<?= $templateDir ?>/images/170217_cleandevil_final.jpg">
                     <div class="layer"></div>
                 </div>
                 <svg class="star-button" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70.0354767 67.0449219"  xml:space="preserve">
@@ -271,7 +271,7 @@ $templateDir = get_stylesheet_directory_uri();
             </svg>
             </div>
             <div class="img-container">
-                <div class="img" data-background="images/image_736х416/CGAG_VW%20-%2001.06.%20-%2031.12.2017.jpg">
+                <div class="img" data-background="<?= $templateDir ?>/images/CGAG_VW%20-%2001.06.%20-%2031.12.2017.jpg">
                     <div class="layer"></div>
                 </div>
                 <svg class="star-button" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70.0354767 67.0449219"  xml:space="preserve">
@@ -290,7 +290,7 @@ $templateDir = get_stylesheet_directory_uri();
             </svg>
             </div>
             <div class="img-container">
-                <div class="img" data-background="images/image_736х416/Edelweiss_pizza%20-%2014.08.%20-%2019.08.2017.jpg">
+                <div class="img" data-background="<?= $templateDir ?>/images/Edelweiss_pizza%20-%2014.08.%20-%2019.08.2017.jpg">
                     <div class="layer"></div>
                 </div>
                 <svg class="star-button" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70.0354767 67.0449219"  xml:space="preserve">
@@ -309,7 +309,7 @@ $templateDir = get_stylesheet_directory_uri();
             </svg>
             </div>
             <div class="img-container">
-                <div class="img" data-background="images/image_736х416/Hafners%20British%20Bikes%20-%20Letzte%2010%20Tage%20vom%20Monat.jpg">
+                <div class="img" data-background="<?= $templateDir ?>/images/Hafners%20British%20Bikes%20-%20Letzte%2010%20Tage%20vom%20Monat.jpg">
                     <div class="layer"></div>
                 </div>
                 <svg class="star-button" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70.0354767 67.0449219"  xml:space="preserve">
@@ -328,7 +328,7 @@ $templateDir = get_stylesheet_directory_uri();
             </svg>
             </div>
             <div class="img-container">
-                <div class="img" data-background="images/image_736х416/Jazz%20Club%20Lichtensteig%20-%2007.08.%20-%2010.08.2017.jpg">
+                <div class="img" data-background="<?= $templateDir ?>/images/Jazz%20Club%20Lichtensteig%20-%2007.08.%20-%2010.08.2017.jpg">
                     <div class="layer"></div>
                 </div>
                 <svg class="star-button" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70.0354767 67.0449219"  xml:space="preserve">
@@ -347,7 +347,7 @@ $templateDir = get_stylesheet_directory_uri();
             </svg>
             </div>
             <div class="img-container">
-                <div class="img" data-background="images/image_736х416/Möbel%20GAMMA%20-%2017.07.%20-%2021.07.2017_02.08.%20-%2004.08.2017_10.08.%20-%2011.08.2017.jpg">
+                <div class="img" data-background="<?= $templateDir ?>/images/Möbel%20GAMMA%20-%2017.07.%20-%2021.07.2017_02.08.%20-%2004.08.2017_10.08.%20-%2011.08.2017.jpg">
                     <div class="layer"></div>
                 </div>
                 <svg class="star-button" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70.0354767 67.0449219"  xml:space="preserve">
@@ -409,33 +409,33 @@ $templateDir = get_stylesheet_directory_uri();
             <h2>Archive</h2>
         </div>
         <div class="archive-gallery-inner">
-            <div class="img-container">
-                <div class="img" data-background="images/image_736х416/170217_cleandevil_final.jpg">
+            <div class="img-container archive">
+                <div class="img" data-background="<?= $templateDir ?>/images/170217_cleandevil_final.jpg">
                     <div class="layer"></div>
                 </div>
                 <span class="img-text">Gewinnerbild August 2017</span class="img-text">
             </div>
-            <div class="img-container">
-                <div class="img" data-background="images/image_736х416/CGAG_VW%20-%2001.06.%20-%2031.12.2017.jpg">
+            <div class="img-container archive">
+                <div class="img" data-background="<?= $templateDir ?>/images/CGAG_VW%20-%2001.06.%20-%2031.12.2017.jpg">
                     <div class="layer"></div>
                 </div>
                 <span class="img-text">Gewinnerbild August 2017</span>
             </div>
-            <div class="img-container">
+            <div class="img-container archive">
                 <div class="img"
-                     data-background="images/image_736х416/Edelweiss_pizza%20-%2014.08.%20-%2019.08.2017.jpg">
+                     data-background="<?= $templateDir ?>/images/Edelweiss_pizza%20-%2014.08.%20-%2019.08.2017.jpg">
                     <div class="layer"></div>
                 </div>
                 <span class="img-text">Gewinnerbild August 2017</span>
             </div>
-            <div class="img-container">
-                <div class="img" data-background="images/image_736х416/Hafners%20British%20Bikes%20-%20Letzte%2010%20Tage%20vom%20Monat.jpg">
+            <div class="img-container archive">
+                <div class="img" data-background="<?= $templateDir ?>/images/Hafners%20British%20Bikes%20-%20Letzte%2010%20Tage%20vom%20Monat.jpg">
                     <div class="layer"></div>
                 </div>
                 <span class="img-text">Gewinnerbild August 2017</span>
             </div>
-            <div class="img-container">
-                <div class="img" data-background="images/image_736х416/Jazz%20Club%20Lichtensteig%20-%2007.08.%20-%2010.08.2017.jpg">
+            <div class="img-container archive">
+                <div class="img" data-background="<?= $templateDir ?>/images/Jazz%20Club%20Lichtensteig%20-%2007.08.%20-%2010.08.2017.jpg">
                     <div class="layer"></div>
                 </div>
                 <span class="img-text">Gewinnerbild August 2017</span>
