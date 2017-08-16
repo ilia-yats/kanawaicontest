@@ -14,6 +14,36 @@ function IsActiveForm() {
         $button.addClass('active');
     }
 }
+
+var thanksModal = {
+    $cnt: null,
+    $close: null,
+    init: function () {
+        var self = this;
+
+        this.$cnt = $('#thanks-for-vote-modal');
+        this.$close = $('.close', this.$cnt);
+
+        this.$close.on('click', function () {
+            self.hide();
+        });
+    },
+    show: function () {
+        var self = this;
+
+        this.$cnt.addClass('active');
+        $(document).mouseup(function (e) {
+            if (self.$cnt.has(e.target).length === 0) {
+                self.hide();
+            }
+        })
+    },
+    hide: function () {
+        this.$cnt.removeClass('active');
+        $(document).unbind('mouseup');
+    }
+};
+
 var ImageZoom =  {
     $cnt: null,
     $block: null,
@@ -116,6 +146,7 @@ var ImageZoom =  {
 
 $(document).ready(function () {
     GalleryImages();
+    thanksModal.init();
     ImageZoom.init();
     var $galleryBlock = $('#gallery-images');
 
@@ -134,7 +165,9 @@ $(document).ready(function () {
         }
         ImageZoom.show(imgContainer);
     });
-
+    $(window).resize(function(){
+        $('.img-container').height($('.img-container').width());
+    });
     $('.star-button', $galleryBlock).on('click', function () {
         if (($('.chosen', $galleryBlock).length < 3) || $(this).parent().hasClass('chosen')) {
             $(this).parent().toggleClass('chosen');
@@ -162,5 +195,5 @@ $(document).ready(function () {
 
         $('#archive-gallery').slideDown(200);
         $(this).hide();
-    })
+    });
 });
