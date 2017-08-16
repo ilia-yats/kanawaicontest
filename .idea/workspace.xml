@@ -2,360 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28b848f2-745a-4fd4-be4c-47dc095a53d0" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/assets/css/admin.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/assets/css/style.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/assets/js/admin_main.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/assets/js/calendar_and_places_schema.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/assets/js/confirmation.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/assets/js/popup_message.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/assets/js/remove_menu_items.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/assets/js/vendor/fullcalendar.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/assets/js/vendor/jquery.PrintArea.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/assets/js/vendor/jquery.magnific-popup.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/assets/js/vendor/jquery.sticky.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/assets/js/vendor/moment.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/assets/js/vendor/ru.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/city/AdminMenu.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/city/List.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/city/views/city-edit.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/city/views/city-list.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/city/views/city-new.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/client/AdminMenu.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/client/Data.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/client/List.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/client/views/client-edit.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/client/views/client-list.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/client/views/client-new.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/disclaimed_place/AdminMenu.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/disclaimed_place/List.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/disclaimed_place/views/disclaimed_place-list.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/event/AdminMenu.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/event/Data.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/event/List.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/event/Manager.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/event/views/event-list.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/event_stat/AdminMenu.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/event_stat/List.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/event_stat/views/event_stat-list.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/exception/InvalidEmailException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/exception/NotFullDataException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/public_stat/AdminMenu.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/public_stat/List.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/public_stat/views/public_stat-list.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/reserved_place/AdminMenu.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/reserved_place/Data.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/reserved_place/List.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/reserved_place/views/reserved_place-edit.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/reserved_place/views/reserved_place-list.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/reserved_place/views/reserved_place-new.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/route/AdminMenu.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/route/Data.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/route/List.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/route/views/route-edit.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/route/views/route-list.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/route/views/route-new.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/ticket/Ticket.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/ticket/tickets/57bb1a1e73f71.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/ticket/views/ticket_template.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/ticket_window/AdminMenu.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/ticket_window/List.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/ticket_window/views/ticket_window-edit.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/ticket_window/views/ticket_window-list.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/ticket_window/views/ticket_window-new.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/trips_calendar/AdminMenu.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/trips_calendar/List.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/trips_calendar/views/trips-calendar.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/CHANGELOG.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/CREDITS.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/FONT INFO.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/LICENSE.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/README.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/classes/barcode.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/classes/bmp.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/classes/cssmgr.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/classes/directw.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/classes/form.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/classes/gif.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/classes/grad.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/classes/indic.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/classes/meter.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/classes/svg.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/classes/tocontents.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/classes/ttfontsuni.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/classes/ttfontsuni_analysis.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/classes/wmf.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/compress.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/config.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/config_cp.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/config_fonts.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/alpha.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/alpha3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/bayeux1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/bg.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/bgbarcode.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/bgrock.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/borders2FF.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/borders2IE.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/borders3FF.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/borders3IE.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/borders4FF.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/borders4IE.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/bordersFF.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/bordersIE.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/bordersMPDF2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/clematis.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/example01_basic.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/example02_CSS_styles.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/example03_backgrounds_and_borders.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/example04_images.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/example05_tables.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/example06_tables_nested.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/example07_tables_borders.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/example08_lists.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/example09_forms.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/example10_floating_and_fixed_position_elements.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/example11_overflow_auto.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/example12_paging_html.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/example13_paging_css.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/example14_page_numbers_ToC_Index_Bookmarks.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/example15_headers_method_1.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/example16_headers_method_2.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/example17_headers_method_3.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/example18_headers_method_4.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/example19_page_sizes.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/example20_justify.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/example21_hyphenation.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/example22_columns.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/example23_orientation.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/example24_orientation_2.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/example26_RTL.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/example27_CJK_using_Adobe_fonts.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/example28_CJK_using_embedded_fonts.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/example29_multilingual_autofont.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/example30_arabic.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/example32_indic.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/example35_watermarks.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/example36_annotations_and_Attached_files.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/example37_barcodes.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/example38_dot_tab.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/example39_PDFA_compliance.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/example40_MPDFI_thumbnails.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/example41_MPDFI_template.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/example42_MPDFI_templatedoc.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/example43_MPDFI_booklet.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/example44_MPDFI_yearbook.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/example46_progress_bars_simple.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/example47_progress_bars_simple_custom.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/example48_progress_bars_advanced.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/example49_changelog.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/example50_new_mPDF_3_features.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/example51_new_mPDF_4_features.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/example52_lineheight.htm" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/example52_new_mPDF_4-2_features.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/example53_new_mPDF_v5-0_fonts.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/example54_new_mPDF_v5-1_features_gradients_and_images.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/example55_new_mPDF_v5-1_color_and_other_features.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/example56_new_mPDF_v5-1_features_grayscale.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/example57_new_mPDF_v5-3_active_forms.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/example57_new_mPDF_v5-3_active_forms_b.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/example58_new_mPDF_v5-4_features.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/example59_new_mPDF_v5-6_features.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/example60_new_mPDF_v5-7_features.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/firefox-48.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/flowers-pattern.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/formsubmit.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/goto.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/img1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/img2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/img3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/img4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/img5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/index.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/klematis.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/mpdfstyleA4.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/mpdfstylePaged.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/mpdfstyletables.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/quran282.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/sample_basic.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/sample_logoheader2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/sample_orientation2.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/sample_orientation3.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/show_code.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/sunset.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/sunsetv.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/test.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/tiger" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/tiger.bmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/tiger.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/tiger.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/tiger.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/tiger.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/tiger.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/tiger.wmf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/tiger2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/tiger2.wmf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/tiger24trns.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/tiger300px300dpi.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/tiger300px300dpi.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/tiger300px72dpi.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/tiger300px96dpi.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/tiger300px96dpi.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/tiger8trns.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/tiger8trns.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/tigercmyk.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/tux.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/examples/windmill.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/font/ccourier.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/font/ccourierb.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/font/ccourierbi.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/font/ccourieri.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/font/chelvetica.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/font/chelveticab.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/font/chelveticabi.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/font/chelveticai.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/font/csymbol.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/font/ctimes.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/font/ctimesb.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/font/ctimesbi.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/font/ctimesi.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/font/czapfdingbats.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/graph.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/graph_cache/dummy.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/iccprofiles/SWOP2006_Coated5v2.icc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/iccprofiles/sRGB_IEC61966-2-1.icc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/includes/CJKdata.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/includes/functions.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/includes/ind_bn_1_001.volt.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/includes/ind_gu_1_001.volt.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/includes/ind_hi_1_001.volt.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/includes/ind_kn_1_001.volt.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/includes/ind_ml_1_001.volt.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/includes/ind_or_1_001.volt.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/includes/ind_pa_1_001.volt.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/includes/ind_ta_1_001.volt.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/includes/ind_te_1_001.volt.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/includes/no_image.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/includes/out.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/includes/subs_core.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/includes/subs_win-1252.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/includes/upperCase.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/mpdf.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/mpdf.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/mpdfi/filters/FilterASCII85.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/mpdfi/filters/FilterLZW.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/mpdfi/fpdi_pdf_parser.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/mpdfi/pdf_context.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/mpdfi/pdf_parser.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/patterns/NOTES.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/patterns/de.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/patterns/dictionary.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/patterns/en.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/patterns/es.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/patterns/fi.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/patterns/fr.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/patterns/it.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/patterns/nl.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/patterns/pl.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/patterns/ru.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/patterns/sv.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/progbar.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfontdata/dejavusanscondensed.cw.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfontdata/dejavusanscondensed.cw127.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfontdata/dejavusanscondensed.mtx.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfontdata/dejavusanscondensedB.cw.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfontdata/dejavusanscondensedB.cw127.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfontdata/dejavusanscondensedB.mtx.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfontdata/dejavuserifcondensed.cw.dat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfontdata/dejavuserifcondensed.mtx.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfontdata/dummy.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfonts/DejaVuSans-Bold.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfonts/DejaVuSans-BoldOblique.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfonts/DejaVuSans-Oblique.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfonts/DejaVuSans.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfonts/DejaVuSansCondensed-Bold.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfonts/DejaVuSansCondensed-BoldOblique.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfonts/DejaVuSansCondensed-Oblique.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfonts/DejaVuSansCondensed.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfonts/DejaVuSansMono-Bold.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfonts/DejaVuSansMono-BoldOblique.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfonts/DejaVuSansMono-Oblique.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfonts/DejaVuSansMono.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfonts/DejaVuSerif-Bold.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfonts/DejaVuSerif-BoldItalic.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfonts/DejaVuSerif-Italic.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfonts/DejaVuSerif.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfonts/DejaVuSerifCondensed-Bold.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfonts/DejaVuSerifCondensed-BoldItalic.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfonts/DejaVuSerifCondensed-Italic.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfonts/DejaVuSerifCondensed.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfonts/DejaVuinfo.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfonts/GNUFreeFontinfo.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfonts/Garuda-Bold.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfonts/Garuda-BoldOblique.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfonts/Garuda-Oblique.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfonts/Garuda.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfonts/Norasi-Bold.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfonts/Norasi-BoldOblique.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfonts/Norasi-Oblique.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfonts/Norasi.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfonts/Thai Fonts License.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfonts/XB Riyaz.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfonts/XB RiyazBd.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfonts/XB RiyazBdIt.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfonts/XB RiyazIt.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfonts/XB Zar Bd.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfonts/XB Zar BdIt.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfonts/XB Zar It.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfonts/XB Zar.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfonts/XW Zar Font Info.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfonts/ind_bn_1_001.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfonts/ind_gu_1_001.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfonts/ind_hi_1_001.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfonts/ind_kn_1_001.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfonts/ind_ml_1_001.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfonts/ind_or_1_001.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfonts/ind_pa_1_001.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfonts/ind_ta_1_001.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfonts/ind_te_1_001.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfonts/ocrb10.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/ttfonts/ocrbinfo.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/utils/UnicodeData.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/utils/UnicodeRanges.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/utils/font_collections.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/utils/font_coverage.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/utils/font_dump.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/utils/font_names.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/MPDF57/utils/index.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/liqpay/LiqPay.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/liqpay/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/vendor/liqpay/composer.json" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-config.php" afterPath="$PROJECT_DIR$/wp-config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/images/AdminMenu.php" afterPath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/images/AdminMenu.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/images/List.php" afterPath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/images/List.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/images/views/images-list.php" afterPath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/images/views/images-list.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/kanawaicontest.php" afterPath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/kanawaicontest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/public/Kanawaicontest.php" afterPath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/public/Kanawaicontest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/tours/AdminMenu.php" afterPath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/tours/AdminMenu.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/tours/List.php" afterPath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/tours/List.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/tours/views/tours-edit.php" afterPath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/tours/views/tours-edit.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/tours/views/tours-list.php" afterPath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/tours/views/tours-list.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/tours/views/tours-new.php" afterPath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/tours/views/tours-new.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/tours/views/tours-view.php" afterPath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/tours/views/tours-view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/uninstall.php" afterPath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/uninstall.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/voters/AdminMenu.php" afterPath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/voters/AdminMenu.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/voters/List.php" afterPath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/voters/List.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/voters/views/voters-list.php" afterPath="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/voters/views/voters-list.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/Zephyr-child/contest_page.php" afterPath="$PROJECT_DIR$/wp-content/themes/Zephyr-child/contest_page.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/Zephyr-child/functions.php" afterPath="$PROJECT_DIR$/wp-content/themes/Zephyr-child/functions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/Zephyr-child/css/main.css" afterPath="$PROJECT_DIR$/wp-content/themes/Zephyr-child/css/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/Zephyr-child/js/index.js" afterPath="$PROJECT_DIR$/wp-content/themes/Zephyr-child/js/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/live/catalog-k164a4th1ifaxkq.txt" afterPath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/live/catalog-k164a4th1ifaxkq.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/live/catalog-k164a4th1ifaxkq.txt.bak" afterPath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/live/catalog-k164a4th1ifaxkq.txt.bak" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/live/state-k164a4th1ifaxkq.txt" afterPath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/live/state-k164a4th1ifaxkq.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/log-k164a4th1ifaxkq.txt" afterPath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/log-k164a4th1ifaxkq.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/settings_backup-c4e9czpa7xp6cre3do6ejxr5gy7iz9b4.php" afterPath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/settings_backup-c4e9czpa7xp6cre3do6ejxr5gy7iz9b4.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-live_periodic_k164a4th1ifaxkq.txt" afterPath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-live_periodic_k164a4th1ifaxkq.txt" />
     </list>
     <ignored path="kanawai.iws" />
@@ -382,7 +35,7 @@
       <file leaf-file-name="kanawaicontest.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/plugins/kanawaicontest/kanawaicontest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
+            <state relative-caret-position="-2647">
               <caret line="24" column="6" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
               <folding>
                 <element signature="e#6#153#0#PHP" expanded="true" />
@@ -391,6 +44,13 @@
                 <marker date="1502877361000" expanded="true" signature="8511:8573" ph="SELECT kci.*... kanawaicontest_images" />
               </folding>
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="screenshot.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/Zephyr-child/screenshot.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -462,7 +122,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="List.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="List.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/plugins/kanawaicontest/voters/List.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="330">
@@ -477,11 +137,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="contest_page.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="contest_page.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/Zephyr-child/contest_page.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="900">
-              <caret line="60" column="61" selection-start-line="60" selection-start-column="61" selection-end-line="60" selection-end-column="61" />
+            <state relative-caret-position="300">
+              <caret line="75" column="60" selection-start-line="75" selection-start-column="60" selection-end-line="75" selection-end-column="60" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/Zephyr-child/css/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="578">
+              <caret line="766" column="0" selection-start-line="766" selection-start-column="0" selection-end-line="766" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -573,8 +243,6 @@
         <option value="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/voters/List.php" />
         <option value="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/tours/views/tours-view.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/Zephyr-child/js/index.js" />
-        <option value="$PROJECT_DIR$/wp-content/themes/Zephyr-child/css/main.css" />
-        <option value="$PROJECT_DIR$/wp-content/themes/Zephyr-child/contest_page.php" />
         <option value="$PROJECT_DIR$/wp-config.php" />
         <option value="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/public/Kanawaicontest.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/Zephyr-child/functions.php" />
@@ -586,6 +254,8 @@
         <option value="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/kanawaicontest.php" />
         <option value="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/voters/views/voters-list.php" />
         <option value="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/voters/AdminMenu.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/Zephyr-child/css/main.css" />
+        <option value="$PROJECT_DIR$/wp-content/themes/Zephyr-child/contest_page.php" />
       </list>
     </option>
   </component>
@@ -1067,7 +737,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79889000" />
+    <option name="totallyTimeSpent" value="81117000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="6" />
@@ -1110,7 +780,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/kanawaicontest/images/views/images-edit.php" />
     <entry file="file://$PROJECT_DIR$/wp-content/plugins/kanawaicontest/city/List.php" />
     <entry file="file://$PROJECT_DIR$/wp-content/plugins/kanawaicontest/tours/views/voters-list.php" />
     <entry file="file://$PROJECT_DIR$/wp-content/plugins/multi-image-upload/multi-image-upload.php">
@@ -1287,14 +956,6 @@
     <entry file="file://$PROJECT_DIR$/wp-content/plugins/kanawaicontest/assets/js/remove_menu_items.js" />
     <entry file="file://$PROJECT_DIR$/wp-content/plugins/kanawaicontest/assets/js/confirmation.js" />
     <entry file="file://$PROJECT_DIR$/wp-content/plugins/kanawaicontest/assets/js/popup_message.js" />
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/Zephyr-child/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="717" column="39" selection-start-line="717" selection-start-column="39" selection-end-line="717" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/Zephyr-child/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
@@ -1323,14 +984,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1363">
           <caret line="212" column="30" selection-start-line="212" selection-start-column="30" selection-end-line="212" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/Zephyr-child/contest_page.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="60" column="61" selection-start-line="60" selection-start-column="61" selection-end-line="60" selection-end-column="61" />
           <folding />
         </state>
       </provider>
@@ -1404,19 +1057,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/kanawaicontest/kanawaicontest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="24" column="6" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
-          <folding>
-            <element signature="e#6#153#0#PHP" expanded="true" />
-            <marker date="1502877361000" expanded="true" signature="7841:7939" ph="INSERT INTO kanawaicontest_image_votes... " />
-            <marker date="1502877361000" expanded="true" signature="8116:8207" ph="SELECT * FRO... kanawaicontest_tours" />
-            <marker date="1502877361000" expanded="true" signature="8511:8573" ph="SELECT kci.*... kanawaicontest_images" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/plugins/kanawaicontest/voters/AdminMenu.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="481">
@@ -1435,6 +1075,40 @@
             <marker date="1502870769000" expanded="true" signature="2232:2293" ph="SELECT * FRO... kanawaicontest_voters" />
             <marker date="1502870769000" expanded="true" signature="2518:2626" ph="INSERT INTO kanawaicontest_voters... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/kanawaicontest/kanawaicontest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2647">
+          <caret line="24" column="6" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
+          <folding>
+            <element signature="e#6#153#0#PHP" expanded="true" />
+            <marker date="1502877361000" expanded="true" signature="7841:7939" ph="INSERT INTO kanawaicontest_image_votes... " />
+            <marker date="1502877361000" expanded="true" signature="8116:8207" ph="SELECT * FRO... kanawaicontest_tours" />
+            <marker date="1502877361000" expanded="true" signature="8511:8573" ph="SELECT kci.*... kanawaicontest_images" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/Zephyr-child/screenshot.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/Zephyr-child/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="766" column="0" selection-start-line="766" selection-start-column="0" selection-end-line="766" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/Zephyr-child/contest_page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="75" column="60" selection-start-line="75" selection-start-column="60" selection-end-line="75" selection-end-column="60" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -120,10 +120,6 @@ $templateDir = get_stylesheet_directory_uri();
                     ag behält sich das Recht vor, diese Wettbewerbsbestimmungen zu jeder Zeit abzuändern.
                 </p>
             </div>
-            <div class="thanks-for-vote">
-                <h2>Vielen Dank für Ihre Stimme – Sie nehmen an der aktuellen Verlosung teil</h2>
-                <span>Die Gewinner werden vor Ende jedes Monats persönlich kontaktiert.</span>
-            </div>
             <div id="show-form" class="show-form-button">Weiter und Registration</div>
             <div class="already-vote">
                 <span>Sie haben Ihre Stimme fuer das aktuelle Gewinnspiel bereits abgegeben.<br>Gerne können Sie nächsten Monat wieder mitmachen!</span>
@@ -143,7 +139,7 @@ $templateDir = get_stylesheet_directory_uri();
                     <button type="submit">Absenden</button>
                 </form>
             </div>
-            <a href="#" id="show-archiv" class="show-archiv-button">archiv</a>
+            <a href="#" id="show-archive" class="show-archive-button">archiv</a>
         </div>
     </div>
     <div class="archive-gallery" id="archive-gallery">
@@ -155,34 +151,34 @@ $templateDir = get_stylesheet_directory_uri();
                 <div class="img" data-background="images/image_736х416/170217_cleandevil_final.jpg">
                     <div class="layer"></div>
                 </div>
-                <span>Gewinnerbild August 2017</span>
+                <span class="img-text">Gewinnerbild August 2017</span class="img-text">
             </div>
             <div class="img-container">
                 <div class="img" data-background="images/image_736х416/CGAG_VW%20-%2001.06.%20-%2031.12.2017.jpg">
                     <div class="layer"></div>
                 </div>
-                <span>Gewinnerbild August 2017</span>
+                <span class="img-text">Gewinnerbild August 2017</span>
             </div>
             <div class="img-container">
                 <div class="img"
                      data-background="images/image_736х416/Edelweiss_pizza%20-%2014.08.%20-%2019.08.2017.jpg">
                     <div class="layer"></div>
                 </div>
-                <span>Gewinnerbild August 2017</span>
+                <span class="img-text">Gewinnerbild August 2017</span>
             </div>
             <div class="img-container">
                 <div class="img"
                      data-background="images/image_736х416/Hafners%20British%20Bikes%20-%20Letzte%2010%20Tage%20vom%20Monat.jpg">
                     <div class="layer"></div>
                 </div>
-                <span>Gewinnerbild August 2017</span>
+                <span class="img-text">Gewinnerbild August 2017</span>
             </div>
             <div class="img-container">
                 <div class="img"
                      data-background="images/image_736х416/Jazz%20Club%20Lichtensteig%20-%2007.08.%20-%2010.08.2017.jpg">
                     <div class="layer"></div>
                 </div>
-                <span>Gewinnerbild August 2017</span>
+                <span class="img-text">Gewinnerbild August 2017</span>
             </div>
         </div>
     </div>
@@ -242,6 +238,58 @@ $templateDir = get_stylesheet_directory_uri();
             </svg>
         </div>
         <span id="image-zoom-text" class="img-text"></span>
+    </div>
+    <div class="thanks-for-vote-modal" id="thanks-for-vote-modal">
+        <svg class="close" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+             viewBox="0 0 156.1552734 156.1587219" enable-background="new 0 0 156.1552734 156.1587219" xml:space="preserve">
+            <g>
+                <rect x="-25.29459" y="71.0318832" transform="matrix(0.7070985 0.7071151 -0.7071151 0.7070985 78.0801392 -32.3402939)" width="206.7444" height="14.0949373"/>
+                <rect x="71.0301437" y="-25.2928486" transform="matrix(0.7071068 0.7071068 -0.7071068 0.7071068 78.0788422 -32.3402939)" width="14.0949373" height="206.7444"/>
+            </g>
+        </svg>
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+             viewBox="0 0 111.375 111.375" enable-background="new 0 0 111.375 111.375" xml:space="preserve">
+            <circle fill="#FFFFFF" cx="55.8808594" cy="55.7296715" r="55.3263168"/>
+            <circle fill="#ED1836" cx="55.8808594" cy="55.7296715" r="48.3533516"/>
+            <g>
+                <defs>
+                    <circle cx="55.8808594" cy="55.7296715" r="48.3533516"/>
+                </defs>
+                <clipPath id="SVGID_2_">
+                    <use xlink:href="#SVGID_1_"  overflow="visible"/>
+                </clipPath>
+                <path clip-path="url(#SVGID_2_)" fill="#B71326" d="M107.6336823,50.8943214L55.8563461,28.1791039
+                    c0,0-0.9276657,1.4157181-1.1781998,2.1673241c-0.2505341,0.7516079-3.5074959,36.0771103-3.5074959,36.8287201
+                    c0,0.7516022-18.5305939,15.4536667-18.5305939,15.4536667l0.5010719,1.0021439l47.1006699,18.7066498l15.3661804-14.8651047
+                    c0,0,8.5182037-14.0299911,8.5182037-14.5310593S107.6336823,50.8943214,107.6336823,50.8943214z"/>
+            </g>
+            <g>
+                <path fill="#FFFFFF" d="M66.7523727,84.8156204c0,0,0,0-0.0009766,0H34.6643448
+                    c-1.8984413,0-3.4434147-1.6119766-3.4434147-3.5929642V52.3415909c0-1.2531662,0.6166286-2.3951416,1.6284847-3.0481873
+                    c1.8634834-1.6906319,9.4659882-8.5997925,12.1393433-11.2066307c1.4041634-1.3692055,2.3956261-3.2749329,2.7927933-5.3651581
+                    c0.0437012-0.2301445,0.0689468-0.4651413,0.096138-0.6996574c0.0922508-0.7919064,0.2058678-1.7775421,0.7778244-2.7466698
+                    c0.7117958-1.2041264,1.894558-2.0892563,3.2462883-2.4291306c1.8236694-0.4622288,4.1979332-0.113615,6.0012093,0.8487148
+                    c4.86409,2.5990677,6.2099876,9.5941677,4.4144821,14.4970989l-1.1021614,3.0064316
+                    c2.3393059-0.0067978,5.6768723-0.0145645,8.300705-0.0145645c4.119278,0,4.2027893,0.01408,4.4261322,0.0514641
+                    c3.2356033,0.5476837,5.7603836,3.026825,6.4304199,6.3158379c0.5467148,2.6816101-0.2621841,5.3496246-2.0897369,7.1898003
+                    c0.8215256,2.764637,0.0495224,5.8545799-1.9809799,7.9137306c0.8234634,2.7631836,0.0524368,5.8531265-1.9741898,7.9127655
+                    c0.6302261,2.0669174,0.3680344,4.3207703-0.7778244,6.2857285C72.1019897,83.3342514,69.5606995,84.8156204,66.7523727,84.8156204
+                    z"/>
+                <path fill="#B71326" d="M35.1984329,80.8381195h31.5539398l0,0c1.3779449,0,2.6354828-0.7433548,3.3618393-1.9892426
+                    c0.7244186-1.2419968,0.7525787-2.6976318,0.0757446-3.8949585l-0.9263992-1.6386795l1.5857544-1.0152512
+                    c1.7391891-1.1133347,2.3315353-3.4754562,1.3206558-5.2646561l-0.9254303-1.6381912l1.5838165-1.0147705
+                    c1.7401581-1.1143036,2.3325043-3.4754601,1.3206558-5.2636833l-0.9263992-1.6386795l1.5857544-1.015255
+                    c1.6343079-1.0472984,1.9324265-2.8146439,1.6673279-4.119278c-0.2660751-1.3012314-1.2167511-2.8034782-3.0918884-3.1690826
+                    c-0.2515106-0.0058289-1.0895386-0.0150528-3.8677673-0.0150528c-4.5135345,0-11.1439972,0.0237923-11.1439972,0.0237923
+                    l-2.8578606,0.0101929l3.0685806-8.3715897c1.1934471-3.2589111,0.3544426-8.0661888-2.5539131-9.620388
+                    c-0.9448509-0.5049553-2.2858963-0.7185917-3.1559753-0.5001011c-0.324337,0.0815716-0.6205139,0.3034611-0.7923927,0.5942955
+                    c-0.1427498,0.2427673-0.1932449,0.6778069-0.2515068,1.1817913c-0.0378723,0.3291931-0.0776863,0.6583862-0.1398354,0.9827232
+                    c-0.5476837,2.8855324-1.9411697,5.5389824-3.9231224,7.4723816c-2.7995911,2.7296753-10.8118896,10.0063858-12.3898773,11.4372597
+                    l-0.1777039,0.1611938V80.8381195z"/>
+            </g>
+        </svg>
+        <h2>Vielen Dank für Ihre Stimme – Sie nehmen an der aktuellen Verlosung teil</h2>
+        <span>Die Gewinner werden vor Ende jedes Monats persönlich kontaktiert.</span>
     </div>
 </div>
 <?php get_footer(); ?>

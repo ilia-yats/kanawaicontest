@@ -469,12 +469,6 @@ template, [hidden] {
     color: #ed1836; }
 .rules .inner .rules-text .not-visible-p {
     display: none; }
-.rules .inner .thanks-for-vote {
-    display: none;
-    margin-bottom: 85px;
-    text-align: left; }
-.rules .inner .thanks-for-vote span {
-    color: #a3a3a3; }
 .rules .inner .show-form-button {
     position: relative;
     width: 310px;
@@ -696,6 +690,60 @@ template, [hidden] {
     left: 50px; }
 .image-zoom .img-text.active {
     display: block; }
+
+.thanks-for-vote-modal {
+    position: fixed;
+    visibility: hidden;
+    width: 800px;
+    padding: 90px 80px;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    -webkit-transform: translate(-50%, -50%) scale(0.7);
+    -moz-transform: translate(-50%, -50%) scale(0.7);
+    -ms-transform: translate(-50%, -50%) scale(0.7);
+    -o-transform: translate(-50%, -50%) scale(0.7);
+    transform: translate(-50%, -50%) scale(0.7);
+    background: #FFFFFF;
+    -webkit-box-shadow: 1.5px 2.6px 21px 0 rgba(23, 16, 27, 0.46);
+    -moz-box-shadow: 1.5px 2.6px 21px 0 rgba(23, 16, 27, 0.46);
+    box-shadow: 1.5px 2.6px 21px 0 rgba(23, 16, 27, 0.46);
+    box-sizing: border-box;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -ms-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease; }
+.thanks-for-vote-modal.active {
+    visibility: visible;
+    -webkit-transform: translate(-50%, -50%) scale(1);
+    -moz-transform: translate(-50%, -50%) scale(1);
+    -ms-transform: translate(-50%, -50%) scale(1);
+    -o-transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1); }
+.thanks-for-vote-modal .close {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    top: 20px;
+    right: 20px;
+    opacity: 0.7;
+    fill: #bebebe;
+    cursor: pointer; }
+.thanks-for-vote-modal .icon {
+    width: 110px;
+    height: 110px; }
+.thanks-for-vote-modal h2 {
+    margin: 50px 0;
+    padding: 0;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 48px;
+    text-align: center;
+    text-transform: uppercase; }
+.thanks-for-vote-modal span {
+    font-size: 15px;
+    color: #a3a3a3; }
 
 @media screen and (min-width: 900px) and (max-width: 1280px) {
     div#gallery-images, div#archive-gallery .archive-gallery-inner {
