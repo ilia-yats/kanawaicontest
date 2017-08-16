@@ -47,7 +47,7 @@ var ImageZoom =  {
                 self.$block.siblings().toggleClass('chosen');
             }
 
-            if ($('.chosen', $galleryBlock).length < 3) {
+            if ($('chosen', $galleryBlock).length < 3) {
                 $('#show-form').removeClass('active');
             } else {
                 $('#show-form').addClass('active');
@@ -134,7 +134,7 @@ $(document).ready(function () {
     $('#show-full-rules').on('click', function (e) {
         e.preventDefault();
 
-        $(this).hide().parent().siblings('.hidden').slideDown();
+        $(this).hide().parent().siblings('.not-visible-p').slideDown();
     });
 
     $('.show-form-button').on('click', function () {

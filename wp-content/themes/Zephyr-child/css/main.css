@@ -323,25 +323,36 @@ template, [hidden] {
  * ========================================================================== */
 /**
  * Add the correct display in IE 10-. */
-body {
+.contest-page {
     position: relative;
+    min-width: 320px;
     font-family: 'Libre Franklin', sans-serif;
     color: #212121;
     font-size: 15px; }
-body h2 {
+.contest-page h2 {
     margin: 0 0 50px;
     padding: 0;
     text-transform: uppercase;
     font-size: 40px;
+    font-weight: bold;
     text-align: left; }
-body .inner {
-    width: 1140px;
+.contest-page .inner {
+    max-width: 1140px;
+    min-width: 320px;
+    width: 100%;
     margin: 0 auto; }
+.contest-page .img-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFFFFF; }
 
 .main-banner {
     width: 100%;
     height: 800px;
-    background: url("../images/baner_landing.jpg") right/cover no-repeat; }
+    background: url("../images/big-picture.jpg") right/cover no-repeat; }
 
 .what-win {
     width: 100%;
@@ -373,16 +384,12 @@ body .inner {
     background-color: #d8d1ca; }
 .what-need-to-do .inner {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: space-between;
     align-items: flex-start; }
 .what-need-to-do .inner .steps {
     max-width: 180px;
-    cursor: pointer; }
-.what-need-to-do .inner .steps:hover .img-box {
-    box-shadow: 0 -1px 0 transparent inset, 0 2px 3px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.3) !important; }
-.what-need-to-do .inner .steps:hover div:not(.img-box) {
-    color: #ed1836; }
+    margin-bottom: 10px; }
 .what-need-to-do .inner .steps .img-box {
     display: inline-block;
     line-height: 0;
@@ -401,7 +408,9 @@ body .inner {
     padding: 85px 0;
     width: 100%; }
 .gallery .gallery-title {
-    width: 1140px;
+    min-width: 320px;
+    max-width: 1140px;
+    width: 100%;
     margin: 0 auto; }
 .gallery .gallery-title h2 {
     margin: 0 0 20px; }
@@ -417,8 +426,10 @@ body .inner {
     width: 100%;
     height: 416px;
     background-color: rgba(0, 0, 0, 0.5); }
-.gallery .gallery-images .img-container:hover div.img div.layer, .gallery .archive-gallery .img-container:hover div.img div.layer {
+.gallery .gallery-images .img-container:hover div.img div.layer, .gallery .gallery-images .img-container.chosen div.img div.layer, .gallery .archive-gallery .img-container:hover div.img div.layer, .gallery .archive-gallery .img-container.chosen div.img div.layer {
     background-color: transparent; }
+.gallery .gallery-images .img-container.chosen svg, .gallery .archive-gallery .img-container.chosen svg {
+    fill: #d51130; }
 .gallery .gallery-images .img-container .img, .gallery .archive-gallery .img-container .img {
     width: 100%;
     height: 100%;
@@ -428,7 +439,7 @@ body .inner {
     background-color: inherit;
     cursor: pointer; }
 .gallery .gallery-images .img-container .img .layer, .gallery .archive-gallery .img-container .img .layer {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.2);
     width: 100%;
     height: 100%;
     transition: all .2s ease; }
@@ -441,7 +452,7 @@ body .inner {
     fill: rgba(255, 255, 255, 0.7);
     cursor: pointer;
     transition: all 0.2s ease; }
-.gallery .gallery-images .img-container svg.chosen, .gallery .gallery-images .img-container svg:hover, .gallery .archive-gallery .img-container svg.chosen, .gallery .archive-gallery .img-container svg:hover {
+.gallery .gallery-images .img-container svg:hover, .gallery .archive-gallery .img-container svg:hover {
     fill: #d51130; }
 
 .rules {
@@ -455,9 +466,8 @@ body .inner {
     text-align: left;
     line-height: 22px; }
 .rules .inner .rules-text p a {
-    color: #ed1836;
-    text-decoration: none; }
-.rules .inner .rules-text .hidden {
+    color: #ed1836; }
+.rules .inner .rules-text .not-visible-p {
     display: none; }
 .rules .inner .thanks-for-vote {
     display: none;
@@ -466,6 +476,7 @@ body .inner {
 .rules .inner .thanks-for-vote span {
     color: #a3a3a3; }
 .rules .inner .show-form-button {
+    position: relative;
     width: 310px;
     margin: 0 auto 50px;
     padding: 18px 20px;
@@ -478,7 +489,8 @@ body .inner {
     -moz-border-radius: 3px;
     border-radius: 3px;
     cursor: default;
-    background-color: #c2c2c2; }
+    background-color: #c2c2c2;
+    box-sizing: border-box; }
 .rules .inner .show-form-button.active {
     background-color: #d51130;
     cursor: pointer; }
@@ -488,7 +500,6 @@ body .inner {
     margin-bottom: 50px;
     font-size: 18px;
     color: #fefefe;
-    text-transform: uppercase;
     background-color: #ffa900; }
 .rules .inner .form {
     display: none;
@@ -498,7 +509,9 @@ body .inner {
     display: block;
     padding-bottom: 5px; }
 .rules .inner .form form input {
-    width: 700px;
+    max-width: 700px;
+    min-width: 320px;
+    width: 100%;
     height: 46px;
     margin-bottom: 30px;
     line-height: 46px;
@@ -539,6 +552,7 @@ body .inner {
 .rules .inner .form form button {
     margin-top: 30px;
     padding: 14px;
+    line-height: 16px;
     text-transform: uppercase;
     color: #fefefe;
     border: none;
@@ -547,16 +561,19 @@ body .inner {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px; }
-.rules .inner .show-archiv-button {
+.rules .inner .show-archive-button {
     font-weight: bold;
     color: #c2c2c2;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    text-decoration: underline; }
 
 .archive-gallery {
     display: none;
     margin-bottom: 85px; }
 .archive-gallery .archive-gallery-title {
-    width: 1140px;
+    max-width: 1140px;
+    min-width: 320px;
+    width: 100%;
     margin: 0 auto; }
 .archive-gallery .archive-gallery-inner {
     display: grid;
@@ -565,6 +582,8 @@ body .inner {
 .archive-gallery .archive-gallery-inner .img-container {
     position: relative;
     width: 100%;
+    max-width: 416px;
+    min-width: 310px;
     height: 416px; }
 .archive-gallery .archive-gallery-inner .img-container:hover div.img div.layer {
     background-color: transparent; }
@@ -577,17 +596,10 @@ body .inner {
     background-color: inherit;
     cursor: pointer; }
 .archive-gallery .archive-gallery-inner .img-container .img .layer {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.2);
     width: 100%;
     height: 100%;
     transition: all .2s ease; }
-.archive-gallery .archive-gallery-inner .img-container span {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #FFFFFF; }
 
 .image-zoom {
     visibility: hidden;
@@ -609,7 +621,8 @@ body .inner {
     background-color: #FFFFFF;
     -webkit-box-shadow: 0 3px 21px 0 rgba(23, 16, 27, 0.46);
     -moz-box-shadow: 0 3px 21px 0 rgba(23, 16, 27, 0.46);
-    box-shadow: 0 3px 21px 0 rgba(23, 16, 27, 0.46); }
+    box-shadow: 0 3px 21px 0 rgba(23, 16, 27, 0.46);
+    box-sizing: border-box; }
 .image-zoom.visible {
     visibility: visible;
     opacity: 1;
@@ -619,36 +632,87 @@ body .inner {
     -o-transform: translate(-50%, -50%) scale(1);
     transform: translate(-50%, -50%) scale(1); }
 .image-zoom .image-zoom-inner {
-    position: relative; }
-.image-zoom .image-zoom-inner #prev, .image-zoom .image-zoom-inner #next, .image-zoom .image-zoom-inner .star-button, .image-zoom .image-zoom-inner #close {
+    position: relative;
+    user-select: none;
+    line-height: 0;
+    border-top: 1px solid #e0e0e0; }
+.image-zoom .image-zoom-inner svg {
     position: absolute;
-    fill: rgba(255, 255, 255, 0.7);
-    cursor: pointer;
+    fill: #FFFFFF;
     -webkit-transition: all 0.2s ease;
     -moz-transition: all 0.2s ease;
     -ms-transition: all 0.2s ease;
     -o-transition: all 0.2s ease;
     transition: all 0.2s ease; }
-.image-zoom .image-zoom-inner #prev, .image-zoom .image-zoom-inner #next {
+.image-zoom .image-zoom-inner img {
+    -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 5px 10px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 5px 10px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 5px 10px rgba(0, 0, 0, 0.25); }
+.image-zoom .image-zoom-inner .prev, .image-zoom .image-zoom-inner .next {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    z-index: 5;
+    cursor: pointer; }
+.image-zoom .image-zoom-inner .prev:hover svg, .image-zoom .image-zoom-inner .next:hover svg {
+    fill: #d51130; }
+.image-zoom .image-zoom-inner .prev svg, .image-zoom .image-zoom-inner .next svg {
     width: 20px;
     height: 35px;
     top: calc(50% - 37px); }
-.image-zoom .image-zoom-inner #prev, .image-zoom .image-zoom-inner .star-button {
+.image-zoom .image-zoom-inner .prev {
+    left: 0; }
+.image-zoom .image-zoom-inner .next {
+    right: 0; }
+.image-zoom .image-zoom-inner .prev > svg, .image-zoom .image-zoom-inner .star-button {
     left: 20px; }
-.image-zoom .image-zoom-inner #next, .image-zoom .image-zoom-inner #close {
+.image-zoom .image-zoom-inner .next > svg, .image-zoom .image-zoom-inner .close {
     right: 20px; }
-.image-zoom .image-zoom-inner #close {
+.image-zoom .image-zoom-inner .close {
     width: 35px;
     height: 35px;
     top: 20px;
-    stroke: rgba(255, 255, 255, 0.7); }
-.image-zoom .image-zoom-inner #close:hover {
-    stroke: #d51130; }
+    z-index: 10;
+    cursor: pointer; }
+.image-zoom .image-zoom-inner .close:hover {
+    fill: #d51130; }
 .image-zoom .image-zoom-inner .star-button {
+    display: none;
     width: 70px;
     height: 67px;
     bottom: 20px;
-    fill: rgba(255, 255, 255, 0.7);
-    transition: all 0.2s ease; }
+    z-index: 10;
+    fill: #FFFFFF;
+    cursor: pointer; }
+.image-zoom .image-zoom-inner .star-button.active {
+    display: block; }
 .image-zoom .image-zoom-inner .star-button.chosen, .image-zoom .image-zoom-inner .star-button:hover {
     fill: #d51130; }
+.image-zoom .img-text {
+    display: none;
+    color: #212121;
+    left: 50px; }
+.image-zoom .img-text.active {
+    display: block; }
+
+@media screen and (min-width: 900px) and (max-width: 1280px) {
+    div#gallery-images, div#archive-gallery .archive-gallery-inner {
+        grid-template-columns: 1fr 1fr 1fr; } }
+
+@media screen and (min-width: 480px) and (max-width: 900px) {
+    div.main-banner {
+        height: 565px; }
+    div#gallery-images, div#archive-gallery .archive-gallery-inner {
+        grid-template-columns: 1fr 1fr; } }
+
+@media screen and (max-width: 480px) {
+    div.contest-page h2 {
+        font-size: 20px; }
+    div.main-banner {
+        height: 380px; }
+    .what-need-to-do div.inner {
+        justify-content: center; }
+    div#gallery-images, div#archive-gallery .archive-gallery-inner {
+        grid-template-columns: 1fr; } }
