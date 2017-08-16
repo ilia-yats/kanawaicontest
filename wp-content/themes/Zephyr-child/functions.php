@@ -131,10 +131,10 @@ function pb_tag_manager2()
 
 
 // Include Kanawai contest plugin and scripts
-add_action('init', 'kanawaicontest_public_init');
+//add_action('init', 'kanawaicontest_public_init');
 // Kanawai contest plugin additional html and assets
 add_action('wp_enqueue_scripts', 'kanawaicontest_assets', 12);
-add_action('wp_footer', 'kanawaicontest_button');
+//add_action('wp_footer', 'kanawaicontest_button');
 function kanawaicontest_public_init()
 {
     require_once ABSPATH . '/wp-content/plugins/kanawaicontest/public/Kanawaicontest.php';

@@ -2,146 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28b848f2-745a-4fd4-be4c-47dc095a53d0" name="Default" comment="Merge branch 'master' of https://github.com/ilia-yats/kanawaicontest&#10;&#10;# Conflicts:&#10;#&#9;wp-content/themes/Zephyr-child/js/index.js&#10;">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-53po4djdz8_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-53po4djdz8_sum_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-n4etqsyui5_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-n4etqsyui5_sum_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_04075ed9cb3d81f9f63cded30b17e9b6-2073qh_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_10f7571d65046da73cab8f5e74265425-nqb7wo_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_121c38ba1a28f6b9070baed8a0062af1-524g7t_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_13264b9425d7fcb402fe35d1135fbd43-78darm_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_13264b9425d7fcb402fe35d1135fbd43-niu039_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_13264b9425d7fcb402fe35d1135fbd43-r69i3k_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_1361cc6f7cc63b7ce238554d913f840b-bq9gwf_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_15e20a1a3310c965ca21eb419ff4e416-pfugs6_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_17910a862fa9bac230bd53c5d3fc48c5-hic0yk_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_199fbdb57c16c2d52ebf55332eada11c-87ybdk_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_1a17834886e02f5c228cc47a52da8cef-w54q8n_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_1b94bb3402799d07768ddb972511b7fa-3ipj7r_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_1c5f74b3442b69960991643f1cd2f7ea-wsvb8m_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_1d325f1a22af54170432c9b2d614680f-68frb2_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_1e30a4135baea043aef78bb76847aeff-ux287o_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_1fc112a6364646c27cb01fc29e09174f-qpep0v_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_267036c9b07002361e06a96de9b2ee65-o5yfpq_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_26ba91cd1aade63c2694ab6095154e54-3ba1cv_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_28f90c53454778ae5118ca1cd6976c22-xfoqar_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_2c3e754b94520443385840a096dea5c9-ji0i3y_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_2cb97758b454c50f2b2f29daace4cfd6-dhs4xd_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_2d205e665ef3ceba126a708d06228815-7aisxc_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_2e25ccc366689c3ac0a37dd7911e4dcd-65drqp_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_2e25ccc366689c3ac0a37dd7911e4dcd-vis9ra_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_2fb6292c09667becd0759f3d52fbfc42-ebs1pr_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_3068f9574811e3513fe1a10b9867a186-y1b5h2_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_319c7eafba15852d4b82eb7791f23f82-z72obs_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_34e68a6eee45df3cdba5c65181d03c24-h20476_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_35189e3b848ed2bbf998869cc8421f7f-b0hbhb_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_38e372c10b5bcd8fac30368fd86e117b-hmgns4_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_3aa34ff3d7a60b2ed181f258e8b41f48-kozx1p_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_3d20c0283ccb61b59c7dfb9686129662-peaijh_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_3d462a7ca17901488dee982666a938d5-fs1urm_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_3db5f0f84c26a2050191f252d7186da5-xjx8g8_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_3dbb005adea2fa86981a89e90ebc1cd0-8r5cu8_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_3f52cb6d3f29a3dedbaa46f7025dcdda-qkf4pe_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_41a68e17cea8feeb4dbde9d46310ec06-yb2grz_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_438483449b529c176e4728777bad482b-2woito_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_48e06183cb4ad4f8569de1e8422a7909-a65ehv_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_497477cca917a18e31bbc4707dbfa39b-rsn0i2_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_49f21ccfef8eef84380f80a475c543f5-4emw29_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_4b34c1dc3a7e4e9141f09bc0cdd97fe2-5m9hpy_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_4b34c1dc3a7e4e9141f09bc0cdd97fe2-yhcrdg_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_4c5c425b82cf63cacef3450e52d18845-azyx6v_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_4d2f312c1e1c5e897713b8dcc7886d05-vd2xmc_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_4e337d05a2ef91d0e274e141835afb52-nzso3a_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_50cf8f541f1ccfc2eedf265a5e84a5ec-mqxtr6_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_50cf8f541f1ccfc2eedf265a5e84a5ec-z3ghpj_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_59a9a5e9c3076c084ed230f65d1c97ac-0g5oz2_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_5bf5a169dc3100b1ef5be7d71fdf9f6c-08buwj_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_5bff785bce8caa6776c51561846a6653-hs7rh4_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_5e32f5d7b910ff4d296dd83053280226-ikz86y_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_5e3a482073c17409d7cf5700d7bcced9-jd8mcg_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_604b577d07ab023528114239d0c5dbdc-0jzv0y_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_6363a0ccaf108a460c01e078447e9ded-1n2bau_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_63b9009a7fc326f21d9bfbbd6c7cefd4-ewa6if_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_64845956c44d12b081c2bc6b4d17e968-ejzpwm_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_69cb2a2b06dc04b63d23ede94e2637d7-9j50jx_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_6bc169ba3904a1ddc7bce70c0ce2f8d0-fdz0cz_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_6d6de031b076c907b4cd14ddf8c489f5-iqgdt7_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_6fb15602ba3da0540c0cfece1ba07095-6k28f4_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_70ac79f47cccf3da0ad74a02ec0de69d-urcn3i_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_713a54e05d57537b711a5b4c8c23a53a-pkawce_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_73f98cbc31810bd217b6b2c0f8b7d73e-djtvew_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_791cb99958f175040e81a5ecbd3c4d33-rszxjw_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_7968d730700b22caa726f1d184e18eec-ye36ew_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_7a57c795f842897c8bc619573518ee18-xnzrm0_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_7aca1d2bf99449111721d7b22c354ff6-so0trk_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_7b17d90761a970155af1573e7b445bec-2tsu0p_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_7bb3d89e216d22dd7587ba4d2580875a-4a3gch_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_7d8800db7754c13efed12903301acb91-em5u7h_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_7e5c8a4f8011a42199b1504dd4126b02-9zuyig_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_8406d938ff97ba5fed7c5ad8e70cae3e-g375p3_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_8766ff433e49e02ef4f2531f7aef2fa0-ptkz0m_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_8d83d390d78fdf89ee2fc65d2034f0c3-5d2u2r_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_90ee7ce594cdff6768ff666d3af9c702-23mib5_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_93eedfe6fc8bfc9e59d2c6b6440a79c2-b5sj1v_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_994c5bfac0f73947c57e68891f35b086-boheo3_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_9adf2043ec46f4aa11b6b53445fe9611-8nep17_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_9b7c4acca15a976860ccfa88e3756720-xuzdtr_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_9c4731037b5bc45faf8941c7fe09add0-6un4mo_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_9c4731037b5bc45faf8941c7fe09add0-jwqgz5_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_9c4731037b5bc45faf8941c7fe09add0-yb82mw_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_9c4ba50891d7683b924712abf50e3faf-oyrbn6_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_9e31f814e879b249b6b2de421e51416e-x8ixou_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_9e45cf9cca3074a907547257e6d4ccb4-08ztxb_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_a171086eee007d7a67e5b44ab2b737f5-ict3t6_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_a1b2df1a43d0c6ebf708047916e9991d-8d1tot_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_a3adc6d311c25f2241a9abd902fbf484-ar6rb3_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_a4125987c713b1cd3f5c666a4d942d0d-pfq3yw_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_a4cc11893b3aae59027ed29dff54efd0-os82a2_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_a4d05105c9cc77a84d69d1b9f067b771-fh8429_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_a546600046ce6997cb4594b42dc8c127-bvz2zr_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_a5f9cebaa89d006458c64be765a55d81-ctg04n_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_aaef249ae0bfc10924cf9176b4d6d04d-tjs3kf_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_abeaa097235dd6711838a760dac33bde-1k19cp_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_acbecb1a825e49bae8c9bc9ee2ee7c9d-sot9ur_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_ad0851a04f756e94255817ab9a3fc4a2-vgeahv_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_b1ef6595c72cc00178e6cceb85468f44-7x7yki_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_b4ab979289967763d525e258b8093603-tnba31_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_b532669d3fc7bdf403a970dbb40e299b-vbufgx_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_b76e3bbcef510e9425b31a5661329a29-68i40p_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_bc4d0a7db8b37fcafdfe41f680e9569d-yu9z84_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_bc52831bc73636e980c0990bb40872cc-jc0i5z_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_bf6d96c614295364c3615b1899e2a0ac-bxwntf_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_c0477add6286d6dbe83b06d324b4fe94-nsuhou_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_c1218e6a9491ea9871190b9932e4a77a-pms7a2_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_c6ed7e91b86f9c70f8db5c3ddba1fd5d-471p8x_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_c76050e14c4aafcfba8b25bee43ca0a2-cn0h3j_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_ca7741f351573cb5d483b1020443351c-i0yqzw_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_caf4de96786836f25ed2ded17e0531ac-rdcay0_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_cb374ab397ffb24d014fb1b350b0b7cd-i0s26f_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_d05152f1d4735081c584e8458c2da7ff-jtsobp_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_d34913446fd0f462bb11ebc1b33618ed-3eadsg_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_d387cfa072bf87a448c7518f228a551c-2dncze_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_d3adb48c80e4b8af83aa28cb5f919d67-9vb5cj_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_d3b7e5246d36c5057e6b152f6d8ed774-ifaqkp_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_da34924b77c3bedafa7ba7687164640b-z7uwv5_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_dbce9a150fbd1bcac1c23cd8e195136f-udg3df_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_e3d40e30a9c493dcd9f43489f41d8cd8-bw51u1_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_e8cf583a376bf1e65904af6ceeda6ed2-k741wf_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_eb73138a0991c22ebd282ce9a2cc2368-ecvj4q_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_f9458762a24120312b957cf895c9d80f-0eic7f_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_f9458762a24120312b957cf895c9d80f-d10m8o_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_f9458762a24120312b957cf895c9d80f-k67knw_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_ff64341ba1b0961f187b3d5d967b19f2-23cyfw_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_ff64341ba1b0961f187b3d5d967b19f2-7wusp9_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-remote_send-live_ff64341ba1b0961f187b3d5d967b19f2-zas4dn_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-tsq3f12h8t_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-tsq3f12h8t_sum_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-vhtg9zyfj1_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/status-vhtg9zyfj1_sum_k164a4th1ifaxkq.txt" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/Zephyr-child/contest_page.php" afterPath="$PROJECT_DIR$/wp-content/themes/Zephyr-child/contest_page.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/Zephyr-child/js/index.js" afterPath="$PROJECT_DIR$/wp-content/themes/Zephyr-child/js/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/settings_backup-c4e9czpa7xp6cre3do6ejxr5gy7iz9b4.php" afterPath="$PROJECT_DIR$/wp-content/uploads/pb_backupbuddy/settings_backup-c4e9czpa7xp6cre3do6ejxr5gy7iz9b4.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/Zephyr-child/functions.php" afterPath="$PROJECT_DIR$/wp-content/themes/Zephyr-child/functions.php" />
     </list>
     <ignored path="kanawai.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -269,11 +130,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="contest_page.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="contest_page.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/Zephyr-child/contest_page.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="54" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
+            <state relative-caret-position="300">
+              <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="functions.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/Zephyr-child/functions.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5">
+              <caret line="135" column="33" selection-start-line="135" selection-start-column="33" selection-end-line="135" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -386,7 +257,6 @@
         <option value="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/tours/views/tours-view.php" />
         <option value="$PROJECT_DIR$/wp-config.php" />
         <option value="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/public/Kanawaicontest.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/Zephyr-child/functions.php" />
         <option value="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/tours/List.php" />
         <option value="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/tours/AdminMenu.php" />
         <option value="$PROJECT_DIR$/wp-content/plugins/kanawaicontest/images/views/images-list.php" />
@@ -398,6 +268,7 @@
         <option value="$PROJECT_DIR$/wp-content/themes/Zephyr-child/css/main.css" />
         <option value="$PROJECT_DIR$/wp-content/themes/Zephyr-child/js/index.js" />
         <option value="$PROJECT_DIR$/wp-content/themes/Zephyr-child/contest_page.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/Zephyr-child/functions.php" />
       </list>
     </option>
   </component>
@@ -583,196 +454,6 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kanawai" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kanawai" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kanawaicontest" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kanawai" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kanawai" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kanawaicontest" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="voters" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kanawai" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kanawai" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kanawaicontest" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="voters" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kanawai" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kanawai" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kanawaicontest" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tours" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kanawai" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kanawai" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kanawaicontest" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tours" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kanawai" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kanawai" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kanawaicontest" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kanawai" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kanawai" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kanawaicontest" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -879,7 +560,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81938000" />
+    <option name="totallyTimeSpent" value="82149000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="6" />
@@ -1114,14 +795,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/Zephyr-child/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1363">
-          <caret line="212" column="30" selection-start-line="212" selection-start-column="30" selection-end-line="212" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/plugins/kanawaicontest/tours/List.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -1248,8 +921,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/Zephyr-child/contest_page.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="54" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
+        <state relative-caret-position="300">
+          <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/Zephyr-child/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5">
+          <caret line="135" column="33" selection-start-line="135" selection-start-column="33" selection-end-line="135" selection-end-column="33" />
           <folding />
         </state>
       </provider>
