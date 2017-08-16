@@ -7,3 +7,5 @@ node_modules
 *.zip
 *.rar
 *.txt
+*.txt.lock
+*.xml

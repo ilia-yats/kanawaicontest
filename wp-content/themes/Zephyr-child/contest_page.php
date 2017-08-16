@@ -103,7 +103,7 @@ $templateDir = get_stylesheet_directory_uri();
                 <h2>Vielen Dank für Ihre Stimme – Sie nehmen an der aktuellen Verlosung teil</h2>
                 <span>Die Gewinner werden vor Ende jedes Monats persönlich kontaktiert.</span>
             </div>
-            <div id="show-form" class="show-form-button">Mitmachen und gewinnen<span>* Weiter und Registration</span></div>
+            <div id="show-form" class="show-form-button">Weiter und Registration</div>
             <div class="already-vote">
                 <span>Sie haben Ihre Stimme fuer das aktuelle Gewinnspiel bereits abgegeben.<br>Gerne können Sie nächsten Monat wieder mitmachen!</span>
             </div>
