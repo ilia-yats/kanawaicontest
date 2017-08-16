@@ -150,7 +150,14 @@ $(document).ready(function () {
     ImageZoom.init();
     var $galleryBlock = $('#gallery-images');
 
+    $('#main-form').on('click', 'button', function (e) {
+        e.preventDefault();
 
+        $('#main-form input').val('');
+        setTimeout(function () {
+            thanksModal.show();
+        }, 500)
+    });
     $('.img').on('click', function () {
         var imgContainer = $(this).parent();
         var $imgZoomStarButton = $('#image-zoom .star-button');
