@@ -119,9 +119,9 @@ function pb_tag_manager2()
 }
 
 
+// include kanawai contest plugin and scripts
 add_action('init', 'kanawaicontest_public_init');
 function kanawaicontest_public_init() {
-    // use correct path here
     require_once ABSPATH . '/wp-content/plugins/kanawaicontest/public/Kanawaicontest.php';
 }
 

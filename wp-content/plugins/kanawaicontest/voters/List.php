@@ -1,77 +1,36 @@
 <?php
 // Exit if accessed directly
-if( ! defined('ABSPATH')) {
+if ( ! defined('ABSPATH')) {
     exit;
 }
 
-if( ! class_exists('WP_List_Table')) {
+if ( ! class_exists('WP_List_Table')) {
     require_once(ABSPATH . 'wp-admin/includes/class-wp-list-table.php');
 }
 
 class KC_Voters_List extends WP_List_Table
 {
-    /**
-     * Constructor.
-     *
-     * @param void
-     */
     public function __construct()
     {
-        global $wpdb;
-
         parent::__construct(array(
             'singular' => 'Voter',
-            'plural'   => 'Voters',
-            'ajax'     => FALSE,
+            'plural' => 'Voters',
+            'ajax' => FALSE,
         ));
     }
 
-//    /**
-//     * Retrieve ticket_windows data from the database.
-//     *
-//     * @param int $id
-//     *
-//     * @return array
-//     */
-//    public static function get_ticket_window($id = 0)
-//    {
-//        global $wpdb;
-//
-//        if(empty(self::$ticket_window_phones)) {
-//            self::retrieve_cities_phones();
-//        }
-//
-//        $item = $wpdb->get_row($wpdb->prepare("SELECT * FROM kanawaicontest_voters WHERE id = %d", $id));
-//        $item->phones = isset(self::$ticket_window_phones[$item->id])
-//            ? self::$ticket_window_phones[$item->id]
-//            : [];
-//
-//        return $item;
-//    }
-
-    /**
-     * Retrieve ticket_windows data from the database.
-     *
-     * @param int $per_page
-     * @param int $page_number
-     *
-     * @return array
-     */
     public static function get_voters($per_page = 20, $page_number = 1)
     {
         global $wpdb;
 
-//        if(empty(self::$ticket_window_phones)) {
-//            self::retrieve_cities_phones();
-//        }
+        $sql = "SELECT kcv.* FROM kanawaicontest_voters AS kcv";
 
-        $sql = "SELECT * FROM kanawaicontest_voters";
+        if (!empty($_REQUEST['tour_id'])) {
+            $sql .= ' INNER JOIN kanawaicontest_images_votes AS kciv ON kcv.id = kciv.voter_id 
+                WHERE kciv.tour_id = ' . absint($_REQUEST['tour_id']) . ' AND kciv.id IS NOT NULL';
+        }
 
-//        if( ! empty($_REQUEST['s'])) {
-//            $sql .= self::create_search_sql_where_clause($_REQUEST['s']);
-//        }
-
-        if( ! empty($_REQUEST['orderby'])) {
+        if ( ! empty($_REQUEST['orderby'])) {
             $sql .= ' ORDER BY ' . esc_sql($_REQUEST['orderby']);
             $sql .= ! empty($_REQUEST['order']) ? ' ' . esc_sql($_REQUEST['order']) : ' ASC';
         }
@@ -81,62 +40,8 @@ class KC_Voters_List extends WP_List_Table
 
         $result = $wpdb->get_results($sql, 'ARRAY_A');
 
-//        foreach($result as &$item) {
-//            $item['phones'] = isset(self::$ticket_window_phones[$item['id']])
-//                ? self::$ticket_window_phones[$item['id']]
-//                : [];
-//        }
-
         return $result;
     }
-
-//    /**
-//     * Retrieve all ticket_windows data from the database without limits and offsets
-//     *
-//     * @return array
-//     */
-//    public static function get_voters_of_image()
-//    {
-//        global $wpdb;
-//
-////        if(empty(self::$ticket_window_phones)) {
-////            self::retrieve_cities_phones();
-////        }
-//
-//        $sql = "SELECT
-//                  ticket_windows.*,
-//                  cities.name AS city_name,
-//                  cities.lon AS city_lat,
-//                  cities.lat AS city_lon
-//                  FROM kanawaicontest_voters AS ticket_windows
-//                  JOIN bm_cities AS cities
-//                  ON ticket_windows.city_id = cities.id";
-//
-//        $ticket_windows = [];
-//
-//        $result = $wpdb->get_results($sql, 'ARRAY_A');
-//
-//        foreach($result as $row) {
-//            $row['phones'] = isset(self::$ticket_window_phones[$row['id']])
-//                ? self::$ticket_window_phones[$row['id']]
-//                : [];
-//
-//            if( ! isset($ticket_windows[$row['city_name']])) {
-//                $ticket_windows[$row['city_name']] = [
-//                    'ticket_windows' => [],
-//                    'lon'            => '',
-//                    'lat'            => '',
-//                    'name'           => '',
-//                ];
-//            }
-//            $ticket_windows[$row['city_name']]['ticket_windows'][] = $row;
-//            $ticket_windows[$row['city_name']]['lon'] = $row['city_lon'];
-//            $ticket_windows[$row['city_name']]['lat'] = $row['city_lat'];
-//            $ticket_windows[$row['city_name']]['name'] = $row['city_name'];
-//        }
-//
-//        return $ticket_windows;
-//    }
 
     /**
      * Delete a city record.
@@ -148,7 +53,7 @@ class KC_Voters_List extends WP_List_Table
     {
         global $wpdb;
 
-        return (boolean) $wpdb->delete(
+        return (boolean)$wpdb->delete(
             "kanawaicontest_voters",
             ['id' => $id],
             ['%d']
@@ -164,11 +69,11 @@ class KC_Voters_List extends WP_List_Table
     {
         global $wpdb;
 
-        $sql = "SELECT COUNT(*) FROM kanawaicontest_voters";
-
-//        if( ! empty($_REQUEST['s'])) {
-//            $sql .= self::create_search_sql_where_clause($_REQUEST['s']);
-//        }
+        $sql = "SELECT COUNT(*) FROM kanawaicontest_voters AS kcv";
+        if (!empty($_REQUEST['tour_id'])) {
+            $sql .= ' INNER JOIN kanawaicontest_images_votes AS kciv ON kcv.id = kciv.voter_id 
+                WHERE kciv.tour_id = ' . absint($_REQUEST['tour_id']) . ' AND kciv.id IS NOT NULL';
+        }
 
         return $wpdb->get_var($sql);
     }
@@ -193,7 +98,7 @@ class KC_Voters_List extends WP_List_Table
      */
     public function column_default($item, $column_name)
     {
-        switch($column_name) {
+        switch ($column_name) {
             case 'name':
             case 'last_name':
             case 'email':
@@ -222,39 +127,21 @@ class KC_Voters_List extends WP_List_Table
     }
 
     /**
-//     * Method for name column.
-//     *
-//     * @param array $item an array of DB data
-//     *
-//     * @return string
-//     */
-//    function column_name($item)
-//    {
-//        $title = '<strong>' . $item['name'] . '</strong>';
-//
-//        $actions = [
-//            'edit' => sprintf('<a href="?page=%s&action=%s&id=%d">Detail</a>', esc_attr($_REQUEST['page']), 'edit', absint($item['id'])),
-//        ];
-//
-//        return $title . $this->row_actions($actions);
-//    }
-
-    /**
      *  Associative array of columns.
      *
      * @return array
      */
     function get_columns()
     {
-        $columns = [
-            'cb'            => '<input type="checkbox" />',
-            'name'          => 'name',
-            'phone'         => 'phone',
-            'last_name'           => 'last_name',
-            'email'           => 'email',
-            'voted'       => 'voted',
+        $columns = array(
+            'cb' => '<input type="checkbox" />',
+            'name' => 'name',
+            'phone' => 'phone',
+            'last_name' => 'last_name',
+            'email' => 'email',
+            'voted' => 'voted',
             'photo' => 'photo',
-        ];
+        );
 
         return $columns;
     }
@@ -267,8 +154,8 @@ class KC_Voters_List extends WP_List_Table
     public function get_sortable_columns()
     {
         $sortable_columns = array(
-            'name'          => array('name', TRUE),
-            'voted'         => array('voted', TRUE),
+            'name' => array('name', TRUE),
+            'voted' => array('voted', TRUE),
         );
 
         return $sortable_columns;
@@ -281,9 +168,9 @@ class KC_Voters_List extends WP_List_Table
      */
     public function get_bulk_actions()
     {
-        $actions = [
+        $actions = array(
             'bulk-delete' => 'Delete',
-        ];
+        );
 
         return $actions;
     }
@@ -301,66 +188,57 @@ class KC_Voters_List extends WP_List_Table
         $current_page = $this->get_pagenum();
         $total_items = self::record_count();
 
-        $this->set_pagination_args([
+        $this->set_pagination_args(array(
             'total_items' => $total_items,
-            'per_page'    => $per_page,
-        ]);
+            'per_page' => $per_page,
+        ));
 
         $this->items = $this->get_voters($per_page, $current_page);
     }
 
-//    /**
-//     * Handles bulk action and delete.
-//     *
-//     * @return void
-//     */
-//    public function process_bulk_action()
-//    {
-//        $page_url = menu_page_url('kanawaicontest_voters', FALSE);
-//
-//        $result = FALSE;
-//
-//        //Detect when a bulk action is being triggered...
-//        if('delete' === $this->current_action()) {
-//            // In our file that handles the request, verify the nonce.
-//            $nonce = esc_attr($_REQUEST['_wpnonce']);
-//
-//            if(wp_verify_nonce($nonce, 'bm_delete_ticket_window')) {
-//
-//                $result = self::delete_ticket_window(absint($_REQUEST['id']));
-//
-//                if($result) {
-//                    BM_Util_Util::push_admin_notice('success', 'Кассы удалены');
-//                } else {
-//                    BM_Util_Util::push_admin_notice('error', 'Не удалось удалить кассы');
-//                }
-//            }
-//        }
-//
-//        // If the delete bulk action is triggered
-//        if((isset($_POST['action']) && $_POST['action'] == 'bulk-delete')
-//            || (isset($_POST['action2']) && $_POST['action2'] == 'bulk-delete')
-//        ) {
-//            if(isset($_POST['bulk-delete']) && is_array($_POST['bulk-delete'])) {
-//                $delete_ids = esc_sql($_POST['bulk-delete']);
-//                // loop over the array of record ids and delete them
-//                $result = TRUE;
-//                foreach($delete_ids as $id) {
-//                    if( ! self::delete_ticket_window($id)) {
-//                        $result = FALSE;
-//                    }
-//                }
-//                if($result) {
-//                    BM_Util_Util::push_admin_notice('success', 'Кассы удалены');
-//                } else {
-//                    BM_Util_Util::push_admin_notice('error', 'Не удалось удалить кассы');
-//                }
-//            }
-//        }
-//
-//        wp_redirect($page_url);
-//        exit;
-//    }
+    public function process_bulk_action()
+    {
+        $result = FALSE;
+
+        //Detect when a bulk action is being triggered...
+        if ('delete' === $this->current_action()) {
+            // In our file that handles the request, verify the nonce.
+            $nonce = esc_attr($_REQUEST['_wpnonce']);
+
+            if (wp_verify_nonce($nonce, 'kanawaicontest_delete_vote')) {
+
+                $result = self::delete_vote(absint($_REQUEST['id']));
+            }
+        }
+
+        // If the delete bulk action is triggered
+        if ((isset($_POST['action']) && $_POST['action'] == 'bulk-delete')
+            || (isset($_POST['action2']) && $_POST['action2'] == 'bulk-delete')
+        ) {
+            if (isset($_POST['bulk-delete']) && is_array($_POST['bulk-delete'])) {
+                $delete_ids = esc_sql($_POST['bulk-delete']);
+                // loop over the array of record ids and delete them
+                $result = TRUE;
+                foreach ($delete_ids as $id) {
+                    if ( ! self::delete_image($id)) {
+                        $result = FALSE;
+                    }
+                }
+            }
+        }
+
+        if ($result) {
+            Kanawaicontest_Util_Util::push_admin_notice('success', 'Images Deleted');
+        } else {
+            Kanawaicontest_Util_Util::push_admin_notice('error', 'Cannot delete images');
+        }
+
+        // Redirect
+        $args = array('tour_id' => absint($_REQUEST['tour_id']));
+        $page_url = add_query_arg($args, menu_page_url('kanawaicontest_images', FALSE));
+        wp_redirect($page_url);
+        exit;
+    }
 
 //    /**
 //     * Handles form data when submitted.

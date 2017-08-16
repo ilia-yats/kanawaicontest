@@ -64,15 +64,16 @@ class KC_Tours_AdminMenu
         $template = '';
 
         switch($action) {
-//            case 'view':
-//            case 'edit':
-//                $template = __DIR__ . '/views/images-edit.php';
-//                break;
-
+            case 'view':
+                $template = __DIR__ . '/views/tours-view.php';
+                break;
+            case 'edit':
+                $template = __DIR__ . '/views/tours-edit.php';
+                break;
             case 'new':
                 $template = __DIR__ . '/views/tours-new.php';
                 break;
-
+            case 'list':
             default:
                 $template = __DIR__ . '/views/tours-list.php';
                 break;

@@ -10,6 +10,13 @@ if( ! defined('ABSPATH')) {
 class KC_Voters_AdminMenu
 {
     /**
+     * WP_List_Table object.
+     *
+     * @var object
+     */
+    public $voters_list;
+
+    /**
      * Constructor.
      *
      * @param void
@@ -38,7 +45,7 @@ class KC_Voters_AdminMenu
      */
     public function plugin_menu()
     {
-        $hook = add_submenu_page('kanawaicontest', 'Voters', 'Voters', 'read', 'kanawaicontest', array($this, 'plugin_settings_page'));
+        $hook = add_submenu_page('kanawaicontest', 'Voters', 'Voters', 'read', 'kanawaicontest_voters', array($this, 'plugin_settings_page'));
 
         add_action("load-$hook", array($this, 'screen_option'));
         add_action("load-$hook", array($this, 'form_handler'));
@@ -59,15 +66,10 @@ class KC_Voters_AdminMenu
         switch($action) {
 //            case 'view':
 //            case 'edit':
-//                $template = __DIR__ . '/views/ticket_window-edit.php';
-//                break;
-//
 //            case 'new':
-//                $template = __DIR__ . '/views/ticket_window-new.php';
-//                break;
 
             default:
-                $template = __DIR__ . '/views/ticket_window-list.php';
+                $template = __DIR__ . '/views/voters-list.php';
                 break;
         }
 

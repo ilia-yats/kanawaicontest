@@ -60,19 +60,15 @@ class KC_Images_AdminMenu
     {
         $action = isset($_REQUEST['action']) ? $_REQUEST['action'] : 'list';
         $id = isset($_REQUEST['id']) ? intval($_REQUEST['id']) : 0;
-
         $template = '';
 
         switch($action) {
-//            case 'view':
-//            case 'edit':
-//                $template = __DIR__ . '/views/images-edit.php';
-//                break;
-
+            case 'edit':
+                $template = __DIR__ . '/views/images-edit.php';
+                break;
             case 'new':
                 $template = __DIR__ . '/views/images-new.php';
                 break;
-
             default:
                 $template = __DIR__ . '/views/images-list.php';
                 break;
