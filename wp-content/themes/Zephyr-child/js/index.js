@@ -4,12 +4,23 @@ function GalleryImages() {
         $(this).css('background-image', 'url('+background+')')
     })
 }
+function IsActiveForm() {
+    var $galleryBlock = $('#gallery-images');
+    var $button = $('#show-form');
+
+    if ($('.chosen', $galleryBlock).length < 1) {
+        $button.removeClass('active');
+    } else {
+        $button.addClass('active');
+    }
+}
 var ImageZoom =  {
     $cnt: null,
     $block: null,
     $img: null,
     $starButton: null,
     $cntInner: null,
+    $imgText: null,
     imgUrl: null,
     init: function() {
         var self = this;
@@ -17,9 +28,10 @@ var ImageZoom =  {
         this.$cntInner = $('.image-zoom-inner', this.$cnt);
         this.$starButton = $('.star-button', this.$cntInner);
         this.$img = $('.main-img', this.$cntInner);
+        this.$imgText = $('#image-zoom-text', this.$cnt);
 
         $('#next').click(function () {
-            if (self.$block.parent().is(':last-child')) {
+            if (self.$block.is(':last-child')) {
                 return false;
             }
 
@@ -27,7 +39,7 @@ var ImageZoom =  {
         });
 
         $('#prev').click(function () {
-            if (self.$block.parent().is(':first-child')) {
+            if (self.$block.is(':first-child')) {
                 return false;
             }
 
@@ -44,27 +56,23 @@ var ImageZoom =  {
 
             if (($('.chosen', $galleryBlock).length < 3) || $(this).hasClass('chosen')) {
                 $(this).toggleClass('chosen');
-                self.$block.siblings().toggleClass('chosen');
+                self.$block.toggleClass('chosen');
             }
 
-            if ($('chosen', $galleryBlock).length < 3) {
-                $('#show-form').removeClass('active');
-            } else {
-                $('#show-form').addClass('active');
-            }
+            IsActiveForm();
         });
     },
-    show: function ($block, isChosen) {
+    show: function ($block) {
         var self = this;
         self.$block = $block;
 
-        isChosen
-            ? this.$starButton.addClass('chosen')
-            : this.$starButton.removeClass('chosen');
+        self.$block.hasClass('chosen')
+            ? self.$starButton.addClass('chosen')
+            : self.$starButton.removeClass('chosen');
 
-        this.imgUrl = self.$block.data('background');
-        this.$cnt.addClass('visible');
-        this.$img.attr('src', self.imgUrl);
+        self.imgUrl = self.$block.children('.img').data('background');
+        self.$cnt.addClass('visible');
+        self.$img.attr('src', self.imgUrl);
 
         $(document).mouseup(function (e) {
             if (self.$cnt.has(e.target).length === 0) {
@@ -74,27 +82,34 @@ var ImageZoom =  {
     },
     hide: function () {
         this.$cnt.removeClass('visible');
+        this.$cntInner.children().removeClass('active');
         this.$img.attr('src', '');
         $(document).unbind('mouseup');
     },
     nextImg: function () {
         var self = this;
 
-        (self.$block.parent().next().children('svg').hasClass('chosen'))
+        self.$block = self.$block.next();
+        (self.$block.hasClass('chosen'))
             ? $('svg', self.$cntInner).addClass('chosen')
             : $('svg', self.$cntInner).removeClass('chosen');
-        self.$block = self.$block.parent().next().children('.img');
-        self.imgUrl = self.$block.data('background');
+        if (self.$block.children('span').length !== 0) {
+            self.$imgText.text(self.$block.children('span').text());
+        }
+        self.imgUrl = self.$block.children('.img').data('background');
         self.$img.attr('src', self.imgUrl);
     },
     prevImg: function () {
         var self = this;
 
-        (self.$block.parent().prev().children('svg').hasClass('chosen'))
+        self.$block = self.$block.prev();
+        (self.$block.hasClass('chosen'))
             ? $('svg', self.$cntInner).addClass('chosen')
             : $('svg', self.$cntInner).removeClass('chosen');
-        self.$block = self.$block.parent().prev().children('.img');
-        self.imgUrl = self.$block.data('background');
+        if (self.$block.children('span').length !== 0) {
+            self.$imgText.text(self.$block.children('span').text());
+        }
+        self.imgUrl = self.$block.children('.img').data('background');
         self.$img.attr('src', self.imgUrl);
     }
 };
@@ -106,29 +121,26 @@ $(document).ready(function () {
 
 
     $('.img').on('click', function () {
-        var isChosen = false;
-        if ($(this).siblings().hasClass('chosen')) {
-            isChosen = true;
-        }
+        var imgContainer = $(this).parent();
+        var $imgZoomStarButton = $('#image-zoom .star-button');
+        var $imgZoomText = $('#image-zoom-text');
 
-        if ($(this).siblings('.star-button').length == 0) {
-            $('#image-zoom .star-button').hide();
+        if (imgContainer.hasClass('archive')) {
+            var text = imgContainer.children('span').text();
+            $imgZoomText.text(text).addClass('active');
         } else {
-            $('#image-zoom .star-button').show();
+            $imgZoomText.removeClass('active');
+            $imgZoomStarButton.addClass('active');
         }
-        ImageZoom.show($(this), isChosen);
+        ImageZoom.show(imgContainer);
     });
 
     $('.star-button', $galleryBlock).on('click', function () {
-        if (($('.chosen', $galleryBlock).length < 3) || $(this).hasClass('chosen')) {
-            $(this).toggleClass('chosen');
+        if (($('.chosen', $galleryBlock).length < 3) || $(this).parent().hasClass('chosen')) {
+            $(this).parent().toggleClass('chosen');
         }
 
-        if ($('.chosen', $galleryBlock).length < 3) {
-            $('#show-form').removeClass('active');
-        } else {
-            $('#show-form').addClass('active');
-        }
+        IsActiveForm();
     });
 
     $('#show-full-rules').on('click', function (e) {
@@ -142,10 +154,10 @@ $(document).ready(function () {
             return false;
         }
         $(this).hide();
-        $('#main-form').slideDown(300);
+        $('#main-form').slideDown(200);
     });
 
-    $('#show-archiv').on('click', function (e) {
+    $('#show-archive').on('click', function (e) {
         e.preventDefault();
 
         $('#archive-gallery').slideDown(200);
