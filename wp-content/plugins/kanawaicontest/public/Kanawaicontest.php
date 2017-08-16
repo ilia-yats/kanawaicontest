@@ -101,20 +101,19 @@ class KC_Public_Kanawaicontest
                 $last_name = isset($post['last_name']) ? sanitize_text_field($post['last_name']) : '';
                 $email = isset($post['email']) ? sanitize_text_field($post['email']) : '';
                 $phone = isset($post['phone']) ? sanitize_text_field($post['phone']) : '';
-                $email = isset($post['image_email']) ? sanitize_text_field($post['image_email']) : '';
                 $voted_images_ids = isset($post['voted_images_ids'])
                     ? implode(',', sanitize_text_field($post['voted_images_ids']))
                     : array();
 
-                $voter = KC_Voters_List::create_or_get_by_email($email);
-                $current_tour = KC_Tours_List::get_current_tour();
-                foreach ($voted_images_ids as $id) {
-                    $vote = array(
-                        'image_id' => $id,
-                        'voter_id' => $voter['id'],
-                        'tour_id' => $current_tour['id'],
+                $voter_id = Kanawaicontest::get_instance()->get_voters_list()->get_id_by_email($email);
+                if (empty($voter_id)) {
+                    $voter_id = Kanawaicontest::get_instance()->get_voters_list()->create_voter(
+                        $name, $last_name, $email, $phone
                     );
-                    KC_ImagesVotes_List::saveVote($vote);
+                }
+                $current_tour = Kanawaicontest::get_instance()->get_tours_list()->get_current_tour();
+                foreach ($voted_images_ids as $id) {
+                    Kanawaicontest::get_instance()->saveVote($id, $voter_id, $current_tour['id']);
                 }
             } catch(Exception $e) {
                 $response['message'] = 'Error';
@@ -125,9 +124,9 @@ class KC_Public_Kanawaicontest
         wp_die(json_encode($response));
     }
 
-    public static function get_images()
+    public static function get_current_tour_images()
     {
-        return KC_Images_List::get_images();
+        return Kanawaicontest::get_instance()->get_current_tour_images();
     }
 }
 

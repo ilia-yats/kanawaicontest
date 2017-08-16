@@ -1,10 +1,10 @@
 <?php
 // Exit if accessed directly
-if( ! defined('ABSPATH')) {
+if ( ! defined('ABSPATH')) {
     exit;
 }
 
-if( ! class_exists('WP_List_Table')) {
+if ( ! class_exists('WP_List_Table')) {
     require_once(ABSPATH . 'wp-admin/includes/class-wp-list-table.php');
 }
 
@@ -14,8 +14,8 @@ class KC_Tours_List extends WP_List_Table
     {
         parent::__construct(array(
             'singular' => 'Tour',
-            'plural'   => 'Tours',
-            'ajax'     => FALSE,
+            'plural' => 'Tours',
+            'ajax' => FALSE,
         ));
     }
 
@@ -23,9 +23,9 @@ class KC_Tours_List extends WP_List_Table
     {
         global $wpdb;
 
-        $sql = "SELECT * FROM kanawaicontest_tours";
+        $sql = "SELECT * FROM kanawaicontest_tours ORDER BY start_date DESC";
 
-        if( ! empty($_REQUEST['orderby'])) {
+        if ( ! empty($_REQUEST['orderby'])) {
             $sql .= ' ORDER BY ' . esc_sql($_REQUEST['orderby']);
             $sql .= ! empty($_REQUEST['order']) ? ' ' . esc_sql($_REQUEST['order']) : ' ASC';
         }
@@ -36,21 +36,38 @@ class KC_Tours_List extends WP_List_Table
         $result = $wpdb->get_results($sql, 'ARRAY_A');
 
         return $result;
-
     }
 
-    public static function get_tour_with_images($id)
+    public function activate_tour($id)
     {
         global $wpdb;
 
-        $tour = static::get_tour($id);
-        $tour['images'] = [];
-        $tour_images =  $wpdb->get_results($wpdb->prepare("SELECT * FROM kanawaicontest_images WHERE id = %d", $id), 'ARRAY_A');
-        foreach ($tour_images as $image) {
-            $tour['images'][$image['id']] = $image;
-        }
+        $wpdb->query($wpdb->prepare('UPDATE kanawaicontest_tours SET 
+            status = "active",
+            start_date = CURRENT_DATE 
+            end_date = NULL 
+            WHERE id = %d', $id)
+        );
+    }
 
-        return $tour;
+    public function archive_tour($id)
+    {
+        global $wpdb;
+
+        $wpdb->query($wpdb->prepare('UPDATE kanawaicontest_tours SET 
+            status = "archived",
+            end_date = CURRENT_DATE 
+            WHERE id = %d', $id)
+        );
+    }
+
+    public function get_current_tour()
+    {
+        global $wpdb;
+
+        $current_tour = $wpdb->get_row("SELECT * FROM kanawaicontest_tours WHERE status = 'active' ORDER BY start_date DESC LIMIT 1", 'ARRAY_A');
+
+        return $current_tour;
     }
 
     public function get_tour($id)
@@ -78,9 +95,10 @@ class KC_Tours_List extends WP_List_Table
 
     public function column_default($item, $column_name)
     {
-        switch($column_name) {
+        switch ($column_name) {
             case 'id':
             case 'title':
+            case 'status':
             case 'start_date':
             case 'end_date':
                 return $item[$column_name];
@@ -109,11 +127,12 @@ class KC_Tours_List extends WP_List_Table
     function get_columns()
     {
         $columns = [
-            'cb'            => '<input type="checkbox" />',
-            'id'            => 'id',
-            'title'         => 'title',
-            'start_date'    => 'start_date',
-            'end_date'      => 'end_date',
+            'cb' => '<input type="checkbox" />',
+            'id' => 'id',
+            'title' => 'title',
+            'status' => 'status',
+            'start_date' => 'start_date',
+            'end_date' => 'end_date',
         ];
 
         return $columns;
@@ -122,9 +141,10 @@ class KC_Tours_List extends WP_List_Table
     public function get_sortable_columns()
     {
         $sortable_columns = array(
-            'id'          => array('id', TRUE),
-            'start_date'  => array('start_date', TRUE),
-            'end_date'    => array('end_date', TRUE),
+            'id' => array('id', TRUE),
+            'status' => array('status', TRUE),
+            'start_date' => array('start_date', TRUE),
+            'end_date' => array('end_date', TRUE),
         );
 
         return $sortable_columns;
@@ -143,7 +163,7 @@ class KC_Tours_List extends WP_List_Table
     {
         global $wpdb;
 
-        return (boolean) $wpdb->delete(
+        return (boolean)$wpdb->delete(
             "kanawaicontest_tours",
             ['id' => $id],
             ['%d']
@@ -160,7 +180,7 @@ class KC_Tours_List extends WP_List_Table
 
         $this->set_pagination_args([
             'total_items' => $total_items,
-            'per_page'    => $per_page,
+            'per_page' => $per_page,
         ]);
 
         $this->items = $this->get_tours($per_page, $current_page);
@@ -168,91 +188,89 @@ class KC_Tours_List extends WP_List_Table
 
     public function process_bulk_action()
     {
-        $page_url = menu_page_url('kanawaicontest', FALSE);
-
         $result = FALSE;
 
         //Detect when a bulk action is being triggered...
-        if('delete' === $this->current_action()) {
+        if ('delete' === $this->current_action()) {
             // In our file that handles the request, verify the nonce.
             $nonce = esc_attr($_REQUEST['_wpnonce']);
 
-            if(wp_verify_nonce($nonce, 'kanawaicontest_delete_tour')) {
+            if (wp_verify_nonce($nonce, 'kanawaicontest_delete_tour')) {
 
                 $result = self::delete_tour(absint($_REQUEST['id']));
             }
         }
 
         // If the delete bulk action is triggered
-        if((isset($_POST['action']) && $_POST['action'] == 'bulk-delete')
+        if ((isset($_POST['action']) && $_POST['action'] == 'bulk-delete')
             || (isset($_POST['action2']) && $_POST['action2'] == 'bulk-delete')
         ) {
-            if(isset($_POST['bulk-delete']) && is_array($_POST['bulk-delete'])) {
+            if (isset($_POST['bulk-delete']) && is_array($_POST['bulk-delete'])) {
                 $delete_ids = esc_sql($_POST['bulk-delete']);
                 // loop over the array of record ids and delete them
                 $result = TRUE;
-                foreach($delete_ids as $id) {
-                    if( ! self::delete_tour($id)) {
+                foreach ($delete_ids as $id) {
+                    if ( ! self::delete_tour($id)) {
                         $result = FALSE;
                     }
                 }
             }
         }
 
-        if($result) {
+        if ($result) {
             Kanawaicontest_Util_Util::push_admin_notice('success', 'Tours Deleted');
         } else {
             Kanawaicontest_Util_Util::push_admin_notice('error', 'Cannot delete tours');
         }
 
+        $page_url = menu_page_url('kanawaicontest', FALSE);
         wp_redirect($page_url);
         exit;
     }
 
     public function process_form_submit()
     {
-        if( ! isset($_POST['submit_tour'])) {
+        if ( ! isset($_POST['submit_tour'])) {
             return;
         }
 
-        if( ! wp_verify_nonce($_POST['_wpnonce'], 'kanawaicontest_new_tour')) {
+        if ( ! wp_verify_nonce($_POST['_wpnonce'], 'kanawaicontest_new_tour')) {
             die('Go get a life script kiddies');
         }
 
         // Get unslashed post
         $post = Kanawaicontest::$unslashed_post;
 
-        $page_url = menu_page_url('kanawaicontest', FALSE);
-
         $title = isset($post['title']) ? sanitize_text_field($post['title']) : '';
-        $start_date = isset($post['start_date']) ? sanitize_text_field($post['start_date']) : '';
-        $end_date = isset($post['end_date']) ? sanitize_text_field($post['end_date']) : '';
+//        $start_date = isset($post['start_date']) ? sanitize_text_field($post['start_date']) : '';
+//        $end_date = isset($post['end_date']) ? sanitize_text_field($post['end_date']) : '';
         $id = isset($post['id']) ? absint($post['id']) : null;
 
         if (is_null($id)) {
             $result = $this->insert_tour(array(
-                'title'         => $title,
-                'start_date'    => $start_date,
-                'end_date'      => $end_date,
+                'title' => $title,
+//                'start_date' => $start_date,
+//                'end_date' => $end_date,
             ));
-            if($result !== false) {
+            if ($result !== false) {
                 Kanawaicontest_Util_Util::push_admin_notice('success', 'Tour created');
             }
         } else {
             $result = $this->update_tour($id, array(
-                'title'         => $title,
-                'start_date'    => $start_date,
-                'end_date'      => $end_date,
+                'title' => $title,
+//                'start_date' => $start_date,
+//                'end_date' => $end_date,
             ));
-            if($result !== false) {
+            if ($result !== false) {
                 Kanawaicontest_Util_Util::push_admin_notice('success', 'Tour updated');
             }
         }
-        if(!$result) {
+        if ( ! $result) {
             Kanawaicontest_Util_Util::push_admin_notice('error', 'Cannot add or update tour');
         }
 
         // Redirect
+        $page_url = menu_page_url('kanawaicontest', FALSE);
         wp_redirect($page_url);
         exit;
     }
@@ -261,7 +279,7 @@ class KC_Tours_List extends WP_List_Table
     {
         global $wpdb;
 
-        if($wpdb->insert('kanawaicontest_tours', $args)) {
+        if ($wpdb->insert('kanawaicontest_tours', $args)) {
 
             return $wpdb->insert_id;
         }
@@ -273,7 +291,7 @@ class KC_Tours_List extends WP_List_Table
         global $wpdb;
 
         $result = $wpdb->update('kanawaicontest_tours', $args, array('id' => $id));
-        if($result !== FALSE) {
+        if ($result !== FALSE) {
             return $id;
         }
 

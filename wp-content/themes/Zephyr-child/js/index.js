@@ -162,5 +162,10 @@ $(document).ready(function () {
 
         $('#archive-gallery').slideDown(200);
         $(this).hide();
-    })
+    });
+
+    $('#contest-link-block').on('click', 'svg', function () {
+        $(this).parent().removeClass('active');
+    });
 });
+

@@ -2,13 +2,13 @@
 /*
 Template Name: Contest Page
 */
-wp_deregister_script( 'jquery' );
-wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js', false, '1.12.4' );
-wp_enqueue_script( 'jquery' );
+wp_deregister_script('jquery');
+wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js', false, '1.12.4');
+wp_enqueue_script('jquery');
 $templateDir = get_stylesheet_directory_uri();
 ?>
 <script src='https://www.google.com/recaptcha/api.js?hl=de-CH'></script>
-<?php get_header();?>
+<?php get_header(); ?>
 <div class="contest-page">
     <div class="main-banner"></div>
     <div class="what-win">
@@ -61,25 +61,27 @@ $templateDir = get_stylesheet_directory_uri();
             <span>Bitte maximal 3 Favoriten auswählen </span>
         </div>
         <div class="gallery-images" id="gallery-images">
-            <?php foreach (KC_Public_Kanawaicontest::get_images() as $image) : ?>
+            <?php foreach (KC_Public_Kanawaicontest::get_current_tour_images() as $image) :                ?>
                 <div class="img-container">
                     <div class="img" data-background="<?php echo $image['image_url']; ?>">
                         <div class="layer"></div>
                     </div>
-                    <svg class="star-button" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70.0354767 67.0449219"  xml:space="preserve">
-                <path d="M53.9242935,67.0449219c-0.7185936,0-1.4357224-0.1764832-2.0729027-0.51091
-                    l-16.4696312-8.6591988c-0.2037811-0.1092033-0.4226723-0.1033516-0.6069527-0.0058479l-16.486208,8.6582184
-                    c-1.4323101,0.7663727-3.3243465,0.6522903-4.6854811-0.3266296c-1.3855104-1.0218277-2.0607147-2.6891212-1.7803955-4.3632393
-                    l3.1420183-18.3489914c0.0380259-0.2164574-0.0341263-0.4368134-0.186718-0.5859909L1.4533342,29.9159775
-                    c-1.2041557-1.1758804-1.6473044-2.9679756-1.1300538-4.5670166c0.5182257-1.6029396,1.9324991-2.7953949,3.6032043-3.0362263
-                    l18.4113922-2.6744938c0.2125568-0.0321751,0.407074-0.1696529,0.4997005-0.3588085l8.2428589-16.6885242
-                    c0.7512569-1.530789,2.2820473-2.4853382,3.9927292-2.4853382c1.715065,0,3.2482948,0.9545492,4.0014992,2.4902134
-                    l8.2253113,16.6807232c0.0955505,0.1901302,0.287632,0.3295593,0.5089607,0.362709l18.4109039,2.6744938
-                    c1.6658325,0.2408314,3.0776672,1.432312,3.5958939,3.0352516c0.5255356,1.6243916,0.0926285,3.3745613-1.1295624,4.5670166
-                    L55.3678169,42.9033089c-0.1599045,0.1540527-0.2286415,0.3724594-0.1920776,0.5918388l3.1395798,18.3353424
-                    c0.2905579,1.6702156-0.3836746,3.3414078-1.7608948,4.3564072C55.7768402,66.751442,54.8715286,67.0449219,53.9242935,67.0449219z"
-                />
-            </svg>
+                    <svg class="star-button" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70.0354767 67.0449219"
+                         xml:space="preserve">
+                        <path d="M53.9242935,67.0449219c-0.7185936,0-1.4357224-0.1764832-2.0729027-0.51091
+                            l-16.4696312-8.6591988c-0.2037811-0.1092033-0.4226723-0.1033516-0.6069527-0.0058479l-16.486208,8.6582184
+                            c-1.4323101,0.7663727-3.3243465,0.6522903-4.6854811-0.3266296c-1.3855104-1.0218277-2.0607147-2.6891212-1.7803955-4.3632393
+                            l3.1420183-18.3489914c0.0380259-0.2164574-0.0341263-0.4368134-0.186718-0.5859909L1.4533342,29.9159775
+                            c-1.2041557-1.1758804-1.6473044-2.9679756-1.1300538-4.5670166c0.5182257-1.6029396,1.9324991-2.7953949,3.6032043-3.0362263
+                            l18.4113922-2.6744938c0.2125568-0.0321751,0.407074-0.1696529,0.4997005-0.3588085l8.2428589-16.6885242
+                            c0.7512569-1.530789,2.2820473-2.4853382,3.9927292-2.4853382c1.715065,0,3.2482948,0.9545492,4.0014992,2.4902134
+                            l8.2253113,16.6807232c0.0955505,0.1901302,0.287632,0.3295593,0.5089607,0.362709l18.4109039,2.6744938
+                            c1.6658325,0.2408314,3.0776672,1.432312,3.5958939,3.0352516c0.5255356,1.6243916,0.0926285,3.3745613-1.1295624,4.5670166
+                            L55.3678169,42.9033089c-0.1599045,0.1540527-0.2286415,0.3724594-0.1920776,0.5918388l3.1395798,18.3353424
+                            c0.2905579,1.6702156-0.3836746,3.3414078-1.7608948,4.3564072C55.7768402,66.751442,54.8715286,67.0449219,53.9242935,67.0449219z"
+                        />
+                    </svg>
                 </div>
             <?php endforeach; ?>
         </div>
@@ -88,15 +90,34 @@ $templateDir = get_stylesheet_directory_uri();
         <div class="inner">
             <h2>Teilnahmebedingungen</h2>
             <div class="rules-text">
-                <p>Alle Personen können mitstimmen. Preisberechtigt sind beim Gewinnspiel der kanawai ag ‘Impression of the month’ jedoch nur erwachsene Personen über 18 Jahren mit einem festen Wohnsitz in der Schweiz. Stimm-, aber nicht preisberechtigt sind die Mitarbeitenden der kanawai ag und die Mitarbeitenden der an der Umsetzung beteiligten Agenturen.
-                    Pro monatliches Gewinnspiel können die Anzahl Gewinner und die Anzahl und Art der Preise variieren. Es obliegt der kanawai ag, die Preise festzulegen und zu publizieren. <a href="#" id="show-full-rules" class="show-full-rules">Mehr</a>
+                <p>Alle Personen können mitstimmen. Preisberechtigt sind beim Gewinnspiel der kanawai ag ‘Impression of
+                    the month’ jedoch nur erwachsene Personen über 18 Jahren mit einem festen Wohnsitz in der Schweiz.
+                    Stimm-, aber nicht preisberechtigt sind die Mitarbeitenden der kanawai ag und die Mitarbeitenden der
+                    an der Umsetzung beteiligten Agenturen.
+                    Pro monatliches Gewinnspiel können die Anzahl Gewinner und die Anzahl und Art der Preise variieren.
+                    Es obliegt der kanawai ag, die Preise festzulegen und zu publizieren. <a href="#"
+                                                                                             id="show-full-rules"
+                                                                                             class="show-full-rules">Mehr</a>
                 </p>
-                <p class="not-visible-p">Jede Einsendung muss von einer gültigen E-Mail-Adresse und Telefonnummer erfolgen, an welche auch Antwortsendungen verschickt werden können. Jede Einsendung muss während der Zeit eingereicht werden, in welcher das Gewinnspiel online ist. Automatisch generierte Einträge und Versendungen sowie technische Manipulationen werden von der Teilnahme ausgeschlossen.
-                    Das Werbebild, das am meisten Stimmen erhalten hat, wird das ‘Impression of the month’. Die Verlosung des Preises oder der Preise findet unter allen Abstimmenden statt, die das Gewinnerbild ausgewählt haben. Der oder die Gewinner werden durch eine systemische Zufallsgenerator-Software ausgewählt. Die Verlosungs-Datenbank wird jeden Monat aufs Neue mit den Abstimmenden gefüllt.
-                    Die Preise können nicht bar ausbezahlt werden Über den Wettbewerb wird keine Korrespondenz geführt. Die Gewinner werden telefonisch benachrichtigt. Der Rechtsweg ist ausgeschlossen.
-                    Die kanawai ag kann nicht haftbar gemacht werden für fehlgeleitete, verloren gegangene, zu späte oder fehlerhafte Einträge. Die kanawai ag lehnt jede Haftung ab bezüglich technischer sowie Hard- und Softwarefehler jeglicher Art, unterbrochener Netzwerkverbindungen oder unvollständiger, verspäteter oder verloren gegangener Übermittlungen oder Übermittlungen, welche Systembeschädigungen beim Benutzer hervorrufen könnten.
-                    Adressen werden nicht an Dritte weitergegeben, können aber bei Bedarf und sofern nicht ausdrücklich abgelehnt für weitere werbliche Massnahmen von der kanawai ag verwendet werden.
-                    Mit der Teilnahme am Gewinnspiel anerkennt der Teilnehmer diese Teilnahmebestimmungen. Die kanawai ag behält sich das Recht vor, diese Wettbewerbsbestimmungen zu jeder Zeit abzuändern.
+                <p class="not-visible-p">Jede Einsendung muss von einer gültigen E-Mail-Adresse und Telefonnummer
+                    erfolgen, an welche auch Antwortsendungen verschickt werden können. Jede Einsendung muss während der
+                    Zeit eingereicht werden, in welcher das Gewinnspiel online ist. Automatisch generierte Einträge und
+                    Versendungen sowie technische Manipulationen werden von der Teilnahme ausgeschlossen.
+                    Das Werbebild, das am meisten Stimmen erhalten hat, wird das ‘Impression of the month’. Die
+                    Verlosung des Preises oder der Preise findet unter allen Abstimmenden statt, die das Gewinnerbild
+                    ausgewählt haben. Der oder die Gewinner werden durch eine systemische Zufallsgenerator-Software
+                    ausgewählt. Die Verlosungs-Datenbank wird jeden Monat aufs Neue mit den Abstimmenden gefüllt.
+                    Die Preise können nicht bar ausbezahlt werden Über den Wettbewerb wird keine Korrespondenz geführt.
+                    Die Gewinner werden telefonisch benachrichtigt. Der Rechtsweg ist ausgeschlossen.
+                    Die kanawai ag kann nicht haftbar gemacht werden für fehlgeleitete, verloren gegangene, zu späte
+                    oder fehlerhafte Einträge. Die kanawai ag lehnt jede Haftung ab bezüglich technischer sowie Hard-
+                    und Softwarefehler jeglicher Art, unterbrochener Netzwerkverbindungen oder unvollständiger,
+                    verspäteter oder verloren gegangener Übermittlungen oder Übermittlungen, welche Systembeschädigungen
+                    beim Benutzer hervorrufen könnten.
+                    Adressen werden nicht an Dritte weitergegeben, können aber bei Bedarf und sofern nicht ausdrücklich
+                    abgelehnt für weitere werbliche Massnahmen von der kanawai ag verwendet werden.
+                    Mit der Teilnahme am Gewinnspiel anerkennt der Teilnehmer diese Teilnahmebestimmungen. Die kanawai
+                    ag behält sich das Recht vor, diese Wettbewerbsbestimmungen zu jeder Zeit abzuändern.
                 </p>
             </div>
             <div class="thanks-for-vote">
@@ -143,19 +164,22 @@ $templateDir = get_stylesheet_directory_uri();
                 <span>Gewinnerbild August 2017</span>
             </div>
             <div class="img-container">
-                <div class="img" data-background="images/image_736х416/Edelweiss_pizza%20-%2014.08.%20-%2019.08.2017.jpg">
+                <div class="img"
+                     data-background="images/image_736х416/Edelweiss_pizza%20-%2014.08.%20-%2019.08.2017.jpg">
                     <div class="layer"></div>
                 </div>
                 <span>Gewinnerbild August 2017</span>
             </div>
             <div class="img-container">
-                <div class="img" data-background="images/image_736х416/Hafners%20British%20Bikes%20-%20Letzte%2010%20Tage%20vom%20Monat.jpg">
+                <div class="img"
+                     data-background="images/image_736х416/Hafners%20British%20Bikes%20-%20Letzte%2010%20Tage%20vom%20Monat.jpg">
                     <div class="layer"></div>
                 </div>
                 <span>Gewinnerbild August 2017</span>
             </div>
             <div class="img-container">
-                <div class="img" data-background="images/image_736х416/Jazz%20Club%20Lichtensteig%20-%2007.08.%20-%2010.08.2017.jpg">
+                <div class="img"
+                     data-background="images/image_736х416/Jazz%20Club%20Lichtensteig%20-%2007.08.%20-%2010.08.2017.jpg">
                     <div class="layer"></div>
                 </div>
                 <span>Gewinnerbild August 2017</span>
@@ -166,31 +190,43 @@ $templateDir = get_stylesheet_directory_uri();
         <div class="image-zoom-inner">
             <img src="" alt="" id="zoom-img" class="main-img">
             <svg id="close" class="close" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                 viewBox="0 0 156.1552734 156.1587219" enable-background="new 0 0 156.1552734 156.1587219" xml:space="preserve">
+                 viewBox="0 0 156.1552734 156.1587219" enable-background="new 0 0 156.1552734 156.1587219"
+                 xml:space="preserve">
             <g>
-                <rect x="-25.29459" y="71.0318832" transform="matrix(0.7070985 0.7071151 -0.7071151 0.7070985 78.0801392 -32.3402939)" width="206.7444" height="14.0949373"/>
-                <rect x="71.0301437" y="-25.2928486" transform="matrix(0.7071068 0.7071068 -0.7071068 0.7071068 78.0788422 -32.3402939)" width="14.0949373" height="206.7444"/>
+                <rect x="-25.29459" y="71.0318832"
+                      transform="matrix(0.7070985 0.7071151 -0.7071151 0.7070985 78.0801392 -32.3402939)"
+                      width="206.7444" height="14.0949373"/>
+                <rect x="71.0301437" y="-25.2928486"
+                      transform="matrix(0.7071068 0.7071068 -0.7071068 0.7071068 78.0788422 -32.3402939)"
+                      width="14.0949373" height="206.7444"/>
             </g>
         </svg>
             <div id="prev" class="prev">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                     viewBox="0 0 88.0531006 156.1586914" enable-background="new 0 0 88.0531006 156.1586914" xml:space="preserve">
+                     viewBox="0 0 88.0531006 156.1586914" enable-background="new 0 0 88.0531006 156.1586914"
+                     xml:space="preserve">
                 <g>
-                    <rect x="36.9809608" y="56.9169044" transform="matrix(0.7073687 -0.7068447 0.7068447 0.7073687 -66.376564 63.9349174)" width="14.094964" height="110.4323044"/>
+                    <rect x="36.9809608" y="56.9169044"
+                          transform="matrix(0.7073687 -0.7068447 0.7068447 0.7073687 -66.376564 63.9349174)"
+                          width="14.094964" height="110.4323044"/>
                     <polygon points="9.9840088,88.0375977 88.0531006,9.9666138 78.0865479,0 0.0305176,78.0578003 	"/>
                 </g>
             </svg>
             </div>
             <div id="next" class="next">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                     viewBox="0 0 88.0531006 156.1586914" enable-background="new 0 0 88.0531006 156.1586914" xml:space="preserve">
+                     viewBox="0 0 88.0531006 156.1586914" enable-background="new 0 0 88.0531006 156.1586914"
+                     xml:space="preserve">
                 <g>
-                    <rect x="36.9771767" y="56.9169044" transform="matrix(-0.7073687 -0.7068447 0.7068447 -0.7073687 -4.0943375 222.5710754)" width="14.094964" height="110.4323044"/>
+                    <rect x="36.9771767" y="56.9169044"
+                          transform="matrix(-0.7073687 -0.7068447 0.7068447 -0.7073687 -4.0943375 222.5710754)"
+                          width="14.094964" height="110.4323044"/>
                     <polygon points="78.0690918,88.0375977 0,9.9666138 9.9665527,0 88.022583,78.0578003 	"/>
                 </g>
             </svg>
             </div>
-            <svg class="star-button" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70.0354767 67.0449219"  xml:space="preserve">
+            <svg class="star-button" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                 viewBox="0 0 70.0354767 67.0449219" xml:space="preserve">
                     <path d="M53.9242935,67.0449219c-0.7185936,0-1.4357224-0.1764832-2.0729027-0.51091
                         l-16.4696312-8.6591988c-0.2037811-0.1092033-0.4226723-0.1033516-0.6069527-0.0058479l-16.486208,8.6582184
                         c-1.4323101,0.7663727-3.3243465,0.6522903-4.6854811-0.3266296c-1.3855104-1.0218277-2.0607147-2.6891212-1.7803955-4.3632393
@@ -208,4 +244,4 @@ $templateDir = get_stylesheet_directory_uri();
         <span id="image-zoom-text" class="img-text"></span>
     </div>
 </div>
-<?php get_footer();?>
+<?php get_footer(); ?>

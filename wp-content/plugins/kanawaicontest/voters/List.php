@@ -25,7 +25,7 @@ class KC_Voters_List extends WP_List_Table
 
         $sql = "SELECT kcv.* FROM kanawaicontest_voters AS kcv";
 
-        if (!empty($_REQUEST['tour_id'])) {
+        if ( ! empty($_REQUEST['tour_id'])) {
             $sql .= ' INNER JOIN kanawaicontest_images_votes AS kciv ON kcv.id = kciv.voter_id 
                 WHERE kciv.tour_id = ' . absint($_REQUEST['tour_id']) . ' AND kciv.id IS NOT NULL';
         }
@@ -70,12 +70,31 @@ class KC_Voters_List extends WP_List_Table
         global $wpdb;
 
         $sql = "SELECT COUNT(*) FROM kanawaicontest_voters AS kcv";
-        if (!empty($_REQUEST['tour_id'])) {
+        if ( ! empty($_REQUEST['tour_id'])) {
             $sql .= ' INNER JOIN kanawaicontest_images_votes AS kciv ON kcv.id = kciv.voter_id 
                 WHERE kciv.tour_id = ' . absint($_REQUEST['tour_id']) . ' AND kciv.id IS NOT NULL';
         }
 
         return $wpdb->get_var($sql);
+    }
+
+    public function get_id_by_email($email)
+    {
+        global $wpdb;
+
+        $voter = $wpdb->get_row($wpdb->prepare("SELECT * FROM kanawaicontest_voters AS kcv WHERE email = '%s'", $email), "ARRAY_A");
+
+        return isset($voter['id']) ? $voter['id'] : false;
+    }
+
+    public function create_voter($name, $last_name, $email, $phone)
+    {
+        global $wpdb;
+
+        $wpdb->query($wpdb->prepare("INSERT INTO kanawaicontest_voters(name, last_name, email, phone)
+            VALUES ('%s', '%s', '%s', '%s')", $name, $last_name, $email, $phone));
+
+        return $wpdb->insert_id;
     }
 
     /**

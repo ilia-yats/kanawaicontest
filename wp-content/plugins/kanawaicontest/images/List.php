@@ -19,38 +19,41 @@ class KC_Images_List extends WP_List_Table
         ));
     }
 
-    public function get_images($per_page = 20, $page_number = 1)
+    public function get_current_tour_images($per_page = 20, $page_number = 1)
     {
         global $wpdb;
-
-        $sql = "SELECT kci.* FROM kanawaicontest_images kci";
-
-        if (!empty($_REQUEST['tour_id'])) {
-            $sql .= ' WHERE tour_id = ' . absint($_REQUEST['tour_id']);
+        $result = [];
+        $current_tour = Kanawaicontest::get_instance()->get_current_tour();
+        if (!empty($current_tour)) {
+            $sql = $wpdb->prepare("SELECT kci.* FROM kanawaicontest_images kci WHERE tour_id = %d", $current_tour['id']);
+            if ( ! empty($_REQUEST['orderby'])) {
+                $sql .= ' ORDER BY ' . esc_sql($_REQUEST['orderby']);
+                $sql .= ! empty($_REQUEST['order']) ? ' ' . esc_sql($_REQUEST['order']) : ' ASC';
+            }
+            $sql .= " LIMIT $per_page";
+            $sql .= ' OFFSET ' . ($page_number - 1) * $per_page;
+            $result = $wpdb->get_results($sql, 'ARRAY_A');
         }
-
-        if ( ! empty($_REQUEST['orderby'])) {
-            $sql .= ' ORDER BY ' . esc_sql($_REQUEST['orderby']);
-            $sql .= ! empty($_REQUEST['order']) ? ' ' . esc_sql($_REQUEST['order']) : ' ASC';
-        }
-
-        $sql .= " LIMIT $per_page";
-        $sql .= ' OFFSET ' . ($page_number - 1) * $per_page;
-
-        $result = $wpdb->get_results($sql, 'ARRAY_A');
-
         foreach ($result as &$item) {
             $item['image_url'] = wp_get_attachment_image_src($item['attachment_id'])[0];
+            $item['voted'] = $this->count_votes($item['id']);
         }
 
         return $result;
+    }
+
+    public function count_votes($image_id)
+    {
+        global $wpdb;
+
+        return $wpdb->get_var("SELECT COUNT(*) FROM kanawaicontest_images_votes WHERE image_id = " . absint($image_id));
     }
 
     public function delete_image($id)
     {
         global $wpdb;
 
-        return (boolean)$wpdb->delete(
+        return (bool)$wpdb->delete(
             "kanawaicontest_images",
             array('id' => $id),
             array('%d')
@@ -92,11 +95,11 @@ class KC_Images_List extends WP_List_Table
     function column_title($item)
     {
         $title = '<strong>' . $item['title'] . '</strong>';
-        $actions = [
-            'edit' => sprintf('<a href="?page=%s&action=%s&id=%d">Edit</a>', esc_attr($_REQUEST['page']), 'edit', absint($item['id'])),
-        ];
+//        $actions = [
+//            'edit' => sprintf('<a class="add-new-h2" href="?page=%s&action=%s&id=%d">Edit</a>', esc_attr($_REQUEST['page']), 'delete', absint($item['id'])),
+//        ];
 
-        return $title . $this->row_actions($actions);
+        return $title;// . '<br>' . $this->row_actions($actions);
     }
 
     function column_cb($item)
@@ -110,7 +113,7 @@ class KC_Images_List extends WP_List_Table
     {
         $columns = [
             'cb' => '<input type="checkbox" />',
-            'id' => 'id',
+//            'id' => 'id',
             'title' => 'title',
 //            'description' => 'description',
             'image_url' => 'image_url',
@@ -152,7 +155,8 @@ class KC_Images_List extends WP_List_Table
             'per_page' => $per_page,
         ]);
 
-        $this->items = $this->get_images($per_page, $current_page);
+        $this->items = $this->get_current_tour_images($per_page, $current_page);
+//        $this->items = $this->get_images($per_page, $current_page);
     }
 
     public function process_bulk_action()

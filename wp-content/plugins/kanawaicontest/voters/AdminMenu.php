@@ -59,16 +59,11 @@ class KC_Voters_AdminMenu
     public function plugin_settings_page()
     {
         $action = isset($_REQUEST['action']) ? $_REQUEST['action'] : 'list';
-//        $id = isset($_REQUEST['id']) ? intval($_REQUEST['id']) : 0;
-
         $template = '';
 
         switch($action) {
-//            case 'view':
-//            case 'edit':
-//            case 'new':
-
             default:
+                $tour_id = Kanawaicontest::get_instance()->get_current_tour()['id'];
                 $template = __DIR__ . '/views/voters-list.php';
                 break;
         }
@@ -104,10 +99,6 @@ class KC_Voters_AdminMenu
      */
     public function form_handler()
     {
-        if(isset($_REQUEST['action']) && ($_REQUEST['action'] == 'new' || $_REQUEST['action'] == 'edit')) {
-            $this->voters_list->process_form_submit();
-        }
-
         if((isset($_REQUEST['action']) && $_REQUEST['action'] == 'delete')
             || (isset($_POST['action']) && $_POST['action'] == 'bulk-delete')
             || (isset($_POST['action2']) && $_POST['action2'] == 'bulk-delete')

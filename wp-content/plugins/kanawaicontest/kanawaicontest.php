@@ -8,23 +8,18 @@ Author: uui
 Author URI: 
 */
 
+//ini_set('display_errors', 1);
+//error_reporting(E_ALL);
+
 // Exit if accessed directly
-if( ! defined('ABSPATH')) {
+if ( ! defined('ABSPATH')) {
     exit;
 }
 
 include_once(__DIR__ . '/init.php');
 
-/**
- * Main Bookingmanager plugin class
- */
 class Kanawaicontest
 {
-    /**
-     * Instance of this class.
-     *
-     * @var static
-     */
     protected static $instance;
 
     /*
@@ -34,18 +29,10 @@ class Kanawaicontest
      */
     public static $unslashed_post;
 
-    /**
-     * Components
-     */
     public $tours;
     public $images;
     public $voters;
 
-    /**
-     * Constructor.
-     *
-     * @param mixed
-     */
     public function __construct()
     {
         // Capture POST, unslash and store in class variable
@@ -54,9 +41,9 @@ class Kanawaicontest
         // Start session
         Kanawaicontest_Util_Util::session_start();
 
-        if(is_admin()) {
+        if (is_admin()) {
             // Register needed plugin settings
-            add_action('admin_init', function() {
+            add_action('admin_init', function () {
                 register_setting('kanawaicontest_settings', 'kanawaicontest_rules');
 //                register_setting('kanawaicontest_settings', 'kanawaicontest_admin_email');
 //                register_setting('kanawaicontest_settings', 'kanawaicontest_client_email_subject');
@@ -75,72 +62,47 @@ class Kanawaicontest
             add_action('init', array($this, 'create_menu'));
 
             // Add needed scripts on page
-            add_action('admin_enqueue_scripts', array($this, 'enqueue_bookingmanager_admin_scripts'));
+//            add_action('admin_enqueue_scripts', array($this, 'enqueue_bookingmanager_admin_scripts'));
 
-//            // Check if array of admin notices exists in session
+            // Check if array of admin notices exists in session
             add_action('admin_notices', array('Kanawaicontest_Util_Util', 'show_admin_notices'));
 
-//            // Save all registered events before script execution ends
-//            add_action('shutdown', array("BM_Event_Manager", 'save_all_events'));
+            add_action('admin_footer', array($this, 'media_selector_print_scripts'));
         }
-        
-//        add_filter( 'login_redirect', array($this, 'redirect_to_home_page'), 10, 3);
 
         // When plugin activated, add new tables and user role
-//        register_activation_hook(__FILE__, array($this, 'create_tables'));
-//        register_activation_hook(__FILE__, array($this, 'add_roles'));
-
-
-        add_action( 'admin_footer', array( $this, 'media_selector_print_scripts' ));
-
-
-
-
+        register_activation_hook(__FILE__, array($this, 'create_tables'));
 
 
     }
 
-    /**
-     * Singleton instance.
-     *
-     * @return object
-     */
     public static function get_instance()
     {
-        if( ! isset(self::$instance)) {
+        if ( ! isset(self::$instance)) {
             self::$instance = new self();
         }
 
         return self::$instance;
     }
 
-
-    /**
-     * Create relevant tables.
-     *
-     * @return mixed
-     */
     public function create_tables()
     {
         // TODO: create SQL dump
     }
 
-    /**
-     * Adds items to admin menu depending on the roles of current user
-     */
     public function create_menu()
     {
         $user = wp_get_current_user();
 
-        if( ! $user instanceof WP_User) {
+        if ( ! $user instanceof WP_User) {
 
             return FALSE;
         }
 
         // Show all menu items for admins
-        if(in_array('administrator', $user->roles)) {
+        if (in_array('administrator', $user->roles)) {
 
-            add_action('admin_menu', function() {
+            add_action('admin_menu', function () {
                 add_menu_page(
                     'Contest',
                     'Contest',
@@ -154,46 +116,21 @@ class Kanawaicontest
             add_action('admin_menu', array($this->tours, 'plugin_menu'));
             add_action('admin_menu', array($this->images, 'plugin_menu'));
             add_action('admin_menu', array($this->voters, 'plugin_menu'));
-            add_action('admin_menu', function() {
+            add_action('admin_menu', function () {
                 add_submenu_page(
                     'kanawaicontest',
                     'Settings',
                     'Settings',
                     'manage_options',
                     'kanawaicontest_settings',
-                    function() {
+                    function () {
                         include KANAWAICONTEST_ROOT . '/settings/views/settings.php';;
                     });
             });
         }
-//        elseif(in_array('booking_clerk', $user->roles)) {
-//        // Show several items for booking-clerks
-//            add_action('admin_menu', function() {
-//                add_menu_page(
-//                    'Резервирование мест',
-//                    'Резервирование мест',
-//                    'read',
-//                    'bookingmanager',
-//                    array($this->calendar, 'plugin_menu'),
-//                    'dashicons-calendar-alt',
-//                    NULL
-//                );
-//            });
-//            add_action('admin_menu', array($this->calendar, 'plugin_menu'));
-//            add_action('admin_menu', array($this->places, 'plugin_menu'));
-//
-//            // Dirty hack: script removes all menu items except the ones created above
-//            add_action('admin_enqueue_scripts', array($this, 'enqueue_menu_items_hide_script'));
-//        }
-//
+
         return TRUE;
     }
-
-
-    /**
-     * Enqueues needed scripts on admin page
-     */
-
 
 //    public function enqueue_bookingmanager_admin_scripts()
 //    {
@@ -201,83 +138,24 @@ class Kanawaicontest
 //        wp_enqueue_style('jquery-style', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/themes/smoothness/jquery-ui.css');
 //        wp_enqueue_script('bm_admin_main', '/wp-content/plugins/bookingmanager/assets/js/admin_main.js', array('jquery-ui-datepicker', 'jquery-ui-dialog'), FALSE, TRUE);
 //    }
-    /**
-     * Returns data about current user
-     *
-     * @return array
-     */
 
+    public function media_selector_print_scripts()
+    {
+        $my_saved_attachment_post_id = get_option('media_selector_attachment_id', 0);
 
-
-    /**
-     * Enqueues script for removing not-necessary menu items
-     */
-//    public function enqueue_menu_items_hide_script()
-//    {
-//        wp_enqueue_script('bm_remove_menu_items', '/wp-content/plugins/bookingmanager/assets/js/remove_menu_items.js', array('jquery-ui-datepicker', 'jquery-ui-dialog'), FALSE, TRUE);
-//    }
-
-//    public static function get_current_user_data()
-//    {
-//        $user_data = [
-//            'id'   => NULL,
-//            'name' => 'Неизвестно',
-//        ];
-//
-//        // Get current user
-//        $user = wp_get_current_user();
-//
-//        if($user instanceof WP_User) {
-//            $user_data['id'] = $user->ID;
-//            $user_data['name'] = $user->display_name;
-//        }
-//
-//        return $user_data;
-//    }
-    /* Redirect the user logging in to a custom admin page. */
-
-//    function redirect_to_home_page( $redirect_to, $request, $user )
-//    {
-//        if ( is_array( $user->roles ) ) {
-//            if ( in_array( 'booking_clerk', $user->roles ) ) {
-//                return admin_url( '?page=bookingmanager' );
-//            } else {
-//                return admin_url();
-//            }
-//        }
-//    }
-    /**
-     *  Adds a custom user role 'booking clerk'
-     */
-//    public function add_roles()
-//    {
-//        add_role(
-//            'booking_clerk',
-//            __('Booking-Clerk'),
-//            [
-//                'read' => TRUE,
-//                'level_0' => TRUE,
-//                'manage_options' => TRUE,
-//            ]
-//        );
-//    }
-
-    public function media_selector_print_scripts() {
-
-        $my_saved_attachment_post_id = get_option( 'media_selector_attachment_id', 0 );
-
-        ?><script type='text/javascript'>
-            jQuery( document ).ready( function( $ ) {
+        ?>
+        <script type='text/javascript'>
+            jQuery(document).ready(function ($) {
                 // Uploading files
                 var file_frame;
                 var wp_media_post_id = wp.media.model.settings.post.id; // Store the old id
                 var set_to_post_id = <?php echo $my_saved_attachment_post_id; ?>; // Set this
-                jQuery('#upload_image_button').on('click', function( event ){
+                jQuery('#upload_image_button').on('click', function (event) {
                     event.preventDefault();
                     // If the media frame already exists, reopen it.
-                    if ( file_frame ) {
+                    if (file_frame) {
                         // Set the post ID to what we want
-                        file_frame.uploader.uploader.param( 'post_id', set_to_post_id );
+                        file_frame.uploader.uploader.param('post_id', set_to_post_id);
                         // Open frame
                         file_frame.open();
                         return;
@@ -294,12 +172,12 @@ class Kanawaicontest
                         multiple: false	// Set to true to allow multiple files to be selected
                     });
                     // When an image is selected, run a callback.
-                    file_frame.on( 'select', function() {
+                    file_frame.on('select', function () {
                         // We set multiple to false so only get one image from the uploader
                         attachment = file_frame.state().get('selection').first().toJSON();
                         // Do something with attachment.id and/or attachment.url here
-                        $( '#image-preview' ).attr( 'src', attachment.url ).css( 'width', 'auto' );
-                        $( '#image_attachment_id' ).val( attachment.id );
+                        $('#image-preview').attr('src', attachment.url).css('width', 'auto');
+                        $('#image_attachment_id').val(attachment.id);
                         // Restore the main post ID
                         wp.media.model.settings.post.id = wp_media_post_id;
                     });
@@ -307,11 +185,67 @@ class Kanawaicontest
                     file_frame.open();
                 });
                 // Restore the main ID when the add media button is pressed
-                jQuery( 'a.add_media' ).on( 'click', function() {
+                jQuery('a.add_media').on('click', function () {
                     wp.media.model.settings.post.id = wp_media_post_id;
                 });
             });
         </script><?php
+    }
+
+    public function get_tours_list()
+    {
+        return $this->tours->tours_list;
+    }
+
+    public function get_images_list()
+    {
+        return $this->images->images_list;
+    }
+
+    public function get_voters_list()
+    {
+        return $this->voters->voters_list;
+    }
+
+    public function saveVote($image_id, $voter_id, $tour_id)
+    {
+        global $wpdb;
+
+        $result = $wpdb->query($wpdb->prepare("INSERT INTO kanawaicontest_image_votes(image_id, voter_id, tour_id)
+            VALUES(%d, %d, %d)", $image_id, $voter_id, $tour_id));
+
+        return $result;
+    }
+
+    public function get_current_tour()
+    {
+        global $wpdb;
+
+        $current_tour = $wpdb->get_row("SELECT * FROM kanawaicontest_tours WHERE status = 'active' ORDER BY start_date DESC LIMIT 1", 'ARRAY_A');
+
+        return $current_tour;
+    }
+
+    public function get_current_tour_images($per_page = 20, $page_number = 1)
+    {
+        global $wpdb;
+        $result = [];
+        $current_tour = $this->get_current_tour();
+        if (!empty($current_tour)) {
+            $sql = $wpdb->prepare("SELECT kci.* FROM kanawaicontest_images kci WHERE tour_id = %d", $current_tour['id']);
+            if ( ! empty($_REQUEST['orderby'])) {
+                $sql .= ' ORDER BY ' . esc_sql($_REQUEST['orderby']);
+                $sql .= ! empty($_REQUEST['order']) ? ' ' . esc_sql($_REQUEST['order']) : ' ASC';
+            }
+            $sql .= " LIMIT $per_page";
+            $sql .= ' OFFSET ' . ($page_number - 1) * $per_page;
+            $result = $wpdb->get_results($sql, 'ARRAY_A');
+        }
+        foreach ($result as &$item) {
+            $item['image_url'] = wp_get_attachment_image_src($item['attachment_id'])[0];
+        }
+
+        return $result;
     }
 
 }
