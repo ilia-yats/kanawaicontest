@@ -11,6 +11,11 @@ $templateDir = get_stylesheet_directory_uri();
 <?php get_header();?>
 <div class="contest-page">
     <div class="main-banner"></div>
+    <div class="contest-end">
+        <div>Das aktuelle Gewinnspiel ist abgeschlossen. Das Gewinner-Werbebild wird bis Ende Monat auf unserer kanawai<br>Facebookseite publiziert. <a href="https://www.facebook.com/kanawaimegascreens/">www.facebook.com/kanawaimegascreens/</a></div>
+        <div>Die GewinnerInnen werden persönlich durch unsere Mitarbeiter kontaktiert.</div>
+        <div>Das nächste Gewinnspiel kommt bestimmt – es wird bis spätestens am zehnten des nächsten Monats online sein.</div>
+    </div>
     <div class="what-win">
         <div class="inner">
             <h2>GEWINNSPIEL</h2>
@@ -57,15 +62,16 @@ $templateDir = get_stylesheet_directory_uri();
     </div>
     <div class="gallery">
         <div class="gallery-title">
-            <h2>gallery</h2>
+            <h2>gallery – <span id="contest-month">august 2017</span></h2>
             <span>Bitte maximal 3 Favoriten auswählen </span>
         </div>
         <div class="gallery-images" id="gallery-images">
-            <div class="img-container">
-                <div class="img" data-background="images/image_736х416/170217_cleandevil_final.jpg">
+            <div class="img-container" id="picture-1">
+                <div class="img" data-background="<?= $templateDir ?>/images/170217_cleandevil_final.jpg">
                     <div class="layer"></div>
                 </div>
-                <svg class="star-button" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70.0354767 67.0449219"  xml:space="preserve">
+                <a href="http://google.com.ua" class="link"></a>
+                <svg class="star-button" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70.0354767 67.0449219"  xml:space="preserve">
                 <path d="M53.9242935,67.0449219c-0.7185936,0-1.4357224-0.1764832-2.0729027-0.51091
                     l-16.4696312-8.6591988c-0.2037811-0.1092033-0.4226723-0.1033516-0.6069527-0.0058479l-16.486208,8.6582184
                     c-1.4323101,0.7663727-3.3243465,0.6522903-4.6854811-0.3266296c-1.3855104-1.0218277-2.0607147-2.6891212-1.7803955-4.3632393
@@ -80,11 +86,12 @@ $templateDir = get_stylesheet_directory_uri();
                 />
             </svg>
             </div>
-            <div class="img-container">
-                <div class="img" data-background="images/image_736х416/CGAG_VW%20-%2001.06.%20-%2031.12.2017.jpg">
+            <div class="img-container" id="picture-2">
+                <div class="img" data-background="<?= $templateDir ?>/images/CGAG_VW%20-%2001.06.%20-%2031.12.2017.jpg">
                     <div class="layer"></div>
                 </div>
-                <svg class="star-button" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70.0354767 67.0449219"  xml:space="preserve">
+                <a href="http://google.ru" class="link"></a>
+                <svg class="star-button" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70.0354767 67.0449219"  xml:space="preserve">
                 <path d="M53.9242935,67.0449219c-0.7185936,0-1.4357224-0.1764832-2.0729027-0.51091
                     l-16.4696312-8.6591988c-0.2037811-0.1092033-0.4226723-0.1033516-0.6069527-0.0058479l-16.486208,8.6582184
                     c-1.4323101,0.7663727-3.3243465,0.6522903-4.6854811-0.3266296c-1.3855104-1.0218277-2.0607147-2.6891212-1.7803955-4.3632393
@@ -99,11 +106,12 @@ $templateDir = get_stylesheet_directory_uri();
                 />
             </svg>
             </div>
-            <div class="img-container">
-                <div class="img" data-background="images/image_736х416/Edelweiss_pizza%20-%2014.08.%20-%2019.08.2017.jpg">
+            <div class="img-container" id="picture-3">
+                <div class="img" data-background="<?= $templateDir ?>/images/Edelweiss_pizza%20-%2014.08.%20-%2019.08.2017.jpg">
                     <div class="layer"></div>
                 </div>
-                <svg class="star-button" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70.0354767 67.0449219"  xml:space="preserve">
+                <a href="http://google.by" class="link"></a>
+                <svg class="star-button" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70.0354767 67.0449219"  xml:space="preserve">
                 <path d="M53.9242935,67.0449219c-0.7185936,0-1.4357224-0.1764832-2.0729027-0.51091
                     l-16.4696312-8.6591988c-0.2037811-0.1092033-0.4226723-0.1033516-0.6069527-0.0058479l-16.486208,8.6582184
                     c-1.4323101,0.7663727-3.3243465,0.6522903-4.6854811-0.3266296c-1.3855104-1.0218277-2.0607147-2.6891212-1.7803955-4.3632393
@@ -118,11 +126,12 @@ $templateDir = get_stylesheet_directory_uri();
                 />
             </svg>
             </div>
-            <div class="img-container">
-                <div class="img" data-background="images/image_736х416/Hafners%20British%20Bikes%20-%20Letzte%2010%20Tage%20vom%20Monat.jpg">
+            <div class="img-container" id="picture-4">
+                <div class="img" data-background="<?= $templateDir ?>/images/Hafners%20British%20Bikes%20-%20Letzte%2010%20Tage%20vom%20Monat.jpg">
                     <div class="layer"></div>
                 </div>
-                <svg class="star-button" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70.0354767 67.0449219"  xml:space="preserve">
+                <a href="http://google.tr" class="link"></a>
+                <svg class="star-button" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70.0354767 67.0449219"  xml:space="preserve">
                 <path d="M53.9242935,67.0449219c-0.7185936,0-1.4357224-0.1764832-2.0729027-0.51091
                     l-16.4696312-8.6591988c-0.2037811-0.1092033-0.4226723-0.1033516-0.6069527-0.0058479l-16.486208,8.6582184
                     c-1.4323101,0.7663727-3.3243465,0.6522903-4.6854811-0.3266296c-1.3855104-1.0218277-2.0607147-2.6891212-1.7803955-4.3632393
@@ -137,11 +146,12 @@ $templateDir = get_stylesheet_directory_uri();
                 />
             </svg>
             </div>
-            <div class="img-container">
-                <div class="img" data-background="images/image_736х416/Jazz%20Club%20Lichtensteig%20-%2007.08.%20-%2010.08.2017.jpg">
+            <div class="img-container" id="picture-5">
+                <div class="img" data-background="<?= $templateDir ?>/images/Jazz%20Club%20Lichtensteig%20-%2007.08.%20-%2010.08.2017.jpg">
                     <div class="layer"></div>
                 </div>
-                <svg class="star-button" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70.0354767 67.0449219"  xml:space="preserve">
+                <a href="http://google.co.uk" class="link"></a>
+                <svg class="star-button" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70.0354767 67.0449219"  xml:space="preserve">
                 <path d="M53.9242935,67.0449219c-0.7185936,0-1.4357224-0.1764832-2.0729027-0.51091
                     l-16.4696312-8.6591988c-0.2037811-0.1092033-0.4226723-0.1033516-0.6069527-0.0058479l-16.486208,8.6582184
                     c-1.4323101,0.7663727-3.3243465,0.6522903-4.6854811-0.3266296c-1.3855104-1.0218277-2.0607147-2.6891212-1.7803955-4.3632393
@@ -156,11 +166,12 @@ $templateDir = get_stylesheet_directory_uri();
                 />
             </svg>
             </div>
-            <div class="img-container">
-                <div class="img" data-background="images/image_736х416/Möbel%20GAMMA%20-%2017.07.%20-%2021.07.2017_02.08.%20-%2004.08.2017_10.08.%20-%2011.08.2017.jpg">
+            <div class="img-container" id="picture-6">
+                <div class="img" data-background="<?= $templateDir ?>/images/Möbel%20GAMMA%20-%2017.07.%20-%2021.07.2017_02.08.%20-%2004.08.2017_10.08.%20-%2011.08.2017.jpg">
                     <div class="layer"></div>
                 </div>
-                <svg class="star-button" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70.0354767 67.0449219"  xml:space="preserve">
+                <a href="http://google.ro" class="link"></a>
+                <svg class="star-button" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70.0354767 67.0449219"  xml:space="preserve">
                 <path d="M53.9242935,67.0449219c-0.7185936,0-1.4357224-0.1764832-2.0729027-0.51091
                     l-16.4696312-8.6591988c-0.2037811-0.1092033-0.4226723-0.1033516-0.6069527-0.0058479l-16.486208,8.6582184
                     c-1.4323101,0.7663727-3.3243465,0.6522903-4.6854811-0.3266296c-1.3855104-1.0218277-2.0607147-2.6891212-1.7803955-4.3632393
@@ -175,11 +186,12 @@ $templateDir = get_stylesheet_directory_uri();
                 />
             </svg>
             </div>
-            <div class="img-container">
-                <div class="img" data-background="images/image_736х416/Möbel%20Schnetzer.jpg">
+            <div class="img-container" id="picture-7">
+                <div class="img" data-background="<?= $templateDir ?>/images/Möbel%20Schnetzer.jpg">
                     <div class="layer"></div>
                 </div>
-                <svg class="star-button" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70.0354767 67.0449219"  xml:space="preserve">
+                <a href="http://google.pl" class="link"></a>
+                <svg class="star-button" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70.0354767 67.0449219"  xml:space="preserve">
                 <path d="M53.9242935,67.0449219c-0.7185936,0-1.4357224-0.1764832-2.0729027-0.51091
                     l-16.4696312-8.6591988c-0.2037811-0.1092033-0.4226723-0.1033516-0.6069527-0.0058479l-16.486208,8.6582184
                     c-1.4323101,0.7663727-3.3243465,0.6522903-4.6854811-0.3266296c-1.3855104-1.0218277-2.0607147-2.6891212-1.7803955-4.3632393
@@ -194,11 +206,12 @@ $templateDir = get_stylesheet_directory_uri();
                 />
             </svg>
             </div>
-            <div class="img-container">
-                <div class="img" data-background="images/image_736х416/Neue%20Blumenau%20-%2010.08.%20-%2012.08.2017.jpg">
+            <div class="img-container" id="picture-8">
+                <div class="img" data-background="<?= $templateDir ?>/images/Neue%20Blumenau%20-%2010.08.%20-%2012.08.2017.jpg">
                     <div class="layer"></div>
                 </div>
-                <svg class="star-button" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70.0354767 67.0449219"  xml:space="preserve">
+                <a href="http://google.ge" class="link"></a>
+                <svg class="star-button" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70.0354767 67.0449219"  xml:space="preserve">
                 <path d="M53.9242935,67.0449219c-0.7185936,0-1.4357224-0.1764832-2.0729027-0.51091
                     l-16.4696312-8.6591988c-0.2037811-0.1092033-0.4226723-0.1033516-0.6069527-0.0058479l-16.486208,8.6582184
                     c-1.4323101,0.7663727-3.3243465,0.6522903-4.6854811-0.3266296c-1.3855104-1.0218277-2.0607147-2.6891212-1.7803955-4.3632393
@@ -213,11 +226,12 @@ $templateDir = get_stylesheet_directory_uri();
                 />
             </svg>
             </div>
-            <div class="img-container">
-                <div class="img" data-background="images/image_736х416/Royal%20King%20BWC%20-%2016zu9_6%20-%2028.08.%20-%2003.09.2017.jpg">
+            <div class="img-container" id="picture-9">
+                <div class="img" data-background="<?= $templateDir ?>/images/Royal%20King%20BWC%20-%2016zu9_6%20-%2028.08.%20-%2003.09.2017.jpg">
                     <div class="layer"></div>
                 </div>
-                <svg class="star-button" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70.0354767 67.0449219"  xml:space="preserve">
+                <a href="http://google.nh" class="link"></a>
+                <svg class="star-button" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70.0354767 67.0449219"  xml:space="preserve">
                 <path d="M53.9242935,67.0449219c-0.7185936,0-1.4357224-0.1764832-2.0729027-0.51091
                     l-16.4696312-8.6591988c-0.2037811-0.1092033-0.4226723-0.1033516-0.6069527-0.0058479l-16.486208,8.6582184
                     c-1.4323101,0.7663727-3.3243465,0.6522903-4.6854811-0.3266296c-1.3855104-1.0218277-2.0607147-2.6891212-1.7803955-4.3632393
@@ -232,11 +246,12 @@ $templateDir = get_stylesheet_directory_uri();
                 />
             </svg>
             </div>
-            <div class="img-container">
-                <div class="img" data-background="images/image_736х416/Verein%20Highlander_31.07.-06.08.2017.jpg">
+            <div class="img-container" id="picture-10">
+                <div class="img" data-background="<?= $templateDir ?>/images/Verein%20Highlander_31.07.-06.08.2017.jpg">
                     <div class="layer"></div>
                 </div>
-                <svg class="star-button" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70.0354767 67.0449219"  xml:space="preserve">
+                <a href="http://google.ru" class="link"></a>
+                <svg class="star-button" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70.0354767 67.0449219"  xml:space="preserve">
                 <path d="M53.9242935,67.0449219c-0.7185936,0-1.4357224-0.1764832-2.0729027-0.51091
                     l-16.4696312-8.6591988c-0.2037811-0.1092033-0.4226723-0.1033516-0.6069527-0.0058479l-16.486208,8.6582184
                     c-1.4323101,0.7663727-3.3243465,0.6522903-4.6854811-0.3266296c-1.3855104-1.0218277-2.0607147-2.6891212-1.7803955-4.3632393
@@ -251,11 +266,12 @@ $templateDir = get_stylesheet_directory_uri();
                 />
             </svg>
             </div>
-            <div class="img-container">
-                <div class="img" data-background="images/image_736х416/170217_cleandevil_final.jpg">
+            <div class="img-container" id="picture-11">
+                <div class="img" data-background="<?= $templateDir ?>/images/170217_cleandevil_final.jpg">
                     <div class="layer"></div>
                 </div>
-                <svg class="star-button" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70.0354767 67.0449219"  xml:space="preserve">
+                <a href="http://google.nh" class="link"></a>
+                <svg class="star-button" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70.0354767 67.0449219"  xml:space="preserve">
                 <path d="M53.9242935,67.0449219c-0.7185936,0-1.4357224-0.1764832-2.0729027-0.51091
                     l-16.4696312-8.6591988c-0.2037811-0.1092033-0.4226723-0.1033516-0.6069527-0.0058479l-16.486208,8.6582184
                     c-1.4323101,0.7663727-3.3243465,0.6522903-4.6854811-0.3266296c-1.3855104-1.0218277-2.0607147-2.6891212-1.7803955-4.3632393
@@ -270,11 +286,12 @@ $templateDir = get_stylesheet_directory_uri();
                 />
             </svg>
             </div>
-            <div class="img-container">
-                <div class="img" data-background="images/image_736х416/CGAG_VW%20-%2001.06.%20-%2031.12.2017.jpg">
+            <div class="img-container" id="picture-12">
+                <div class="img" data-background="<?= $templateDir ?>/images/CGAG_VW%20-%2001.06.%20-%2031.12.2017.jpg">
                     <div class="layer"></div>
                 </div>
-                <svg class="star-button" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70.0354767 67.0449219"  xml:space="preserve">
+                <a href="http://google.pl" class="link"></a>
+                <svg class="star-button" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70.0354767 67.0449219"  xml:space="preserve">
                 <path d="M53.9242935,67.0449219c-0.7185936,0-1.4357224-0.1764832-2.0729027-0.51091
                     l-16.4696312-8.6591988c-0.2037811-0.1092033-0.4226723-0.1033516-0.6069527-0.0058479l-16.486208,8.6582184
                     c-1.4323101,0.7663727-3.3243465,0.6522903-4.6854811-0.3266296c-1.3855104-1.0218277-2.0607147-2.6891212-1.7803955-4.3632393
@@ -289,11 +306,12 @@ $templateDir = get_stylesheet_directory_uri();
                 />
             </svg>
             </div>
-            <div class="img-container">
-                <div class="img" data-background="images/image_736х416/Edelweiss_pizza%20-%2014.08.%20-%2019.08.2017.jpg">
+            <div class="img-container" id="picture-13">
+                <div class="img" data-background="<?= $templateDir ?>/images/Edelweiss_pizza%20-%2014.08.%20-%2019.08.2017.jpg">
                     <div class="layer"></div>
                 </div>
-                <svg class="star-button" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70.0354767 67.0449219"  xml:space="preserve">
+                <a href="http://google.ro" class="link"></a>
+                <svg class="star-button" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70.0354767 67.0449219"  xml:space="preserve">
                 <path d="M53.9242935,67.0449219c-0.7185936,0-1.4357224-0.1764832-2.0729027-0.51091
                     l-16.4696312-8.6591988c-0.2037811-0.1092033-0.4226723-0.1033516-0.6069527-0.0058479l-16.486208,8.6582184
                     c-1.4323101,0.7663727-3.3243465,0.6522903-4.6854811-0.3266296c-1.3855104-1.0218277-2.0607147-2.6891212-1.7803955-4.3632393
@@ -308,11 +326,12 @@ $templateDir = get_stylesheet_directory_uri();
                 />
             </svg>
             </div>
-            <div class="img-container">
-                <div class="img" data-background="images/image_736х416/Hafners%20British%20Bikes%20-%20Letzte%2010%20Tage%20vom%20Monat.jpg">
+            <div class="img-container" id="picture-14">
+                <div class="img" data-background="<?= $templateDir ?>/images/Hafners%20British%20Bikes%20-%20Letzte%2010%20Tage%20vom%20Monat.jpg">
                     <div class="layer"></div>
                 </div>
-                <svg class="star-button" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70.0354767 67.0449219"  xml:space="preserve">
+                <a href="http://google.co.uk" class="link"></a>
+                <svg class="star-button" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70.0354767 67.0449219"  xml:space="preserve">
                 <path d="M53.9242935,67.0449219c-0.7185936,0-1.4357224-0.1764832-2.0729027-0.51091
                     l-16.4696312-8.6591988c-0.2037811-0.1092033-0.4226723-0.1033516-0.6069527-0.0058479l-16.486208,8.6582184
                     c-1.4323101,0.7663727-3.3243465,0.6522903-4.6854811-0.3266296c-1.3855104-1.0218277-2.0607147-2.6891212-1.7803955-4.3632393
@@ -327,11 +346,12 @@ $templateDir = get_stylesheet_directory_uri();
                 />
             </svg>
             </div>
-            <div class="img-container">
-                <div class="img" data-background="images/image_736х416/Jazz%20Club%20Lichtensteig%20-%2007.08.%20-%2010.08.2017.jpg">
+            <div class="img-container" id="picture-15">
+                <div class="img" data-background="<?= $templateDir ?>/images/Jazz%20Club%20Lichtensteig%20-%2007.08.%20-%2010.08.2017.jpg">
                     <div class="layer"></div>
                 </div>
-                <svg class="star-button" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70.0354767 67.0449219"  xml:space="preserve">
+                <a href="http://google.com.ua" class="link"></a>
+                <svg class="star-button" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70.0354767 67.0449219"  xml:space="preserve">
                 <path d="M53.9242935,67.0449219c-0.7185936,0-1.4357224-0.1764832-2.0729027-0.51091
                     l-16.4696312-8.6591988c-0.2037811-0.1092033-0.4226723-0.1033516-0.6069527-0.0058479l-16.486208,8.6582184
                     c-1.4323101,0.7663727-3.3243465,0.6522903-4.6854811-0.3266296c-1.3855104-1.0218277-2.0607147-2.6891212-1.7803955-4.3632393
@@ -346,11 +366,12 @@ $templateDir = get_stylesheet_directory_uri();
                 />
             </svg>
             </div>
-            <div class="img-container">
-                <div class="img" data-background="images/image_736х416/Möbel%20GAMMA%20-%2017.07.%20-%2021.07.2017_02.08.%20-%2004.08.2017_10.08.%20-%2011.08.2017.jpg">
+            <div class="img-container" id="picture-16">
+                <div class="img" data-background="<?= $templateDir ?>/images/Möbel%20GAMMA%20-%2017.07.%20-%2021.07.2017_02.08.%20-%2004.08.2017_10.08.%20-%2011.08.2017.jpg">
                     <div class="layer"></div>
                 </div>
-                <svg class="star-button" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70.0354767 67.0449219"  xml:space="preserve">
+                <a href="http://google.ge" class="link"></a>
+                <svg class="star-button" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70.0354767 67.0449219"  xml:space="preserve">
                 <path d="M53.9242935,67.0449219c-0.7185936,0-1.4357224-0.1764832-2.0729027-0.51091
                     l-16.4696312-8.6591988c-0.2037811-0.1092033-0.4226723-0.1033516-0.6069527-0.0058479l-16.486208,8.6582184
                     c-1.4323101,0.7663727-3.3243465,0.6522903-4.6854811-0.3266296c-1.3855104-1.0218277-2.0607147-2.6891212-1.7803955-4.3632393
@@ -367,6 +388,10 @@ $templateDir = get_stylesheet_directory_uri();
             </div>
         </div>
     </div>
+    <div class="chosen-pictures" id="chosen-pictures">
+        <h5>ist ausgewählt</h5>
+        <div class="chosen-pictures-block"></div>
+    </div>
     <div class="rules">
         <div class="inner">
             <h2>Teilnahmebedingungen</h2>
@@ -382,14 +407,8 @@ $templateDir = get_stylesheet_directory_uri();
                     Mit der Teilnahme am Gewinnspiel anerkennt der Teilnehmer diese Teilnahmebestimmungen. Die kanawai ag behält sich das Recht vor, diese Wettbewerbsbestimmungen zu jeder Zeit abzuändern.
                 </p>
             </div>
-            <div class="thanks-for-vote">
-                <h2>Vielen Dank für Ihre Stimme – Sie nehmen an der aktuellen Verlosung teil</h2>
-                <span>Die Gewinner werden vor Ende jedes Monats persönlich kontaktiert.</span>
-            </div>
-            <div id="show-form" class="show-form-button">Mitmachen und gewinnen<span>* Weiter und Registration</span></div>
-            <div class="already-vote">
-                <span>Sie haben Ihre Stimme fuer das aktuelle Gewinnspiel bereits abgegeben.<br>Gerne können Sie nächsten Monat wieder mitmachen!</span>
-            </div>
+            <div class="agreement">* Ich akzeptiere die Teilnahmebedingungen</div>
+            <div id="show-form" class="show-form-button">Weiter und Registration</div>
             <div class="form" id="main-form">
                 <form action="post">
                     <label for="name">Vorname:</label>
@@ -414,34 +433,34 @@ $templateDir = get_stylesheet_directory_uri();
         </div>
         <div class="archive-gallery-inner">
             <div class="img-container">
-                <div class="img" data-background="images/image_736х416/170217_cleandevil_final.jpg">
+                <div class="img" data-background="<?= $templateDir ?>/images/170217_cleandevil_final.jpg">
                     <div class="layer"></div>
                 </div>
-                <span>Gewinnerbild August 2017</span>
+                <span class="img-text">Gewinnerbild August 2017</span>
             </div>
             <div class="img-container">
-                <div class="img" data-background="images/image_736х416/CGAG_VW%20-%2001.06.%20-%2031.12.2017.jpg">
+                <div class="img" data-background="<?= $templateDir ?>/images/CGAG_VW%20-%2001.06.%20-%2031.12.2017.jpg">
                     <div class="layer"></div>
                 </div>
-                <span>Gewinnerbild August 2017</span>
+                <span class="img-text">Gewinnerbild July 2017</span>
             </div>
             <div class="img-container">
-                <div class="img" data-background="images/image_736х416/Edelweiss_pizza%20-%2014.08.%20-%2019.08.2017.jpg">
+                <div class="img" data-background="<?= $templateDir ?>/images/Edelweiss_pizza%20-%2014.08.%20-%2019.08.2017.jpg">
                     <div class="layer"></div>
                 </div>
-                <span>Gewinnerbild August 2017</span>
+                <span class="img-text">Gewinnerbild June 2017</span>
             </div>
             <div class="img-container">
-                <div class="img" data-background="images/image_736х416/Hafners%20British%20Bikes%20-%20Letzte%2010%20Tage%20vom%20Monat.jpg">
+                <div class="img" data-background="<?= $templateDir ?>/images/Hafners%20British%20Bikes%20-%20Letzte%2010%20Tage%20vom%20Monat.jpg">
                     <div class="layer"></div>
                 </div>
-                <span>Gewinnerbild August 2017</span>
+                <span class="img-text">Gewinnerbild May 2017</span>
             </div>
             <div class="img-container">
-                <div class="img" data-background="images/image_736х416/Jazz%20Club%20Lichtensteig%20-%2007.08.%20-%2010.08.2017.jpg">
+                <div class="img" data-background="<?= $templateDir ?>/images/Jazz%20Club%20Lichtensteig%20-%2007.08.%20-%2010.08.2017.jpg">
                     <div class="layer"></div>
                 </div>
-                <span>Gewinnerbild August 2017</span>
+                <span class="img-text">Gewinnerbild April 2017</span>
             </div>
         </div>
     </div>
@@ -487,10 +506,11 @@ $templateDir = get_stylesheet_directory_uri();
                         c0.2905579,1.6702156-0.3836746,3.3414078-1.7608948,4.3564072C55.7768402,66.751442,54.8715286,67.0449219,53.9242935,67.0449219z"
                     />
             </svg>
+            <a href="" id="image-link"></a>
         </div>
         <span id="image-zoom-text" class="img-text"></span>
     </div>
-    <div class="thanks-for-vote-modal" id="thanks-for-vote-modal">
+    <div class="thanks-for-vote-modal modal-window" id="thanks-for-vote-modal">
         <svg class="close" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
              viewBox="0 0 156.1552734 156.1587219" enable-background="new 0 0 156.1552734 156.1587219" xml:space="preserve">
             <g>
@@ -542,5 +562,53 @@ $templateDir = get_stylesheet_directory_uri();
         <h2>Vielen Dank für Ihre Stimme – Sie nehmen an der aktuellen Verlosung teil</h2>
         <span>Die Gewinner werden vor Ende jedes Monats persönlich kontaktiert.</span>
     </div>
+    <div class="already-vote-modal modal-window" id="already-vote-modal">
+        <svg class="close" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+             viewBox="0 0 156.1552734 156.1587219" enable-background="new 0 0 156.1552734 156.1587219" xml:space="preserve">
+            <g>
+                <rect x="-25.29459" y="71.0318832" transform="matrix(0.7070985 0.7071151 -0.7071151 0.7070985 78.0801392 -32.3402939)" width="206.7444" height="14.0949373"/>
+                <rect x="71.0301437" y="-25.2928486" transform="matrix(0.7071068 0.7071068 -0.7071068 0.7071068 78.0788422 -32.3402939)" width="14.0949373" height="206.7444"/>
+            </g>
+        </svg>
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+             viewBox="0 0 110 110" enable-background="new 0 0 110 110" xml:space="preserve">
+            <g>
+                <g>
+                    <circle fill="#FFFFFF" cx="54.8540497" cy="54.8540726" r="53.5206795"/>
+                    <circle fill="#ED1836" cx="54.8540497" cy="54.8540726" r="46.9522324"/>
+                    <g>
+                        <defs>
+                            <circle id="SVGID_13_" cx="54.6918793" cy="54.8804092" r="46.9522324"/>
+                        </defs>
+                        <clipPath id="SVGID_2_">
+                            <use xlink:href="#SVGID_13_"  overflow="visible"/>
+                        </clipPath>
+                        <path clip-path="url(#SVGID_2_)" fill="#B71326" d="M104.4900131,47.0331459L60.7591896,25.6899586
+                            c0,0-0.2710648,0.1729431-0.7005615,0.4518948c-1.5842018,1.0289116-20.2028961,3.1674938-20.4457703,3.7218456
+                            c-0.3087196,0.7046452-25.7785378,17.4304676-6.1455307,43.1661072c0.4426613,0.5802536,9.4356155,6.4306946,9.4356155,6.4306946
+                            l1.8938179,0.6617432l33.543457,20.4624329l6.0386887-7.2651443l10.7095795-10.2581329l5.5569611-12.6835938
+                            c0,0,2.3618088-9.7999649,2.4725723-11.0112877C103.228775,58.1551933,104.4900131,47.0331459,104.4900131,47.0331459z"/>
+                    </g>
+                    <path fill="#FFFFFF" d="M54.8363533,83.283165c0,0-0.0008888,0-0.0017776,0c-7.82658,0-15.1765327-3.0399246-20.6963234-8.5597153
+                        c-11.4141331-11.4136887-11.4141331-29.9860611,0-41.3997498c5.5197906-5.5202332,12.8706322-8.5601559,20.6972122-8.5601559
+                        c7.8274689,0,15.1791992,3.0408115,20.7007599,8.5628185c5.5197906,5.5202332,8.5597153,12.8706322,8.5597153,20.6972122
+                        c-0.000885,7.8270226-3.0417023,15.1774216-8.5623779,20.6976547
+                        C70.0137787,80.2423553,62.6629333,83.283165,54.8363533,83.283165z M54.8354645,28.399025
+                        c-6.8555794,0-13.2931137,2.6618195-18.126812,7.4950752c-9.9958,9.996685-9.9958,26.2622643,0,36.2589531
+                        c4.8328094,4.8328094,11.2703438,7.4946289,18.1259232,7.4950714c6.8564682,0,13.2948952-2.6627045,18.1285896-7.4977341
+                        c4.8345871-4.8337021,7.4972916-11.2712364,7.4972916-18.1268158s-2.6618195-13.2931137-7.4946289-18.126812
+                        C68.1312408,31.0617313,61.6919327,28.399025,54.8354645,28.399025z"/>
+                    <path fill="none" stroke="#000000" stroke-width="4" stroke-miterlimit="10" d="M66.7307663,59.7356186"/>
+                </g>
+                <path fill="#FFFFFF" d="M52.4624825,65.8827362c-0.4979553,0-0.9959106-0.1900558-1.37603-0.5701752l-9.3262062-9.32621
+                    c-0.7602386-0.7597618-0.7602386-1.9922943,0-2.7520561c0.7602348-0.7602386,1.9918213-0.7602386,2.7520561,0l7.9501801,7.9497032
+                    L67.467659,46.1797714c0.7602386-0.7602386,1.9918213-0.7602386,2.7520523,0c0.7602386,0.7597618,0.7602386,1.9922943,0,2.7520561
+                    L53.8385086,65.312561C53.4583931,65.6926804,52.9604378,65.8827362,52.4624825,65.8827362z"/>
+            </g>
+        </svg>
+        <h2>Sie haben Ihre Stimme fuer das aktuelle Gewinnspiel bereits abgegeben.</h2>
+        <span>Gerne können Sie nächsten Monat wieder mitmachen!</span>
+    </div>
+    <div class="background-screen" id="background-screen"></div>
 </div>
 <?php get_footer();?>
