@@ -167,6 +167,7 @@ $(document).ready(function () {
     var $mainBanner = $('.main-banner');
     var $galleryBlock = $('#gallery-images');
     var $imgBlock = $('.img-container');
+    var $galleryShowButton = $('#gallery-show');
     var bannerCoefficient = 1459/641;
     var galleryCoefficient = 633/357;
 
@@ -175,6 +176,23 @@ $(document).ready(function () {
 
     $mainBanner.height($mainBanner.width() / bannerCoefficient);
     $imgBlock.height($imgBlock.width() / galleryCoefficient);
+    if ($galleryShowButton.hasClass('visible')) {
+        $galleryBlock.height(($imgBlock.height() + 5) * 3);
+    }
+
+    $(window).resize(function() {
+        $mainBanner.height($mainBanner.width() / bannerCoefficient);
+        $imgBlock.height($imgBlock.width() / galleryCoefficient);
+        if ($galleryShowButton.hasClass('visible')) {
+            $galleryBlock.height(($imgBlock.height() + 5) * 3);
+        }
+    });
+
+    $galleryShowButton.on('click', function () {
+        var value = '100%';
+        $(this).removeClass('visible').hide();
+        $galleryBlock.height(value);
+    });
 
     $('#main-form').on('click', 'button', function (e) {
         e.preventDefault();
@@ -198,11 +216,6 @@ $(document).ready(function () {
             $imgZoomStarButton.addClass('active');
         }
         ImageZoom.show(imgContainer, imgLink);
-    });
-
-    $(window).resize(function() {
-        $mainBanner.height($mainBanner.width() / bannerCoefficient);
-        $imgBlock.height($imgBlock.width() / galleryCoefficient);
     });
 
     $('.star-button', $galleryBlock).on('click', function () {

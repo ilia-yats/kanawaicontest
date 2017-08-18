@@ -387,6 +387,7 @@ $templateDir = get_stylesheet_directory_uri();
             </svg>
             </div>
         </div>
+        <div class="gallery-show visible" id="gallery-show">Mehr</div>
     </div>
     <div class="chosen-pictures" id="chosen-pictures">
         <h5>ist ausgewählt</h5>

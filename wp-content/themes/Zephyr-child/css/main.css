@@ -439,7 +439,13 @@ template, [hidden] {
     display: grid;
     grid-gap: 5px;
     grid-template-columns: 1fr 1fr 1fr;
-    margin: 50px 0 0; }
+    margin: 50px 0 0;
+    -webkit-transition: height 0.2s ease;
+    -moz-transition: height 0.2s ease;
+    -ms-transition: height 0.2s ease;
+    -o-transition: height 0.2s ease;
+    transition: height 0.2s ease;
+    overflow: hidden; }
 .gallery .gallery-images .img-container, .gallery .archive-gallery .img-container {
     position: relative;
     width: 100%;
@@ -475,6 +481,14 @@ template, [hidden] {
     transition: all 0.2s ease; }
 .gallery .gallery-images .img-container svg:hover, .gallery .archive-gallery .img-container svg:hover {
     fill: #d51130; }
+.gallery .gallery-show {
+    margin-top: 50px;
+    text-align: center;
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    color: #c2c2c2; }
 
 .chosen-pictures {
     min-width: 320px;
@@ -536,13 +550,6 @@ template, [hidden] {
 .rules .inner .show-form-button.active {
     background-color: #d51130;
     cursor: pointer; }
-.rules .inner .already-vote {
-    display: none;
-    padding: 20px 0;
-    margin-bottom: 50px;
-    font-size: 18px;
-    color: #fefefe;
-    background-color: #ffa900; }
 .rules .inner .form {
     display: none;
     margin-bottom: 85px;
@@ -804,6 +811,61 @@ template, [hidden] {
 .modal-window span {
     font-size: 15px;
     color: #a3a3a3; }
+
+.contest-link-block {
+    position: fixed;
+    z-index: 200;
+    visibility: hidden;
+    top: calc(50% - 195px);
+    right: -290px;
+    width: 400px;
+    height: 195px;
+    text-align: center;
+    user-select: none;
+    background: linear-gradient(69deg, #d51130 23%, #490000);
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -ms-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
+    box-sizing: border-box; }
+.contest-link-block.active {
+    visibility: visible;
+    right: 0; }
+.contest-link-block .close {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    fill: #FFFFFF;
+    cursor: pointer; }
+.contest-link-block h3 {
+    margin: 50px 0 20px;
+    padding: 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 38px;
+    color: #FFFFFF; }
+.contest-link-block .contest-link {
+    display: inline-block;
+    height: 68px;
+    padding: 14px 20px 0;
+    color: #000000;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 35px;
+    background-color: #FFFFFF;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 3px 3px 0 rgba(23, 16, 27, 0.5);
+    -moz-box-shadow: 0 3px 3px 0 rgba(23, 16, 27, 0.5);
+    box-shadow: 0 3px 3px 0 rgba(23, 16, 27, 0.5);
+    box-sizing: border-box; }
 
 @media screen and (min-width: 900px) and (max-width: 1280px) {
     div#gallery-images, div#archive-gallery .archive-gallery-inner {
