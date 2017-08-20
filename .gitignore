@@ -9,4 +9,4 @@ node_modules
 *.txt
 *.txt.lock
 *.xml
-.idea/
+.idea/workspace.xml
