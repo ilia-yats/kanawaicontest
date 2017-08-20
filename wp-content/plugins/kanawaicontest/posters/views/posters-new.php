@@ -32,7 +32,7 @@
                     <label for="image_file">Image File</label>
                 </th>
                 <td>
-                    <input id="upload_image_button" type="button" class="button" value="<?php _e( 'Select image' ); ?>" />
+                    <input id="upload_image_button" type="button" class="button" value="<?php _e('Select image'); ?>"/>
                 </td>
             </tr>
             </tbody>

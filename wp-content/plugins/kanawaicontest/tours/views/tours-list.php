@@ -1,6 +1,6 @@
 <div class="wrap">
     <h2>
-        <?php _e('Tours') ?><?php echo sprintf('<a href="?page=%s&action=%s" class="add-new-h2">Add new</a>', esc_attr($_REQUEST['page']), 'new'); ?>
+        <?php _e('Tours') ?>
     </h2>
     <form method="post">
         <?php

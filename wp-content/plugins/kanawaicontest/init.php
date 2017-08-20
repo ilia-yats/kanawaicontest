@@ -14,8 +14,9 @@ function kanawaicontest_components_autoloader($class_name)
     $file_name = substr($trimmed_class_name, strrpos($trimmed_class_name, '_') + 1);
     $file_path = KANAWAICONTEST_ROOT . '/' . $dir_name . '/' . $file_name . '.php';
 
-    if(file_exists($file_path)) {
-        include_once ($file_path);
+    if (file_exists($file_path)) {
+        include_once($file_path);
     }
 }
+
 spl_autoload_register('kanawaicontest_components_autoloader');

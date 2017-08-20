@@ -1,6 +1,6 @@
 <?php
 // Exit if accessed directly
-if( ! defined('ABSPATH')) {
+if ( ! defined('ABSPATH')) {
     exit;
 }
 
@@ -61,13 +61,13 @@ class KC_Voters_AdminMenu
         $action = isset($_REQUEST['action']) ? $_REQUEST['action'] : 'list';
         $template = '';
 
-        switch($action) {
+        switch ($action) {
             default:
                 $template = __DIR__ . '/views/voters-list.php';
                 break;
         }
 
-        if(file_exists($template)) {
+        if (file_exists($template)) {
             include($template);
         }
     }
@@ -81,9 +81,9 @@ class KC_Voters_AdminMenu
     {
         $option = 'per_page';
         $args = array(
-            'label'   => 'Show on page',
+            'label' => 'Show on page',
             'default' => 20,
-            'option'  => 'voters_per_page',
+            'option' => 'voters_per_page',
         );
 
         add_screen_option($option, $args);
@@ -98,7 +98,7 @@ class KC_Voters_AdminMenu
      */
     public function form_handler()
     {
-        if((isset($_REQUEST['action']) && $_REQUEST['action'] == 'delete')
+        if ((isset($_REQUEST['action']) && $_REQUEST['action'] == 'delete')
             || (isset($_POST['action']) && $_POST['action'] == 'bulk-delete')
             || (isset($_POST['action2']) && $_POST['action2'] == 'bulk-delete')
         ) {

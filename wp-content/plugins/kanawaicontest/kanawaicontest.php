@@ -62,7 +62,7 @@ class Kanawaicontest
             add_action('init', array($this, 'create_menu'));
 
             // Add needed scripts on page
-//            add_action('admin_enqueue_scripts', array($this, 'enqueue_bookingmanager_admin_scripts'));
+            add_action('admin_enqueue_scripts', array($this, 'enqueue_kanawaicontest_admin_scripts'));
 
             // Check if array of admin notices exists in session
             add_action('admin_notices', array('Kanawaicontest_Util_Util', 'show_admin_notices'));
@@ -132,12 +132,10 @@ class Kanawaicontest
         return TRUE;
     }
 
-//    public function enqueue_bookingmanager_admin_scripts()
-//    {
-//        wp_enqueue_style('bm_admin_style', '/wp-content/plugins/bookingmanager/assets/css/admin.css');
-//        wp_enqueue_style('jquery-style', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/themes/smoothness/jquery-ui.css');
-//        wp_enqueue_script('bm_admin_main', '/wp-content/plugins/bookingmanager/assets/js/admin_main.js', array('jquery-ui-datepicker', 'jquery-ui-dialog'), FALSE, TRUE);
-//    }
+    public function enqueue_kanawaicontest_admin_scripts()
+    {
+        wp_enqueue_script('kc_admin_script', '/wp-content/plugins/kanawaicontest/assets/admin.js', array('jquery'), false, true);
+    }
 
     public function media_selector_print_scripts()
     {

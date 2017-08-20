@@ -26,20 +26,20 @@ class Kanawaicontest_Util_Util
     {
         $client_ip = '';
 
-        foreach(array(
-                    'HTTP_CLIENT_IP',
-                    'HTTP_X_FORWARDED_FOR',
-                    'HTTP_X_FORWARDED',
-                    'HTTP_X_CLUSTER_CLIENT_IP',
-                    'HTTP_FORWARDED_FOR',
-                    'HTTP_FORWARDED',
-                    'REMOTE_ADDR',
-                ) as $key
+        foreach (array(
+                     'HTTP_CLIENT_IP',
+                     'HTTP_X_FORWARDED_FOR',
+                     'HTTP_X_FORWARDED',
+                     'HTTP_X_CLUSTER_CLIENT_IP',
+                     'HTTP_FORWARDED_FOR',
+                     'HTTP_FORWARDED',
+                     'REMOTE_ADDR',
+                 ) as $key
         ) {
-            if(array_key_exists($key, $_SERVER) === TRUE) {
-                foreach(explode(',', $_SERVER[$key]) as $ip) {
+            if (array_key_exists($key, $_SERVER) === TRUE) {
+                foreach (explode(',', $_SERVER[$key]) as $ip) {
                     $ip = trim($ip);
-                    if(filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_NO_PRIV_RANGE | FILTER_FLAG_NO_RES_RANGE) !== FALSE) {
+                    if (filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_NO_PRIV_RANGE | FILTER_FLAG_NO_RES_RANGE) !== FALSE) {
                         $client_ip = $ip;
                     }
                 }
@@ -152,7 +152,7 @@ class Kanawaicontest_Util_Util
      */
     public static function session_start()
     {
-        if( ! session_id()) session_start();
+        if ( ! session_id()) session_start();
     }
 
     /**
@@ -171,7 +171,7 @@ class Kanawaicontest_Util_Util
      */
     public static function push_admin_notice($type, $text)
     {
-        if( ! isset($_SESSION['admin_notices'])) {
+        if ( ! isset($_SESSION['admin_notices'])) {
             $_SESSION['admin_notices'] = [];
         }
 
@@ -194,7 +194,7 @@ class Kanawaicontest_Util_Util
      */
     public static function session_get($key, $default = NULL)
     {
-        if(isset($_SESSION[$key])) {
+        if (isset($_SESSION[$key])) {
             return $_SESSION[$key];
         } else {
             return $default;
@@ -266,9 +266,9 @@ class Kanawaicontest_Util_Util
         $notices = self::session_get('admin_notices');
 
         // Show notices
-        if( ! empty($notices) && is_array($notices)) {
-            foreach($notices as $notice) {
-                if(isset($notice['text']) && isset($notice['type'])) {
+        if ( ! empty($notices) && is_array($notices)) {
+            foreach ($notices as $notice) {
+                if (isset($notice['text']) && isset($notice['type'])) {
                     ?>
                     <div class="notice notice-<?php echo $notice['type']; ?> is-dismissible">
                         <p><?php echo $notice['text']; ?></p>

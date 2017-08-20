@@ -27,9 +27,11 @@ class KC_Voters_List extends WP_List_Table
               JOIN kanawaicontest_posters_votes AS kciv ON kcv.id = kciv.voter_id 
               JOIN kanawaicontest_posters AS kcp ON kciv.poster_id = kcp.id ";
 
-        if ( ! empty($_REQUEST['tour_id'])) {
-            $sql .= ' WHERE kciv.tour_id = ' . absint($_REQUEST['tour_id']) . ' AND kciv.id IS NOT NULL';
-        }
+        $tour_id = ! empty($_REQUEST['tour_id'])
+            ? absint($_REQUEST['tour_id'])
+            : Kanawaicontest::get_instance()->tours->init()->tours_list->get_current_tour_id();
+
+        $sql .= ' WHERE kciv.tour_id = ' . $tour_id;
 
         if ( ! empty($_REQUEST['orderby'])) {
             $sql .= ' ORDER BY ' . esc_sql($_REQUEST['orderby']);
@@ -70,12 +72,14 @@ class KC_Voters_List extends WP_List_Table
     {
         global $wpdb;
 
-        $sql = "SELECT COUNT(*) FROM kanawaicontest_voters AS kcv";
+        $sql = "SELECT COUNT(*) FROM kanawaicontest_voters AS kcv
+              JOIN kanawaicontest_posters_votes AS kciv ON kcv.id = kciv.voter_id ";
 
-        if ( ! empty($_REQUEST['tour_id'])) {
-            $sql .= ' INNER JOIN kanawaicontest_posters_votes AS kciv ON kcv.id = kciv.voter_id 
-                WHERE kciv.tour_id = ' . absint($_REQUEST['tour_id']) . ' AND kciv.id IS NOT NULL';
-        }
+        $tour_id = ! empty($_REQUEST['tour_id'])
+            ? absint($_REQUEST['tour_id'])
+            : Kanawaicontest::get_instance()->tours->init()->tours_list->get_current_tour_id();
+
+        $sql .= ' WHERE kciv.tour_id = ' . $tour_id;
 
         return $wpdb->get_var($sql);
     }

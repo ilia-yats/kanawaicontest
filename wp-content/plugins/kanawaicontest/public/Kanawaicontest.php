@@ -1,6 +1,6 @@
 <?php
 // Exit if accessed directly
-if( ! defined('ABSPATH')) {
+if ( ! defined('ABSPATH')) {
     exit;
 }
 
@@ -31,8 +31,8 @@ class KC_Public_Kanawaicontest
     public function kanawaicontest_check_action($wp)
     {
         // catch only requests with "kanawaicontest_action" parameter
-        if(array_key_exists('kanawaicontest_action', $wp->query_vars)) {
-            switch($wp->query_vars['kanawaicontest_action']) {
+        if (array_key_exists('kanawaicontest_action', $wp->query_vars)) {
+            switch ($wp->query_vars['kanawaicontest_action']) {
                 case 'submit_vote':
                     //
 
@@ -75,7 +75,7 @@ class KC_Public_Kanawaicontest
      */
     public static function get_instance()
     {
-        if( ! isset(self::$instance)) {
+        if ( ! isset(self::$instance)) {
             self::$instance = new self();
         }
 
@@ -89,11 +89,11 @@ class KC_Public_Kanawaicontest
     {
         // Default response
         $response = [
-            'status'  => 0,
+            'status' => 0,
             'message' => 'Error',
         ];
 
-        if(isset(self::$unslashed_post['nonce']) && wp_verify_nonce(self::$unslashed_post['nonce'], 'kanawaicontest_submit_vote_nonce')) {
+        if (isset(self::$unslashed_post['nonce']) && wp_verify_nonce(self::$unslashed_post['nonce'], 'kanawaicontest_submit_vote_nonce')) {
 
             // Try to validate data
             try {
@@ -115,7 +115,7 @@ class KC_Public_Kanawaicontest
                 foreach ($voted_posters_ids as $id) {
                     Kanawaicontest::get_instance()->saveVote($id, $voter_id, $current_tour['id']);
                 }
-            } catch(Exception $e) {
+            } catch (Exception $e) {
                 $response['message'] = 'Error';
             }
         }

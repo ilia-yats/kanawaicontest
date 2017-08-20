@@ -25,9 +25,7 @@ class KC_Posters_List extends WP_List_Table
 
         $sql = "SELECT kci.* FROM kanawaicontest_posters kci";
 
-        if (!empty($_REQUEST['tour_id'])) {
-            $sql .= ' WHERE tour_id = ' . absint($_REQUEST['tour_id']);
-        }
+        $sql .= ' WHERE tour_id = ' . $this->get_tour_id();
 
         // TODO: implement sorting by 'voted'
 
@@ -55,6 +53,18 @@ class KC_Posters_List extends WP_List_Table
         return $wpdb->get_var($sql);
     }
 
+    public function get_tour_id()
+    {
+        return (! empty($_REQUEST['tour_id']))
+            ? absint($_REQUEST['tour_id'])
+            : Kanawaicontest::get_instance()->tours->init()->tours_list->get_current_tour_id();
+    }
+
+    public function get_is_current_tour()
+    {
+        return $this->get_tour_id() == Kanawaicontest::get_instance()->tours->init()->tours_list->get_current_tour_id();
+    }
+
     public function delete_image($id)
     {
         global $wpdb;
@@ -72,9 +82,7 @@ class KC_Posters_List extends WP_List_Table
 
         $sql = "SELECT COUNT(*) FROM kanawaicontest_posters";
 
-        if (!empty($_REQUEST['tour_id'])) {
-            $sql .= ' WHERE tour_id = ' . absint($_REQUEST['tour_id']);
-        }
+        $sql .= ' WHERE tour_id = ' . $this->get_tour_id();
 
         return $wpdb->get_var($sql);
     }
@@ -92,7 +100,7 @@ class KC_Posters_List extends WP_List_Table
                 return $item[$column_name];
                 break;
             case 'link':
-                return '<a href="'. $item[$column_name] . '">' . $item[$column_name] . '</a>';
+                return '<a href="' . $item[$column_name] . '">' . $item[$column_name] . '</a>';
                 break;
             case 'image_url':
                 return '<img src="' . $item[$column_name] . '" width=\'100\' height=\'100\' style=\'max-height: 100px; width: 100px;\'>';
@@ -231,15 +239,15 @@ class KC_Posters_List extends WP_List_Table
         $id = isset($post['id']) ? absint($post['id']) : null;
 
 //        if (is_null($id)) {
-            $result = $this->insert_image(array(
-                'tour_id' => $tour_id,
-                'title' => $title,
-                'link' => $link,
-                'attachment_id' => $attachment_id,
-            ));
-            if ($result !== false) {
-                Kanawaicontest_Util_Util::push_admin_notice('success', 'Image added');
-            }
+        $result = $this->insert_image(array(
+            'tour_id' => $tour_id,
+            'title' => $title,
+            'link' => $link,
+            'attachment_id' => $attachment_id,
+        ));
+        if ($result !== false) {
+            Kanawaicontest_Util_Util::push_admin_notice('success', 'Image added');
+        }
 //        } else {
 //            $result = $this->update_image($id, array(
 //                'title' => $title,
