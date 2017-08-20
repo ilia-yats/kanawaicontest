@@ -9,7 +9,7 @@
     <h1><?php _e('View tour') ?></h1>
     <?php endif; ?>
     <p>
-        <?php echo sprintf('<a href="?page=%s&action=%s&tour_id=%d" class="add-new-h2">Images</a>', 'kanawaicontest_images', 'list', $id); ?>
+        <?php echo sprintf('<a href="?page=%s&action=%s&tour_id=%d" class="add-new-h2">Images</a>', 'kanawaicontest_posters', 'list', $id); ?>
         <?php echo sprintf('<a href="?page=%s&action=%s&tour_id=%d" class="add-new-h2">Voters</a>', 'kanawaicontest_voters', 'list', $id); ?>
     </p>
     <table class="form-table">

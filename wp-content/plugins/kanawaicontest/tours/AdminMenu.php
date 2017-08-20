@@ -23,7 +23,7 @@ class KC_Tours_AdminMenu
     
     public function plugin_menu()
     {
-        $hook = add_submenu_page('kanawaicontest', 'Tours', 'Tours', 'read', 'kanawaicontest', array($this, 'plugin_settings_page'));
+        $hook = add_submenu_page('kanawaicontest', 'Archive', 'Archive', 'read', 'kanawaicontest', array($this, 'plugin_settings_page'));
 
         add_action("load-$hook", array($this, 'screen_option'));
         add_action("load-$hook", array($this, 'form_handler'));
@@ -34,26 +34,25 @@ class KC_Tours_AdminMenu
 
         $action = isset($_REQUEST['action']) ? $_REQUEST['action'] : 'current';
         $id = isset($_REQUEST['id']) ? intval($_REQUEST['id']) : 0;
-        $is_current = false;
         $template = '';
         switch ($action) {
-            case 'view':
-                $item = $this->tours_list->get_tour($id);
-                $template = __DIR__ . '/views/tours-view.php';
-                break;
-            case 'current':
-                $item = $this->tours_list->get_current_tour();
-                $id = $item['id'];
-                $is_current = true;
-                $template = __DIR__ . '/views/tours-view.php';
-                break;
-            case 'edit':
-                $item = $this->tours_list->get_tour($id);
-                $template = __DIR__ . '/views/tours-edit.php';
-                break;
-            case 'new':
-                $template = __DIR__ . '/views/tours-new.php';
-                break;
+//            case 'view':
+//                $item = $this->tours_list->get_tour($id);
+//                $template = __DIR__ . '/views/tours-view.php';
+//                break;
+//            case 'current':
+//                $item = $this->tours_list->get_current_tour();
+//                $id = $item['id'];
+//                $is_current = true;
+//                $template = __DIR__ . '/views/tours-view.php';
+//                break;
+//            case 'edit':
+//                $item = $this->tours_list->get_tour($id);
+//                $template = __DIR__ . '/views/tours-edit.php';
+//                break;
+//            case 'new':
+//                $template = __DIR__ . '/views/tours-new.php';
+//                break;
             case 'list':
             default:
                 $template = __DIR__ . '/views/tours-list.php';
@@ -92,18 +91,13 @@ class KC_Tours_AdminMenu
             $this->tours_list->process_bulk_action();
         }
 
-        if (isset($_REQUEST['id']) && isset($_REQUEST['action'])) {
-            if($_REQUEST['action'] == 'activate') {
-                $this->tours_list->activate_tour(absint($_REQUEST['id']));
-            } elseif($_REQUEST['action'] == 'archive') {
-                $this->tours_list->archive_tour(absint($_REQUEST['id']));
-            }
-//            // Redirect
-//            $args = array('action' => 'view', 'id' => absint($_REQUEST['tour_id']));
-//            $page_url = add_query_arg($args, menu_page_url('kanawaicontest_images', FALSE));
-//            wp_redirect($page_url);
-//            exit;
-        }
+//        if (isset($_REQUEST['id']) && isset($_REQUEST['action'])) {
+//            if($_REQUEST['action'] == 'activate') {
+//                $this->tours_list->activate_tour(absint($_REQUEST['id']));
+//            } elseif($_REQUEST['action'] == 'archive') {
+//                $this->tours_list->archive_tour(absint($_REQUEST['id']));
+//            }
+//        }
 
     }
 }

@@ -23,11 +23,12 @@ class KC_Voters_List extends WP_List_Table
     {
         global $wpdb;
 
-        $sql = "SELECT kcv.* FROM kanawaicontest_voters AS kcv";
+        $sql = "SELECT kcv.*, kcp.title AS voted FROM kanawaicontest_voters AS kcv
+              JOIN kanawaicontest_posters_votes AS kciv ON kcv.id = kciv.voter_id 
+              JOIN kanawaicontest_posters AS kcp ON kciv.poster_id = kcp.id ";
 
         if ( ! empty($_REQUEST['tour_id'])) {
-            $sql .= ' INNER JOIN kanawaicontest_images_votes AS kciv ON kcv.id = kciv.voter_id 
-                WHERE kciv.tour_id = ' . absint($_REQUEST['tour_id']) . ' AND kciv.id IS NOT NULL';
+            $sql .= ' WHERE kciv.tour_id = ' . absint($_REQUEST['tour_id']) . ' AND kciv.id IS NOT NULL';
         }
 
         if ( ! empty($_REQUEST['orderby'])) {
@@ -70,8 +71,9 @@ class KC_Voters_List extends WP_List_Table
         global $wpdb;
 
         $sql = "SELECT COUNT(*) FROM kanawaicontest_voters AS kcv";
+
         if ( ! empty($_REQUEST['tour_id'])) {
-            $sql .= ' INNER JOIN kanawaicontest_images_votes AS kciv ON kcv.id = kciv.voter_id 
+            $sql .= ' INNER JOIN kanawaicontest_posters_votes AS kciv ON kcv.id = kciv.voter_id 
                 WHERE kciv.tour_id = ' . absint($_REQUEST['tour_id']) . ' AND kciv.id IS NOT NULL';
         }
 
@@ -226,7 +228,7 @@ class KC_Voters_List extends WP_List_Table
 
             if (wp_verify_nonce($nonce, 'kanawaicontest_delete_vote')) {
 
-                $result = self::delete_vote(absint($_REQUEST['id']));
+                $result = self::delete_voter(absint($_REQUEST['id']));
             }
         }
 
@@ -239,7 +241,7 @@ class KC_Voters_List extends WP_List_Table
                 // loop over the array of record ids and delete them
                 $result = TRUE;
                 foreach ($delete_ids as $id) {
-                    if ( ! self::delete_image($id)) {
+                    if ( ! self::delete_voter($id)) {
                         $result = FALSE;
                     }
                 }
@@ -247,135 +249,17 @@ class KC_Voters_List extends WP_List_Table
         }
 
         if ($result) {
-            Kanawaicontest_Util_Util::push_admin_notice('success', 'Images Deleted');
+            Kanawaicontest_Util_Util::push_admin_notice('success', 'Voters Deleted');
         } else {
-            Kanawaicontest_Util_Util::push_admin_notice('error', 'Cannot delete images');
+            Kanawaicontest_Util_Util::push_admin_notice('error', 'Cannot delete voters');
         }
 
         // Redirect
-        $args = array('tour_id' => absint($_REQUEST['tour_id']));
-        $page_url = add_query_arg($args, menu_page_url('kanawaicontest_images', FALSE));
+        $page_url = isset($_REQUEST['tour_id'])
+            ? add_query_arg(array('tour_id' => absint($_REQUEST['tour_id'])), menu_page_url('kanawaicontest_voters', FALSE))
+            : menu_page_url('kanawaicontest_voters', FALSE);
         wp_redirect($page_url);
         exit;
     }
-
-//    /**
-//     * Handles form data when submitted.
-//     *
-//     * @return void
-//     */
-//    public function process_form_submit()
-//    {
-//        if( ! isset($_POST['submit_voter'])) {
-//            return;
-//        }
-//
-//        if( ! wp_verify_nonce($_POST['_wpnonce'], 'bm_new_ticket_window')) {
-//            die('Go get a life script kiddies');
-//        }
-//
-//        if( ! current_user_can('read')) {
-//            wp_die(__('Permission Denied!', 'bookingmanager_textdomain'));
-//        }
-//
-//        // Get unslashed post
-//        $post = BM_Bookingmanager::$unslashed_post;
-//
-//        $page_url = menu_page_url('bookingmanager_ticket_windows', FALSE);
-//        $field_id = isset($post['field_id']) ? absint($post['field_id']) : 0;
-//
-//        $name = isset($post['name']) ? sanitize_text_field($post['name']) : '';
-//        $phones = isset($post['phones']) ? $post['phones'] : [];
-//        $lon = isset($post['lon']) ? sanitize_text_field($post['lon']) : '';
-//        $lat = isset($post['lat']) ? sanitize_text_field($post['lat']) : '';
-//        $city_id = isset($post['city_id']) ? absint($post['city_id']) : '';
-//        $working_hours = isset($post['working_hours']) ? sanitize_text_field($post['working_hours']) : '';
-//
-//        $fields = array(
-//            'name'          => $name,
-////            'phone'         => $phone,
-//            'lon'           => $lon,
-//            'lat'           => $lat,
-//            'city_id'       => $city_id,
-//            'working_hours' => $working_hours,
-//        );
-//
-//        // New or edit?
-//        if( ! $field_id) {
-//            $insert_id = $this->insert_ticket_window($fields);
-//            $field_id = $insert_id;
-//        } else {
-//            $fields['id'] = $field_id;
-//            $insert_id = $this->insert_ticket_window($fields);
-//        }
-//
-//        // Save phones
-//        $result = ($insert_id && $this->update_phones($field_id, $phones));
-//        if($result) {
-//            BM_Util_Util::push_admin_notice('success', 'ОК');
-//        } else {
-//            BM_Util_Util::push_admin_notice('error', 'Ошибка !');
-//        }
-//
-//        // Redirect
-//        wp_redirect($page_url);
-//        exit;
-//    }
-
-//    /**
-//     * Insert a new city.
-//     *
-//     * @param array
-//     * @return boolean
-//     */
-//    public function insert_ticket_window($args = array())
-//    {
-//        global $wpdb;
-//
-//        $defaults = array(
-//            'id'            => NULL,
-//            'name'          => '',
-////            'phone'         => '',
-//            'lon'           => '',
-//            'lat'           => '',
-//            'city_id'       => '',
-//            'working_hours' => '',
-//        );
-//
-//        $args = wp_parse_args($args, $defaults);
-//        $table_name = $wpdb->prefix . 'kanawaicontest_voters';
-//
-//        // remove row id to determine if new or update
-//        $row_id = (int) $args['id'];
-//        unset($args['id']);
-//
-//        if( ! $row_id) {
-//            // insert a new
-//            if($wpdb->insert($table_name, $args)) {
-//
-//                return $wpdb->insert_id;
-//            }
-//        } else {
-//            // do update method here
-//            $result = $wpdb->update($table_name, $args, array('id' => $row_id));
-//            if($result !== FALSE) {
-//
-//                return $row_id;
-//            }
-//        }
-//
-//        return FALSE;
-//    }
-
-//    public static function retrieve_cities_phones()
-//    {
-//        global $wpdb;
-//
-//        $city_phones = $wpdb->get_results("SELECT id, ticket_window_id, phone FROM bm_phones", 'ARRAY_A');
-//        foreach($city_phones as $phone) {
-//            self::$ticket_window_phones[$phone['ticket_window_id']][$phone['id']] = $phone;
-//        }
-//
-//    }
 
 }

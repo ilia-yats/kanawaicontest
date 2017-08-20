@@ -29,8 +29,8 @@ class Kanawaicontest
      */
     public static $unslashed_post;
 
-    public $tours;
-    public $images;
+    public $archive;
+    public $posters;
     public $voters;
 
     public function __construct()
@@ -54,7 +54,7 @@ class Kanawaicontest
 //
 
             $this->tours = new KC_Tours_AdminMenu();
-            $this->images = new KC_Images_AdminMenu();
+            $this->posters = new KC_Posters_AdminMenu();
             $this->voters = new KC_Voters_AdminMenu();
 
             // Create menu items
@@ -114,7 +114,7 @@ class Kanawaicontest
                 );
             });
             add_action('admin_menu', array($this->tours, 'plugin_menu'));
-            add_action('admin_menu', array($this->images, 'plugin_menu'));
+            add_action('admin_menu', array($this->posters, 'plugin_menu'));
             add_action('admin_menu', array($this->voters, 'plugin_menu'));
             add_action('admin_menu', function () {
                 add_submenu_page(
@@ -192,61 +192,64 @@ class Kanawaicontest
         </script><?php
     }
 
-    public function get_tours_list()
-    {
-        return $this->tours->tours_list;
-    }
+//    public function get_tours_list()
+//    {
+//        return $this->tours->tours_list;
+//    }
+//
+//    public function get_posters_list()
+//    {
+//        return $this->images->posters_list;
+//    }
+//
+//    public function get_voters_list()
+//    {
+//        return $this->voters->voters_list;
+//    }
 
-    public function get_images_list()
-    {
-        return $this->images->images_list;
-    }
-
-    public function get_voters_list()
-    {
-        return $this->voters->voters_list;
-    }
-
-    public function saveVote($image_id, $voter_id, $tour_id)
+    public function saveVote($poster_id, $voter_id, $tour_id)
     {
         global $wpdb;
 
-        $result = $wpdb->query($wpdb->prepare("INSERT INTO kanawaicontest_image_votes(image_id, voter_id, tour_id)
-            VALUES(%d, %d, %d)", $image_id, $voter_id, $tour_id));
+        $sql = $wpdb->prepare(
+            "INSERT INTO kanawaicontest_posters_votes(poster_id, voter_id, tour_id) VALUES(%d, %d, %d)",
+            $poster_id, $voter_id, $tour_id
+        );
+        $result = $wpdb->query($sql);
 
         return $result;
     }
 
-    public function get_current_tour()
-    {
-        global $wpdb;
-
-        $current_tour = $wpdb->get_row("SELECT * FROM kanawaicontest_tours WHERE status = 'active' ORDER BY start_date DESC LIMIT 1", 'ARRAY_A');
-
-        return $current_tour;
-    }
-
-    public function get_current_tour_images($per_page = 20, $page_number = 1)
-    {
-        global $wpdb;
-        $result = [];
-        $current_tour = $this->get_current_tour();
-        if (!empty($current_tour)) {
-            $sql = $wpdb->prepare("SELECT kci.* FROM kanawaicontest_images kci WHERE tour_id = %d", $current_tour['id']);
-            if ( ! empty($_REQUEST['orderby'])) {
-                $sql .= ' ORDER BY ' . esc_sql($_REQUEST['orderby']);
-                $sql .= ! empty($_REQUEST['order']) ? ' ' . esc_sql($_REQUEST['order']) : ' ASC';
-            }
-            $sql .= " LIMIT $per_page";
-            $sql .= ' OFFSET ' . ($page_number - 1) * $per_page;
-            $result = $wpdb->get_results($sql, 'ARRAY_A');
-        }
-        foreach ($result as &$item) {
-            $item['image_url'] = wp_get_attachment_image_src($item['attachment_id'])[0];
-        }
-
-        return $result;
-    }
+//    public function get_current_tour()
+//    {
+//        global $wpdb;
+//
+//        $current_tour = $wpdb->get_row("SELECT * FROM kanawaicontest_tours WHERE status = 'active' ORDER BY start_date DESC LIMIT 1", 'ARRAY_A');
+//
+//        return $current_tour;
+//    }
+//
+//    public function get_current_tour_images($per_page = 20, $page_number = 1)
+//    {
+//        global $wpdb;
+//        $result = [];
+//        $current_tour = $this->get_current_tour();
+//        if (!empty($current_tour)) {
+//            $sql = $wpdb->prepare("SELECT kci.* FROM kanawaicontest_posters kci WHERE tour_id = %d", $current_tour['id']);
+//            if ( ! empty($_REQUEST['orderby'])) {
+//                $sql .= ' ORDER BY ' . esc_sql($_REQUEST['orderby']);
+//                $sql .= ! empty($_REQUEST['order']) ? ' ' . esc_sql($_REQUEST['order']) : ' ASC';
+//            }
+//            $sql .= " LIMIT $per_page";
+//            $sql .= ' OFFSET ' . ($page_number - 1) * $per_page;
+//            $result = $wpdb->get_results($sql, 'ARRAY_A');
+//        }
+//        foreach ($result as &$item) {
+//            $item['image_url'] = wp_get_attachment_image_src($item['attachment_id'])[0];
+//        }
+//
+//        return $result;
+//    }
 
 }
 

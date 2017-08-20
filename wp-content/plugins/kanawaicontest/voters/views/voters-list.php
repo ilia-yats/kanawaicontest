@@ -1,18 +1,17 @@
 <div class="wrap">
 	<h2><?php _e('Voters') ?></h2>
-
 	<?php
-	$tour_images = Kanawaicontest::get_instance()->get_current_tour_images();
-	$image_id = ( ! empty($_REQUEST['image_id'])) ? esc_sql($_REQUEST['image_id']) : '';
+	$posters = Kanawaicontest::get_instance()->posters->init()->posters_list->get_posters();
+	$poster_id = ( ! empty($_REQUEST['poster_id'])) ? esc_sql($_REQUEST['poster_id']) : '';
 	?>
 	<form id="filter_form" action="" method="get">
 		<input type="hidden" name="page" value="<?= esc_attr($_REQUEST['page']) ?>">
-		<label for="filter_image_id"><?php _e('Voted for image')?></label>
-		<select id="filter_image_id" name="image_id">
+		<label for="filter_poster_id"><?php _e('Voted for image')?></label>
+		<select id="filter_poster_id" name="poster_id">
 			<option value=""></option>
-			<?php foreach($tour_images as $image): ?>
+			<?php foreach($posters as $image): ?>
 				<option
-					value="<?php echo $image['id']; ?>" <?php if($image['id'] === $image_id) echo ' selected ' ?>><?php echo $image['title']; ?></option>
+					value="<?php echo $image['id']; ?>" <?php if($image['id'] === $poster_id) echo ' selected ' ?>><?php echo $image['title']; ?></option>
 			<?php endforeach; ?>
 		</select>
 		<input type="submit" class="button primary-button" value="Filter">

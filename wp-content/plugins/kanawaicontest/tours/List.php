@@ -61,23 +61,21 @@ class KC_Tours_List extends WP_List_Table
         );
     }
 
-    public function get_current_tour()
+    public function get_current_tour_id()
     {
         global $wpdb;
 
-        $current_tour = $wpdb->get_row("SELECT * FROM kanawaicontest_tours WHERE status = 'active' ORDER BY start_date DESC LIMIT 1", 'ARRAY_A');
-
-        return $current_tour;
+        return $wpdb->get_var("SELECT id FROM kanawaicontest_tours WHERE status = 'active' ORDER BY start_date DESC LIMIT 1", 'ARRAY_A');
     }
 
-    public function get_tour($id)
-    {
-        global $wpdb;
-
-        $tour = $wpdb->get_row($wpdb->prepare("SELECT * FROM kanawaicontest_tours WHERE id = %d", $id), 'ARRAY_A');
-
-        return $tour;
-    }
+//    public function get_tour($id)
+//    {
+//        global $wpdb;
+//
+//        $tour = $wpdb->get_row($wpdb->prepare("SELECT * FROM kanawaicontest_tours WHERE id = %d", $id), 'ARRAY_A');
+//
+//        return $tour;
+//    }
 
     public static function record_count()
     {

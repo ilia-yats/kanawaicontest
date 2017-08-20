@@ -104,7 +104,7 @@ $table_prefix = 'newwp_';
  *
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
-define('WP_DEBUG', false);
+define('WP_DEBUG', true);
 
 /* Das war’s, Schluss mit dem Bearbeiten! Viel Spaß beim Bloggen. */
 /* That's all, stop editing! Happy blogging. */

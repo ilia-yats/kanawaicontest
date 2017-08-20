@@ -101,8 +101,8 @@ class KC_Public_Kanawaicontest
                 $last_name = isset($post['last_name']) ? sanitize_text_field($post['last_name']) : '';
                 $email = isset($post['email']) ? sanitize_text_field($post['email']) : '';
                 $phone = isset($post['phone']) ? sanitize_text_field($post['phone']) : '';
-                $voted_images_ids = isset($post['voted_images_ids'])
-                    ? implode(',', sanitize_text_field($post['voted_images_ids']))
+                $voted_posters_ids = isset($post['voted_posters_ids'])
+                    ? implode(',', sanitize_text_field($post['voted_posters_ids']))
                     : array();
 
                 $voter_id = Kanawaicontest::get_instance()->get_voters_list()->get_id_by_email($email);
@@ -112,7 +112,7 @@ class KC_Public_Kanawaicontest
                     );
                 }
                 $current_tour = Kanawaicontest::get_instance()->get_tours_list()->get_current_tour();
-                foreach ($voted_images_ids as $id) {
+                foreach ($voted_posters_ids as $id) {
                     Kanawaicontest::get_instance()->saveVote($id, $voter_id, $current_tour['id']);
                 }
             } catch(Exception $e) {

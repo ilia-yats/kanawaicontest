@@ -63,7 +63,6 @@ class KC_Voters_AdminMenu
 
         switch($action) {
             default:
-                $tour_id = Kanawaicontest::get_instance()->get_current_tour()['id'];
                 $template = __DIR__ . '/views/voters-list.php';
                 break;
         }
