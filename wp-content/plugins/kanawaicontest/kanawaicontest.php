@@ -41,21 +41,16 @@ class Kanawaicontest
         // Start session
         Kanawaicontest_Util_Util::session_start();
 
+        $this->posters = new KC_Posters_AdminMenu();
+        $this->tours = new KC_Tours_AdminMenu();
+        $this->voters = new KC_Voters_AdminMenu();
+
         if (is_admin()) {
             // Register needed plugin settings
             add_action('admin_init', function () {
+                register_setting('kanawaicontest_settings', 'kanawaicontest_is_active');
                 register_setting('kanawaicontest_settings', 'kanawaicontest_rules');
-//                register_setting('kanawaicontest_settings', 'kanawaicontest_admin_email');
-//                register_setting('kanawaicontest_settings', 'kanawaicontest_client_email_subject');
-//                register_setting('kanawaicontest_settings', 'kanawaicontest_client_email_text');
-//                register_setting('kanawaicontest_settings', 'kanawaicontest_additional_client_email_text');
-//                register_setting('kanawaicontest_settings', 'kanawaicontest_tickets_email_text');
             });
-//
-
-            $this->tours = new KC_Tours_AdminMenu();
-            $this->posters = new KC_Posters_AdminMenu();
-            $this->voters = new KC_Voters_AdminMenu();
 
             // Create menu items
             // wp_get_current_user works not early than 'init' hook
@@ -72,8 +67,6 @@ class Kanawaicontest
 
         // When plugin activated, add new tables and user role
         register_activation_hook(__FILE__, array($this, 'create_tables'));
-
-
     }
 
     public static function get_instance()
@@ -108,14 +101,14 @@ class Kanawaicontest
                     'Contest',
                     'manage_options',
                     'kanawaicontest',
-                    array($this->tours, 'plugin_menu'),
+                    array($this->posters, 'plugin_menu'),
                     'dashicons-calendar-alt',
                     NULL
                 );
             });
-            add_action('admin_menu', array($this->tours, 'plugin_menu'));
             add_action('admin_menu', array($this->posters, 'plugin_menu'));
             add_action('admin_menu', array($this->voters, 'plugin_menu'));
+            add_action('admin_menu', array($this->tours, 'plugin_menu'));
             add_action('admin_menu', function () {
                 add_submenu_page(
                     'kanawaicontest',
@@ -190,65 +183,22 @@ class Kanawaicontest
         </script><?php
     }
 
-//    public function get_tours_list()
-//    {
-//        return $this->tours->tours_list;
-//    }
-//
-//    public function get_posters_list()
-//    {
-//        return $this->images->posters_list;
-//    }
-//
-//    public function get_voters_list()
-//    {
-//        return $this->voters->voters_list;
-//    }
-
     public function saveVote($poster_id, $voter_id, $tour_id)
     {
         global $wpdb;
 
-        $sql = $wpdb->prepare(
-            "INSERT INTO kanawaicontest_posters_votes(poster_id, voter_id, tour_id) VALUES(%d, %d, %d)",
-            $poster_id, $voter_id, $tour_id
-        );
-        $result = $wpdb->query($sql);
+        if (!empty($tour_id) && !empty($poster_id) && !empty($voter_id)) {
+            $sql = $wpdb->prepare(
+                "INSERT INTO kanawaicontest_posters_votes(poster_id, voter_id, tour_id) VALUES(%d, %d, %d)",
+                $poster_id, $voter_id, $tour_id
+            );
+            $result = $wpdb->query($sql);
 
-        return $result;
+            return $result;
+        }
+
+        return false;
     }
-
-//    public function get_current_tour()
-//    {
-//        global $wpdb;
-//
-//        $current_tour = $wpdb->get_row("SELECT * FROM kanawaicontest_tours WHERE status = 'active' ORDER BY start_date DESC LIMIT 1", 'ARRAY_A');
-//
-//        return $current_tour;
-//    }
-//
-//    public function get_current_tour_images($per_page = 20, $page_number = 1)
-//    {
-//        global $wpdb;
-//        $result = [];
-//        $current_tour = $this->get_current_tour();
-//        if (!empty($current_tour)) {
-//            $sql = $wpdb->prepare("SELECT kci.* FROM kanawaicontest_posters kci WHERE tour_id = %d", $current_tour['id']);
-//            if ( ! empty($_REQUEST['orderby'])) {
-//                $sql .= ' ORDER BY ' . esc_sql($_REQUEST['orderby']);
-//                $sql .= ! empty($_REQUEST['order']) ? ' ' . esc_sql($_REQUEST['order']) : ' ASC';
-//            }
-//            $sql .= " LIMIT $per_page";
-//            $sql .= ' OFFSET ' . ($page_number - 1) * $per_page;
-//            $result = $wpdb->get_results($sql, 'ARRAY_A');
-//        }
-//        foreach ($result as &$item) {
-//            $item['image_url'] = wp_get_attachment_image_src($item['attachment_id'])[0];
-//        }
-//
-//        return $result;
-//    }
-
 }
 
 Kanawaicontest::get_instance();

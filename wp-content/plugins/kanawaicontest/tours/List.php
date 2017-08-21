@@ -41,12 +41,14 @@ class KC_Tours_List extends WP_List_Table
         return $result;
     }
 
-    public function get_current_tour_id()
+    public static function get_current_tour_id()
     {
         global $wpdb;
         static $current_tour_id = null;
+
         if (null === $current_tour_id) {
-            $current_tour_id = $wpdb->get_var("SELECT id FROM kanawaicontest_tours WHERE status = 'active' ORDER BY start_date DESC LIMIT 1");
+            $current_tour_id = $wpdb->get_var("SELECT id FROM kanawaicontest_tours WHERE start_date < '"
+                . date('Y-m-d H:i:s') . "' AND end_date IS NULL");
         }
 
         return $current_tour_id;
@@ -80,7 +82,6 @@ class KC_Tours_List extends WP_List_Table
         switch ($column_name) {
             case 'id':
             case 'title':
-            case 'status':
             case 'start_date':
             case 'end_date':
                 return $item[$column_name];
@@ -110,9 +111,8 @@ class KC_Tours_List extends WP_List_Table
     {
         $columns = [
             'cb' => '<input type="checkbox" />',
-            'id' => 'id',
+//            'id' => 'id',
             'title' => 'title',
-            'status' => 'status',
             'start_date' => 'start_date',
             'end_date' => 'end_date',
         ];
@@ -123,10 +123,9 @@ class KC_Tours_List extends WP_List_Table
     public function get_sortable_columns()
     {
         $sortable_columns = array(
-            'id' => array('id', TRUE),
-            'status' => array('status', TRUE),
-            'start_date' => array('start_date', TRUE),
-            'end_date' => array('end_date', TRUE),
+//            'id' => array('id', TRUE),
+//            'start_date' => array('start_date', TRUE),
+//            'end_date' => array('end_date', TRUE),
         );
 
         return $sortable_columns;
@@ -210,52 +209,36 @@ class KC_Tours_List extends WP_List_Table
         exit;
     }
 
-//    public function process_form_submit()
-//    {
-//        if ( ! isset($_POST['submit_tour'])) {
-//            return;
-//        }
-//
-//        if ( ! wp_verify_nonce($_POST['_wpnonce'], 'kanawaicontest_new_tour')) {
-//            die('Go get a life script kiddies');
-//        }
-//
-//        // Get unslashed post
-//        $post = Kanawaicontest::$unslashed_post;
-//
-//        $title = isset($post['title']) ? sanitize_text_field($post['title']) : '';
-////        $start_date = isset($post['start_date']) ? sanitize_text_field($post['start_date']) : '';
-////        $end_date = isset($post['end_date']) ? sanitize_text_field($post['end_date']) : '';
-//        $id = isset($post['id']) ? absint($post['id']) : null;
-//
-////        if (is_null($id)) {
-//            $result = $this->insert_tour(array(
-//                'title' => $title,
-////                'start_date' => $start_date,
-////                'end_date' => $end_date,
-//            ));
-//            if ($result !== false) {
-//                Kanawaicontest_Util_Util::push_admin_notice('success', 'Tour created');
-//            }
-////        } else {
-////            $result = $this->update_tour($id, array(
-////                'title' => $title,
-////                'start_date' => $start_date,
-////                'end_date' => $end_date,
-////            ));
-////            if ($result !== false) {
-////                Kanawaicontest_Util_Util::push_admin_notice('success', 'Tour updated');
-////            }
-////        }
-//        if ( ! $result) {
-//            Kanawaicontest_Util_Util::push_admin_notice('error', 'Cannot add or update tour');
-//        }
-//
-//        // Redirect
-//        $page_url = menu_page_url('kanawaicontest', FALSE);
-//        wp_redirect($page_url);
-//        exit;
-//    }
+    public function process_form_submit()
+    {
+        if ( ! isset($_POST['submit_tour'])) {
+            return;
+        }
+
+        if ( ! wp_verify_nonce($_POST['_wpnonce'], 'kanawaicontest_new_tour')) {
+            die('Go get a life script kiddies');
+        }
+
+        // Get unslashed post
+        $post = Kanawaicontest::$unslashed_post;
+
+        $title = isset($post['title']) ? sanitize_text_field($post['title']) : '';
+        $result = $this->insert_tour(array(
+            'title' => $title,
+            'start_date' => date('Y-m-d H:i:s'),
+        ));
+        if ($result !== false) {
+            $this->assign_posters_to_tour_id($result);
+            Kanawaicontest_Util_Util::push_admin_notice('success', 'Tour created');
+        } else {
+            Kanawaicontest_Util_Util::push_admin_notice('error', 'Cannot add or update tour');
+        }
+
+        // Redirect
+        $page_url = menu_page_url('kanawaicontest', FALSE);
+        wp_redirect($page_url);
+        exit;
+    }
 
     public function insert_tour($args)
     {
@@ -268,15 +251,11 @@ class KC_Tours_List extends WP_List_Table
         return false;
     }
 
-//    public function update_tour($id, $args)
-//    {
-//        global $wpdb;
-//
-//        $result = $wpdb->update('kanawaicontest_tours', $args, array('id' => $id));
-//        if ($result !== FALSE) {
-//            return $id;
-//        }
-//
-//        return false;
-//    }
+    public function assign_posters_to_tour_id($tour_id)
+    {
+        global $wpdb;
+
+        return $wpdb->query("UPDATE kanawaicontest_posters SET tour_id = " . absint($tour_id)
+            . " WHERE tour_id IS NULL");
+    }
 }

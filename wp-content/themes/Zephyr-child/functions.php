@@ -117,4 +117,22 @@ function pb_tag_manager2()
   <?php
 }
 
+
+// Include Kanawai contest plugin and scripts
+add_action('init', 'kanawaicontest_public_init');
+add_action('wp_footer', 'kanawaicontest_button');
+function kanawaicontest_public_init()
+{
+    require_once ABSPATH . '/wp-content/plugins/kanawaicontest/public/Kanawaicontest.php';
+}
+
+function kanawaicontest_button()
+{
+//    if (get_query_var('pagename') !== 'contest'):
+    if (get_query_var('pagename') == 'contest'):
+        include __DIR__ . '/contest_btn.php';
+    endif;
+}
+
+
 //add_action('us_before_canvas', 'pb_tag_manager2', 1);

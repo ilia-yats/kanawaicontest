@@ -25,7 +25,17 @@ class KC_Posters_List extends WP_List_Table
 
         $sql = "SELECT kci.* FROM kanawaicontest_posters kci";
 
-        $sql .= ' WHERE tour_id = ' . $this->get_tour_id();
+        $tour_id = $this->get_tour_id();
+        if (!empty($tour_id)) {
+            $sql .= ' WHERE tour_id = ' . $this->get_tour_id();
+        } else {
+            $sql .= ' WHERE tour_id IS NULL'; // List all new posters, which are not assigned to any tours
+        }
+
+        if( ! empty($_REQUEST['s'])) {
+            $like = '%' . esc_sql($_REQUEST['s']) . '%';
+            $sql .= " AND (kci.title LIKE '$like' OR kci.link LIKE '$like')";
+        }
 
         // TODO: implement sorting by 'voted'
 
@@ -62,7 +72,8 @@ class KC_Posters_List extends WP_List_Table
 
     public function get_is_current_tour()
     {
-        return $this->get_tour_id() == Kanawaicontest::get_instance()->tours->init()->tours_list->get_current_tour_id();
+        $tour_id = $this->get_tour_id();
+        return !empty($tour_id) && ($tour_id == Kanawaicontest::get_instance()->tours->init()->tours_list->get_current_tour_id());
     }
 
     public function delete_image($id)
@@ -82,7 +93,12 @@ class KC_Posters_List extends WP_List_Table
 
         $sql = "SELECT COUNT(*) FROM kanawaicontest_posters";
 
-        $sql .= ' WHERE tour_id = ' . $this->get_tour_id();
+        $tour_id = $this->get_tour_id();
+        if (!empty($tour_id)) {
+            $sql .= ' WHERE tour_id = ' . $this->get_tour_id();
+        } else {
+            $sql .= ' WHERE tour_id IS NULL'; // List all new posters, which are not assigned to any tours
+        }
 
         return $wpdb->get_var($sql);
     }
@@ -136,8 +152,8 @@ class KC_Posters_List extends WP_List_Table
     public function get_sortable_columns()
     {
         $sortable_columns = array(
-            'id' => array('id', TRUE),
-            'voted' => array('voted', TRUE),
+//            'id' => array('id', TRUE),
+//            'voted' => array('voted', TRUE),
         );
 
         return $sortable_columns;
@@ -158,7 +174,7 @@ class KC_Posters_List extends WP_List_Table
 
         $per_page = $this->get_items_per_page('posters_per_page', 5);
         $current_page = $this->get_pagenum();
-        $total_items = self::record_count();
+        $total_items = $this->record_count();
 
         $this->set_pagination_args([
             'total_items' => $total_items,
@@ -179,7 +195,7 @@ class KC_Posters_List extends WP_List_Table
 
             if (wp_verify_nonce($nonce, 'kanawaicontest_delete_image')) {
 
-                $result = self::delete_image(absint($_REQUEST['id']));
+                $result = $this->delete_image(absint($_REQUEST['id']));
             }
         }
 
@@ -192,7 +208,7 @@ class KC_Posters_List extends WP_List_Table
                 // loop over the array of record ids and delete them
                 $result = TRUE;
                 foreach ($delete_ids as $id) {
-                    if ( ! self::delete_image($id)) {
+                    if ( ! $this->delete_image($id)) {
                         $result = FALSE;
                     }
                 }
@@ -215,10 +231,13 @@ class KC_Posters_List extends WP_List_Table
 
     // TODO: Implement archivation
 
-//    public function process_archivation()
-//    {
-//        $posters = $this->get_posters(null, null)
-//    }
+    public function process_archivation()
+    {
+        global $wpdb;
+
+        return $wpdb->query("UPDATE kanawaicontest_tours SET end_date = '" . date('Y-m-d H:i:s')
+            . "' WHERE id = " . absint($this->get_tour_id()));
+    }
 
     public function process_form_submit()
     {
@@ -235,10 +254,8 @@ class KC_Posters_List extends WP_List_Table
         $title = isset($post['title']) ? sanitize_text_field($post['title']) : '';
         $link = isset($post['link']) ? sanitize_text_field($post['link']) : '';
         $attachment_id = isset($post['image_attachment_id']) ? absint($post['image_attachment_id']) : '';
-        $tour_id = isset($post['tour_id']) ? absint($post['tour_id']) : null;
-        $id = isset($post['id']) ? absint($post['id']) : null;
+        $tour_id = $this->get_tour_id(); // Current tour or null, if no tours started
 
-//        if (is_null($id)) {
         $result = $this->insert_image(array(
             'tour_id' => $tour_id,
             'title' => $title,
@@ -247,18 +264,7 @@ class KC_Posters_List extends WP_List_Table
         ));
         if ($result !== false) {
             Kanawaicontest_Util_Util::push_admin_notice('success', 'Image added');
-        }
-//        } else {
-//            $result = $this->update_image($id, array(
-//                'title' => $title,
-//                'link' => $link,
-//                'attachment_id' => $attachment_id,
-//            ));
-//            if ($result !== false) {
-//                Kanawaicontest_Util_Util::push_admin_notice('success', 'Image updated');
-//            }
-//        }
-        if ( ! $result) {
+        } else {
             Kanawaicontest_Util_Util::push_admin_notice('error', 'Cannot add or update image');
         }
 

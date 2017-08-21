@@ -26,6 +26,15 @@ class KC_Voters_AdminMenu
         add_filter('set-screen-option', array(__CLASS__, 'set_screen'), 10, 3);
     }
 
+    public function init()
+    {
+        if (empty($this->voters_list)) {
+            $this->voters_list = new KC_Voters_List();
+        }
+
+        return $this;
+    }
+
     /**
      * Setting screen option.
      *
@@ -88,7 +97,7 @@ class KC_Voters_AdminMenu
 
         add_screen_option($option, $args);
 
-        $this->voters_list = new KC_Voters_List();
+        $this->init();
     }
 
     /**

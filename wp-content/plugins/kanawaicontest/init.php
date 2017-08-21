@@ -5,6 +5,7 @@
 
 // Plugin root directory
 define('KANAWAICONTEST_ROOT', __DIR__);
+define('KANAWAICONTEST_MAX_POSTERS_TO_VOTE', 3);
 
 // Add autoload function
 function kanawaicontest_components_autoloader($class_name)

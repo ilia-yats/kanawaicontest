@@ -32,7 +32,7 @@ class KC_Posters_AdminMenu
 
     public function plugin_menu()
     {
-        $hook = add_submenu_page('kanawaicontest', 'Posters', 'Posters', 'read', 'kanawaicontest_posters', array($this, 'plugin_settings_page'));
+        $hook = add_submenu_page('kanawaicontest', 'Posters', 'Posters', 'read', 'kanawaicontest', array($this, 'plugin_settings_page'));
         add_action("load-$hook", array($this, 'screen_option'));
         add_action("load-$hook", array($this, 'form_handler'));
     }
@@ -78,8 +78,8 @@ class KC_Posters_AdminMenu
         ) {
             $this->posters_list->process_bulk_action();
         }
-//        if(isset($_REQUEST['action']) && ($_REQUEST['action'] == 'archive')) {
-//            $this->posters_list->process_archivation();
-//        }
+        if(isset($_REQUEST['action']) && ($_REQUEST['action'] == 'archive')) {
+            $this->posters_list->process_archivation();
+        }
     }
 }

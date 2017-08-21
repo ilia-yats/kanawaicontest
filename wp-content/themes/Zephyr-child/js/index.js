@@ -62,14 +62,17 @@ var modalWindow = {
     }
 };
 
+var chosenPicturesIds = Object.create(null);
 var chosenPicture = {
-    $cnt: $('#chosen-pictures'),
-    $cntInner: $('.chosen-pictures-block', this.$cnt),
     add: function (imgId, imgSrc) {
-        this.$cntInner.append('<img src="'+ imgSrc +'" class="'+ imgId +'">');
+		var $cntInner = $('.chosen-pictures-block');
+        $cntInner.append('<img src="'+ imgSrc +'" class="'+ imgId +'">');
+        chosenPicturesIds[imgId] = imgId;
     },
     remove: function (imgId) {
-        this.$cntInner.children('.'+imgId).remove();
+		var $cntInner = $('.chosen-pictures-block');
+        $cntInner.children('.'+imgId).remove();
+        delete chosenPicturesIds[imgId];
     }
 };
 
@@ -188,19 +191,38 @@ $(document).ready(function () {
         }
     });
 
+    $('#contest-link-block').on('click', 'svg', function () {
+        $(this).parent().removeClass('active');
+    });
+
     $galleryShowButton.on('click', function () {
-        var value = '100%';
         $(this).removeClass('visible').hide();
-        $galleryBlock.height(value);
+        $galleryBlock.removeAttr('style');
     });
 
     $('#main-form').on('click', 'button', function (e) {
         e.preventDefault();
 
-        $('#main-form input').val('');
-        setTimeout(function () {
-            modalWindow.show('.thanks-for-vote-modal');
-        }, 500)
+        var formData = $(this).closest('form').serialize();
+        $.ajax({
+            method: 'post',
+            dataType: 'json',
+            url: kanawaicontest.ajaxHandler,
+            data: {
+                nonce: kanawaicontest.nonce,
+                action: kanawaicontest.action,
+                form:formData,
+                chosen_ids:chosenPicturesIds
+            },
+            success:function (response) {
+                console.log(response);
+                if (response.status == 'success') {
+                    modalWindow.show('.thanks-for-vote-modal');
+                } else {
+                    modalWindow.show('.already-vote-modal');
+                }
+            }
+        });
     });
 
     $('.img').on('click', function () {
@@ -235,6 +257,7 @@ $(document).ready(function () {
             return false;
         }
         $(this).hide();
+        $('.agreement').hide();
         $('#main-form').slideDown(200);
     });
 
@@ -244,8 +267,4 @@ $(document).ready(function () {
         $('#archive-gallery').slideDown(200);
         $(this).hide();
     });
-    $('#contest-link-block').on('click', 'svg', function () {
-        $(this).parent().removeClass('active');
-    });
 });
-

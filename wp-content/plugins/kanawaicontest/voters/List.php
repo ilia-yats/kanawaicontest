@@ -13,8 +13,8 @@ class KC_Voters_List extends WP_List_Table
     public function __construct()
     {
         parent::__construct(array(
-            'singular' => 'Voter',
-            'plural' => 'Voters',
+            'singular' => __('Voter'),
+            'plural' => __('Voters'),
             'ajax' => FALSE,
         ));
     }
@@ -23,7 +23,7 @@ class KC_Voters_List extends WP_List_Table
     {
         global $wpdb;
 
-        $sql = "SELECT kcv.*, kcp.title AS voted FROM kanawaicontest_voters AS kcv
+        $sql = "SELECT kcv.*, GROUP_CONCAT(kcp.title SEPARATOR ', ') AS voted FROM kanawaicontest_voters AS kcv
               JOIN kanawaicontest_posters_votes AS kciv ON kcv.id = kciv.voter_id 
               JOIN kanawaicontest_posters AS kcp ON kciv.poster_id = kcp.id ";
 
@@ -32,6 +32,17 @@ class KC_Voters_List extends WP_List_Table
             : Kanawaicontest::get_instance()->tours->init()->tours_list->get_current_tour_id();
 
         $sql .= ' WHERE kciv.tour_id = ' . $tour_id;
+
+        if( ! empty($_REQUEST['poster_id'])) {
+            $sql .= " AND kciv.poster_id = " . absint($_REQUEST['poster_id']);
+        }
+
+        if( ! empty($_REQUEST['s'])) {
+            $like = '%' . esc_sql($_REQUEST['s']) . '%';
+            $sql .= " AND (kcv.last_name LIKE '$like' OR kcv.name LIKE '$like' OR kcv.email LIKE '$like')";
+        }
+
+        $sql .= ' GROUP BY kcv.id';
 
         if ( ! empty($_REQUEST['orderby'])) {
             $sql .= ' ORDER BY ' . esc_sql($_REQUEST['orderby']);
@@ -80,6 +91,17 @@ class KC_Voters_List extends WP_List_Table
             : Kanawaicontest::get_instance()->tours->init()->tours_list->get_current_tour_id();
 
         $sql .= ' WHERE kciv.tour_id = ' . $tour_id;
+
+        if( ! empty($_REQUEST['poster_id'])) {
+            $sql .= " AND kciv.poster_id = " . absint($_REQUEST['poster_id']);
+        }
+
+        if( ! empty($_REQUEST['s'])) {
+            $like = '%' . esc_sql($_REQUEST['s']) . '%';
+            $sql .= " AND (kcv.last_name LIKE '$like' OR kcv.name LIKE '$like' OR kcv.email LIKE '$like')";
+        }
+
+        $sql .= ' GROUP BY kcv.id';
 
         return $wpdb->get_var($sql);
     }
@@ -160,12 +182,12 @@ class KC_Voters_List extends WP_List_Table
     {
         $columns = array(
             'cb' => '<input type="checkbox" />',
-            'name' => 'name',
-            'phone' => 'phone',
-            'last_name' => 'last_name',
-            'email' => 'email',
-            'voted' => 'voted',
-            'photo' => 'photo',
+            'name' => __('Name'),
+            'last_name' => __('Last Name'),
+            'phone' => __('Phone'),
+            'email' => __('Email'),
+            'voted' => __('Voted'),
+            'photo' => __('Photo'),
         );
 
         return $columns;
@@ -179,8 +201,7 @@ class KC_Voters_List extends WP_List_Table
     public function get_sortable_columns()
     {
         $sortable_columns = array(
-            'name' => array('name', TRUE),
-            'voted' => array('voted', TRUE),
+//            'name' => array('name', TRUE),
         );
 
         return $sortable_columns;
@@ -194,7 +215,7 @@ class KC_Voters_List extends WP_List_Table
     public function get_bulk_actions()
     {
         $actions = array(
-            'bulk-delete' => 'Delete',
+            'bulk-delete' => __('Delete'),
         );
 
         return $actions;
@@ -225,17 +246,6 @@ class KC_Voters_List extends WP_List_Table
     {
         $result = FALSE;
 
-        //Detect when a bulk action is being triggered...
-        if ('delete' === $this->current_action()) {
-            // In our file that handles the request, verify the nonce.
-            $nonce = esc_attr($_REQUEST['_wpnonce']);
-
-            if (wp_verify_nonce($nonce, 'kanawaicontest_delete_vote')) {
-
-                $result = self::delete_voter(absint($_REQUEST['id']));
-            }
-        }
-
         // If the delete bulk action is triggered
         if ((isset($_POST['action']) && $_POST['action'] == 'bulk-delete')
             || (isset($_POST['action2']) && $_POST['action2'] == 'bulk-delete')
@@ -253,9 +263,9 @@ class KC_Voters_List extends WP_List_Table
         }
 
         if ($result) {
-            Kanawaicontest_Util_Util::push_admin_notice('success', 'Voters Deleted');
+            Kanawaicontest_Util_Util::push_admin_notice('success', __('Voters Deleted'));
         } else {
-            Kanawaicontest_Util_Util::push_admin_notice('error', 'Cannot delete voters');
+            Kanawaicontest_Util_Util::push_admin_notice('error', __('Cannot delete voters'));
         }
 
         // Redirect
