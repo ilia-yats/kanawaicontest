@@ -1,10 +1,7 @@
 // Move to archive btn
 jQuery('#archive_btn').on('click', function (e) {
     e.preventDefault();
-    var name = prompt('Please type the name of archive entry:', '');
-    if (name !== '' && name !== null && name !== undefined) {
-        var input = document.getElementById('archive_name');
-        input.value = name;
+    if (confirm('Are you sure you want to finish current contest and send all images to archive?')) {
         jQuery('#archive_form').submit();
     }
 });

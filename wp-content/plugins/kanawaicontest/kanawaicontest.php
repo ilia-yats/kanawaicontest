@@ -66,7 +66,7 @@ class Kanawaicontest
         }
 
         // When plugin activated, add new tables and user role
-        register_activation_hook(__FILE__, array($this, 'create_tables'));
+//        register_activation_hook(__FILE__, array($this, 'create_tables'));
     }
 
     public static function get_instance()

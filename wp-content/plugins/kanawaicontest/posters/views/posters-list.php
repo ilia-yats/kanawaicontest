@@ -4,7 +4,7 @@
     /** @var KC_Posters_List $posters_list */
     $posters_list->prepare_items();
     $add_new_btn = sprintf('<a href="?page=%s&action=%s" class="add-new-h2">' . __('Add new') . '</a>', esc_attr($_REQUEST['page']), 'new');
-    $archive_btn = '<a href="?page=kanawaicontest_posters&action=archive" class="add-new-h2">' . __('Move all to archive') . '</a>';
+    $archive_btn = '<a href="" id="archive_btn" class="add-new-h2">' . __('Move all to archive') . '</a>';
     $start_tour_btn = '<a href="?page=kanawaicontest_tours&action=new" class="add-new-h2">' . __('Start new tour') . '</a>';
     ?>
         <h2>
@@ -21,8 +21,8 @@
             <?php endif; ?>
         </h2>
         <?php if ($posters_list->has_items()): ?>
-            <form id="archive_form" action="?page=kanawaicontest_tours&action=archive" method="post">
-                <input type="hidden" name="archive_name" id="archive_name" value="">
+            <form id="archive_form" action="?page=kanawaicontest_posters" method="post">
+                <input type="hidden" name="action" value="archive">
             </form>
         <?php endif; ?>
         <form method="post">

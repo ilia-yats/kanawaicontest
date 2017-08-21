@@ -78,7 +78,7 @@ class KC_Posters_AdminMenu
         ) {
             $this->posters_list->process_bulk_action();
         }
-        if(isset($_REQUEST['action']) && ($_REQUEST['action'] == 'archive')) {
+        if(isset($_REQUEST['action']) && ($_REQUEST['action'] == 'edit')) {
             $this->posters_list->process_archivation();
         }
     }
