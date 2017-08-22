@@ -78,8 +78,11 @@ class KC_Posters_AdminMenu
         ) {
             $this->posters_list->process_bulk_action();
         }
-        if(isset($_REQUEST['action']) && ($_REQUEST['action'] == 'edit')) {
+        if(isset($_REQUEST['action']) && ($_REQUEST['action'] == 'archive')) {
             $this->posters_list->process_archivation();
+        }
+        if(isset($_REQUEST['action']) && ($_REQUEST['action'] == 'export')) {
+            $this->posters_list->process_export();
         }
     }
 }

@@ -12,24 +12,6 @@
                            value="" required="required"/>
                 </td>
             </tr>
-            <!--            <tr class="row-name">-->
-            <!--                <th scope="row">-->
-            <!--                    <label for="start_date">Start Date</label>-->
-            <!--                </th>-->
-            <!--                <td>-->
-            <!--                    <input type="text" name="start_date" id="start_date" class="regular-text"-->
-            <!--                           value="" required="required"/>-->
-            <!--                </td>-->
-            <!--            </tr>-->
-            <!--            <tr class="row-name">-->
-            <!--                <th scope="row">-->
-            <!--                    <label for="end_date">End Date</label>-->
-            <!--                </th>-->
-            <!--                <td>-->
-            <!--                    <input type="text" name="end_date" id="end_date" class="regular-text"-->
-            <!--                           value="" required="required"/>-->
-            <!--                </td>-->
-            <!--            </tr>-->
             </tbody>
         </table>
         <?php wp_nonce_field('kanawaicontest_new_tour'); ?>

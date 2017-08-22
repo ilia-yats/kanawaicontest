@@ -67,7 +67,7 @@ $is_active_contest = !empty(KC_Tours_List::get_current_tour_id());
     <?php if ($is_active_contest): ?>
         <div class="gallery">
             <div class="gallery-title">
-                <h2>gallery – <span id="contest-month">august 2017</span></h2>
+                <h2>gallery – <span id="contest-month"><?php echo sanitize_text_field(KC_Tours_List::get_current_tour_title()) ?></span></h2>
                 <span>Bitte maximal 3 Favoriten auswählen </span>
             </div>
             <div class="gallery-images" id="gallery-images">
@@ -117,44 +117,17 @@ $is_active_contest = !empty(KC_Tours_List::get_current_tour_id());
                 </form>
             </div>
             <?php endif; ?>
-            <a href="#" id="show-archive" class="show-archive-button">archiv</a>
+            <?php if (KC_Public_Kanawaicontest::has_archive()): ?>
+                <a href="#" id="show-archive" class="show-archive-button">archiv</a>
+            <?php endif; ?>
         </div>
     </div>
     <div class="archive-gallery" id="archive-gallery">
         <div class="archive-gallery-title">
-            <h2>Archive</h2>
+            <h2><?php _e('Archive') ?></h2>
         </div>
         <div class="archive-gallery-inner">
-            <div class="img-container archive">
-                <div class="img" data-background="<?= $templateDir ?>/images/170217_cleandevil_final.jpg">
-                    <div class="layer"></div>
-                </div>
-                <span class="img-text">Gewinnerbild August 2017</span>
-            </div>
-            <div class="img-container archive">
-                <div class="img" data-background="<?= $templateDir ?>/images/CGAG_VW%20-%2001.06.%20-%2031.12.2017.jpg">
-                    <div class="layer"></div>
-                </div>
-                <span class="img-text">Gewinnerbild July 2017</span>
-            </div>
-            <div class="img-container archive">
-                <div class="img" data-background="<?= $templateDir ?>/images/Edelweiss_pizza%20-%2014.08.%20-%2019.08.2017.jpg">
-                    <div class="layer"></div>
-                </div>
-                <span class="img-text">Gewinnerbild June 2017</span>
-            </div>
-            <div class="img-container archive">
-                <div class="img" data-background="<?= $templateDir ?>/images/Hafners%20British%20Bikes%20-%20Letzte%2010%20Tage%20vom%20Monat.jpg">
-                    <div class="layer"></div>
-                </div>
-                <span class="img-text">Gewinnerbild May 2017</span>
-            </div>
-            <div class="img-container archive">
-                <div class="img" data-background="<?= $templateDir ?>/images/Jazz%20Club%20Lichtensteig%20-%2007.08.%20-%2010.08.2017.jpg">
-                    <div class="layer"></div>
-                </div>
-                <span class="img-text">Gewinnerbild April 2017</span>
-            </div>
+            <?php KC_Public_Kanawaicontest::render_archive(); ?>
         </div>
     </div>
     <div class="image-zoom" id="image-zoom">

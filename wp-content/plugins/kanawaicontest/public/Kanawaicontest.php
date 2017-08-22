@@ -84,7 +84,6 @@ class KC_Public_Kanawaicontest
         // Default response
         $response = [
             'status' => 'fail',
-//            'message' => 'Error',
         ];
 
         if (isset(self::$unslashed_post['nonce']) && wp_verify_nonce(self::$unslashed_post['nonce'], 'kanawaicontest_vote_nonce')) {
@@ -119,7 +118,6 @@ class KC_Public_Kanawaicontest
                 $response['status'] = 'success';
             } catch (Exception $e) {
 //                echo $e->getMessage();
-//                $response['message'] = 'Error';
             }
         }
 
@@ -143,7 +141,7 @@ class KC_Public_Kanawaicontest
         $sql .= ' WHERE tour_id = ' . KC_Tours_List::get_current_tour_id();
         $posters = $wpdb->get_results($sql, 'ARRAY_A');
         foreach ($posters as &$item) {
-            $item['image_url'] = wp_get_attachment_image_src($item['attachment_id'])[0];
+            $item['image_url'] = wp_get_attachment_image_src($item['attachment_id'], 'full')[0];
         }
         foreach ($posters as $poster): ?>
             <div class="img-container" id="image-<?php echo $poster['id']?>">
@@ -167,6 +165,34 @@ class KC_Public_Kanawaicontest
                 </svg>
             </div>
         <?php endforeach;
+    }
+
+    public static function has_archive()
+    {
+        global $wpdb;
+
+        return (bool) $wpdb->get_var("SELECT id FROM kanawaicontest_tours WHERE id != " . KC_Tours_List::get_current_tour_id());
+    }
+
+    public static function render_archive()
+    {
+        global $wpdb;
+
+        $tours_sql = "SELECT kct.title tour_title, kct.winner_poster_id poster_id, kcp.attachment_id attachment_id
+            FROM kanawaicontest_tours kct
+            JOIN kanawaicontest_posters kcp ON kcp.id = kct.winner_poster_id
+            WHERE kct.id != " . KC_Tours_List::get_current_tour_id();
+        $winners = $wpdb->get_results($tours_sql, 'ARRAY_A');
+        foreach ($winners as $winner) {
+        ?>
+        <div class="img-container archive">
+            <div class="img" data-background="<?php echo wp_get_attachment_image_src($winner['attachment_id'], 'full')[0] ?>">
+                <div class="layer"></div>
+            </div>
+            <span class="img-text">Gewinnerbild <?php echo sanitize_text_field($winner['tour_title']) ?></span>
+        </div>
+        <?php
+        }
     }
 }
 

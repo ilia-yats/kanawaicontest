@@ -351,6 +351,7 @@ template, [hidden] {
 
 .main-banner {
     width: 100%;
+    margin-top: 110px;
     height: 800px;
     background: url("../images/big-picture.jpg") right/cover no-repeat; }
 
@@ -651,7 +652,6 @@ template, [hidden] {
     top: 50%;
     left: 50%;
     z-index: 10;
-    padding: 80px 30px 100px;
     -webkit-transform: translate(-50%, -50%) scale(0.7);
     -moz-transform: translate(-50%, -50%) scale(0.7);
     -ms-transform: translate(-50%, -50%) scale(0.7);
@@ -677,7 +677,9 @@ template, [hidden] {
     -o-transform: translate(-50%, -50%) scale(1);
     transform: translate(-50%, -50%) scale(1); }
 .image-zoom .image-zoom-inner {
+    padding: 80px 30px 100px;
     user-select: none;
+    text-align: center;
     line-height: 0;
     border-top: 1px solid #e0e0e0; }
 .image-zoom .image-zoom-inner > svg {
@@ -752,7 +754,7 @@ template, [hidden] {
     left: 0;
     right: 0;
     z-index: 1;
-    background: rgba(0, 0, 0, 0.2); }
+    background: rgba(0, 0, 0, 0.5); }
 
 .modal-window {
     position: fixed;
@@ -865,10 +867,26 @@ template, [hidden] {
     box-sizing: border-box; }
 
 @media screen and (min-width: 900px) and (max-width: 1280px) {
+  div#image-zoom {
+    min-width: 500px; }
     div#gallery-images, div#archive-gallery .archive-gallery-inner {
         grid-template-columns: 1fr 1fr; } }
 
 @media screen and (min-width: 480px) and (max-width: 900px) {
+  div#image-zoom {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    z-index: 999;
+    transform: none; }
+    div#image-zoom div.image-zoom-inner img {
+      position: absolute;
+      max-width: 94%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
     div#gallery-images, div#archive-gallery .archive-gallery-inner {
         grid-template-columns: 1fr 1fr; }
     div#thanks-for-vote-modal {
@@ -879,9 +897,31 @@ template, [hidden] {
         transform: scale(0.5); } }
 
 @media screen and (max-width: 480px) {
+  div.main-banner {
+    margin-top: 50px; }
+  div#image-zoom {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    z-index: 999;
+    transform: none; }
+    div#image-zoom div.image-zoom-inner img {
+      position: absolute;
+      max-width: 94%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
     div.contest-page h2 {
         font-size: 20px; }
     .what-need-to-do div.inner {
         justify-content: center; }
     div#gallery-images, div#archive-gallery .archive-gallery-inner {
-        grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  div#contest-link-block {
+    width: 300px; }
+    div#contest-link-block > h3 {
+      font-size: 36px; }
+    div#contest-link-block > a {
+      font-size: 24px; } }

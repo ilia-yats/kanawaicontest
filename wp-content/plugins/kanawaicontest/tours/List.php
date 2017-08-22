@@ -13,8 +13,8 @@ class KC_Tours_List extends WP_List_Table
     public function __construct()
     {
         parent::__construct(array(
-            'singular' => 'Tour',
-            'plural' => 'Tours',
+            'singular' => __('Tour'),
+            'plural' => __('Tours'),
             'ajax' => FALSE,
         ));
     }
@@ -41,20 +41,33 @@ class KC_Tours_List extends WP_List_Table
         return $result;
     }
 
-    public static function get_current_tour_id()
+    public static function get_current_tour_title()
     {
         global $wpdb;
         static $current_tour_id = null;
 
         if (null === $current_tour_id) {
-            $current_tour_id = $wpdb->get_var("SELECT id FROM kanawaicontest_tours WHERE start_date < '"
+            $current_tour_id = $wpdb->get_var("SELECT title FROM kanawaicontest_tours WHERE start_date < '"
                 . date('Y-m-d H:i:s') . "' AND end_date IS NULL");
         }
 
         return $current_tour_id;
     }
 
-    public function get_tour($id)
+    public static function get_current_tour_id()
+    {
+        global $wpdb;
+        static $current_tour_id = null;
+
+        if (null === $current_tour_id) {
+            $current_tour_id = (int) $wpdb->get_var("SELECT id FROM kanawaicontest_tours WHERE start_date < '"
+                . date('Y-m-d H:i:s') . "' AND end_date IS NULL");
+        }
+
+        return $current_tour_id;
+    }
+
+    public static function get_tour($id)
     {
         global $wpdb;
 
@@ -96,12 +109,12 @@ class KC_Tours_List extends WP_List_Table
         );
     }
 
-    function column_id($item)
+    function column_title($item)
     {
-        $title = '<strong>' . $item['id'] . '</strong>';
+        $title = '<strong>' . $item['title'] . '</strong>';
         $actions = [
-            'posters' => sprintf('<a href="?page=kanawaicontest_posters&action=list&tour_id=%d">Posters</a>', absint($item['id'])),
-            'voters' => sprintf('<a href="?page=kanawaicontest_voters&action=list&id=%d">Voters</a>', absint($item['id'])),
+            'posters' => sprintf('<a class="button" href="?page=kanawaicontest&action=list&tour_id=%d">' . __('Posters') . '</a>', $item['id']),
+            'voters' => sprintf('<a class="button" href="?page=kanawaicontest_voters&action=list&tour_id=%d">' . __('Voters') . '</a>', $item['id']),
         ];
 
         return $title . $this->row_actions($actions);
@@ -111,10 +124,9 @@ class KC_Tours_List extends WP_List_Table
     {
         $columns = [
             'cb' => '<input type="checkbox" />',
-//            'id' => 'id',
-            'title' => 'title',
-            'start_date' => 'start_date',
-            'end_date' => 'end_date',
+            'title' => __('Title'),
+            'start_date' => __('Start Date'),
+            'end_date' => __('End Date'),
         ];
 
         return $columns;
@@ -123,9 +135,8 @@ class KC_Tours_List extends WP_List_Table
     public function get_sortable_columns()
     {
         $sortable_columns = array(
-//            'id' => array('id', TRUE),
-//            'start_date' => array('start_date', TRUE),
-//            'end_date' => array('end_date', TRUE),
+            'start_date' => array('start_date', TRUE),
+            'end_date' => array('end_date', TRUE),
         );
 
         return $sortable_columns;
@@ -134,7 +145,7 @@ class KC_Tours_List extends WP_List_Table
     public function get_bulk_actions()
     {
         $actions = [
-            'bulk-delete' => 'Delete',
+            'bulk-delete' => __('Delete'),
         ];
 
         return $actions;
@@ -256,6 +267,6 @@ class KC_Tours_List extends WP_List_Table
         global $wpdb;
 
         return $wpdb->query("UPDATE kanawaicontest_posters SET tour_id = " . absint($tour_id)
-            . " WHERE tour_id IS NULL");
+            . " WHERE tour_id = 0");
     }
 }

@@ -27,11 +27,7 @@ class KC_Voters_List extends WP_List_Table
               JOIN kanawaicontest_posters_votes AS kciv ON kcv.id = kciv.voter_id 
               JOIN kanawaicontest_posters AS kcp ON kciv.poster_id = kcp.id ";
 
-        $tour_id = ! empty($_REQUEST['tour_id'])
-            ? absint($_REQUEST['tour_id'])
-            : Kanawaicontest::get_instance()->tours->init()->tours_list->get_current_tour_id();
-
-        $sql .= ' WHERE kciv.tour_id = ' . $tour_id;
+        $sql .= ' WHERE kciv.tour_id = ' . self::get_tour_id();
 
         if( ! empty($_REQUEST['poster_id'])) {
             $sql .= " AND kciv.poster_id = " . absint($_REQUEST['poster_id']);
@@ -83,14 +79,10 @@ class KC_Voters_List extends WP_List_Table
     {
         global $wpdb;
 
-        $sql = "SELECT COUNT(*) FROM kanawaicontest_voters AS kcv
+        $sql = "SELECT COUNT(DISTINCT kcv.id) FROM kanawaicontest_voters AS kcv
               JOIN kanawaicontest_posters_votes AS kciv ON kcv.id = kciv.voter_id ";
 
-        $tour_id = ! empty($_REQUEST['tour_id'])
-            ? absint($_REQUEST['tour_id'])
-            : Kanawaicontest::get_instance()->tours->init()->tours_list->get_current_tour_id();
-
-        $sql .= ' WHERE kciv.tour_id = ' . $tour_id;
+        $sql .= ' WHERE kciv.tour_id = ' . self::get_tour_id();
 
         if( ! empty($_REQUEST['poster_id'])) {
             $sql .= " AND kciv.poster_id = " . absint($_REQUEST['poster_id']);
@@ -100,8 +92,6 @@ class KC_Voters_List extends WP_List_Table
             $like = '%' . esc_sql($_REQUEST['s']) . '%';
             $sql .= " AND (kcv.last_name LIKE '$like' OR kcv.name LIKE '$like' OR kcv.email LIKE '$like')";
         }
-
-        $sql .= ' GROUP BY kcv.id';
 
         return $wpdb->get_var($sql);
     }
@@ -123,6 +113,19 @@ class KC_Voters_List extends WP_List_Table
             VALUES ('%s', '%s', '%s', '%s')", $name, $last_name, $email, $phone));
 
         return $wpdb->insert_id;
+    }
+
+    public static function get_tour_id()
+    {
+        return (! empty($_REQUEST['tour_id']))
+            ? absint($_REQUEST['tour_id'])
+            : KC_Tours_List::get_current_tour_id();
+    }
+
+    public function get_is_current_tour()
+    {
+        $tour_id = $this->get_tour_id();
+        return !empty($tour_id) && ($tour_id == KC_Tours_List::get_current_tour_id());
     }
 
     /**
@@ -200,9 +203,7 @@ class KC_Voters_List extends WP_List_Table
      */
     public function get_sortable_columns()
     {
-        $sortable_columns = array(
-//            'name' => array('name', TRUE),
-        );
+        $sortable_columns = array();
 
         return $sortable_columns;
     }
@@ -240,6 +241,31 @@ class KC_Voters_List extends WP_List_Table
         ));
 
         $this->items = $this->get_voters($per_page, $current_page);
+    }
+
+    public function process_export()
+    {
+        if ( ! wp_verify_nonce($_REQUEST['_wpnonce'], 'kanawaicontest_export')) {
+            die('Go get a life script kiddies');
+        }
+
+        $tour = KC_Tours_List::get_tour($this->get_tour_id());
+        $file_name = 'Voters of tour ' . (isset($tour['title']) ? $tour['title'] : '');
+        header("Content-type: text/csv");
+        header("Content-disposition: filename=$file_name.csv");
+        $output = fopen('php://output', 'w');
+        $columns = $this->get_columns();
+        unset($columns['cb']);
+        fputcsv($output, $columns);
+        foreach ($this->get_voters() as $item) {
+            $row = array();
+            foreach ($columns as $key => $title) {
+                $row[] = $item[$key];
+            }
+            fputcsv($output, $row);
+        }
+        fclose($output);
+        exit;
     }
 
     public function process_bulk_action()

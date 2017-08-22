@@ -8,9 +8,6 @@ Author: uui
 Author URI: 
 */
 
-//ini_set('display_errors', 1);
-//error_reporting(E_ALL);
-
 // Exit if accessed directly
 if ( ! defined('ABSPATH')) {
     exit;
@@ -128,6 +125,10 @@ class Kanawaicontest
     public function enqueue_kanawaicontest_admin_scripts()
     {
         wp_enqueue_script('kc_admin_script', '/wp-content/plugins/kanawaicontest/assets/admin.js', array('jquery'), false, true);
+        wp_localize_script('kc_admin_script', 'kanawaicontest', array(
+                'confirmArchiveMsg' => __('Are you sure you want to finish current contest and send all images to archive?'),
+            )
+        );
     }
 
     public function media_selector_print_scripts()
@@ -156,9 +157,9 @@ class Kanawaicontest
                     }
                     // Create the media frame.
                     file_frame = wp.media.frames.file_frame = wp.media({
-                        title: 'Select a image to upload',
+                        title: '<?php _e('Select an image to upload') ?>',
                         button: {
-                            text: 'Use this image',
+                            text: '<?php _e('Use this image') ?>',
                         },
                         multiple: false	// Set to true to allow multiple files to be selected
                     });

@@ -200,31 +200,6 @@ $(document).ready(function () {
         $galleryBlock.removeAttr('style');
     });
 
-    $('#main-form').on('click', 'button', function (e) {
-        e.preventDefault();
-
-        var formData = $(this).closest('form').serialize();
-        $.ajax({
-            method: 'post',
-            dataType: 'json',
-            url: kanawaicontest.ajaxHandler,
-            data: {
-                nonce: kanawaicontest.nonce,
-                action: kanawaicontest.action,
-                form:formData,
-                chosen_ids:chosenPicturesIds
-            },
-            success:function (response) {
-                console.log(response);
-                if (response.status == 'success') {
-                    modalWindow.show('.thanks-for-vote-modal');
-                } else {
-                    modalWindow.show('.already-vote-modal');
-                }
-            }
-        });
-    });
-
     $('.img').on('click', function () {
         var imgContainer = $(this).parent();
         var $imgZoomStarButton = $('#image-zoom .star-button');
@@ -267,4 +242,57 @@ $(document).ready(function () {
         $('#archive-gallery').slideDown(200);
         $(this).hide();
     });
+
+
+    var $form = $('#main-form');
+    $form.on('click', 'button', function (e) {
+        e.preventDefault();
+        var captchaResponse = grecaptcha.getResponse();
+        if(captchaResponse.length == 0) {
+
+            return false;
+        }
+
+        var $emailInput = $('#email');
+
+        $.each($('input', $form), function () {
+            if ($(this).val() === '') {
+                $(this).addClass('error').siblings('.help-block').text('Cannot be blank').addClass('active');
+            } else {
+                $(this).removeClass('error').siblings('.help-block').removeClass('active');
+            }
+        });
+        if (isValidEmailAddress($emailInput.val()) && $form.find('input').val() !== '') {
+
+            var formData = $(this).closest('form').serialize();
+            $.ajax({
+                method: 'post',
+                dataType: 'json',
+                url: kanawaicontest.ajaxHandler,
+                data: {
+                    nonce: kanawaicontest.nonce,
+                    action: kanawaicontest.action,
+                    form:formData,
+                    chosen_ids:chosenPicturesIds
+                },
+                success:function (response) {
+                    console.log(response);
+                    if (response.status == 'success') {
+                        $('#main-form').slideUp(200);
+                        modalWindow.show('.thanks-for-vote-modal');
+                    } else {
+                        modalWindow.show('.already-vote-modal');
+                    }
+                }
+            });
+
+        } else if (!isValidEmailAddress($emailInput.val()) && $emailInput.val() !== '') {
+            $emailInput.addClass('error').siblings('.help-block').text('Not valid email').addClass('active');
+        }
+    });
+
+    function isValidEmailAddress(emailAddress) {
+        var pattern = /^([a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+(\.[a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+)*|"((([ \t]*\r\n)?[ \t]+)?([\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|\\[\x01-\x09\x0b\x0c\x0d-\x7f\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))*(([ \t]*\r\n)?[ \t]+)?")@(([a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.)+([a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.?$/i;
+        return pattern.test(emailAddress);
+    }
 });

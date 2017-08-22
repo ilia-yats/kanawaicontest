@@ -114,5 +114,8 @@ class KC_Voters_AdminMenu
             /** Process bulk action */
             $this->voters_list->process_bulk_action();
         }
+        if(isset($_REQUEST['action']) && ($_REQUEST['action'] == 'export')) {
+            $this->voters_list->process_export();
+        }
     }
 }
