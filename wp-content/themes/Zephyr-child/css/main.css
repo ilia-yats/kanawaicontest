@@ -517,6 +517,7 @@ template, [hidden] {
 .rules .inner {
     text-align: center; }
 .rules .inner .rules-text {
+    text-align: left;
     margin-bottom: 50px; }
 .rules .inner .rules-text p {
     margin: 0;

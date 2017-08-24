@@ -76,6 +76,7 @@ var chosenPicture = {
         if ($cntInner.children().length !== 0) {
             $('h5', $cnt).removeClass('text-hidden');
         }
+        chosenPicturesIds[imgId] = imgId;
     },
     remove: function (imgId) {
         var $cnt = $('.chosen-pictures');
@@ -84,6 +85,7 @@ var chosenPicture = {
         if ($cntInner.children().length === 0) {
             $('h5', $cnt).addClass('text-hidden');
         }
+        delete chosenPicturesIds[imgId];
     }
 };
 
@@ -236,7 +238,7 @@ $(document).ready(function () {
     $('#show-full-rules').on('click', function (e) {
         e.preventDefault();
 
-        $(this).hide().parent().siblings('.not-visible-p').slideDown();
+        $(this).hide().siblings('p').slideDown(200).removeClass('not-visible-p');
     });
 
     $('.show-form-button').on('click', function () {
