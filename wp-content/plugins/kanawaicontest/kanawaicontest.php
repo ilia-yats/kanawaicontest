@@ -45,8 +45,10 @@ class Kanawaicontest
         if (is_admin()) {
             // Register needed plugin settings
             add_action('admin_init', function () {
-                register_setting('kanawaicontest_settings', 'kanawaicontest_is_active');
+                register_setting('kanawaicontest_settings', 'kanawaicontest_main_banner_attachment_id');
+                register_setting('kanawaicontest_settings', 'kanawaicontest_contest_finished_message');
                 register_setting('kanawaicontest_settings', 'kanawaicontest_rules');
+                register_setting('kanawaicontest_settings', 'kanawaicontest_terms_and_conditions');
             });
 
             // Create menu items

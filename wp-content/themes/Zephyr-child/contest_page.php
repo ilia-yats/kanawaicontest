@@ -11,28 +11,13 @@ $is_active_contest = !empty(KC_Tours_List::get_current_tour_id());
 <script src='https://www.google.com/recaptcha/api.js?hl=de-CH'></script>
 <?php get_header();?>
 <div class="contest-page">
-    <div class="main-banner"></div>
+    <div class="main-banner" style="background: url('<?php echo wp_get_attachment_image_src(get_option('kanawaicontest_main_banner_attachment_id'), 'full')[0]; ?>') right/cover no-repeat;"></div>
     <?php if (!$is_active_contest): ?>
-        <div class="contest-end">
-            <div>Das aktuelle Gewinnspiel ist abgeschlossen. Das Gewinner-Werbebild wird bis Ende Monat auf unserer kanawai<br>Facebookseite publiziert. <a href="https://www.facebook.com/kanawaimegascreens/">www.facebook.com/kanawaimegascreens/</a></div>
-            <div>Die GewinnerInnen werden persönlich durch unsere Mitarbeiter kontaktiert.</div>
-            <div>Das nächste Gewinnspiel kommt bestimmt – es wird bis spätestens am zehnten des nächsten Monats online sein.</div>
-        </div>
+            <?php echo get_option('kanawaicontest_contest_finished_message'); ?>
     <?php endif; ?>
     <div class="what-win">
         <div class="inner">
-            <h2>GEWINNSPIEL</h2>
-            <span>Wählen Sie jetzt Ihre maximal 3 Favoriten der aktuellen Monats-Werbebilder aus und gewinnen Sie einen der attraktiven Monatspreise:</span>
-            <ul>
-                <li>VIP-Tickets mit Nachtessen für 4 Personen an einem Heimspiel des FCSG</li>
-                <li>6 Skipässe und 6 Übernachtungen in Ischgl</li>
-                <li>Kinogutscheine im Cinéwil, Wil</li>
-            </ul>
-            <p>
-                <span>Abstimmen können alle Personen gemäss Teilnahmebedingungen solange unser Gewinnspiel des jeweiligen Monats online ist.</span>
-                <span>Alle Werbebilder, die bis zum 25sten jedes Monats auf unseren MEGA SCREENS leuchten, nehmen automatisch an diesem Gewinnspiel teil.</span>
-                <span>Das Werbebild, welches am meisten Teilnehmerstimmen erhält, wird das Gewinnerbild des Monats.</span>
-            </p>
+            <?php echo get_option('kanawaicontest_rules'); ?>
         </div>
     </div>
     <div class="what-need-to-do">
@@ -78,41 +63,45 @@ $is_active_contest = !empty(KC_Tours_List::get_current_tour_id());
             <div class="gallery-show visible" id="gallery-show">Mehr</div>
         </div>
         <div class="chosen-pictures" id="chosen-pictures">
-            <h5>ist ausgewählt</h5>
+            <h5 class="text-hidden">ist ausgewählt</h5>
             <div class="chosen-pictures-block"></div>
         </div>
     <?php endif; ?>
     <div class="rules">
         <div class="inner">
-            <h2>Teilnahmebedingungen</h2>
-            <div class="rules-text">
-                <p>Alle Personen können mitstimmen. Preisberechtigt sind beim Gewinnspiel der kanawai ag ‘Impression of the month’ jedoch nur erwachsene Personen über 18 Jahren mit einem festen Wohnsitz in der Schweiz. Stimm-, aber nicht preisberechtigt sind die Mitarbeitenden der kanawai ag und die Mitarbeitenden der an der Umsetzung beteiligten Agenturen.
-                    Pro monatliches Gewinnspiel können die Anzahl Gewinner und die Anzahl und Art der Preise variieren. Es obliegt der kanawai ag, die Preise festzulegen und zu publizieren... <a href="#" id="show-full-rules" class="show-full-rules">Mehr</a>
-                </p>
-                <p class="not-visible-p">Jede Einsendung muss von einer gültigen E-Mail-Adresse und Telefonnummer erfolgen, an welche auch Antwortsendungen verschickt werden können. Jede Einsendung muss während der Zeit eingereicht werden, in welcher das Gewinnspiel online ist. Automatisch generierte Einträge und Versendungen sowie technische Manipulationen werden von der Teilnahme ausgeschlossen.
-                    Das Werbebild, das am meisten Stimmen erhalten hat, wird das ‘Impression of the month’. Die Verlosung des Preises oder der Preise findet unter allen Abstimmenden statt, die das Gewinnerbild ausgewählt haben. Der oder die Gewinner werden durch eine systemische Zufallsgenerator-Software ausgewählt. Die Verlosungs-Datenbank wird jeden Monat aufs Neue mit den Abstimmenden gefüllt.
-                    Die Preise können nicht bar ausbezahlt werden Über den Wettbewerb wird keine Korrespondenz geführt. Die Gewinner werden telefonisch benachrichtigt. Der Rechtsweg ist ausgeschlossen.
-                    Die kanawai ag kann nicht haftbar gemacht werden für fehlgeleitete, verloren gegangene, zu späte oder fehlerhafte Einträge. Die kanawai ag lehnt jede Haftung ab bezüglich technischer sowie Hard- und Softwarefehler jeglicher Art, unterbrochener Netzwerkverbindungen oder unvollständiger, verspäteter oder verloren gegangener Übermittlungen oder Übermittlungen, welche Systembeschädigungen beim Benutzer hervorrufen könnten.
-                    Adressen werden nicht an Dritte weitergegeben, können aber bei Bedarf und sofern nicht ausdrücklich abgelehnt für weitere werbliche Massnahmen von der kanawai ag verwendet werden.
-                    Mit der Teilnahme am Gewinnspiel anerkennt der Teilnehmer diese Teilnahmebestimmungen. Die kanawai ag behält sich das Recht vor, diese Wettbewerbsbestimmungen zu jeder Zeit abzuändern.
-                </p>
-            </div>
-            <div class="agreement">* Ich akzeptiere die Teilnahmebedingungen</div>
+            <?php echo get_option('kanawaicontest_terms_and_conditions'); ?>
             <?php if ($is_active_contest): ?>
             <div id="show-form" class="show-form-button">Weiter und Registration</div>
             <div class="form" id="main-form">
                 <form action="" method="post">
+					<div class="name field">
                     <label for="first_name">Vorname:</label>
                     <input name="first_name" type="text" id="first_name">
+						<div class="help-block"></div>
+					</div>
+					<div class="vorname field">
                     <label for="last_name">Name:</label>
                     <input name="last_name" type="text" id="last_name">
+						<div class="help-block"></div>
+					</div>
+					<div class="email field">
                     <label for="email">E-Mail-Adresse:</label>
                     <input name="email" type="email" id="email">
+						<div class="help-block"></div>
+					</div>
+					<div class="phone field">
                     <label for="phone">Telefonnummer:</label>
                     <input name="phone" type="number" id="phone" placeholder="+4  1  11  111  11  11">
+						<div class="help-block"></div>
+					</div>
                     <span>* Die persönlichen Daten werden ausschliesslich für das kanawai-Gewinnspiel verwendet und dienen zur Kontaktaufnahme der monatlichen GewinnerInnen.</span>
                     <div class="g-recaptcha" data-sitekey="6Lft7CsUAAAAAP6U9ZXVc9pO85xaqAaFNRH9QXbB"></div>
-                    <div class="form-agreement">* Ich akzeptiere die Teilnahmebedingungen</div>
+                    <div class="form-agreement">
+                        <input type="checkbox" name="agree-with-rules" id="agree-with-rules">
+                        <label for="agree-with-rules" class="main-label"></label>
+                        <label for="agree-with-rules">Ich akzeptiere die Teilnahmebedingungen</label>
+						<div class="help-block"></div>
+                    </div>
                     <button type="submit">Absenden</button>
                 </form>
             </div>

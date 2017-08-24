@@ -35,6 +35,11 @@ function starButtonAction($toggleClassBlock, $block, isImageZoom) {
     IsActiveForm();
 }
 
+function isValidEmailAddress(emailAddress) {
+        var pattern = /^([a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+(\.[a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+)*|"((([ \t]*\r\n)?[ \t]+)?([\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|\\[\x01-\x09\x0b\x0c\x0d-\x7f\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))*(([ \t]*\r\n)?[ \t]+)?")@(([a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.)+([a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.?$/i;
+        return pattern.test(emailAddress);
+}
+
 var modalWindow = {
     $close: null,
     $backgroundScreen: $('#background-screen'),
@@ -65,14 +70,20 @@ var modalWindow = {
 var chosenPicturesIds = Object.create(null);
 var chosenPicture = {
     add: function (imgId, imgSrc) {
+        var $cnt = $('.chosen-pictures');
 		var $cntInner = $('.chosen-pictures-block');
         $cntInner.append('<img src="'+ imgSrc +'" class="'+ imgId +'">');
-        chosenPicturesIds[imgId] = imgId;
+        if ($cntInner.children().length !== 0) {
+            $('h5', $cnt).removeClass('text-hidden');
+        }
     },
     remove: function (imgId) {
+        var $cnt = $('.chosen-pictures');
 		var $cntInner = $('.chosen-pictures-block');
         $cntInner.children('.'+imgId).remove();
-        delete chosenPicturesIds[imgId];
+        if ($cntInner.children().length === 0) {
+            $('h5', $cnt).addClass('text-hidden');
+        }
     }
 };
 
@@ -171,6 +182,7 @@ $(document).ready(function () {
     var $galleryBlock = $('#gallery-images');
     var $imgBlock = $('.img-container');
     var $galleryShowButton = $('#gallery-show');
+	var $form = $('#main-form');
     var bannerCoefficient = 1459/641;
     var galleryCoefficient = 633/357;
 
@@ -232,7 +244,6 @@ $(document).ready(function () {
             return false;
         }
         $(this).hide();
-        $('.agreement').hide();
         $('#main-form').slideDown(200);
     });
 
@@ -243,26 +254,19 @@ $(document).ready(function () {
         $(this).hide();
     });
 
-
-    var $form = $('#main-form');
     $form.on('click', 'button', function (e) {
         e.preventDefault();
         var captchaResponse = grecaptcha.getResponse();
-        if(captchaResponse.length == 0) {
-
-            return false;
-        }
-
         var $emailInput = $('#email');
 
         $.each($('input', $form), function () {
-            if ($(this).val() === '') {
-                $(this).addClass('error').siblings('.help-block').text('Cannot be blank').addClass('active');
+            if ($(this).val() === '' || (!$(this).is(':checked') && $(this).is(':checkbox'))) {
+                $(this).addClass('error').siblings('.help-block').text('Bitte füllen Sie das Feld aus').addClass('active');
             } else {
                 $(this).removeClass('error').siblings('.help-block').removeClass('active');
             }
         });
-        if (isValidEmailAddress($emailInput.val()) && $form.find('input').val() !== '') {
+        if (isValidEmailAddress($emailInput.val()) && $form.find('input').val() !== '' && captchaResponse.length != 0 && $('#agree-with-rules').is(':checked')) {
 
             var formData = $(this).closest('form').serialize();
             $.ajax({
@@ -287,12 +291,7 @@ $(document).ready(function () {
             });
 
         } else if (!isValidEmailAddress($emailInput.val()) && $emailInput.val() !== '') {
-            $emailInput.addClass('error').siblings('.help-block').text('Not valid email').addClass('active');
+            $emailInput.addClass('error').siblings('.help-block').text('Angegebene E-mail-Adresse ist nicht gültig').addClass('active');
         }
     });
-
-    function isValidEmailAddress(emailAddress) {
-        var pattern = /^([a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+(\.[a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+)*|"((([ \t]*\r\n)?[ \t]+)?([\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|\\[\x01-\x09\x0b\x0c\x0d-\x7f\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))*(([ \t]*\r\n)?[ \t]+)?")@(([a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.)+([a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.?$/i;
-        return pattern.test(emailAddress);
-    }
 });
