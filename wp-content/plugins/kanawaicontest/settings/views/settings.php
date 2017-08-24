@@ -5,6 +5,12 @@
         <?php settings_fields('kanawaicontest_settings'); ?>
         <table class="form-table">
             <tr valign="top">
+                <th scope="row"><b><?php _e('Show "Contest" pop-up button on all pages') ?></b></th>
+                <td>
+                    <input type="checkbox" name="kanawaicontest_button_activated" <?php echo get_option('kanawaicontest_button_activated') ? ' checked ' : ''; ?> value="1"/>
+                </td>
+            </tr>
+            <tr valign="top">
                 <th scope="row"><b><?php _e('Main banner') ?></b></th>
                 <td>
                     <div class='image-preview-wrapper'>

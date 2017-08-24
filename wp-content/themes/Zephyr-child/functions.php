@@ -128,8 +128,7 @@ function kanawaicontest_public_init()
 
 function kanawaicontest_button()
 {
-//    if (get_query_var('pagename') !== 'contest'):
-    if (get_query_var('pagename') == 'contest'):
+    if (get_option('kanawaicontest_button_activated') && get_query_var('pagename') !== 'contest'):
         include __DIR__ . '/contest_btn.php';
     endif;
 }
